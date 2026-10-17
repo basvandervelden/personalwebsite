@@ -1,0 +1,750 @@
+{
+  "source": "citations.csv",
+  "importedAt": "2026-10-17",
+  "summary": {
+    "bibtexRecords": 85,
+    "existingBefore": 77,
+    "existingAfter": 84,
+    "updated": 77,
+    "added": 7,
+    "skipped": 1,
+    "changes": {
+      "authors": 73,
+      "venue": 11,
+      "title": 5,
+      "years": 6,
+      "links": 0
+    },
+    "duplicateIds": [],
+    "addedPapers": [
+      {
+        "id": "cv-bibtex-vanfinger",
+        "title": "Finger analysis in video using multi-scale ridge detection",
+        "year": "2011",
+        "type": "Conference contribution",
+        "venue": "SCIP"
+      },
+      {
+        "id": "cv-bibtex-van2017analysis",
+        "title": "Analysis of healthy breast tissue on MRI for prognosis of breast cancer",
+        "year": "2017",
+        "type": "Doctoral thesis",
+        "venue": "Utrecht University"
+      },
+      {
+        "id": "cv-bibtex-moeskops2016international",
+        "title": "International conference on medical image computing and computer-assisted intervention",
+        "year": "2016",
+        "type": "Conference contribution",
+        "venue": "MICCAI / Springer"
+      },
+      {
+        "id": "cv-bibtex-hurriyetoglu2024d1",
+        "title": "D1. 1 EFRA Requirements Roadmap",
+        "year": "2024",
+        "type": "Report",
+        "venue": "EFRA (Horizon Europe)"
+      },
+      {
+        "id": "cv-bibtex-hurriyetoglu2024d1-2",
+        "title": "D1. 2 Ongoing Recommendations for EFRA Work",
+        "year": "2024",
+        "type": "Report",
+        "venue": "EFRA (Horizon Europe)"
+      },
+      {
+        "id": "cv-bibtex-wang2026foresight",
+        "title": "Foresight Scenario Modelling for Global Wheat Production Under Shared Socioeconomic Pathways: Testing AI Emulators of CGE Models",
+        "year": "2026",
+        "type": "Other scholarly output",
+        "venue": ""
+      },
+      {
+        "id": "cv-bibtex-schoppemaxai4ttx",
+        "title": "XAI4TTX",
+        "year": "2026",
+        "type": "Dataset",
+        "venue": "Zenodo"
+      }
+    ],
+    "note": "Treated FAO report and 2026 npj review as distinct works; corrected 2026 published version of TTX paper; restored earlier publication years where different from BibTeX; maintained 2025 JIF."
+  },
+  "records": [
+    {
+      "key": "van2014association",
+      "action": "updated",
+      "id": "cv-bib-001",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2015association",
+      "action": "updated",
+      "id": "cv-13-19",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "vanfinger",
+      "action": "added",
+      "id": "cv-bibtex-vanfinger",
+      "title": "Finger analysis in video using multi-scale ridge detection"
+    },
+    {
+      "key": "morash2015determining",
+      "action": "updated",
+      "id": "cv-bib-003",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2015evaluation",
+      "action": "updated",
+      "id": "cv-bib-004",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "vancontralateral",
+      "action": "updated",
+      "id": "cv-bib-005",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2016abstract",
+      "action": "updated",
+      "id": "cv-bib-006",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "knuttel2016prediction",
+      "action": "updated",
+      "id": "cv-bib-007",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2016prediction",
+      "action": "updated",
+      "id": "cv-bib-008",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2016parenchymal",
+      "action": "updated",
+      "id": "cv-bib-009",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "moeskops2016deep",
+      "action": "updated",
+      "id": "cv-bib-010",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "chan2017eigentumors",
+      "action": "updated",
+      "id": "cv-bib-011",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2017complementary",
+      "action": "updated",
+      "id": "cv-13-18",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "merckel2018eligibility",
+      "action": "updated",
+      "id": "cv-bib-013",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2017analysis",
+      "action": "added",
+      "id": "cv-bibtex-van2017analysis",
+      "title": "Analysis of healthy breast tissue on MRI for prognosis of breast cancer"
+    },
+    {
+      "key": "van2018perfusion",
+      "action": "updated",
+      "id": "cv-bib-014",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2018contralateral",
+      "action": "updated",
+      "id": "cv-bib-015",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2018bpe",
+      "action": "updated",
+      "id": "cv-bib-016",
+      "fields": []
+    },
+    {
+      "key": "van2019response",
+      "action": "updated",
+      "id": "cv-bib-017",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2016association",
+      "action": "updated",
+      "id": "cv-bib-006",
+      "fields": [
+        "title",
+        "authors",
+        "journal"
+      ]
+    },
+    {
+      "key": "spijkerman2019assessing",
+      "action": "updated",
+      "id": "cv-bib-019",
+      "fields": [
+        "authors",
+        "journal",
+        "year"
+      ]
+    },
+    {
+      "key": "van2019contralateral",
+      "action": "updated",
+      "id": "cv-bib-020",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "wang2020synchronous",
+      "action": "updated",
+      "id": "cv-bib-021",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "de2020mutual",
+      "action": "updated",
+      "id": "cv-bib-022",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "wang2020interpretation",
+      "action": "updated",
+      "id": "cv-bib-023",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2020interpretable",
+      "action": "updated",
+      "id": "cv-bib-024",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2020harmonization",
+      "action": "updated",
+      "id": "cv-bib-025",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "bismeijer2020radiogenomic",
+      "action": "updated",
+      "id": "cv-13-17",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "ragusi2020contralateral",
+      "action": "updated",
+      "id": "cv-bib-027",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2020volumetric",
+      "action": "updated",
+      "id": "cv-13-16",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "vancomplementary",
+      "action": "updated",
+      "id": "cv-13-18",
+      "title": "Complementary value of contralateral parenchymal enhancement on DCE-MRI to conventional prognostic models and molecular assays of breast cancer",
+      "fields": []
+    },
+    {
+      "key": "wang2021toward",
+      "action": "updated",
+      "id": "cv-bib-030",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "chanradiomics",
+      "action": "updated",
+      "id": "cv-bib-031",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "ragusi2021prognostic",
+      "action": "updated",
+      "id": "cv-bib-032",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2022explainable",
+      "action": "updated",
+      "id": "cv-13-14",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "sanguesa2021mixmicrobleed",
+      "action": "updated",
+      "id": "cv-bib-034",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "kutnar2021mixlacune",
+      "action": "updated",
+      "id": "cv-bib-035",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "girones2021mixmicrobleed",
+      "action": "updated",
+      "id": "cv-bib-034",
+      "fields": [
+        "authors",
+        "journal"
+      ]
+    },
+    {
+      "key": "lund2022leveraging",
+      "action": "updated",
+      "id": "cv-bib-037",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "verburg2022deep",
+      "action": "updated",
+      "id": "cv-bib-038",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "moeskops2016international",
+      "action": "added",
+      "id": "cv-bibtex-moeskops2016international",
+      "title": "International conference on medical image computing and computer-assisted intervention"
+    },
+    {
+      "key": "ragusi2021contralateral",
+      "action": "updated",
+      "id": "cv-bib-040",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "vasmel2020oc",
+      "action": "updated",
+      "id": "cv-bib-041",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "vasmel2022dynamic",
+      "action": "updated",
+      "id": "cv-bib-042",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "ragusi2022population",
+      "action": "updated",
+      "id": "cv-bib-043",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "vanvalidation",
+      "action": "updated",
+      "id": "cv-bib-044",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "koerkamp2022dynamic",
+      "action": "updated",
+      "id": "cv-bib-045",
+      "fields": [
+        "authors",
+        "year"
+      ]
+    },
+    {
+      "key": "kraaijveld2022multi",
+      "action": "updated",
+      "id": "cv-bib-046",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "sudre2024valdo",
+      "action": "updated",
+      "id": "cv-bib-047",
+      "fields": [
+        "authors",
+        "journal"
+      ]
+    },
+    {
+      "key": "verburg2022validation",
+      "action": "updated",
+      "id": "cv-bib-048",
+      "fields": [
+        "authors",
+        "year"
+      ]
+    },
+    {
+      "key": "buser2022accurately",
+      "action": "updated",
+      "id": "cv-bib-049",
+      "fields": [
+        "title",
+        "authors",
+        "journal"
+      ]
+    },
+    {
+      "key": "jak2022prediction",
+      "action": "updated",
+      "id": "cv-bib-050",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "janse2023deep",
+      "action": "updated",
+      "id": "cv-bib-051",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "ragusi2023long",
+      "action": "updated",
+      "id": "cv-13-20",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "buser2023radiologic",
+      "action": "updated",
+      "id": "cv-bib-053",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "buser2023evaluation",
+      "action": "updated",
+      "id": "cv-bib-054",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "wang2023assessing",
+      "action": "updated",
+      "id": "cv-bib-055",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2024explainable",
+      "action": "updated",
+      "id": "cv-13-13",
+      "fields": []
+    },
+    {
+      "key": "janssen2024predicting",
+      "action": "updated",
+      "id": "cv-bib-057",
+      "fields": [
+        "authors",
+        "journal"
+      ]
+    },
+    {
+      "key": "wang2024automated",
+      "action": "updated",
+      "id": "cv-bib-058",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "kraaijveld2024unsupervised",
+      "action": "updated",
+      "id": "cv-bib-059",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "fendor2025federated",
+      "action": "updated",
+      "id": "cv-13-09",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "european2025symposium",
+      "action": "updated",
+      "id": "cv-13-12",
+      "fields": []
+    },
+    {
+      "key": "hurriyetoglu2024d1",
+      "action": "added",
+      "id": "cv-bibtex-hurriyetoglu2024d1",
+      "title": "D1. 1 EFRA Requirements Roadmap"
+    },
+    {
+      "key": "hurriyetoglu2024d1",
+      "action": "added",
+      "id": "cv-bibtex-hurriyetoglu2024d1-2",
+      "title": "D1. 2 Ongoing Recommendations for EFRA Work"
+    },
+    {
+      "key": "vos2025evaluation",
+      "action": "updated",
+      "id": "cv-bib-063",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2025examining",
+      "action": "updated",
+      "id": "cv-wur-extra-3",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "kizililsoley2026food",
+      "action": "updated",
+      "id": "cv-13-04",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "papadopoulou2025brightcookies",
+      "action": "updated",
+      "id": "cv-13-10",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "mutlu2025explainable",
+      "action": "updated",
+      "id": "cv-13-11",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "buser2025community",
+      "action": "updated",
+      "id": "cv-bib-067",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "van2025artificial",
+      "action": "updated",
+      "id": "cv-13-08",
+      "fields": []
+    },
+    {
+      "key": "fendorjournal",
+      "action": "skipped_invalid",
+      "title": "Journal of Agriculture and Food Research",
+      "reason": "Journal name is not a paper title"
+    },
+    {
+      "key": "schoppema2026identifying",
+      "action": "updated",
+      "id": "cv-bib-069",
+      "fields": [
+        "authors",
+        "journal",
+        "year",
+        "published-journal-doi"
+      ]
+    },
+    {
+      "key": "kizililsoley2025leveraging",
+      "action": "updated",
+      "id": "cv-bib-070",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "gonzalez2025preparing",
+      "action": "updated",
+      "id": "cv-bib-071",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "korporaal2026colony",
+      "action": "updated",
+      "id": "cv-13-06",
+      "fields": [
+        "authors",
+        "journal"
+      ]
+    },
+    {
+      "key": "menning2026enhancing",
+      "action": "updated",
+      "id": "cv-13-02",
+      "fields": [
+        "authors",
+        "journal"
+      ]
+    },
+    {
+      "key": "ozen2026natural",
+      "action": "updated",
+      "id": "cv-13-05",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "wang2026foresight",
+      "action": "added",
+      "id": "cv-bibtex-wang2026foresight",
+      "title": "Foresight Scenario Modelling for Global Wheat Production Under Shared Socioeconomic Pathways: Testing AI Emulators of CGE Models"
+    },
+    {
+      "key": "van2026artificial",
+      "action": "updated",
+      "id": "cv-13-01",
+      "fields": [
+        "title",
+        "authors",
+        "journal",
+        "year"
+      ]
+    },
+    {
+      "key": "koops2026voedselveiligheid",
+      "action": "updated",
+      "id": "cv-13-07",
+      "fields": [
+        "authors"
+      ]
+    },
+    {
+      "key": "vanartificial",
+      "action": "updated",
+      "id": "cv-13-01",
+      "fields": [
+        "title",
+        "authors",
+        "journal"
+      ]
+    },
+    {
+      "key": "schoppemaxai4ttx",
+      "action": "added",
+      "id": "cv-bibtex-schoppemaxai4ttx",
+      "title": "XAI4TTX"
+    },
+    {
+      "key": "carnoli2026foundation",
+      "action": "updated",
+      "id": "cv-13-03",
+      "fields": [
+        "authors"
+      ]
+    }
+  ]
+}
