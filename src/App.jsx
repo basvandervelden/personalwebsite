@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { site, navigation, researchAreas, projectEntries, publications, activitySections, milestones } from './content.js';
 import './styles.css';
+import CVPage from './CV.jsx';
 
 const homePath = '/';
 const internal = (path) => '#'+path;
@@ -141,8 +142,8 @@ function AcademicActivities(){
 function About(){
   return <>
     <PageHeader kicker="ABOUT" title="A researcher, a team leader, and a builder of programmes." lead="My work combines machine learning research, scientific collaboration and developing people and research directions."/>
-    <section className="section first-section"><div className="container about-columns"><MediaSlot kind="photo" format="portrait" title="Professional or personal portrait" caption="Suggested: natural portrait in a research or university setting"/><div><Eyebrow>BACKGROUND</Eyebrow><h2>From medical imaging to AI for food safety.</h2>{site.about.map(p=><p key={p}>{p}</p>)}<ExtLink href={site.links.research} className="text-link">Scientific profile</ExtLink></div></div></section>
-    <section className="section section-alt"><div className="container"><SectionIntro eyebrow="EXPERIENCE" title="Selected roles and background." description="The full CV and selected activities can be added as separate pages."/><div className="milestones">{milestones.map(m=><div className="milestone" key={m.title}><span>{m.date}</span><div><h3>{m.title}</h3><p>{m.institution}</p></div></div>)}</div></div></section>
+    <section className="section first-section"><div className="container about-columns"><MediaSlot kind="photo" format="portrait" title="Professional or personal portrait" caption="Suggested: natural portrait in a research or university setting"/><div><Eyebrow>BACKGROUND</Eyebrow><h2>From medical imaging to AI for food safety.</h2>{site.about.map(p=><p key={p}>{p}</p>)}<ExtLink href={site.links.research} className="text-link">Scientific profile</ExtLink> <LocalLink to="/cv" className="text-link about-cv-link">Full academic CV <span>→</span></LocalLink></div></div></section>
+    <section className="section section-alt"><div className="container"><SectionIntro eyebrow="EXPERIENCE" title="Selected roles and background." description="For a complete overview of appointments, projects, acquisition, supervision, talks and service, explore the searchable CV."/><div className="milestones">{milestones.map(m=><div className="milestone" key={m.title}><span>{m.date}</span><div><h3>{m.title}</h3><p>{m.institution}</p></div></div>)}</div></div></section>
     <section className="section"><div className="container editorial-grid"><div><Eyebrow>BEYOND INDIVIDUAL RESEARCH</Eyebrow><h2>Building an environment for good research.</h2><p>I care about the conditions that make sustainable science possible: trusted methods, shared data, collaboration across disciplines and time for researchers to develop ambitious ideas.</p><LocalLink to="/academic-activities" className="text-link">Academic activities <span>→</span></LocalLink></div><MediaSlot kind="photo" format="wide" title="Team / laboratory environment" caption="Suggested: an authentic photo of the research team"/></div></section>
   </>;
 }
@@ -168,7 +169,7 @@ function App(){
   useEffect(()=>{
     window.scrollTo({top:0,behavior:'instant'});
     setMenuOpen(false);
-    const label=navigation.find(n=>n.path===path)?.label || researchAreas.find(x=>path==='/research/'+x.slug)?.title || projectEntries.find(x=>path==='/projects/'+x.slug)?.title || 'Page';
+    const label=navigation.find(n=>n.path===path)?.label || researchAreas.find(x=>path==='/research/'+x.slug)?.title || projectEntries.find(x=>path==='/projects/'+x.slug)?.title || (path.startsWith('/cv')?'Full academic CV':'Page');
     document.title=(path==='/'?'Bas van der Velden':label+' | Bas van der Velden')+' — AI for Food Safety';
   },[path]);
   useEffect(()=>{document.documentElement.dataset.theme=theme;try{localStorage.setItem('bas-theme',theme)}catch{}},[theme]);
@@ -181,6 +182,7 @@ function App(){
   else if(path==='/publications') page=<Publications/>;
   else if(path==='/academic-activities') page=<AcademicActivities/>;
   else if(path==='/about') page=<About/>;
+  else if(path==='/cv'||/^\/cv\/\d+$/.test(path)) page=<CVPage sectionNumber={path.split('/')[2]}/>;
   else if(path==='/contact') page=<Contact/>;
   else page=<NotFound/>;
   return <>
@@ -194,7 +196,7 @@ function App(){
       <div className="header-tools"><button className="theme-toggle" aria-label={'Switch to '+(theme==='light'?'dark':'light')+' mode'} onClick={()=>setTheme(t=>t==='light'?'dark':'light')} title="Toggle color theme">{theme==='light'?'☾':'☀'}</button><button className="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded={menuOpen} aria-label="Toggle menu" onClick={()=>setMenuOpen(m=>!m)}><span></span><span></span><span></span></button></div>
     </div></header>
     <main id="main">{page}</main>
-    <footer className="site-footer"><div className="container footer-layout"><div><strong>{site.name}</strong><p>{site.role}<br/>{site.organisation}</p></div><nav aria-label="Footer navigation"><LocalLink to="/research">Research</LocalLink><LocalLink to="/projects">Projects</LocalLink><LocalLink to="/publications">Publications</LocalLink><LocalLink to="/contact">Contact</LocalLink></nav><div><p>© {new Date().getFullYear()} Bas van der Velden</p><p>Wageningen, the Netherlands</p></div></div></footer>
+    <footer className="site-footer"><div className="container footer-layout"><div><strong>{site.name}</strong><p>{site.role}<br/>{site.organisation}</p></div><nav aria-label="Footer navigation"><LocalLink to="/research">Research</LocalLink><LocalLink to="/projects">Projects</LocalLink><LocalLink to="/publications">Publications</LocalLink><LocalLink to="/cv">Full CV</LocalLink><LocalLink to="/contact">Contact</LocalLink></nav><div><p>© {new Date().getFullYear()} Bas van der Velden</p><p>Wageningen, the Netherlands</p></div></div></footer>
   </>;
 }
 export default App;

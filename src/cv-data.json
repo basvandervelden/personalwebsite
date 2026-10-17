@@ -1,0 +1,1557 @@
+{
+  "updated": "October 2026",
+  "title": "Long academic CV",
+  "sourceNote": "Adapted from Bas_van_der_Velden_Long_CV_October_2026.docx. Review before public use. The publication section is a selected list from the long CV, not a complete bibliography.",
+  "profile": {
+    "name": "Bas van der Velden",
+    "role": "Principal Scientist · Head of Data Science & AI",
+    "organisation": "Wageningen Food Safety Research",
+    "email": "bas.vandervelden@wur.nl",
+    "location": "Utrecht / Wageningen, the Netherlands",
+    "links": [
+      {
+        "label": "Research@WUR",
+        "url": "https://research.wur.nl/en/persons/bas-van-der-velden/"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/basvandervelden"
+      }
+    ]
+  },
+  "highlights": [
+    {
+      "label": "Researchers led",
+      "value": "~25"
+    },
+    {
+      "label": "Research outputs in 2026 snapshot",
+      "value": "60"
+    },
+    {
+      "label": "Doctoral researchers",
+      "value": "4"
+    }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "title": "Conference keynote or talk",
+      "src": "",
+      "alt": "Bas van der Velden presenting at a scientific conference",
+      "caption": "Add a conference photograph (file under public/images/cv/)."
+    },
+    {
+      "type": "video",
+      "title": "BNR De Technoloog — Hoe AI weet of je eten veilig is",
+      "src": "https://www.youtube.com/watch?v=-uE88IJbTFk",
+      "caption": "Podcast/video interview, December 2025",
+      "link": "https://omny.fm/shows/de-technoloog/technoloog-473-bas-van-der-velden-4dec"
+    },
+    {
+      "type": "image",
+      "title": "Research illustration or selected slides",
+      "src": "",
+      "alt": "Scientific illustration of AI for food safety research",
+      "caption": "Add a presentation slide, figure or illustration."
+    }
+  ],
+  "sections": [
+    {
+      "id": "cv-section-1",
+      "number": 1,
+      "title": "Current appointments and leadership",
+      "category": "Leadership",
+      "entries": [
+        {
+          "title": "Head of Data Science & Artificial Intelligence — Wageningen Food Safety Research (WFSR), Wageningen University & Research",
+          "period": "2022–present",
+          "details": "Leads an international, interdisciplinary team of approximately 25 researchers. Responsible for scientific direction, team development, acquisition, project leadership and coordination, and the development of AI capability for food-safety research and statutory tasks. Leads and contributes to European research consortia and collaborations with EFSA, FAO and NVWA.",
+          "meta": "",
+          "id": "cv-01-01"
+        },
+        {
+          "title": "Member, Advisory Group on Data (AGoD) — European Food Safety Authority (EFSA)",
+          "period": "2025–present",
+          "details": "Member of the Innovation subgroup, advising EFSA on emerging data-science and AI directions and their responsible use in food-safety risk assessment and surveillance.",
+          "meta": "",
+          "id": "cv-01-02"
+        },
+        {
+          "title": "Member, Advisory Group — Wageningen Data Competence Center (WDCC)",
+          "period": "2022–present",
+          "details": "Cross-WUR advisory role on data and digital research infrastructure; recurrent participation in WDCC advisory and joint governance meetings.",
+          "meta": "",
+          "id": "cv-01-03"
+        },
+        {
+          "title": "Programme / governance role — Knowledge Base Data Driven & High Tech (KB DD&HT), Wageningen Research",
+          "period": "2022–present",
+          "details": "Contributes to cross-WR strategic prioritisation. Project leader of the recurring Small Innovative Projects (SIP) line, including annual themes on Explainable AI and Generative AI. Cross-WR strategic prioritisation and scientific programme development.",
+          "meta": "",
+          "id": "cv-01-04"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-2",
+      "number": 2,
+      "title": "Academic and professional positions",
+      "category": "Positions",
+      "entries": [
+        {
+          "title": "Head of Data Science & AI — Wageningen Food Safety Research",
+          "period": "2022–present",
+          "details": "Research and team leadership in AI for food safety; methodological research, programme building, acquisition, European coordination and regulatory collaboration.",
+          "meta": "",
+          "id": "cv-02-01"
+        },
+        {
+          "title": "Senior Supervising Researcher — Prinses Máxima Center for Pediatric Oncology",
+          "period": "2021–2022",
+          "details": "Supervision of PhD research on deep-learning based assessment of Wilms tumour and sarcoma in children.",
+          "meta": "",
+          "id": "cv-02-02"
+        },
+        {
+          "title": "Senior Postdoctoral Researcher — UMC Utrecht, Image Sciences Institute",
+          "period": "2020–2022",
+          "details": "Principal research line in explainable AI for medical imaging; projects in lymphoma, breast, kidney and prostate cancer.",
+          "meta": "",
+          "id": "cv-02-03"
+        },
+        {
+          "title": "Junior Postdoctoral Researcher — UMC Utrecht, Image Sciences Institute",
+          "period": "2018–2019",
+          "details": "Deep learning for breast MRI response monitoring and multi-centre harmonisation of quantitative imaging biomarkers.",
+          "meta": "",
+          "id": "cv-02-04"
+        },
+        {
+          "title": "PhD Researcher, Medical Imaging — Utrecht University / UMC Utrecht",
+          "period": "2013–2017",
+          "details": "Thesis: Analysis of healthy breast tissue on MRI for prognosis of breast cancer. Advisors: M.A. Viergever and K.G.A. Gilhuijs.",
+          "meta": "",
+          "id": "cv-02-05"
+        },
+        {
+          "title": "Research Fellow — Memorial Sloan Kettering Cancer Center, New York, USA",
+          "period": "2016",
+          "details": "Breast imaging research; collaboration with Prof. Elizabeth Morris; work yielded peer-reviewed publications and conference contributions.",
+          "meta": "",
+          "id": "cv-02-06"
+        },
+        {
+          "title": "Research Fellow — UC Berkeley, California, USA — Bankslab",
+          "period": "2011",
+          "details": "Biomedical image-analysis research; work yielded a peer-reviewed publication and conference poster.",
+          "meta": "",
+          "id": "cv-02-07"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-3",
+      "number": 3,
+      "title": "Education and qualifications",
+      "category": "Education",
+      "entries": [
+        {
+          "title": "Basic Teaching Qualification (BKO) — UMC Utrecht",
+          "period": "2022",
+          "details": "Qualification based on course development, teaching and supervision, including co-creation of two university courses and supervision of more than ten BSc/MSc theses.",
+          "meta": "",
+          "id": "cv-03-01"
+        },
+        {
+          "title": "PhD, Medical Imaging / Medical Image Analysis — Utrecht University / UMC Utrecht",
+          "period": "2017",
+          "details": "Thesis: Analysis of healthy breast tissue on MRI for prognosis of breast cancer. PhD Council member, 2014–2017.",
+          "meta": "",
+          "id": "cv-03-02"
+        },
+        {
+          "title": "MSc Medical Engineering — Eindhoven University of Technology",
+          "period": "2013",
+          "details": "Biomedical image analysis. Extracurricular: UniPartners Eindhoven. Graduation research included computer-aided diagnosis of multiple-sclerosis lesions at Radboud University.",
+          "meta": "",
+          "id": "cv-03-03"
+        },
+        {
+          "title": "Graduate coursework in International Business — Maastricht University",
+          "period": "2011",
+          "details": "Entrepreneurship and SME Management.",
+          "meta": "",
+          "id": "cv-03-04"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-4",
+      "number": 4,
+      "title": "Research programme and scientific leadership",
+      "category": "Research",
+      "entries": [
+        {
+          "title": "Trustworthy and explainable AI",
+          "period": "",
+          "details": "methods that expose model reasoning, quantify limitations and improve validation and adoption in high-stakes food-safety settings.",
+          "meta": "",
+          "id": "cv-04-01"
+        },
+        {
+          "title": "Foundation models and transfer learning",
+          "period": "",
+          "details": "representation learning for LC–HRMS, microscopy and other complex data types, with particular emphasis on data scarcity and cross-experiment transfer.",
+          "meta": "",
+          "id": "cv-04-02"
+        },
+        {
+          "title": "Data foundations for AI",
+          "period": "",
+          "details": "harmonisation, linkage and reuse of large-scale food-safety monitoring and analytical datasets; development of open research resources such as CHEFS and XAI4TTX.",
+          "meta": "",
+          "id": "cv-04-03"
+        },
+        {
+          "title": "Emerging risks and regulatory foresight",
+          "period": "",
+          "details": "AI for weak-signal mining, active-learning assisted news prioritisation, literature extraction and holistic prediction of changing food-safety risks.",
+          "meta": "",
+          "id": "cv-04-04"
+        },
+        {
+          "title": "AI translation and implementation",
+          "period": "",
+          "details": "connecting methodological AI development to laboratory workflows, statutory tasks, regulatory decision-making and end-user validation.",
+          "meta": "",
+          "id": "cv-04-05"
+        },
+        {
+          "title": "Scientific community building",
+          "period": "",
+          "details": "initiator/co-organiser of the AI for Food Safety Conference (AIFS), and cross-WUR programme development around data science, foundation models and trustworthy AI.",
+          "meta": "",
+          "id": "cv-04-06"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-5",
+      "number": 5,
+      "title": "Doctoral supervision and academic assessment",
+      "category": "Supervision",
+      "entries": [
+        {
+          "title": "Hui Wang",
+          "period": "2019–2023",
+          "details": "Radiomics phenotyping and automated evaluation of breast cancer.",
+          "meta": "Co-promotor; completed",
+          "group": "Primary doctoral supervision",
+          "id": "cv-05-01"
+        },
+        {
+          "title": "Osman Mutlu",
+          "period": "2023–present",
+          "details": "EFRA; explainable AI and trustworthy deep learning for food-safety applications.",
+          "meta": "Co-promotor",
+          "group": "Primary doctoral supervision",
+          "id": "cv-05-02"
+        },
+        {
+          "title": "Thijs Schoppema",
+          "period": "2024–present",
+          "details": "Explainable AI for climate change, food safety and security; environmental factors associated with tetrodotoxin contamination.",
+          "meta": "Doctoral supervisor / co-promotor",
+          "group": "Primary doctoral supervision",
+          "id": "cv-05-03"
+        },
+        {
+          "title": "M. Mahdi",
+          "period": "2024–present",
+          "details": "Prediction and cost-effective management of mycotoxin contamination; external validation of food-safety prediction models.",
+          "meta": "Co-promotor",
+          "group": "Primary doctoral supervision",
+          "id": "cv-05-04"
+        },
+        {
+          "id": "cv-05-05",
+          "title": "M. Janse (2019–)",
+          "period": "",
+          "details": "deep learning-based analysis of liquid biopsies and imaging in locally advanced breast cancer.",
+          "meta": "",
+          "group": "Additional supervision"
+        },
+        {
+          "id": "cv-05-06",
+          "title": "M. Ragusi (2019–)",
+          "period": "",
+          "details": "SELECT: stromal enhancement for selection of endocrine therapy.",
+          "meta": "",
+          "group": "Additional supervision"
+        },
+        {
+          "id": "cv-05-07",
+          "title": "H. Chan (2017–2022)",
+          "period": "",
+          "details": "machine learning for prognosis of breast cancer.",
+          "meta": "",
+          "group": "Additional supervision"
+        },
+        {
+          "title": "External assessment of PhD thesis — Candidate: Valentina Corbetta",
+          "period": "2026",
+          "details": "External academic assessment of doctoral work.",
+          "meta": "",
+          "group": "Doctoral assessment",
+          "id": "cv-05-08"
+        },
+        {
+          "title": "Opponent, PhD defence — Radboud UMC, Nijmegen",
+          "period": "2018",
+          "details": "Suzan Vreemann — Breast MRI for screening: evaluation of clinical practice and future perspectives.",
+          "meta": "",
+          "group": "Doctoral assessment",
+          "id": "cv-05-09"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-6",
+      "number": 6,
+      "title": "MSc/BSc and internship supervision",
+      "category": "Supervision",
+      "entries": [
+        {
+          "title": "Anouk van den Hoogen",
+          "period": "2026",
+          "details": "LLM / food-safety project; final presentation in 2026.",
+          "meta": "Secondary supervision",
+          "id": "cv-06-01"
+        },
+        {
+          "title": "Foteini Papadopoulou",
+          "period": "2024–2025",
+          "details": "NLP and LLMs for food safety; subsequent co-authorship on SemEval-2025 work.",
+          "meta": "Secondary / internship supervision",
+          "id": "cv-06-02"
+        },
+        {
+          "title": "X. Arregui",
+          "period": "2022",
+          "details": "Deep Learning in Pediatric Radiotherapy",
+          "meta": "MSc",
+          "id": "cv-06-03"
+        },
+        {
+          "title": "R. Kraaijveld",
+          "period": "2021",
+          "details": "Deep Learning Detection of Metastatic Prostate Lymph Nodes",
+          "meta": "MSc",
+          "id": "cv-06-04"
+        },
+        {
+          "title": "C. Lund",
+          "period": "2021",
+          "details": "Automatic Segmentation of Kidney Cancer on CT",
+          "meta": "MSc",
+          "id": "cv-06-05"
+        },
+        {
+          "title": "D. Kutnar",
+          "period": "2021",
+          "details": "Segmentation of metastatic breast cancer on PET/CT using AI",
+          "meta": "MSc",
+          "id": "cv-06-06"
+        },
+        {
+          "title": "Y. van Zweeden",
+          "period": "2021",
+          "details": "Survival prediction of breast cancer patients using MRI with Radiomics and Deep Learning",
+          "meta": "MSc",
+          "id": "cv-06-07"
+        },
+        {
+          "title": "R. Offenberg",
+          "period": "2020",
+          "details": "Insight in choices of cancer patients using example-based explanations",
+          "meta": "MSc",
+          "id": "cv-06-08"
+        },
+        {
+          "title": "J. Neto dos Santos",
+          "period": "2020",
+          "details": "Explainable AI for breast cancer image analysis",
+          "meta": "MSc",
+          "id": "cv-06-09"
+        },
+        {
+          "title": "A. Liezenga",
+          "period": "2019",
+          "details": "Automatic fault detection in AI systems",
+          "meta": "BSc",
+          "id": "cv-06-10"
+        },
+        {
+          "title": "J. Noothout",
+          "period": "2016",
+          "details": "Automatic Skin Segmentation in Breast DCE-MRI Images",
+          "meta": "MSc",
+          "id": "cv-06-11"
+        },
+        {
+          "title": "S. Pieplenbosch",
+          "period": "2015",
+          "details": "Automatic Segmentation of the Pectoral Muscle in Breast MRI",
+          "meta": "MSc",
+          "id": "cv-06-12"
+        },
+        {
+          "title": "L. Westerhof",
+          "period": "2014",
+          "details": "Asymmetry Analysis of the Blood Vessel Tree in Breast DCE-MRI",
+          "meta": "MSc",
+          "id": "cv-06-13"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-7",
+      "number": 7,
+      "title": "Teaching and training",
+      "category": "Teaching",
+      "entries": [
+        {
+          "title": "Capita Selecta: Deep Learning in Medical Image Analysis",
+          "period": "2020–2022",
+          "details": "Co-created course; lectures, tutorials and group assignments.",
+          "meta": "MSc/PhD, 5 ECTS",
+          "id": "cv-07-01"
+        },
+        {
+          "title": "Bio-informatica",
+          "period": "2020–2022",
+          "details": "Co-created course; lectures and tutorials.",
+          "meta": "BSc, 7.5 ECTS",
+          "id": "cv-07-02"
+        },
+        {
+          "title": "Reproducibility in Clinical Research",
+          "period": "2019",
+          "details": "Invited lecture / teaching session.",
+          "meta": "PhD course",
+          "id": "cv-07-03"
+        },
+        {
+          "title": "Medical Image Formation",
+          "period": "2014–2015",
+          "details": "Tutorial teaching.",
+          "meta": "BSc, 7.5 ECTS",
+          "id": "cv-07-04"
+        },
+        {
+          "title": "AI for food safety / explainable AI training",
+          "period": "2024–2026",
+          "details": "Lectures, workshops and internal/external training for researchers, regulators and practitioners.",
+          "meta": "Professional & academic audiences",
+          "id": "cv-07-05"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-8",
+      "number": 8,
+      "title": "Funded research, acquisition and project leadership",
+      "category": "Funding",
+      "description": "Amounts combine different types of awards, internal allocations and WFSR project shares; they are not personal PI income.",
+      "entries": [
+        {
+          "title": "HANARTH",
+          "period": "2022",
+          "details": "Granted",
+          "meta": "Foundation · €500k",
+          "group": "Funded projects",
+          "id": "cv-08-01"
+        },
+        {
+          "title": "WR Small Innovative Project (SIP)",
+          "period": "2022",
+          "details": "Granted; project lead",
+          "meta": "Internal WR · €22.5k",
+          "group": "Funded projects",
+          "id": "cv-08-02"
+        },
+        {
+          "title": "ECO-READY co-financing",
+          "period": "2023",
+          "details": "Granted; interim WP leadership / WFSR leadership",
+          "meta": "EU / WR · €979k",
+          "group": "Funded projects",
+          "id": "cv-08-03"
+        },
+        {
+          "title": "EFRA co-financing",
+          "period": "2023",
+          "details": "Granted; WFSR project leadership / interim WP leadership",
+          "meta": "EU / WR · €349k",
+          "group": "Funded projects",
+          "id": "cv-08-04"
+        },
+        {
+          "title": "Porticus",
+          "period": "2023",
+          "details": "Granted",
+          "meta": "Foundation · €132k",
+          "group": "Funded projects",
+          "id": "cv-08-05"
+        },
+        {
+          "title": "SIP — automated bone-fragment detection",
+          "period": "2023",
+          "details": "Granted; project lead",
+          "meta": "Internal WR · €22.5k",
+          "group": "Funded projects",
+          "id": "cv-08-06"
+        },
+        {
+          "title": "WCDS / HRMS data infrastructure",
+          "period": "2023",
+          "details": "Granted",
+          "meta": "Internal WUR/WR · €120k",
+          "group": "Funded projects",
+          "id": "cv-08-07"
+        },
+        {
+          "title": "Porticus",
+          "period": "2024",
+          "details": "Granted",
+          "meta": "Foundation · €2.5M",
+          "group": "Funded projects",
+          "id": "cv-08-08"
+        },
+        {
+          "title": "SIP — colony counter / AI imaging",
+          "period": "2024",
+          "details": "Granted; project lead",
+          "meta": "Internal WR · €22.5k",
+          "group": "Funded projects",
+          "id": "cv-08-09"
+        },
+        {
+          "title": "FAO — AI for Food Safety",
+          "period": "2024",
+          "details": "Granted; scientific lead / co-author",
+          "meta": "International organisation · €25k",
+          "group": "Funded projects",
+          "id": "cv-08-10"
+        },
+        {
+          "title": "KB AI & Robotics",
+          "period": "2024",
+          "details": "Granted",
+          "meta": "Internal WR · €160k",
+          "group": "Funded projects",
+          "id": "cv-08-11"
+        },
+        {
+          "title": "KB AI for HRMS",
+          "period": "2024",
+          "details": "Granted; foundation-model research line",
+          "meta": "Internal WR · €400k",
+          "group": "Funded projects",
+          "id": "cv-08-12"
+        },
+        {
+          "title": "SMART FARM",
+          "period": "2025",
+          "details": "Granted; consortium total approx. €3.0M",
+          "meta": "PPS · €560k WFSR share",
+          "group": "Funded projects",
+          "id": "cv-08-13"
+        },
+        {
+          "title": "ENRESFOOD",
+          "period": "2025",
+          "details": "Granted; consortium total approx. €1.4M",
+          "meta": "EU / FutureFoodS · €400k WFSR share",
+          "group": "Funded projects",
+          "id": "cv-08-14"
+        },
+        {
+          "title": "PARC",
+          "period": "2026",
+          "details": "Granted",
+          "meta": "EU · €160k",
+          "group": "Funded projects",
+          "id": "cv-08-15"
+        },
+        {
+          "title": "FoodData4All",
+          "period": "2026",
+          "details": "In progress; consortium total approx. €4.0M",
+          "meta": "EU proposal · €600k WFSR share",
+          "group": "Funded projects",
+          "id": "cv-08-16"
+        },
+        {
+          "title": "UMC Utrecht Talent programme; European Society of Radiology ECR grant (€2k).",
+          "period": "2022",
+          "details": "",
+          "meta": "Earlier awards",
+          "id": "cv-08-17"
+        },
+        {
+          "title": "EUSOBI Young Researcher Grant (€5k); Applied Data Science Utrecht University (€5k).",
+          "period": "2021",
+          "details": "",
+          "meta": "Earlier awards",
+          "id": "cv-08-18"
+        },
+        {
+          "title": "Applied Data Science Utrecht University (€5k).",
+          "period": "2020",
+          "details": "",
+          "meta": "Earlier awards",
+          "id": "cv-08-19"
+        },
+        {
+          "title": "ISMRM-SBI-EUSOBI grant (€2k); NVIDIA Titan XP award (~€1k).",
+          "period": "2018",
+          "details": "",
+          "meta": "Earlier awards",
+          "id": "cv-08-20"
+        },
+        {
+          "title": "ISMRM stipend.",
+          "period": "2017",
+          "details": "",
+          "meta": "Earlier awards",
+          "id": "cv-08-21"
+        },
+        {
+          "title": "René Vogels grant (€4k).",
+          "period": "2016",
+          "details": "",
+          "meta": "Earlier awards",
+          "id": "cv-08-22"
+        },
+        {
+          "title": "ImagO Day award.",
+          "period": "2015",
+          "details": "",
+          "meta": "Earlier awards",
+          "id": "cv-08-23"
+        },
+        {
+          "title": "Dondersfonds (€1k); FEB grant (€1k).",
+          "period": "2011",
+          "details": "",
+          "meta": "Earlier awards",
+          "id": "cv-08-24"
+        },
+        {
+          "title": "Bèta grant (€3k).",
+          "period": "2009",
+          "details": "",
+          "meta": "Earlier awards",
+          "id": "cv-08-25"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-9",
+      "number": 9,
+      "title": "Major research programmes, projects and data infrastructures",
+      "category": "Projects",
+      "entries": [
+        {
+          "title": "HOLiFOOD",
+          "period": "",
+          "details": "Holistic AI and emerging-risk framework linking monitoring data, drivers of change, advanced detection and stakeholder input.",
+          "meta": "Work Package leader & deputy coordinator",
+          "id": "cv-09-01"
+        },
+        {
+          "title": "EFRA — Extreme Food Risk Analytics",
+          "period": "",
+          "details": "Federated learning, extreme data mining and AI-supported food-risk prevention.",
+          "meta": "WFSR project leader / interim WP leader; PhD supervision",
+          "id": "cv-09-02"
+        },
+        {
+          "title": "ECO-READY",
+          "period": "",
+          "details": "Food-system observatory and AI-supported analysis of climate- and crisis-related food risks.",
+          "meta": "Interim WP leader / WFSR leadership",
+          "id": "cv-09-03"
+        },
+        {
+          "title": "CHEFS",
+          "period": "",
+          "details": "CompreHensive European Food Safety database: 392 million analytical results from >15.2 million samples and >4,000 food types, harmonised from approximately 1,000 EFSA data files.",
+          "meta": "Scientific lead / co-author",
+          "id": "cv-09-04",
+          "links": [
+            {
+              "label": "Published data article",
+              "url": "https://doi.org/10.1016/j.foodcont.2025.111816"
+            }
+          ]
+        },
+        {
+          "title": "Weak Signal Miner",
+          "period": "",
+          "details": "Open-source AI pipeline for regulatory foresight using micro-topic emergence scoring and optional LLM interpretation.",
+          "meta": "Scientific collaboration / co-author",
+          "id": "cv-09-05"
+        },
+        {
+          "title": "AI for LC–HRMS / foundation models",
+          "period": "",
+          "details": "Foundation-model and transfer-learning programme for high-resolution mass-spectrometry data; links analytical chemistry and representation learning.",
+          "meta": "Research-line leadership / funding lead",
+          "id": "cv-09-06"
+        },
+        {
+          "title": "Prioritization of signals from news articles",
+          "period": "",
+          "details": "Active-learning / human-in-the-loop prioritisation of global food-safety news for emerging-risk signalling.",
+          "meta": "Project leader, 2025",
+          "id": "cv-09-07"
+        },
+        {
+          "title": "Food safety in a circular water and food system",
+          "period": "",
+          "details": "Data-driven assessment of food-safety implications in circular water and food systems.",
+          "meta": "Project leader, 2025",
+          "id": "cv-09-08"
+        },
+        {
+          "title": "SIP AI imaging portfolio",
+          "period": "",
+          "details": "Explainable AI, automated bone-fragment recognition, colony counting and foundation-model based microbiological image analysis.",
+          "meta": "Project leader",
+          "id": "cv-09-09"
+        },
+        {
+          "title": "WOT-AI and Limietenregister / Normenregister",
+          "period": "",
+          "details": "AI and data-science capability for statutory tasks and NVWA/WFSR information infrastructure.",
+          "meta": "Programme and project development",
+          "id": "cv-09-10"
+        },
+        {
+          "title": "WUR/WR Foundation Models programme",
+          "period": "",
+          "details": "Cross-WR programme connecting foundation-model expertise and domain research.",
+          "meta": "Strategic programme development, 2026",
+          "id": "cv-09-11"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-10",
+      "number": 10,
+      "title": "Scientific advisory roles, governance and service",
+      "category": "Service",
+      "entries": [
+        {
+          "title": "EFSA Advisory Group on Data — Innovation subgroup",
+          "period": "2025–present",
+          "details": "Member; advice on data/AI innovation for food-safety risk assessment.",
+          "meta": "",
+          "id": "cv-10-01"
+        },
+        {
+          "title": "Wageningen Data Competence Center — Advisory Group",
+          "period": "2022–present",
+          "details": "Member; cross-WUR data/digital research infrastructure and strategy.",
+          "meta": "",
+          "id": "cv-10-02"
+        },
+        {
+          "title": "Knowledge Base Data Driven & High Tech",
+          "period": "2022–present",
+          "details": "Programme / governance role; SIP project leadership.",
+          "meta": "",
+          "id": "cv-10-03"
+        },
+        {
+          "title": "MICCAI workshop: Interpretability of Machine Intelligence in Medical Image Computing",
+          "period": "2022",
+          "details": "Programme Committee.",
+          "meta": "",
+          "id": "cv-10-04"
+        },
+        {
+          "title": "Applied Data Science Imaging, Utrecht University",
+          "period": "2022–",
+          "details": "Scientific community / meeting organisation.",
+          "meta": "",
+          "id": "cv-10-05"
+        },
+        {
+          "title": "Medical Image Analysis meetings, UMC Utrecht",
+          "period": "2020–2022",
+          "details": "Scientific chairing / organisation.",
+          "meta": "",
+          "id": "cv-10-06"
+        },
+        {
+          "title": "Image Processing and Machine Learning meetings, UMC Utrecht",
+          "period": "2019–2022",
+          "details": "Scientific chairing / organisation.",
+          "meta": "",
+          "id": "cv-10-07"
+        },
+        {
+          "title": "Colloquia Medical Imaging, UMC Utrecht",
+          "period": "2018–2022",
+          "details": "Scientific organisation.",
+          "meta": "",
+          "id": "cv-10-08"
+        },
+        {
+          "title": "Scientific Symposia, Graduate School Medical Imaging",
+          "period": "2014–2017",
+          "details": "Organisation.",
+          "meta": "",
+          "id": "cv-10-09"
+        },
+        {
+          "title": "PhD Days, Utrecht University",
+          "period": "2015–2016",
+          "details": "Organisation.",
+          "meta": "",
+          "id": "cv-10-10"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-11",
+      "number": 11,
+      "title": "Invited keynotes, lectures and selected scientific presentations",
+      "category": "Talks",
+      "entries": [
+        {
+          "title": "ECVPH Scientific Conference, Munich",
+          "period": "2026",
+          "details": "Invited speaker / keynote programme — Leveraging AI for Veterinary Public Health.",
+          "meta": "",
+          "id": "cv-11-01"
+        },
+        {
+          "title": "European Pesticide Residue Workshop (EPRW), Rotterdam",
+          "period": "2026",
+          "details": "Invited speaker, Special Session on Artificial Intelligence and Pesticide Residues — AI in food safety.",
+          "meta": "",
+          "id": "cv-11-02"
+        },
+        {
+          "title": "HOLiFOOD & FoodSafeR final event",
+          "period": "2026",
+          "details": "AI Foundation Models for Food Safety Risks.",
+          "meta": "",
+          "id": "cv-11-03"
+        },
+        {
+          "title": "FoodProcess Seminar",
+          "period": "2026",
+          "details": "AI & foundation models voor voedselveiligheid.",
+          "meta": "",
+          "id": "cv-11-04"
+        },
+        {
+          "title": "Symposium NVT-RA",
+          "period": "2026",
+          "details": "Scientific presentation / invited contribution.",
+          "meta": "",
+          "id": "cv-11-05"
+        },
+        {
+          "title": "AI4RSE Workshop, Wageningen",
+          "period": "2025",
+          "details": "Keynote — AI for Food Safety.",
+          "meta": "",
+          "id": "cv-11-06"
+        },
+        {
+          "title": "29th Conference on Food Microbiology, Brussels",
+          "period": "2025",
+          "details": "Keynote / invited presentation — AI for food safety; overview of artificial intelligence in food safety.",
+          "meta": "",
+          "id": "cv-11-07"
+        },
+        {
+          "title": "GQFSW",
+          "period": "2025",
+          "details": "Keynote — Artificial Intelligence for food/feed safety.",
+          "meta": "",
+          "id": "cv-11-08"
+        },
+        {
+          "title": "Symposium Analyse van Chemische en Microbiologische Contaminanten",
+          "period": "2025",
+          "details": "Artificial Intelligence voor voedselveiligheid.",
+          "meta": "",
+          "id": "cv-11-09"
+        },
+        {
+          "title": "HOLiFOOD Food Safety Webinar",
+          "period": "2025",
+          "details": "AI for emerging food safety risks: a holistic approach.",
+          "meta": "",
+          "id": "cv-11-10"
+        },
+        {
+          "title": "Campus Connect",
+          "period": "2025",
+          "details": "AI and Digital Twins in Food Safety & Innovation.",
+          "meta": "",
+          "id": "cv-11-11"
+        },
+        {
+          "title": "Using AI for Food Risk Prevention Workshop, Amsterdam",
+          "period": "2025",
+          "details": "Invited workshop contribution on AI for proactive food-safety management.",
+          "meta": "",
+          "id": "cv-11-12"
+        },
+        {
+          "title": "Academic seminar / webinar",
+          "period": "2025",
+          "details": "Explainable AI.",
+          "meta": "",
+          "id": "cv-11-13"
+        },
+        {
+          "title": "RAFA, Prague",
+          "period": "2024",
+          "details": "Invited lecture — AI in food safety: from methodology to applications.",
+          "meta": "",
+          "id": "cv-11-14"
+        },
+        {
+          "title": "EFSA Symposium on Data Readiness for Artificial Intelligence, Parma",
+          "period": "2024",
+          "details": "Invited lecture — Explainable Artificial Intelligence for Food Safety / explainable and open science session.",
+          "meta": "",
+          "id": "cv-11-15"
+        },
+        {
+          "title": "VMT Food Safety Event, Amersfoort",
+          "period": "2024",
+          "details": "Keynote — AI en de risico’s in de voedselketen.",
+          "meta": "",
+          "id": "cv-11-16"
+        },
+        {
+          "title": "GroentenFruit Huis Congress",
+          "period": "2024",
+          "details": "Workshop — Artificial Intelligence (AI) en voedselveiligheid.",
+          "meta": "",
+          "id": "cv-11-17"
+        },
+        {
+          "title": "BIG team guest lecture",
+          "period": "2024",
+          "details": "Extracting knowledge graphs from unstructured text for evolution analysis.",
+          "meta": "",
+          "id": "cv-11-18"
+        },
+        {
+          "title": "EFRA Summit",
+          "period": "2023",
+          "details": "Keynote and panel contribution; federated / AI-enabled food-risk analytics.",
+          "meta": "",
+          "id": "cv-11-19"
+        },
+        {
+          "title": "European Conference of Radiology (ECR) AIX",
+          "period": "2022",
+          "details": "Keynote — Explainable AI.",
+          "meta": "",
+          "id": "cv-11-20"
+        },
+        {
+          "title": "European Conference of Radiology",
+          "period": "2022",
+          "details": "Refresher Course — Artificial intelligence trustworthiness.",
+          "meta": "",
+          "id": "cv-11-21"
+        },
+        {
+          "title": "VVSOR Symposium",
+          "period": "2022",
+          "details": "Invited talk — Transparent Machine Learning.",
+          "meta": "",
+          "id": "cv-11-22"
+        },
+        {
+          "title": "Utrecht University Conference: Data Science & AI for Society",
+          "period": "2022",
+          "details": "Invited presentation.",
+          "meta": "",
+          "id": "cv-11-23"
+        },
+        {
+          "title": "EUSOBI Annual Scientific Meeting",
+          "period": "2022",
+          "details": "Invited presentation.",
+          "meta": "",
+          "id": "cv-11-24"
+        },
+        {
+          "title": "Nola Hylton Lab, UCSF, San Francisco",
+          "period": "2019",
+          "details": "Invited research seminar.",
+          "meta": "",
+          "id": "cv-11-25"
+        },
+        {
+          "title": "ISMRM-SBI-EUSOBI Workshop on Breast MRI, Las Vegas",
+          "period": "2018",
+          "details": "Invited talk and session chair.",
+          "meta": "",
+          "id": "cv-11-26"
+        },
+        {
+          "title": "Memorial Sloan Kettering Cancer Center, New York",
+          "period": "2016",
+          "details": "Invited research presentation.",
+          "meta": "",
+          "id": "cv-11-27"
+        },
+        {
+          "title": "Medical Imaging Symposium for PhD Students, Netherlands",
+          "period": "2016",
+          "details": "Invited presentation.",
+          "meta": "",
+          "id": "cv-11-28"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-12",
+      "number": 12,
+      "title": "Conference leadership and scientific community building",
+      "category": "Community",
+      "entries": [
+        {
+          "title": "Initiator and co-organiser — AI for Food Safety Conference (AIFS) — Wageningen Food Safety Research / international community",
+          "period": "2026–2027",
+          "details": "Established a dedicated technical conference at the intersection of AI and food safety, with full-paper submissions, peer review and oral/poster tracks. First conference: 8–9 April 2027, Ede, The Netherlands.",
+          "meta": "",
+          "id": "cv-12-01",
+          "links": [
+            {
+              "label": "AIFS 2027",
+              "url": "https://aifsconference.io/"
+            }
+          ]
+        },
+        {
+          "title": "Workshop / session chair — Smart data handling and AI in food analysis — RAFA, Prague",
+          "period": "2024",
+          "details": "Chaired an AI/data-focused session alongside invited scientific presentation.",
+          "meta": "",
+          "id": "cv-12-02"
+        },
+        {
+          "title": "Session chair — Deep Learning: Lesions and Pathologies — SPIE Medical Imaging",
+          "period": "2019",
+          "details": "Scientific session chair.",
+          "meta": "",
+          "id": "cv-12-03"
+        },
+        {
+          "title": "Session chair — AI in breast MRI — ISMRM-SBI-EUSOBI Workshop, Las Vegas",
+          "period": "2018",
+          "details": "Scientific session chair.",
+          "meta": "",
+          "id": "cv-12-04"
+        },
+        {
+          "title": "Scientific symposium organisation — Graduate School Medical Imaging / Utrecht University",
+          "period": "2014–2017",
+          "details": "Organisation of scientific symposia and PhD-community activities.",
+          "meta": "",
+          "id": "cv-12-05"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-13",
+      "number": 13,
+      "title": "Selected peer-reviewed publications and research outputs",
+      "category": "Publications",
+      "description": "Selected research outputs from the long CV; the full record is maintained on Research@WUR.",
+      "entries": [
+        {
+          "id": "cv-13-01",
+          "title": "van Meer, F., Takeuchi, M., Ochieng, P.E., Tavelli, R., Gerssen, A., et al., van der Velden, B.H.M. (2026). Artificial intelligence in food safety. npj Science of Food, 10, 294.",
+          "period": "2026",
+          "details": "",
+          "meta": "",
+          "group": "AI, data science and food safety",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.1038/s41538-026-00925-1"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-02",
+          "title": "Menning, A., Farkas, Z., Vribék, K., & van der Velden, B.H.M. (2026). Enhancing regulatory foresight through weak signal mining: An AI-based micro-topic emergence scoring approach. Array, 31, 101126.",
+          "period": "2026",
+          "details": "",
+          "meta": "",
+          "group": "AI, data science and food safety",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.1016/j.array.2026.101126"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-03",
+          "title": "Carnoli, A.J., Padilla-Gonzalez, F., van den Bulk, L.M., Korporaal, D., Alewijn, M., Blokland, M.H., & van der Velden, B.H.M. (2026). Foundation Models for Liquid Chromatography–High-Resolution Mass Spectrometry: A New Era beyond Labeled Datasets. Analytical Chemistry, 98(31), 22586–22594.",
+          "period": "2026",
+          "details": "",
+          "meta": "",
+          "group": "AI, data science and food safety",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.1021/acs.analchem.6c01825"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-04",
+          "title": "Kızılilsoley, N., van Meer, F., Mutlu, O., Hoenderdaal, W., Hobé, R., Mu, W., Gerssen, A., van der Fels-Klerx, I., Jóźwiak, Á., Manikas, I., Hürriyetoğlu, A., & van der Velden, B. (2026). Food safety trends across Europe: insights from the 392-million-entry CompreHensive European Food Safety (CHEFS) database. Food Control, 182, 111816.",
+          "period": "2026",
+          "details": "",
+          "meta": "",
+          "group": "AI, data science and food safety",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.1016/j.foodcont.2025.111816"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-05",
+          "title": "Özen, N., Papadopoulou, F., Mutlu, O., Öztürk, B., Mu, W., van den Bulk, L., van der Velden, B., & Hürriyetoğlu, A. (2026). Natural language processing in food safety research. Future Foods, 101152.",
+          "period": "2026",
+          "details": "",
+          "meta": "",
+          "group": "AI, data science and food safety",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.1016/j.fufo.2026.101152"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-06",
+          "title": "Korporaal, D., de Kruijf, P., Litjens, R.H.G.M., & van der Velden, B.H.M. (2026). Colony Grounded SAM2: Zero-shot detection and segmentation of bacterial colonies using foundation models. Proceedings of SPIE Medical Imaging 2026, 139281A.",
+          "period": "2026",
+          "details": "",
+          "meta": "",
+          "group": "AI, data science and food safety"
+        },
+        {
+          "id": "cv-13-07",
+          "title": "Koops, A., van der Velden, B., Fendor, Z., Schoppema, T., Hofstra, N., Peters, S., van der Zaan, B., Leenen, I., Pijcke, G., & de Jong, A. (2026). Voedselveiligheid in een circulair water- en voedselsysteem. WFSR Report 2026.007.",
+          "period": "2026",
+          "details": "",
+          "meta": "",
+          "group": "AI, data science and food safety",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.18174/714727"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-08",
+          "title": "van Meer, F., van der Velden, B.H.M., & Takeuchi, M. (2025). Artificial intelligence for food safety: A literature synthesis, real-world applications and regulatory frameworks. FAO.",
+          "period": "2025",
+          "details": "",
+          "meta": "",
+          "group": "AI, data science and food safety",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.4060/cd7242en"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-09",
+          "title": "Fendor, Z., van der Velden, B.H.M., Wang, X., Carnoli, A.J., Mutlu, O., & Hürriyetoğlu, A. (2025). Federated learning in food research. Journal of Agriculture and Food Research, 23, 102238.",
+          "period": "2025",
+          "details": "",
+          "meta": "",
+          "group": "AI, data science and food safety",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.1016/j.jafr.2025.102238"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-10",
+          "title": "Papadopoulou, F., Mutlu, O., Özen, N., van der Velden, B.H.M., Hendrickx, I., & Hürriyetoğlu, A. (2025). BrightCookies at SemEval-2025 Task 9: Exploring Data Augmentation for Food Hazard Classification. Proceedings of SemEval-2025, 914–930.",
+          "period": "2025",
+          "details": "",
+          "meta": "",
+          "group": "AI, data science and food safety"
+        },
+        {
+          "id": "cv-13-11",
+          "title": "Mutlu, O., van der Velden, B.H.M., Hürriyetoğlu, A., & Fensel, A. (2025). Explainable Artificial Intelligence for Deep Learning in Food. Research Square (preprint; manuscript under journal revision).",
+          "period": "2025",
+          "details": "",
+          "meta": "",
+          "group": "AI, data science and food safety"
+        },
+        {
+          "id": "cv-13-12",
+          "title": "European Food Safety Authority & van der Velden, B.H.M. (2025). Symposium on Data Readiness for Artificial Intelligence. EFSA Supporting Publications, 22(4), 9434E.",
+          "period": "2025",
+          "details": "",
+          "meta": "",
+          "group": "AI, data science and food safety",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.2903/sp.efsa.2025.EN-9434"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-13",
+          "title": "van der Velden, B.H.M. (2024). Explainable AI: current status and future potential. European Radiology, 34, 1187–1189.",
+          "period": "2024",
+          "details": "",
+          "meta": "",
+          "group": "AI, data science and food safety",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.1007/s00330-023-10121-4"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-14",
+          "title": "van der Velden, B.H.M., Kuijf, H.J., Gilhuijs, K.G.A., et al. (2022). Explainable artificial intelligence (XAI) in deep learning-based medical image analysis. Medical Image Analysis, 79, 102470.",
+          "period": "2022",
+          "details": "",
+          "meta": "",
+          "group": "Foundational work in explainable AI and medical imaging",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.1016/j.media.2022.102470"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-15",
+          "title": "Lund, C.B. & van der Velden, B.H.M. (2021). Leveraging clinical characteristics for improved deep learning-based kidney tumor segmentation on CT. KiTS21 Challenge, MICCAI.",
+          "period": "2021",
+          "details": "",
+          "meta": "",
+          "group": "Foundational work in explainable AI and medical imaging"
+        },
+        {
+          "id": "cv-13-16",
+          "title": "van der Velden, B.H.M., Janse, M.H.A., Ragusi, M.A.A., et al. (2020). Volumetric breast density estimation on MRI using explainable deep learning regression. Scientific Reports, 10.",
+          "period": "2020",
+          "details": "",
+          "meta": "",
+          "group": "Foundational work in explainable AI and medical imaging",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.1038/s41598-020-75167-6"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-17",
+          "title": "Bismeijer, T., van der Velden, B.H.M., Canisius, S., et al. (2020). Radiogenomic analysis of breast cancer by linking MRI phenotypes with tumor gene expression. Radiology, 296(2), 277–287.",
+          "period": "2020",
+          "details": "",
+          "meta": "",
+          "group": "Foundational work in explainable AI and medical imaging",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.1148/radiol.2020191453"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-18",
+          "title": "van der Velden, B.H.M., Elias, S.G., Bismeijer, T., et al. (2017). Complementary Value of Contralateral Parenchymal Enhancement on DCE-MRI to Prognostic Models and Molecular Assays in High-risk ER+/HER2− Breast Cancer. Clinical Cancer Research, 23(21), 6505–6515.",
+          "period": "2017",
+          "details": "",
+          "meta": "",
+          "group": "Foundational work in explainable AI and medical imaging",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.1158/1078-0432.CCR-17-0176"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-19",
+          "title": "van der Velden, B.H.M., Dmitriev, I., Loo, C.E., et al. (2015). Association between parenchymal enhancement of the contralateral breast in dynamic contrast-enhanced MR imaging and outcome of patients with unilateral invasive breast cancer. Radiology, 276(3), 675–685.",
+          "period": "2015",
+          "details": "",
+          "meta": "",
+          "group": "Foundational work in explainable AI and medical imaging",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.1148/radiol.15142192"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-20",
+          "title": "Ragusi, M.A.A., et al., van der Velden, B.H.M. (2023). Long-term Survival in Breast Cancer Patients Is Associated with Contralateral Parenchymal Enhancement at MRI: Outcomes of the SELECT Study. Radiology, 307(4), e221922.",
+          "period": "2023",
+          "details": "",
+          "meta": "",
+          "group": "Foundational work in explainable AI and medical imaging",
+          "links": [
+            {
+              "label": "DOI",
+              "url": "https://doi.org/10.1148/radiol.221922"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv-section-14",
+      "number": 14,
+      "title": "Open science, datasets and research infrastructure",
+      "category": "Open science",
+      "entries": [
+        {
+          "title": "CHEFS",
+          "period": "",
+          "details": "CompreHensive European Food Safety database. Harmonised resource containing 392 million analytical results from official European food-safety monitoring; designed for trend analysis, risk prediction and early-warning research.",
+          "meta": "",
+          "id": "cv-14-01",
+          "links": [
+            {
+              "label": "Food Control paper",
+              "url": "https://doi.org/10.1016/j.foodcont.2025.111816"
+            }
+          ]
+        },
+        {
+          "title": "XAI4TTX (2026)",
+          "period": "",
+          "details": "open dataset supporting explainable-AI research on tetrodotoxin contamination in bivalve mollusks. DOI: 10.5281/zenodo.18958220.",
+          "meta": "",
+          "id": "cv-14-02",
+          "links": [
+            {
+              "label": "Dataset on Zenodo",
+              "url": "https://doi.org/10.5281/zenodo.18958220"
+            }
+          ]
+        },
+        {
+          "title": "Weak Signal Miner",
+          "period": "",
+          "details": "open-source pipeline for identifying emerging micro-topics and weak signals in large text corpora for regulatory foresight.",
+          "meta": "",
+          "id": "cv-14-03"
+        },
+        {
+          "title": "LC–HRMS foundation-model research infrastructure",
+          "period": "",
+          "details": "large-scale unlabeled analytical data and benchmarking workflows for representation learning, transfer learning and downstream food-safety tasks.",
+          "meta": "",
+          "id": "cv-14-04"
+        },
+        {
+          "title": "AI-enhanced news signalling",
+          "period": "",
+          "details": "active-learning / human-in-the-loop workflow for prioritising food-safety news and supporting expert emerging-risk identification.",
+          "meta": "",
+          "id": "cv-14-05"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-15",
+      "number": 15,
+      "title": "Peer review and scientific assessment",
+      "category": "Service",
+      "entries": [
+        {
+          "title": "Grant review: Hanarth Fonds (2022); Dutch Cancer Society / KWF Round-I (2020).",
+          "period": "",
+          "details": "",
+          "meta": "",
+          "id": "cv-15-01"
+        },
+        {
+          "title": "Journal peer review (selected, historical): Artificial Intelligence in Medicine; Artificial Intelligence Review; BMC Medical Imaging; BMC Cancer; European Journal of Radiology; European Radiology; IEEE Journal of Biomedical and Health Informatics; IEEE Transactions on Image Processing; IEEE Transactions on Pattern Analysis and Machine Intelligence; Journal of Magnetic Resonance Imaging; Scientific Reports; Medical Image Analysis; Physics in Medicine and Biology.",
+          "period": "",
+          "details": "",
+          "meta": "",
+          "id": "cv-15-02"
+        },
+        {
+          "title": "Programme Committee: MICCAI workshop Interpretability of Machine Intelligence in Medical Image Computing (2022).",
+          "period": "",
+          "details": "",
+          "meta": "",
+          "id": "cv-15-03"
+        },
+        {
+          "title": "External PhD thesis assessment / defence participation: Valentina Corbetta (2026); Suzan Vreemann, Radboud UMC (opponent, 2018).",
+          "period": "",
+          "details": "",
+          "meta": "",
+          "id": "cv-15-04"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-16",
+      "number": 16,
+      "title": "Media, professional outreach and public engagement",
+      "category": "Media",
+      "entries": [
+        {
+          "title": "Food Safety Magazine",
+          "period": "2026",
+          "details": "Coverage and interview contributions on AIFS and on AI applications in food safety; international professional audience.",
+          "meta": "",
+          "id": "cv-16-01"
+        },
+        {
+          "title": "BNR De Technoloog",
+          "period": "2025",
+          "details": "Podcast guest — Hoe AI weet of je eten veilig is.",
+          "meta": "",
+          "id": "cv-16-02",
+          "links": [
+            {
+              "label": "Listen to the episode",
+              "url": "https://omny.fm/shows/de-technoloog/technoloog-473-bas-van-der-velden-4dec"
+            },
+            {
+              "label": "Watch on YouTube",
+              "url": "https://www.youtube.com/watch?v=-uE88IJbTFk"
+            }
+          ]
+        },
+        {
+          "title": "Wageningen / KennisOnline",
+          "period": "2025",
+          "details": "AI hoeft geen zwarte doos te blijven — feature on explainable AI and responsible AI for food safety.",
+          "meta": "",
+          "id": "cv-16-03"
+        },
+        {
+          "title": "CHEFS media coverage",
+          "period": "2025",
+          "details": "Miljoenen Europese analyseresultaten voor voedselveiligheid op één rij; public communication around CHEFS.",
+          "meta": "",
+          "id": "cv-16-04"
+        },
+        {
+          "title": "VMT",
+          "period": "2024",
+          "details": "Podcast on AI and emerging food-safety risks; Food Safety Event coverage.",
+          "meta": "",
+          "id": "cv-16-05"
+        },
+        {
+          "title": "Food to go Podcast (UK)",
+          "period": "2024",
+          "details": "Applications of AI.",
+          "meta": "",
+          "id": "cv-16-06"
+        },
+        {
+          "title": "Food Quality & Safety",
+          "period": "2023",
+          "details": "Cover story / expert interview — Harnessing the Power of AI: Data sharing and machine learning are transforming food safety.",
+          "meta": "",
+          "id": "cv-16-07"
+        },
+        {
+          "title": "Medical-imaging media",
+          "period": "2019–2021",
+          "details": "Coverage in AuntMinnie, AuntMinnie Europe, Applied Radiology and related outlets.",
+          "meta": "",
+          "id": "cv-16-08"
+        }
+      ]
+    },
+    {
+      "id": "cv-section-17",
+      "number": 17,
+      "title": "Scheduled engagements and forward scientific community activities",
+      "category": "Upcoming",
+      "description": "Forward-looking entries are recorded as planned engagements in the source CV.",
+      "entries": [
+        {
+          "title": "AI for Food Safety Conference (AIFS), 8–9 April 2027, Ede",
+          "period": "",
+          "details": "initiator and organising committee member.",
+          "meta": "",
+          "id": "cv-17-01",
+          "links": [
+            {
+              "label": "AIFS 2027",
+              "url": "https://aifsconference.io/"
+            }
+          ]
+        },
+        {
+          "title": "EFSA Advisory Group on Data Symposium on People Readiness for AI, 30 November–1 December 2026, Dublin",
+          "period": "",
+          "details": "AGoD participation.",
+          "meta": "",
+          "id": "cv-17-02"
+        },
+        {
+          "title": "WUR Model & Data Day 2026",
+          "period": "",
+          "details": "scheduled scientific contribution / session.",
+          "meta": "",
+          "id": "cv-17-03"
+        },
+        {
+          "title": "NVVT symposium, November 2026",
+          "period": "",
+          "details": "scheduled scientific contribution.",
+          "meta": "",
+          "id": "cv-17-04"
+        }
+      ]
+    }
+  ]
+}

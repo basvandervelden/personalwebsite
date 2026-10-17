@@ -72,3 +72,7 @@ Only once the site is ready should `basvandervelden.com` be configured as the Gi
 - Light/dark mode preference is stored locally.
 - Fonts are loaded from Google Fonts, with system fallbacks.
 - CHEFS's 392 million analytical results refer to the published study.
+
+## Complete academic CV
+
+The full long-CV source has been converted into an interactive page at [Full academic CV](https://basvandervelden.github.io/personalwebsite/#/cv), with 17 sections, search, filters, compact view, printable view, DOI links, media support and a section table of contents. Edit the data in `src/cv-data.json` and see [CV_EDITING.md](./CV_EDITING.md) for a short guide.
