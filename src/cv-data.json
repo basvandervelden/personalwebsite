@@ -1,7 +1,7 @@
 {
   "updated": "October 2026",
   "title": "Long academic CV",
-  "sourceNote": "Adapted from Bas_van_der_Velden_Long_CV_October_2026.docx, with the September 2026 Principal Scientist appointment added. Review entries before public use. The publication section is a selected list from the long CV, not a complete bibliography.",
+  "sourceNote": "Long academic CV of October 2026, supplemented by calendar-supported activity inventory (2022–2027). The publication list is a selection rather than complete bibliography; view Research@WUR for the complete record. Calendar appointments not proving a speaking/advisory role are held for verification.",
   "profile": {
     "name": "Bas van der Velden",
     "role": "Principal Scientist · Head of Data Science & AI",
@@ -16,6 +16,10 @@
       {
         "label": "GitHub",
         "url": "https://github.com/basvandervelden"
+      },
+      {
+        "label": "OpenAlex indexed works",
+        "url": "https://openalex.org/authors/A5029655930"
       }
     ]
   },
@@ -1055,6 +1059,14 @@
               "url": "https://research.wur.nl/en/activities/artifici%C3%ABle-intelligentie-in-de-voedselveiligheid-een-overzicht/"
             }
           ]
+        },
+        {
+          "id": "cv-agenda-2024-inspections",
+          "title": "Symposium Modern Inspections with New Technology — Alignment presentation and poster",
+          "period": "2024-01-31",
+          "details": "Calendar records a presentation and poster at the symposium. The precise presentation title and the hosting organisation remain to be confirmed.",
+          "meta": "Conference presentation & poster · calendar-confirmed",
+          "links": []
         }
       ]
     },
@@ -1112,7 +1124,7 @@
       "number": 13,
       "title": "Selected peer-reviewed publications and research outputs",
       "category": "Publications",
-      "description": "Selected research outputs from the long CV; the full record is maintained on Research@WUR.",
+      "description": "Selected papers from the long CV. This is not the complete bibliography: Research@WUR lists 60 research outputs, while OpenAlex indexes additional versions and publication types. Use the links below for the primary author records.",
       "entries": [
         {
           "id": "cv-13-01",
@@ -1534,6 +1546,14 @@
           "details": "Coverage in AuntMinnie, AuntMinnie Europe, Applied Radiology and related outlets.",
           "meta": "",
           "id": "cv-16-08"
+        },
+        {
+          "id": "cv-agenda-2024-newfood",
+          "title": "New Food — Applications of AI Podcast",
+          "period": "2024-01-30",
+          "details": "Podcast appearance concerning applications of artificial intelligence. Working title from the calendar; publication link still to be added.",
+          "meta": "Podcast · date from agenda",
+          "links": []
         }
       ]
     },
