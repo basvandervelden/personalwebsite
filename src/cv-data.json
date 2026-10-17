@@ -882,7 +882,13 @@
           "period": "2025",
           "details": "Keynote / invited presentation — AI for food safety; overview of artificial intelligence in food safety.",
           "meta": "",
-          "id": "cv-11-07"
+          "id": "cv-11-07",
+          "links": [
+            {
+              "label": "Keynote activity",
+              "url": "https://research.wur.nl/en/activities/ai-for-food-safety-2/"
+            }
+          ]
         },
         {
           "title": "GQFSW",
@@ -920,11 +926,17 @@
           "id": "cv-11-12"
         },
         {
-          "title": "Academic seminar / webinar",
-          "period": "2025",
-          "details": "Explainable AI.",
-          "meta": "",
-          "id": "cv-11-13"
+          "title": "EFSA Advisory Group on Data — Explainable AI",
+          "period": "2025-09-23",
+          "details": "Invited academic lecture / seminar on Explainable AI for the EFSA Advisory Group on Data.",
+          "meta": "EFSA, Italy",
+          "id": "cv-11-13",
+          "links": [
+            {
+              "label": "Research@WUR activity",
+              "url": "https://research.wur.nl/en/activities/explainable-ai/"
+            }
+          ]
         },
         {
           "title": "RAFA, Prague",
@@ -1030,6 +1042,19 @@
           "details": "Invited presentation.",
           "meta": "",
           "id": "cv-11-28"
+        },
+        {
+          "id": "cv-11-29",
+          "title": "29th Conference on Food Microbiology, Brussels — Artificiële intelligentie in de voedselveiligheid: een overzicht",
+          "period": "2025-10-02",
+          "details": "Oral scientific presentation on AI in food safety, alongside a separately recorded keynote at the conference.",
+          "meta": "Brussels, Belgium",
+          "links": [
+            {
+              "label": "Research@WUR activity",
+              "url": "https://research.wur.nl/en/activities/artifici%C3%ABle-intelligentie-in-de-voedselveiligheid-een-overzicht/"
+            }
+          ]
         }
       ]
     },
