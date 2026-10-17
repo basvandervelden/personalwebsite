@@ -464,17 +464,22 @@
         },
         {
           "id": "cv-teaching-intro-r-plotting",
-          "title": "Introduction to R — Plotting (COO 3)",
+          "title": "Introduction to R — independent course",
           "period": "",
-          "details": "Online practical teaching material credited to Bas van der Velden. Covers plotting in R, reusable code examples, exercises, plotting customisation and common pitfalls. A concrete example of course-material development.",
-          "meta": "Online teaching resource · R programming / data visualisation",
-          "source": "https://hjkuijf.github.io/IntroR/COO3.html",
+          "details": "Developed and taught as a standalone course in R programming and data analysis, including practical exercises, code examples, teaching materials and instructional videos. The linked Plotting (COO 3) module is one example of the course material.",
+          "meta": "Course development and teaching · R programming and data visualisation",
+          "source": "User-confirmed standalone course; public lesson authored by Bas van der Velden.",
           "status": "verified",
           "links": [
             {
-              "label": "Course material",
+              "label": "Course material: Plotting (COO 3)",
               "url": "https://hjkuijf.github.io/IntroR/COO3.html"
             }
+          ],
+          "tags": [
+            "Course development",
+            "Course teaching",
+            "Introduction to R"
           ]
         }
       ]
