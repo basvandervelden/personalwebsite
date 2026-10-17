@@ -1,7 +1,7 @@
 {
   "updated": "October 2026",
   "title": "Long academic CV",
-  "sourceNote": "Adapted from Bas_van_der_Velden_Long_CV_October_2026.docx. Review before public use. The publication section is a selected list from the long CV, not a complete bibliography.",
+  "sourceNote": "Adapted from Bas_van_der_Velden_Long_CV_October_2026.docx, with the September 2026 Principal Scientist appointment added. Review entries before public use. The publication section is a selected list from the long CV, not a complete bibliography.",
   "profile": {
     "name": "Bas van der Velden",
     "role": "Principal Scientist · Head of Data Science & AI",
@@ -60,9 +60,16 @@
     {
       "id": "cv-section-1",
       "number": 1,
-      "title": "Current appointments and leadership",
-      "category": "Leadership",
+      "title": "Current positions",
+      "category": "Current positions",
       "entries": [
+        {
+          "id": "cv-01-05",
+          "title": "Principal Scientist — Wageningen Food Safety Research (WFSR)",
+          "period": "2026–present",
+          "details": "Appointed 1 September 2026 as one of four Principal Scientists at WFSR, alongside my role as Head of Data Science & AI. The institute-wide role focuses on scientific leadership and research development; its precise remit is being further defined.",
+          "meta": "Wageningen University & Research"
+        },
         {
           "title": "Head of Data Science & Artificial Intelligence — Wageningen Food Safety Research (WFSR), Wageningen University & Research",
           "period": "2022–present",
@@ -91,21 +98,15 @@
           "meta": "",
           "id": "cv-01-04"
         }
-      ]
+      ],
+      "description": "Current academic, scientific leadership and advisory appointments."
     },
     {
       "id": "cv-section-2",
       "number": 2,
-      "title": "Academic and professional positions",
-      "category": "Positions",
+      "title": "Past positions",
+      "category": "Past positions",
       "entries": [
-        {
-          "title": "Head of Data Science & AI — Wageningen Food Safety Research",
-          "period": "2022–present",
-          "details": "Research and team leadership in AI for food safety; methodological research, programme building, acquisition, European coordination and regulatory collaboration.",
-          "meta": "",
-          "id": "cv-02-01"
-        },
         {
           "title": "Senior Supervising Researcher — Prinses Máxima Center for Pediatric Oncology",
           "period": "2021–2022",
@@ -148,7 +149,8 @@
           "meta": "",
           "id": "cv-02-07"
         }
-      ]
+      ],
+      "description": "Previous research and academic appointments, excluding current positions listed above."
     },
     {
       "id": "cv-section-3",
