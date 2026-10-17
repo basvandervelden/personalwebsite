@@ -42,8 +42,11 @@ function Entry({entry,compact}) {
     <div className="cv-entry-body">
       {entry.group && <p className="cv-entry-group">{entry.group}</p>}
       <h3>{entry.title}</h3>
+      {entry.status==='to_verify'&&<span className="cv-review-label">TO VERIFY — NOT CONFIRMED</span>}
+      {entry.status==='imported'&&<span className="cv-imported-label">FROM PUBLICATION INVENTORY</span>}
       {entry.meta && <p className="cv-entry-meta">{entry.meta}</p>}
       {!compact && entry.details && <p className="cv-entry-description">{entry.details}</p>}
+      {!compact && entry.source && <p className="cv-source-label">Source: {entry.source}</p>}
       {entry.links?.length>0 && <div className="cv-entry-links">{entry.links.filter(link=>external(link.url)).map((link,i)=><a href={link.url} target="_blank" rel="noopener noreferrer" key={link.url+i}>{link.label} ↗</a>)}</div>}
       {entry.media?.length>0 && <div className="cv-inline-media">{entry.media.map((m,i)=><Attachment key={i} item={m}/>)}</div>}
     </div>
@@ -68,22 +71,23 @@ export default function CVPage({sectionNumber}) {
   const [year,setYear]=useState('All years');
   const [category,setCategory]=useState('All topics');
   const [compact,setCompact]=useState(false);
+  const [includeCandidates,setIncludeCandidates]=useState(true);
   const [collapsed,setCollapsed]=useState([]);
   const years=useMemo(()=>[...new Set(cv.sections.flatMap(s=>s.entries.map(e=>startYear(e.period)).filter(Boolean)))].sort((a,b)=>Number(b)-Number(a)),[]);
   const categories=useMemo(()=>[...new Set(cv.sections.map(s=>s.category))],[]);
   const selected=sectionNumber?cv.sections.find(s=>s.number===Number(sectionNumber)):null;
   const baseSections=selected?[selected]:cv.sections;
   const query=normalize(search.trim());
-  const filtered=baseSections.filter(s=>category==='All topics'||s.category===category).map(s=>({...s,visible:s.entries.filter(e=>matchesQuery(e,query)&&(year==='All years'||startYear(e.period)===year))})).filter(s=>s.visible.length);
+  const filtered=baseSections.filter(s=>category==='All topics'||s.category===category).map(s=>({...s,visible:s.entries.filter(e=>matchesQuery(e,query)&&(year==='All years'||startYear(e.period)===year)&&(includeCandidates||e.status!=='to_verify'))})).filter(s=>s.visible.length);
   const resultCount=filtered.reduce((sum,s)=>sum+s.visible.length,0);
   const totalCount=cv.sections.reduce((sum,s)=>sum+s.entries.length,0);
-  const clear=()=>{setSearch('');setYear('All years');setCategory('All topics');setCollapsed([])};
+  const clear=()=>{setSearch('');setYear('All years');setCategory('All topics');setIncludeCandidates(true);setCollapsed([])};
   return <div className="cv-page">
     <div className="cv-hero"><div className="container">
       <div className="cv-breadcrumb"><a href="#/about">About</a><span>/</span><a href="#/cv">Full academic CV</a>{selected&&<><span>/</span><span>{selected.title}</span></>}</div>
       <p className="cv-kicker">ACADEMIC RECORD · {cv.updated.toUpperCase()}</p>
       <h1>Academic <em>curriculum vitae.</em></h1>
-      <p className="cv-hero-lead">An extended, searchable record of research, leadership, grants, projects, supervision, publications, talks and scientific service. The entries are sourced from my October 2026 long CV.</p>
+      <p className="cv-hero-lead">An extensive, searchable working inventory of research, leadership, grants, projects, supervision, publications and talks, built from the long CV, older publication records and agenda notes. Unverified items are clearly marked.</p>
       <div className="cv-actions">
         <a href="mailto:bas.vandervelden@wur.nl" className="cv-primary-action">Contact <span>↗</span></a>
         <button type="button" className="cv-secondary-action" onClick={()=>window.print()}>Print / save as PDF <span>↗</span></button>
@@ -110,7 +114,7 @@ export default function CVPage({sectionNumber}) {
           <div className="cv-filter-row">
             <label>Topic <select value={category} onChange={e=>{setCategory(e.target.value);setCollapsed([])}}><option>All topics</option>{categories.map(c=><option key={c}>{c}</option>)}</select></label>
             <label>Start year <select value={year} onChange={e=>{setYear(e.target.value);setCollapsed([])}}><option>All years</option>{years.map(y=><option key={y}>{y}</option>)}</select></label>
-            <button type="button" className="cv-reset" onClick={clear}>Reset filters</button>
+            <label className="cv-candidate-toggle"><input type="checkbox" checked={includeCandidates} onChange={e=>setIncludeCandidates(e.target.checked)}/> Include unverified candidates</label><button type="button" className="cv-reset" onClick={clear}>Reset filters</button>
           </div>
         </section>
         <section className="cv-results-head" aria-live="polite">
@@ -119,7 +123,7 @@ export default function CVPage({sectionNumber}) {
         </section>
         {filtered.length? <div className="cv-records">{filtered.map(s=><CvSection key={s.id} section={s} entries={s.visible} compact={compact} collapsed={collapsed.includes(s.id)} onToggle={()=>setCollapsed(prev=>prev.includes(s.id)?prev.filter(id=>id!==s.id):[...prev,s.id])}/>)}</div>
         :<div className="cv-no-results"><h2>No matching entries</h2><p>Try a broader search term or remove one of the filters.</p><button type="button" onClick={clear}>Show all entries →</button></div>}
-        <div className="cv-publications-note"><strong>About this record</strong><p>This is an online adaptation of the long academic CV from {cv.updated}. The publications section reproduces the <em>selected</em> publications from that document; it is not the full bibliography. Some planned engagements and historical roles may need updating as circumstances change. Financial project figures represent mixed funding categories and WFSR shares, not personal PI funding.</p><a href={cv.profile.links[0].url} target="_blank" rel="noopener noreferrer">See Research@WUR for the full publication record ↗</a></div>
+        <div className="cv-publications-note"><strong>About this record</strong><p>This is an online adaptation of the long academic CV from {cv.updated}. The publication inventory now combines a 75-record historical spreadsheet, the existing long CV and supplementary verified research outputs. It includes journal articles, preprints and conference contributions, and some records or venues need confirmation. Items clearly labelled <em>TO VERIFY</em> are leads rather than established CV achievements. You can hide them using the checkbox above. Some planned engagements and historical roles may need updating as circumstances change. Financial project figures represent mixed funding categories and WFSR shares, not personal PI funding.</p><a href={cv.profile.links[0].url} target="_blank" rel="noopener noreferrer">See Research@WUR for the full publication record ↗</a></div>
       </div>
     </div>
     <section className="cv-media-section"><div className="container"><div className="cv-media-title"><div><p className="cv-kicker">SELECTED MEDIA</p><h2>Research beyond the publication list.</h2></div><p>Presentations, interviews, scientific figures and visual material. Images can be added without changing the page layout.</p></div><div className="cv-media-grid">{cv.media.map((item,i)=><Attachment item={item} key={i}/>)}</div></div></section>
