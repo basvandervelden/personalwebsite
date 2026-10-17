@@ -61,3 +61,34 @@ The initial dataset was transcribed from `Bas_van_der_Velden_Long_CV_October_202
 
 Each commit to `main` triggers GitHub Actions and republishes GitHub Pages.
 Verify the live site at https://basvandervelden.github.io/personalwebsite/#/cv before moving basvandervelden.com.
+
+
+## October 2026 master CV expansion
+
+The online CV is now a **working master list** rather than a selectively edited public CV.
+
+Sources combined:
+- `Bas_van_der_Velden_Long_CV_October_2026.docx` — existing CV sections.
+- `publicaties_aangevuld.xlsx` — 75 historic publications, preprints, abstracts and conference outputs. Duplicates were removed where titles/years matched the long CV.
+- `agenda_cv_shortlist.xlsx` — calendar-derived leads, maintained separately in `data/cv-review-queue.json`.
+- Wageningen Research output/activities and publicly available conference programmes — direct links added where available.
+
+**Check labels:**
+- `"status": "verified"` — supported by public institutional/event records.
+- `"status": "imported"` — imported from the earlier publication spreadsheet; bibliographic metadata may need checking.
+- `"status": "to_verify"` — calendar/proposal lead; do not present as confirmed without validating the role.
+- Entries with no status are inherited from the October CV and should also be reviewed when required.
+
+The website's **Include unverified candidates** checkbox temporarily hides all `to_verify` rows.
+
+### Prune an entry
+
+Find its unique `id` in `src/cv-data.json`, then delete the entire JSON object from its section's `entries` array (including a trailing comma if required). Or tell ChatGPT the `id`, name or title and ask to remove it. Commit on `main` to publish automatically.
+
+### Confirm an agenda candidate
+
+Edit `status` from `to_verify` to `verified`, add the correct `period`, `title`, `details` and one or more external `links`. Ideally move the entry from the last candidate section to the appropriate section, such as **Invited keynotes**, **Scientific service** or **Projects**.
+
+### Why publication counts differ
+
+Research@WUR reports its own institutional output types (including posters and digital products). The current master publication section also includes older spreadsheet-derived abstracts, preprints and conference contributions and may contain version duplicates. **Do not interpret its item count as peer-reviewed journal articles or as an official bibliometric total.**
