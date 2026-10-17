@@ -461,6 +461,21 @@
           "details": "Lectures, workshops and internal/external training for researchers, regulators and practitioners.",
           "meta": "Professional & academic audiences",
           "id": "cv-07-05"
+        },
+        {
+          "id": "cv-teaching-intro-r-plotting",
+          "title": "Introduction to R — Plotting (COO 3)",
+          "period": "",
+          "details": "Online practical teaching material credited to Bas van der Velden. Covers plotting in R, reusable code examples, exercises, plotting customisation and common pitfalls. A concrete example of course-material development.",
+          "meta": "Online teaching resource · R programming / data visualisation",
+          "source": "https://hjkuijf.github.io/IntroR/COO3.html",
+          "status": "verified",
+          "links": [
+            {
+              "label": "Course material",
+              "url": "https://hjkuijf.github.io/IntroR/COO3.html"
+            }
+          ]
         }
       ]
     },
