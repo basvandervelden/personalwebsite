@@ -4,7 +4,21 @@ import './cv.css';
 
 const external = (url) => /^https:\/\//i.test(url || '');
 const startYear = (period) => /^\d{4}/.exec(period || '')?.[0] || '';
-const entryText = (entry) => [entry.title, entry.period, entry.details, entry.meta, entry.group, ...(entry.links || []).map(l=>l.label)].join(' ').toLocaleLowerCase();
+// Topic synonyms: searching for "XAI" also finds entries spelled out as "explainable AI", etc.
+const normalize = text => String(text || '').toLocaleLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
+const topicAliases = {
+  xai: ['explainab', 'explainable artificial intelligence', 'interpretability', 'interpretab', 'uitlegbare ai', 'verklaarbare ai', 'transparent machine learning', 'black box'],
+  llm: ['large language model', 'language model'],
+  fm: ['foundation model', 'representation learning', 'self-supervised'],
+  hrms: ['high-resolution mass spectrometry', 'mass spectrometry', 'lc–hrms', 'lc-hrms']
+};
+const entryText = (entry) => normalize([entry.title, entry.period, entry.details, entry.meta, entry.group, ...(entry.tags||[]), ...(entry.links || []).map(l=>l.label)].join(' '));
+const matchesQuery = (entry, query) => {
+  if (!query) return true;
+  const text = entryText(entry);
+  const alias = topicAliases[query];
+  return text.includes(query) || !!alias?.some(term => text.includes(normalize(term)));
+};
 
 function Attachment({item}) {
   const [play, setPlay] = useState(false);
@@ -59,8 +73,8 @@ export default function CVPage({sectionNumber}) {
   const categories=useMemo(()=>[...new Set(cv.sections.map(s=>s.category))],[]);
   const selected=sectionNumber?cv.sections.find(s=>s.number===Number(sectionNumber)):null;
   const baseSections=selected?[selected]:cv.sections;
-  const query=search.trim().toLocaleLowerCase();
-  const filtered=baseSections.filter(s=>category==='All topics'||s.category===category).map(s=>({...s,visible:s.entries.filter(e=>(!query||entryText(e).includes(query))&&(year==='All years'||startYear(e.period)===year))})).filter(s=>s.visible.length);
+  const query=normalize(search.trim());
+  const filtered=baseSections.filter(s=>category==='All topics'||s.category===category).map(s=>({...s,visible:s.entries.filter(e=>matchesQuery(e,query)&&(year==='All years'||startYear(e.period)===year))})).filter(s=>s.visible.length);
   const resultCount=filtered.reduce((sum,s)=>sum+s.visible.length,0);
   const totalCount=cv.sections.reduce((sum,s)=>sum+s.entries.length,0);
   const clear=()=>{setSearch('');setYear('All years');setCategory('All topics');setCollapsed([])};
