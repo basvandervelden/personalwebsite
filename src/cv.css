@@ -110,3 +110,15 @@
 .cv-candidate-toggle input{accent-color:var(--accent);width:15px;height:15px}
 :root[data-theme=dark] .cv-review-label{color:#f1d28b;border-color:#9e7b46;background:#463b2a}
 @media print{.cv-review-label,.cv-imported-label,.cv-source-label{font-size:8px!important}.cv-candidate-toggle{display:none!important}}
+
+/* Publication records: title, authors, journal and journal impact factor. */
+.cv-publication-entry .cv-entry-body h3{font-weight:800;font-size:16px;line-height:1.5;letter-spacing:-.02em}
+.cv-pub-authors{font-size:12.5px;line-height:1.75;color:var(--muted);margin-top:8px;overflow-wrap:anywhere}
+.cv-pub-details{display:flex;align-items:center;flex-wrap:wrap;gap:8px 16px;margin-top:9px}
+.cv-pub-journal{color:var(--accent);font-size:12px;font-weight:800}
+.cv-pub-kind{font-size:11px;color:var(--subtle)}
+.cv-impact-factor{display:inline-flex;align-items:baseline;gap:5px;background:var(--accent-soft);color:var(--accent);padding:4px 8px;border-radius:3px;font-size:12px;font-weight:800;font-variant-numeric:tabular-nums}
+.cv-impact-factor small{font-size:10px;font-weight:600;opacity:.8}
+.cv-publication-entry .cv-entry-links{margin-top:10px}
+.cv-publication-entry .cv-entry-links a{font-size:11px}
+@media print{.cv-impact-factor{border:1px solid #bbb;background:#fff;color:#000}}

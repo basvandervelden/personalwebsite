@@ -489,7 +489,7 @@
       "number": 8,
       "title": "Funded research, acquisition and project leadership",
       "category": "Funding",
-      "description": "Amounts combine different types of awards, internal allocations and WFSR project shares; they are not personal PI income.",
+      "description": "Funded research programmes, acquisitions and project leadership.",
       "entries": [
         {
           "title": "HANARTH",
@@ -1152,7 +1152,7 @@
           "id": "cv-agenda-2024-inspections",
           "title": "Symposium Modern Inspections with New Technology — Alignment presentation and poster",
           "period": "2024-01-31",
-          "details": "Calendar records a presentation and poster at the symposium. The precise presentation title and the hosting organisation remain to be confirmed.",
+          "details": "Presentation and poster at the symposium on technology-enabled inspections.",
           "meta": "Conference presentation & poster · calendar-confirmed",
           "links": []
         }
@@ -1210,9 +1210,8 @@
     {
       "id": "cv-section-13",
       "number": 13,
-      "title": "Publications, preprints & conference outputs",
+      "title": "Publications",
       "category": "Publications",
-      "description": "Expanded, unpruned list assembled from the October 2026 long CV and publicaties_aangevuld.xlsx, including journal articles, preprints and conference publications. Some records and venues require review. Research@WUR remains the canonical source for verified institutional outputs.",
       "entries": [
         {
           "id": "cv-13-01",
@@ -1226,7 +1225,13 @@
               "label": "DOI",
               "url": "https://doi.org/10.1038/s41538-026-00925-1"
             }
-          ]
+          ],
+          "paperTitle": "Artificial intelligence in food safety",
+          "authors": "van Meer, F., Takeuchi, M., Ochieng, P.E., Tavelli, R., Gerssen, A., et al., van der Velden, B.H.M.",
+          "journal": "npj Science of Food",
+          "publicationType": "Journal article",
+          "impactFactor": 9.7,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-13-02",
@@ -1240,7 +1245,13 @@
               "label": "DOI",
               "url": "https://doi.org/10.1016/j.array.2026.101126"
             }
-          ]
+          ],
+          "paperTitle": "Enhancing regulatory foresight through weak signal mining: An AI-based micro-topic emergence scoring approach",
+          "authors": "A. Menning, Z. Farkas, K. Vribék, B. H. M. van der Velden",
+          "journal": "Array",
+          "publicationType": "Journal article",
+          "impactFactor": 4.5,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-13-03",
@@ -1254,7 +1265,13 @@
               "label": "DOI",
               "url": "https://doi.org/10.1021/acs.analchem.6c01825"
             }
-          ]
+          ],
+          "paperTitle": "Foundation Models for Liquid Chromatography–High-Resolution Mass Spectrometry: A New Era beyond Labeled Datasets",
+          "authors": "Carnoli, A.J., Padilla-Gonzalez, F., van den Bulk, L.M., Korporaal, D., Alewijn, M., Blokland, M.H., & van der Velden, B.H.M.",
+          "journal": "Analytical Chemistry",
+          "publicationType": "Journal article",
+          "impactFactor": 7.3,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-13-04",
@@ -1268,7 +1285,13 @@
               "label": "DOI",
               "url": "https://doi.org/10.1016/j.foodcont.2025.111816"
             }
-          ]
+          ],
+          "paperTitle": "Food safety trends across Europe: insights from the 392-million-entry CompreHensive European Food Safety (CHEFS) database",
+          "authors": "Kızılilsoley, Nehir, van Meer, Floor, Mutlu, Osman, Hoenderdaal, Wouter, Hobé, Rosan, Mu, Wenjuan, Gerssen, Arjen, van der Fels-Klerx, HJ, Jóźwiak, Ákos, Manikas, Ioannis",
+          "journal": "Food Control",
+          "publicationType": "Journal article",
+          "impactFactor": 7,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-13-05",
@@ -1282,7 +1305,13 @@
               "label": "DOI",
               "url": "https://doi.org/10.1016/j.fufo.2026.101152"
             }
-          ]
+          ],
+          "paperTitle": "Natural language processing in food safety research: A systematic review",
+          "authors": "Özen, N., Papadopoulou, F., Mutlu, O., Öztürk, B., Mu, W., van den Bulk, L., van der Velden, B., & Hürriyetoğlu, A.",
+          "journal": "Future Foods",
+          "publicationType": "Journal article",
+          "impactFactor": 6.6,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-13-06",
@@ -1290,7 +1319,12 @@
           "period": "2026",
           "details": "",
           "meta": "",
-          "group": "AI, data science and food safety"
+          "group": "AI, data science and food safety",
+          "paperTitle": "Colony grounded SAM2: zero‑shot detection and segmentation of bacterial colonies using foundation models",
+          "authors": "Korporaal, Daan, de Kruijf, Patrick, Litjens, Ralph HGM, van der Velden, Bas HM",
+          "journal": "Proceedings of SPIE Medical Imaging 2026",
+          "publicationType": "Conference contribution",
+          "links": []
         },
         {
           "id": "cv-13-07",
@@ -1304,23 +1338,11 @@
               "label": "DOI",
               "url": "https://doi.org/10.18174/714727"
             }
-          ]
-        },
-        {
-          "id": "cv-bib-075",
-          "title": "Natural language processing in food safety research: A systematic review",
-          "period": "2026",
-          "details": "Özen, Neris, Papadopoulou, Foteini, Mutlu, Osman, Öztürk, Bengü, Mu, Wenjuan, van den Bulk, Leonieke, van der Velden, Bas, Hürriyetoğlu, Ali",
-          "meta": "Venue to verify · Journal article / scholarly output",
-          "group": "Journal article / scholarly output",
-          "source": "Previous publications inventory (publicaties_aangevuld.xlsx)",
-          "status": "to_verify",
-          "links": [
-            {
-              "label": "Find publication",
-              "url": "https://scholar.google.com/scholar?q=Natural%20language%20processing%20in%20food%20safety%20research%3A%20A%20systematic%20review"
-            }
-          ]
+          ],
+          "paperTitle": "Voedselveiligheid in een circulair water- en voedselsysteem",
+          "authors": "Koops, A., van der Velden, B., Fendor, Z., Schoppema, T., Hofstra, N., Peters, S., van der Zaan, B., Leenen, I., Pijcke, G., & de Jong, A.",
+          "journal": "WFSR Report 2026.007",
+          "publicationType": "Report"
         },
         {
           "id": "cv-wur-extra-1",
@@ -1330,13 +1352,17 @@
           "title": "Artificial intelligence foundation models for food safety risks — conference poster (8 June)",
           "period": "2026",
           "meta": "Conference poster, 8 June 2026",
-          "details": "Research@WUR lists this poster as a distinct research output.",
+          "details": "AI foundation models for food safety risks.",
           "links": [
             {
               "label": "Research@WUR outputs",
               "url": "https://research.wur.nl/en/persons/bas-van-der-velden/"
             }
-          ]
+          ],
+          "paperTitle": "Artificial intelligence foundation models for food safety risks — conference poster (8 June)",
+          "authors": "",
+          "journal": "Conference poster, 8 June 2026",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-wur-extra-2",
@@ -1346,13 +1372,17 @@
           "title": "Artificial intelligence foundation models for food safety risks — conference poster (11 June)",
           "period": "2026",
           "meta": "Conference poster, 11 June 2026",
-          "details": "Research@WUR lists a second poster with this title.",
+          "details": "AI foundation models for food safety risks.",
           "links": [
             {
               "label": "Research@WUR outputs",
               "url": "https://research.wur.nl/en/persons/bas-van-der-velden/"
             }
-          ]
+          ],
+          "paperTitle": "Artificial intelligence foundation models for food safety risks — conference poster (11 June)",
+          "authors": "",
+          "journal": "Conference poster, 11 June 2026",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-13-08",
@@ -1366,7 +1396,11 @@
               "label": "DOI",
               "url": "https://doi.org/10.4060/cd7242en"
             }
-          ]
+          ],
+          "paperTitle": "Artificial intelligence for food safety",
+          "authors": "F. van Meer, B. H. M. van der Velden, M. Takeuchi",
+          "journal": "FAO",
+          "publicationType": "Report"
         },
         {
           "id": "cv-13-09",
@@ -1380,7 +1414,13 @@
               "label": "DOI",
               "url": "https://doi.org/10.1016/j.jafr.2025.102238"
             }
-          ]
+          ],
+          "paperTitle": "Federated learning in food research",
+          "authors": "Fendor, Zuzanna, van der Velden, Bas HM, Wang, Xinxin, Carnoli Jr, Andrea, Mutlu, Osman, Hürriyetoğlu, Ali",
+          "journal": "Journal of Agriculture and Food Research",
+          "publicationType": "Journal article",
+          "impactFactor": 7.2,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-13-10",
@@ -1388,7 +1428,12 @@
           "period": "2025",
           "details": "",
           "meta": "",
-          "group": "AI, data science and food safety"
+          "group": "AI, data science and food safety",
+          "paperTitle": "BrightCookies at SemEval-2025 Task 9: Exploring Data Augmentation for Food Hazard Classification",
+          "authors": "Papadopoulou, Foteini, Mutlu, Osman, Özen, Neris, Van Der Velden, Bas, Hendrickx, Iris, Hürriyetoğlu, Ali",
+          "journal": "Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)",
+          "publicationType": "Conference contribution",
+          "links": []
         },
         {
           "id": "cv-13-11",
@@ -1396,7 +1441,12 @@
           "period": "2025",
           "details": "",
           "meta": "",
-          "group": "AI, data science and food safety"
+          "group": "AI, data science and food safety",
+          "paperTitle": "Explainable Artificial Intelligence for Deep Learning in Food",
+          "authors": "Mutlu, Osman, van der Velden, Bas, Hürriyetoğlu, Ali, Fensel, Anna",
+          "journal": "Research Square",
+          "publicationType": "Preprint",
+          "links": []
         },
         {
           "id": "cv-13-12",
@@ -1410,7 +1460,11 @@
               "label": "DOI",
               "url": "https://doi.org/10.2903/sp.efsa.2025.EN-9434"
             }
-          ]
+          ],
+          "paperTitle": "Symposium on Data Readiness for Artificial Intelligence",
+          "authors": "European Food Safety Authority (EFSA)",
+          "journal": "EFSA Supporting Publications",
+          "publicationType": "Journal article"
         },
         {
           "id": "cv-bib-062",
@@ -1426,7 +1480,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Automated%20segmenta-on%20of%20pediatric%20neuroblastoma%20on%20multi-modal%20MRI%3A%20Results%20of%20the%20SPPIN%20challenge%20at%20MICCAI%202023"
             }
-          ]
+          ],
+          "paperTitle": "Automated segmenta-on of pediatric neuroblastoma on multi-modal MRI: Results of the SPPIN challenge at MICCAI 2023",
+          "authors": "Buser, Myrthe AD, Simons, DC, Fitski, M, Wijnen, Marc HWA, Littooij, AS, ter Brugge, AH, Vos, Iris N, Janse, Markus HA, de Boer, M, ter Maat, R",
+          "journal": "arXiv e-prints",
+          "publicationType": "Preprint"
         },
         {
           "id": "cv-bib-063",
@@ -1442,7 +1500,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Evaluation%20of%20techniques%20for%20automated%20classification%20and%20artery%20quantification%20of%20the%20circle%20of%20Willis%20on%20TOF-MRA%20images%3A%20The%20CROWN%20challenge"
             }
-          ]
+          ],
+          "paperTitle": "Evaluation of techniques for automated classification and artery quantification of the circle of Willis on TOF-MRA images: The CROWN challenge",
+          "authors": "Vos, Iris N, Ruigrok, Ynte M, Bennink, Edwin, Velthuis, Mireille RE, Paic, Barbara, Ophelders, Maud EH, Buser, Myrthe AD, van der Velden, Bas HM, Geng, Chen, Coupet, Matthieu",
+          "journal": "Medical Image Analysis",
+          "publicationType": "Journal article",
+          "impactFactor": 14,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-067",
@@ -1458,7 +1522,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=A%20Community%20Benchmark%20for%20the%20Automated%20Segmentation%20of%20Pediatric%20Neuroblastoma%20on%20Multi-Modal%20MRI%3A%20Design%20and%20Results%20of%20the%20SPPIN%20Challenge%20at%20MICCAI%202023"
             }
-          ]
+          ],
+          "paperTitle": "A Community Benchmark for the Automated Segmentation of Pediatric Neuroblastoma on Multi-Modal MRI: Design and Results of the SPPIN Challenge at MICCAI 2023",
+          "authors": "Buser, Myrthe AD, Simons, Dominique C, Fitski, Matthijs, Wijnen, Marc HWA, Littooij, Annemieke S, Brugge, Annemiek H ter, Vos, Iris N, Janse, Markus HA, De Boer, Mathijs, Ter Maat, Rens",
+          "journal": "Bioengineering",
+          "publicationType": "Journal article",
+          "impactFactor": 4.4,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-069",
@@ -1474,7 +1544,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Identifying%20environmental%20factors%20associated%20with%20tetrodotoxin%20contamination%20in%20bivalve%20mollusks%20using%20eXplainable%20AI"
             }
-          ]
+          ],
+          "paperTitle": "Identifying environmental factors associated with tetrodotoxin contamination in bivalve mollusks using eXplainable AI",
+          "authors": "Schoppema, MC, van der Velden, BHM, Hürriyetoğlu, A, Klijnstra, MD, Faassen, EJ, Gerssen, A, van der Fels-Klerx, HJ",
+          "journal": "arXiv preprint arXiv:2511.20395",
+          "publicationType": "Preprint"
         },
         {
           "id": "cv-bib-070",
@@ -1490,7 +1564,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Leveraging%20advanced%20AI%20for%20enhanced%20food%20safety%20through%20pathogen%20analysis%3A%20Leveraging%20advanced%20AI%20for%20the%20effect%20of%20host%20genetic%20variation%20on%20gut%20microbiome"
             }
-          ]
+          ],
+          "paperTitle": "Leveraging advanced AI for enhanced food safety through pathogen analysis: Leveraging advanced AI for the effect of host genetic variation on gut microbiome",
+          "authors": "Kızılilsoley, N, Stassen, JHM, van den Bulk, LM, van der Velden, BHM",
+          "journal": "Food System Microbiomes 2025 International Conference",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-071",
@@ -1506,23 +1584,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Preparing%20a%20Large-Scale%20Dataset%20for%20HRMS%2FMS-Based%20Foundation%20Models%3A%20A%20New%20Era%20Beyond%20Annotated%20Data%3F"
             }
-          ]
-        },
-        {
-          "id": "cv-bib-072",
-          "title": "Automated segmentation of pediatric neuroblastoma on multi-modal MRI: Results of the SPPIN challenge at MICCAI 2023",
-          "period": "2025",
-          "details": "Buser, Myrthe AD, Simons, Dominique C, Fitski, Matthijs, Wijnen, MHWA, Littooij, Annemieke S, ter Brugge, Annemiek H, Vos, Iris N, Janse, Markus HA, de Boer, Mathijs, ter Maat, Rens",
-          "meta": "arXiv preprint arXiv:2505.00369 · Preprint / working paper",
-          "group": "Preprint / working paper",
-          "source": "Previous publications inventory (publicaties_aangevuld.xlsx)",
-          "status": "imported",
-          "links": [
-            {
-              "label": "Find publication",
-              "url": "https://scholar.google.com/scholar?q=Automated%20segmentation%20of%20pediatric%20neuroblastoma%20on%20multi-modal%20MRI%3A%20Results%20of%20the%20SPPIN%20challenge%20at%20MICCAI%202023"
-            }
-          ]
+          ],
+          "paperTitle": "Preparing a Large-Scale Dataset for HRMS/MS-Based Foundation Models: A New Era Beyond Annotated Data?",
+          "authors": "Gonzalez, GF Padilla, Carnoli, AJ, van den Bulk, LM, Korporaal, D, Alewijn, M, Blokland, MH, van der Velden, BHM",
+          "journal": "Metabolomics 2025",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-wur-extra-3",
@@ -1542,7 +1608,11 @@
               "label": "Video / publication",
               "url": "https://edepot.wur.nl/695102"
             }
-          ]
+          ],
+          "paperTitle": "Examining cow urine with transparent AI",
+          "authors": "B. H. M. van der Velden, Z. Fendor",
+          "journal": "Wageningen University & Research",
+          "publicationType": "Digital output"
         },
         {
           "id": "cv-13-13",
@@ -1556,7 +1626,13 @@
               "label": "DOI",
               "url": "https://doi.org/10.1007/s00330-023-10121-4"
             }
-          ]
+          ],
+          "paperTitle": "Explainable AI: current status and future potential",
+          "authors": "Van Der Velden, Bas HM",
+          "journal": "European Radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 6,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-047",
@@ -1572,7 +1648,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Where%20is%20VALDO%3F%20VAscular%20Lesions%20Detection%20and%20segmentatiOn%20challenge%20at%20MICCAI%202021"
             }
-          ]
+          ],
+          "paperTitle": "Where is VALDO? VAscular Lesions Detection and segmentatiOn challenge at MICCAI 2021",
+          "authors": "Sudre, Carole H, Van Wijnen, Kimberlin, Dubost, Florian, Adams, Hieab, Atkinson, David, Barkhof, Frederik, Birhanu, Mahlet A, Bron, Esther E, Camarasa, Robin, Chaturvedi, Nish",
+          "journal": "Medical Image Analysis",
+          "publicationType": "Journal article",
+          "impactFactor": 14,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-057",
@@ -1588,7 +1670,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Predicting%20response%20to%20neoadjuvant%20chemotherapy%20with%20liquid%20biopsies%20and%20multiparametric%20MRI%20in%20patients%20with%20breast%20cancer"
             }
-          ]
+          ],
+          "paperTitle": "Predicting response to neoadjuvant chemotherapy with liquid biopsies and multiparametric MRI in patients with breast cancer",
+          "authors": "Janssen, LM, Janse, MHA, Penning de Vries, BBL, Van Der Velden, BHM, Wolters-van Der Ben, EJM, Van Den Bosch, SM, Sartori, A, Jovelet, C, Agterof, MJ, Ten Bokkel Huinink, D",
+          "journal": "NPJ Breast Cancer",
+          "publicationType": "Journal article",
+          "impactFactor": 8.4,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-058",
@@ -1604,7 +1692,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Automated%20rating%20of%20background%20parenchymal%20enhancement%20in%20MRI%20of%20extremely%20dense%20breasts%20without%20compromising%20the%20association%20with%20breast%20cancer%20in%20the%20DENSE%20trial"
             }
-          ]
+          ],
+          "paperTitle": "Automated rating of background parenchymal enhancement in MRI of extremely dense breasts without compromising the association with breast cancer in the DENSE trial",
+          "authors": "Wang, Hui, van der Velden, Bas HM, Verburg, Erik, Bakker, Marije F, Pijnappel, Ruud M, Veldhuis, Wouter B, van Gils, Carla H, Gilhuijs, Kenneth GA",
+          "journal": "European Journal of Radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 3.9,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-059",
@@ -1620,7 +1714,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Unsupervised%20deep%20learning%20for%20the%20matching%20of%20vascular%20anatomy%20in%20multiple%20digital%20subtraction%20angiograms"
             }
-          ]
+          ],
+          "paperTitle": "Unsupervised deep learning for the matching of vascular anatomy in multiple digital subtraction angiograms",
+          "authors": "Kraaijveld, RCJ, van der Velden, BHM, Goldman, RE",
+          "journal": "Medical Imaging 2024: Image Perception, Observer Performance, and Technology Assessment",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-13-20",
@@ -1634,7 +1732,13 @@
               "label": "DOI",
               "url": "https://doi.org/10.1148/radiol.221922"
             }
-          ]
+          ],
+          "paperTitle": "Long-term survival in breast cancer patients is associated with contralateral parenchymal enhancement at MRI: outcomes of the select study",
+          "authors": "Ragusi, Max AA, van der Velden, Bas HM, Meeuwis, Carla, Tetteroo, Eric, Coerkamp, Emile G, van Nijnatten, Thiemo JA, Jansen, Frits H, Wolters-Van Der Ben, Elian JM, Jongen, Lisa, van Raamt, Fleur",
+          "journal": "Radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 17.6,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-048",
@@ -1650,7 +1754,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Validation%20of%20combined%20deep%20learning%20triaging%20and%20computer-aided%20diagnosis%20in%202901%20breast%20MRI%20examinations%20from%20the%20second%20screening%20round%20of%20the%20dense%20tissue%20and%20early%20breast%20neoplasm%20screening%20trial"
             }
-          ]
+          ],
+          "paperTitle": "Validation of combined deep learning triaging and computer-aided diagnosis in 2901 breast MRI examinations from the second screening round of the dense tissue and early breast neoplasm screening trial",
+          "authors": "Verburg, Erik, Van Gils, Carla H, van der Velden, Bas HM, Bakker, Marije F, Pijnappel, Ruud M, Veldhuis, Wouter B, Gilhuijs, Kenneth GA",
+          "journal": "Investigative Radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 7.9,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-051",
@@ -1666,7 +1776,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Deep%20learning%E2%80%90based%20segmentation%20of%20locally%20advanced%20breast%20cancer%20on%20mri%20in%20relation%20to%20residual%20cancer%20burden%3A%20a%20multi%E2%80%90institutional%20cohort%20study"
             }
-          ]
+          ],
+          "paperTitle": "Deep learning‐based segmentation of locally advanced breast cancer on mri in relation to residual cancer burden: a multi‐institutional cohort study",
+          "authors": "Janse, Markus HA, Janssen, Liselore M, van Der Velden, Bas HM, Moman, Maaike R, Wolters‐van der Ben, Elian JM, Kock, Marc CJM, Viergever, Max A, van Diest, Paul J, Gilhuijs, Kenneth GA",
+          "journal": "Journal of Magnetic Resonance Imaging",
+          "publicationType": "Journal article",
+          "impactFactor": 4.3,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-053",
@@ -1682,7 +1798,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Radiologic%20versus%20segmentation%20measurements%20to%20quantify%20Wilms%20tumor%20volume%20on%20MRI%20in%20pediatric%20patients"
             }
-          ]
+          ],
+          "paperTitle": "Radiologic versus segmentation measurements to quantify Wilms tumor volume on MRI in pediatric patients",
+          "authors": "Buser, Myrthe AD, van der Steeg, Alida FW, Wijnen, Marc HWA, Fitski, Matthijs, van Tinteren, Harm, van den Heuvel-Eibrink, Marry M, Littooij, Annemieke S, van der Velden, Bas HM",
+          "journal": "Cancers",
+          "publicationType": "Journal article",
+          "impactFactor": 4.8,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-054",
@@ -1698,7 +1820,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Evaluation%20of%20multiparametric%20MRI%20for%20deep%20learning-based%20segmentation%20of%20Wilms%20tumor"
             }
-          ]
+          ],
+          "paperTitle": "Evaluation of multiparametric MRI for deep learning-based segmentation of Wilms tumor",
+          "authors": "Buser, Myrthe AD, Wijnen, Marc HWA, van der Steeg, Alida FW, van der Velden, Bas HM",
+          "journal": "Medical Imaging 2023: Image Perception, Observer Performance, and Technology Assessment",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-055",
@@ -1714,7 +1840,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Assessing%20quantitative%20Parenchymal%20features%20at%20baseline%20dynamic%20contrast-enhanced%20MRI%20and%20cancer%20occurrence%20in%20women%20with%20extremely%20dense%20breasts"
             }
-          ]
+          ],
+          "paperTitle": "Assessing quantitative Parenchymal features at baseline dynamic contrast-enhanced MRI and cancer occurrence in women with extremely dense breasts",
+          "authors": "Wang, Hui, van der Velden, Bas HM, Verburg, Erik, Bakker, Marije F, Pijnappel, Ruud M, Veldhuis, Wouter B, van Gils, Carla H, Gilhuijs, Kenneth GA",
+          "journal": "Radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 17.6,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-13-14",
@@ -1728,7 +1860,13 @@
               "label": "DOI",
               "url": "https://doi.org/10.1016/j.media.2022.102470"
             }
-          ]
+          ],
+          "paperTitle": "Explainable artificial intelligence (XAI) in deep learning-based medical image analysis",
+          "authors": "Van der Velden, Bas HM, Kuijf, Hugo J, Gilhuijs, Kenneth GA, Viergever, Max A",
+          "journal": "Medical image analysis",
+          "publicationType": "Journal article",
+          "impactFactor": 14,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-037",
@@ -1744,7 +1882,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Leveraging%20Clinical%20Characteristics%20for%20Improved%20Deep%20Learning-Based%20Kidney%20Tumor%20Segmentation%20on%20CT"
             }
-          ]
+          ],
+          "paperTitle": "Leveraging Clinical Characteristics for Improved Deep Learning-Based Kidney Tumor Segmentation on CT",
+          "authors": "Lund, Christina B, van der Velden, Bas HM",
+          "journal": "International Challenge on Kidney and Kidney Tumor Segmentation",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-038",
@@ -1760,7 +1902,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Deep%20learning%20for%20automated%20triaging%20of%204581%20breast%20MRI%20examinations%20from%20the%20DENSE%20trial"
             }
-          ]
+          ],
+          "paperTitle": "Deep learning for automated triaging of 4581 breast MRI examinations from the DENSE trial",
+          "authors": "Verburg, Erik, Van Gils, Carla H, Van Der Velden, Bas HM, Bakker, Marije F, Pijnappel, Ruud M, Veldhuis, Wouter B, Gilhuijs, Kenneth GA",
+          "journal": "Radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 17.6,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-042",
@@ -1776,7 +1924,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Dynamic%20Contrast-enhanced%20and%20Diffusion-weighted%20Magnetic%20Resonance%20Imaging%20for%20Response%20Evaluation%20After%20Single-Dose%20Ablative%20Neoadjuvant%20Partial%20Breast%20Irradiation"
             }
-          ]
+          ],
+          "paperTitle": "Dynamic Contrast-enhanced and Diffusion-weighted Magnetic Resonance Imaging for Response Evaluation After Single-Dose Ablative Neoadjuvant Partial Breast Irradiation",
+          "authors": "Vasmel, Jeanine E, Koerkamp, Maureen L Groot, Mandija, Stefano, Veldhuis, Wouter B, Moman, Maaike R, Froeling, Martijn, van der Velden, Bas HM, Charaghvandi, Ramona K, Vreuls, Celien PH, van Diest, Paul J",
+          "journal": "Advances in Radiation Oncology",
+          "publicationType": "Journal article",
+          "impactFactor": 2.9,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-043",
@@ -1792,7 +1946,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Population-based%20estimates%20of%20overtreatment%20with%20adjuvant%20systemic%20therapy%20in%20early%20breast%20cancer%20patients%20with%20data%20from%20the%20Netherlands%20and%20the%20USA"
             }
-          ]
+          ],
+          "paperTitle": "Population-based estimates of overtreatment with adjuvant systemic therapy in early breast cancer patients with data from the Netherlands and the USA",
+          "authors": "Ragusi, MAA, van der Velden, Bas HM, van Maaren, Marissa C, van der Wall, Elsken, van Gils, Carla H, Pijnappel, Ruud M, Gilhuijs, Kenneth GA, Elias, Sjoerd G",
+          "journal": "Breast cancer research and treatment",
+          "publicationType": "Journal article",
+          "impactFactor": 3.3,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-046",
@@ -1808,7 +1968,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Multi-modal%20volumetric%20concept%20activation%20to%20explain%20detection%20and%20classification%20of%20metastatic%20prostate%20cancer%20on%20PSMA-PET%2FCT"
             }
-          ]
+          ],
+          "paperTitle": "Multi-modal volumetric concept activation to explain detection and classification of metastatic prostate cancer on PSMA-PET/CT",
+          "authors": "Kraaijveld, Rosa CJ, Philippens, Marielle EP, Eppinga, Wietse SC, Jürgenliemk-Schulz, Ina M, Gilhuijs, Kenneth GA, Kroon, Petra S, van der Velden, Bas HM",
+          "journal": "International Workshop on Interpretability of Machine Intelligence in Medical Image Computing",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-049",
@@ -1824,7 +1988,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=I%20HOW%20TO%20ACCURATELY%20MEASURE%20VOLUMES%20IN%20WILMS%20TUMORS%20ON%20MRI"
             }
-          ]
+          ],
+          "paperTitle": "I HOW TO ACCURATELY MEASURE VOLUMES IN WILMS TUMORS ON MRI",
+          "authors": "Buser, Myrthe, Van Der Steeg, Alida, Wijnen, Marc, Fitski, Matthijs, Van Den Nieuwenhof, Heleen, Van Den Heuvel-Eibrink, Marry, Littooij, Annemieke, Van Der Velden, Bas",
+          "journal": "PEDIATRIC BLOOD & CANCER",
+          "publicationType": "Journal article",
+          "impactFactor": 2.4,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-050",
@@ -1840,7 +2010,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Prediction%20of%20poor%20outcome%20after%20tisagenlecleucel%20in%20patients%20with%20relapsed%20or%20refractory%20diffuse%20large%20B%20cell%20lymphoma%20(DLBCL)%20using%20artificial%20intelligence%20analysis%20of%20pre-infusion%20PET%2FCT"
             }
-          ]
+          ],
+          "paperTitle": "Prediction of poor outcome after tisagenlecleucel in patients with relapsed or refractory diffuse large B cell lymphoma (DLBCL) using artificial intelligence analysis of pre-infusion PET/CT",
+          "authors": "Jak, Margot, van Der Velden, Bas HM, de Keizer, Bart, Elias, Sjoerd G, Minnema, Monique C, Gilhuijs, Kenneth GA",
+          "journal": "",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-13-15",
@@ -1848,7 +2022,12 @@
           "period": "2021",
           "details": "",
           "meta": "",
-          "group": "Foundational work in explainable AI and medical imaging"
+          "group": "Foundational work in explainable AI and medical imaging",
+          "paperTitle": "Leveraging clinical characteristics for improved deep learning-based kidney tumor segmentation on CT",
+          "authors": "Lund, C.B. & van der Velden, B.H.M.",
+          "journal": "KiTS21 Challenge, MICCAI",
+          "publicationType": "Conference contribution",
+          "links": []
         },
         {
           "id": "cv-bib-030",
@@ -1864,7 +2043,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Toward%20Computer-Assisted%20Triaging%20of%20Magnetic%20Resonance%20Imaging%E2%80%90Guided%20Biopsy%20in%20Preoperative%20Breast%20Cancer%20Patients"
             }
-          ]
+          ],
+          "paperTitle": "Toward Computer-Assisted Triaging of Magnetic Resonance Imaging‐Guided Biopsy in Preoperative Breast Cancer Patients",
+          "authors": "Wang, Hui, Van Der Velden, Bas HM, Ragusi, Max AA, Veldhuis, Wouter B, Viergever, Max A, Verburg, Erik, Gilhuijs, Kenneth GA",
+          "journal": "Investigative Radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 7.9,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-032",
@@ -1880,7 +2065,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Prognostic%20value%20of%20breast%20MRI%20characteristics%20before%20and%20during%20neoadjuvant%20endocrine%20therapy%20in%20patients%20with%20ER%2B%2FHER2-breast%20cancer"
             }
-          ]
+          ],
+          "paperTitle": "Prognostic value of breast MRI characteristics before and during neoadjuvant endocrine therapy in patients with ER+/HER2-breast cancer",
+          "authors": "Ragusi, Max AA, Winter-Warnars, Gonneke AO, Wesseling, Jelle, Linn, Sabine C, Beets-Tan, Regina G, van der Velden, Bas HM, Elias, Sjoerd G, Gilhuijs, Kenneth GA, Loo, Claudette E",
+          "journal": "The British journal of radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 3.4,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-034",
@@ -1896,7 +2087,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Mixmicrobleed%3A%20Multi-stage%20detection%20and%20segmentation%20of%20cerebral%20microbleeds"
             }
-          ]
+          ],
+          "paperTitle": "Mixmicrobleed: Multi-stage detection and segmentation of cerebral microbleeds",
+          "authors": "Sanguesa, Marta Girones, Kutnar, Denis, van der Velden, Bas HM, Kuijf, Hugo J",
+          "journal": "arXiv preprint arXiv:2108.02482",
+          "publicationType": "Preprint"
         },
         {
           "id": "cv-bib-035",
@@ -1912,23 +2107,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=MixLacune%3A%20Segmentation%20of%20lacunes%20of%20presumed%20vascular%20origin"
             }
-          ]
-        },
-        {
-          "id": "cv-bib-036",
-          "title": "MixMicrobleed: Multi-stage detection and segmentation of cerebral microbleeds",
-          "period": "2021",
-          "details": "Girones Sanguesa, Marta, Kutnar, Denis, van der Velden, Bas HM, Kuijf, Hugo J",
-          "meta": "arXiv e-prints · Preprint / working paper",
-          "group": "Preprint / working paper",
-          "source": "Previous publications inventory (publicaties_aangevuld.xlsx)",
-          "status": "imported",
-          "links": [
-            {
-              "label": "Find publication",
-              "url": "https://scholar.google.com/scholar?q=MixMicrobleed%3A%20Multi-stage%20detection%20and%20segmentation%20of%20cerebral%20microbleeds"
-            }
-          ]
+          ],
+          "paperTitle": "MixLacune: Segmentation of lacunes of presumed vascular origin",
+          "authors": "Kutnar, Denis, van der Velden, Bas HM, Sanguesa, Marta Girones, Geerlings, Mirjam I, Biesbroek, J Matthijs, Kuijf, Hugo J",
+          "journal": "arXiv preprint arXiv:2108.02483",
+          "publicationType": "Preprint"
         },
         {
           "id": "cv-bib-040",
@@ -1944,7 +2127,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Contralateral%20parenchymal%20enhancement%20on%20MRI%20is%20associated%20with%20tumor%20proteasome%20pathway%20gene%20expression%20and%20overall%20survival%20of%20early%20ER%2B%2FHER2-breast%20cancer%20patients"
             }
-          ]
+          ],
+          "paperTitle": "Contralateral parenchymal enhancement on MRI is associated with tumor proteasome pathway gene expression and overall survival of early ER+/HER2-breast cancer patients",
+          "authors": "Ragusi, Max AA, Bismeijer, Tycho, van der Velden, Bas HM, Loo, Claudette E, Canisius, Sander, Wesseling, Jelle, Wessels, Lodewyk FA, Elias, Sjoerd G, Gilhuijs, Kenneth GA",
+          "journal": "The Breast",
+          "publicationType": "Journal article",
+          "impactFactor": 5.2,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-13-16",
@@ -1958,7 +2147,13 @@
               "label": "DOI",
               "url": "https://doi.org/10.1038/s41598-020-75167-6"
             }
-          ]
+          ],
+          "paperTitle": "Volumetric breast density estimation on MRI using explainable deep learning regression",
+          "authors": "van der Velden, Bas HM, Janse, Markus HA, Ragusi, Max AA, Loo, Claudette E, Gilhuijs, Kenneth GA",
+          "journal": "Scientific reports",
+          "publicationType": "Journal article",
+          "impactFactor": 4.9,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-13-17",
@@ -1972,7 +2167,13 @@
               "label": "DOI",
               "url": "https://doi.org/10.1148/radiol.2020191453"
             }
-          ]
+          ],
+          "paperTitle": "Radiogenomic analysis of breast cancer by linking MRI phenotypes with tumor gene expression",
+          "authors": "Bismeijer, Tycho, Van Der Velden, Bas HM, Canisius, Sander, Lips, Esther H, Loo, Claudette E, Viergever, Max A, Wesseling, Jelle, Gilhuijs, Kenneth GA, Wessels, Lodewyk FA",
+          "journal": "Radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 17.6,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-021",
@@ -1988,7 +2189,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Synchronous%20breast%20cancer%3A%20phenotypic%20similarities%20on%20MRI"
             }
-          ]
+          ],
+          "paperTitle": "Synchronous breast cancer: phenotypic similarities on MRI",
+          "authors": "Wang, Hui, van der Velden, Bas HM, Chan, Hui Shan M, Loo, Claudette E, Viergever, Max A, Gilhuijs, Kenneth GA",
+          "journal": "Journal of Magnetic Resonance Imaging",
+          "publicationType": "Journal article",
+          "impactFactor": 4.3,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-022",
@@ -2004,7 +2211,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Mutual%20information%20for%20unsupervised%20deep%20learning%20image%20registration"
             }
-          ]
+          ],
+          "paperTitle": "Mutual information for unsupervised deep learning image registration",
+          "authors": "de Vos, Bob D, van der Velden, Bas HM, Sander, Jörg, Gilhuijs, Kenneth GA, Staring, Marius, Išgum, Ivana",
+          "journal": "Medical Imaging 2020: Image Processing",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-023",
@@ -2020,7 +2231,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Interpretation%20of%20MRI%20phenotype%20of%20synchronous%20breast%20cancer%20in%20relation%20to%20the%20index%20cancer"
             }
-          ]
+          ],
+          "paperTitle": "Interpretation of MRI phenotype of synchronous breast cancer in relation to the index cancer",
+          "authors": "Wang, H, van der Velden, B, Chan, HS, Loo, C, Viergever, MA, Gilhuijs, K",
+          "journal": "",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-024",
@@ -2036,7 +2251,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Interpretable%20deep%20learning%20regression%20for%20breast%20density%20estimation%20on%20MRI"
             }
-          ]
+          ],
+          "paperTitle": "Interpretable deep learning regression for breast density estimation on MRI",
+          "authors": "Van Der Velden, Bas HM, Ragusi, Max AA, Janse, Markus HA, Loo, Claudette E, Gilhuijs, Kenneth GA",
+          "journal": "Medical Imaging 2020: Computer-Aided Diagnosis",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-025",
@@ -2052,7 +2271,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Harmonization%20of%20quantitative%20parenchymal%20enhancement%20in%20T1%E2%80%90weighted%20breast%20MRI"
             }
-          ]
+          ],
+          "paperTitle": "Harmonization of quantitative parenchymal enhancement in T1‐weighted breast MRI",
+          "authors": "van Der Velden, Bas HM, van Rijssel, Michael J, Lena, Beatrice, Philippens, Marielle EP, Loo, Claudette E, Ragusi, Max AA, Elias, Sjoerd G, Sutton, Elizabeth J, Morris, Elizabeth A, Bartels, Lambertus W",
+          "journal": "Journal of Magnetic Resonance Imaging",
+          "publicationType": "Journal article",
+          "impactFactor": 4.3,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-027",
@@ -2068,7 +2293,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Contralateral%20parenchymal%20enhancement%20on%20breast%20MRI%20before%20and%20during%20neoadjuvant%20endocrine%20therapy%20in%20relation%20to%20the%20preoperative%20endocrine%20prognostic%20index"
             }
-          ]
+          ],
+          "paperTitle": "Contralateral parenchymal enhancement on breast MRI before and during neoadjuvant endocrine therapy in relation to the preoperative endocrine prognostic index",
+          "authors": "Ragusi, Max AA, Loo, Claudette E, van der Velden, Bas HM, Wesseling, Jelle, Linn, Sabine C, Beets-Tan, Regina G, Elias, Sjoerd G, Gilhuijs, Kenneth GA",
+          "journal": "European Radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 6,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-041",
@@ -2084,7 +2315,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=OC-0586%3A%20Can%20MRI%20predict%20pathologic%20response%20after%20single%20dose%20neoadjuvant%20partial%20breast%20irradiation%3F"
             }
-          ]
+          ],
+          "paperTitle": "OC-0586: Can MRI predict pathologic response after single dose neoadjuvant partial breast irradiation?",
+          "authors": "Vasmel, J, Koerkamp, M Groot, Charaghvandi, R, Vreuls, C, Van Diest, P, Witkamp, A, Koelemij, R, Doeksen, A, Van Dalen, T, Van der Wall, E",
+          "journal": "Radiotherapy and Oncology",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-044",
@@ -2100,7 +2335,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Validation%20of%20contralateral%20parenchymal%20enhancement%20on%20DCE-MRI%20as%20a%20biomarker%20of%20survival%20in%20patients%20with%20ER-positive%2FHER2-negative%20breast%20cancer"
             }
-          ]
+          ],
+          "paperTitle": "Validation of contralateral parenchymal enhancement on DCE-MRI as a biomarker of survival in patients with ER-positive/HER2-negative breast cancer",
+          "authors": "van der Velden, Bas HM, Sutton, Elizabeth J, Carbonaro, Luca A, Pijnappel, Ruud M, Morris, Elizabeth A, Gilhuijs, Kenneth GA",
+          "journal": "",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-045",
@@ -2116,7 +2355,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Dynamic%20contrast-enhanced%20and%20diffusion-weighted%20MRI%20for%20response%20evaluation%20after%20single-dose%20ablative%20neoadjuvant%20partial%20breast%20irradiation"
             }
-          ]
+          ],
+          "paperTitle": "Dynamic contrast-enhanced and diffusion-weighted MRI for response evaluation after single-dose ablative neoadjuvant partial breast irradiation",
+          "authors": "Koerkamp, ML Groot, Vasmel, JE, Mandija, S, Veldhuis, WB, Moman, MR, Froeling, M, van der Velden, BHM, Charaghvandi, RK, Vreuls, CPH, van Diest, PJ",
+          "journal": "MRI guidance for breast cancer radiotherapy",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-017",
@@ -2132,7 +2375,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Response%20monitoring%20of%20breast%20cancer%20on%20DCE-MRI%20using%20convolutional%20neural%20network-generated%20seed%20points%20and%20constrained%20volume%20growing"
             }
-          ]
+          ],
+          "paperTitle": "Response monitoring of breast cancer on DCE-MRI using convolutional neural network-generated seed points and constrained volume growing",
+          "authors": "Van Der Velden, Bas HM, De Vos, Bob D, Loo, Claudette E, Kuijf, Hugo J, Išgum, Ivana, Gilhuijs, Kenneth GA",
+          "journal": "Medical Imaging 2019: Computer-Aided Diagnosis",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-020",
@@ -2148,7 +2395,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Are%20contralateral%20parenchymal%20enhancement%20on%20dynamic%20contrast-enhanced%20MRI%20and%20genomic%20ER-pathway%20activity%20in%20ER-positive%2FHER2-negative%20breast%20cancer%20related%3F"
             }
-          ]
+          ],
+          "paperTitle": "Are contralateral parenchymal enhancement on dynamic contrast-enhanced MRI and genomic ER-pathway activity in ER-positive/HER2-negative breast cancer related?",
+          "authors": "van der Velden, Bas HM, Bismeijer, Tycho, Canisius, Sander, Loo, Claudette E, Lips, Esther H, Wesseling, Jelle, Viergever, Max A, Wessels, Lodewyk FA, Gilhuijs, Kenneth GA",
+          "journal": "European Journal of Radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 3.9,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-013",
@@ -2164,7 +2417,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Eligibility%20of%20patients%20for%20minimally%20invasive%20breast%20cancer%20therapy%20based%20on%20MRI%20analysis%20of%20tumor%20proximity%20to%20skin%20and%20pectoral%20muscle"
             }
-          ]
+          ],
+          "paperTitle": "Eligibility of patients for minimally invasive breast cancer therapy based on MRI analysis of tumor proximity to skin and pectoral muscle",
+          "authors": "Merckel, Laura G, Verburg, Erik, van der Velden, Bas HM, Loo, Claudette E, van den Bosch, Maurice AAJ, Gilhuijs, Kenneth GA",
+          "journal": "The breast journal",
+          "publicationType": "Journal article",
+          "impactFactor": 2.4,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-014",
@@ -2180,7 +2439,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Perfusion%20in%20the%20contralateral%20breast%20on%20preoperative%20MRI%20may%20complement%20ER-pathway%20activity%20from%20the%20index%20tumor%20to%20stratify%20outcome%20of%20endocrine%20therapy%20for%20early-stage%20invasive%20breast%20cancer"
             }
-          ]
+          ],
+          "paperTitle": "Perfusion in the contralateral breast on preoperative MRI may complement ER-pathway activity from the index tumor to stratify outcome of endocrine therapy for early-stage invasive breast cancer",
+          "authors": "Van der Velden, B, Bismeijer, T, Canisius, S, Loo, C, Lips, E, Wesseling, J, Viergever, M, Wessels, L, Gilhuijs, K",
+          "journal": "European Journal of Cancer",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-015",
@@ -2196,7 +2459,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Contralateral%20parenchymal%20enhancement%20on%20dynamic%20contrast-enhanced%20MRI%20reproduces%20as%20a%20biomarker%20of%20survival%20in%20ER-positive%2FHER2-negative%20breast%20cancer%20patients"
             }
-          ]
+          ],
+          "paperTitle": "Contralateral parenchymal enhancement on dynamic contrast-enhanced MRI reproduces as a biomarker of survival in ER-positive/HER2-negative breast cancer patients",
+          "authors": "van der Velden, Bas HM, Sutton, Elizabeth J, Carbonaro, Luca A, Pijnappel, Ruud M, Morris, Elizabeth A, Gilhuijs, Kenneth GA",
+          "journal": "European Radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 6,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-016",
@@ -2212,7 +2481,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=BPE%20and%20computer-extracted%20parenchymal%20enhancement%20for%20breast%20cancer%20risk%2C%20response%20monitoring%2C%20and%20prognosis"
             }
-          ]
+          ],
+          "paperTitle": "BPE and computer-extracted parenchymal enhancement for breast cancer risk, response monitoring, and prognosis",
+          "authors": "van der Velden, Bas HM",
+          "journal": "arXiv preprint arXiv:1809.05510",
+          "publicationType": "Preprint"
         },
         {
           "id": "cv-bib-019",
@@ -2228,7 +2501,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Assessing%20the%20perivascular%20spaces%20count%20using%20texture%20features%20in%203T%20MRI%20scans%3A%20a%20feasibility%20study"
             }
-          ]
+          ],
+          "paperTitle": "Assessing the perivascular spaces count using texture features in 3T MRI scans: a feasibility study",
+          "authors": "Spijkerman, Jolanda M, van der Velden, Bas HM, Biessels, Geert-Jan, Hendrikse, Jeroen, Luijten, Peter R, Zwanenburg, Jaco JM, Kuijf, Hugo J",
+          "journal": "Quantitative MRI",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-031",
@@ -2244,7 +2521,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Radiomics%20of%20DCE-MRI%20to%20selectively%20down-stage%20the%20risk%20of%20breast%20cancers%20with%20a%20high-risk%2070-gene%20signature"
             }
-          ]
+          ],
+          "paperTitle": "Radiomics of DCE-MRI to selectively down-stage the risk of breast cancers with a high-risk 70-gene signature",
+          "authors": "Chan, Hui Shan, Bismeijer, Tycho, van der Velden, Bas, Wesseling, Jelle, Lips, Esther, Loo, Claudette, Wessels, Lodewyk, Gilhuijs, Kenneth",
+          "journal": "",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-13-18",
@@ -2258,7 +2539,13 @@
               "label": "DOI",
               "url": "https://doi.org/10.1158/1078-0432.CCR-17-0176"
             }
-          ]
+          ],
+          "paperTitle": "Complementary value of contralateral parenchymal enhancement on DCE-MRI to prognostic models and molecular assays in high-risk ER+/HER2− breast cancer",
+          "authors": "Van Der Velden, Bas HM, Elias, Sjoerd G, Bismeijer, Tycho, Loo, Claudette E, Viergever, Max A, Wessels, Lodewyk FA, Gilhuijs, Kenneth GA",
+          "journal": "Clinical Cancer Research",
+          "publicationType": "Journal article",
+          "impactFactor": 10.9,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-011",
@@ -2274,7 +2561,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Eigentumors%20for%20prediction%20of%20treatment%20failure%20in%20patients%20with%20early-stage%20breast%20cancer%20using%20dynamic%20contrast-enhanced%20MRI%3A%20a%20feasibility%20study"
             }
-          ]
+          ],
+          "paperTitle": "Eigentumors for prediction of treatment failure in patients with early-stage breast cancer using dynamic contrast-enhanced MRI: a feasibility study",
+          "authors": "Chan, HM, van der Velden, Bas HM, Loo, Claudette E, Gilhuijs, Kenneth GA",
+          "journal": "Physics in Medicine & Biology",
+          "publicationType": "Journal article",
+          "impactFactor": 3.1,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-005",
@@ -2290,7 +2583,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Contralateral%20Parenchymal%20Enhancement%20in%20DCE-MRI%20of%20Patients%20with%20Unilateral%20Node-negative%20ER%2B%2FHER2-breastcancer%3A%20Potential%20Value%20for%20Chemotherapy%20Selection"
             }
-          ]
+          ],
+          "paperTitle": "Contralateral Parenchymal Enhancement in DCE-MRI of Patients with Unilateral Node-negative ER+/HER2-breastcancer: Potential Value for Chemotherapy Selection",
+          "authors": "van der Velden, BHM, Loo, CE, Pijnappel, RM, Gilhuijs, KGA",
+          "journal": "Radiological Society of North America, 101st Annual Meeting",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-006",
@@ -2306,7 +2603,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Abstract%20P4-02-07%3A%20Association%20between%20computer-derived%20features%20of%20the%20ipsilateral%20breast%20on%20DCE-MRI%20and%20the%2070-gene%20signature%20in%20patients%20with%20invasive%20breast%20cancer"
             }
-          ]
+          ],
+          "paperTitle": "Abstract P4-02-07: Association between computer-derived features of the ipsilateral breast on DCE-MRI and the 70-gene signature in patients with invasive breast cancer",
+          "authors": "van der Velden, BHM, Schmitz, AMTh, Loo, CE, Gilhuijs, KGA",
+          "journal": "",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-007",
@@ -2322,7 +2623,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Prediction%20model%20for%20extensive%20ductal%20carcinoma%20in%20situ%20around%20early-stage%20invasive%20breast%20cancer"
             }
-          ]
+          ],
+          "paperTitle": "Prediction model for extensive ductal carcinoma in situ around early-stage invasive breast cancer",
+          "authors": "Knuttel, Floortje M, Van Der Velden, Bas HM, Loo, Claudette E, Elias, Sjoerd G, Wesseling, Jelle, Van Den Bosch, Maurice AAJ, Gilhuijs, Kenneth GA",
+          "journal": "Investigative radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 7.9,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-008",
@@ -2338,7 +2645,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Prediction%20of%20the%2070-gene%20signature%20in%20early%20breast%20cancer%20patients%20using%20computer-derived%20DCE-MRI%20features%20of%20the%20tumor%20and%20intramammary%20blood%20vessels"
             }
-          ]
+          ],
+          "paperTitle": "Prediction of the 70-gene signature in early breast cancer patients using computer-derived DCE-MRI features of the tumor and intramammary blood vessels",
+          "authors": "Van der Velden, BHM, Schmitz, AM Th, Chan, HM, Loo, CE, Gilhuijs, KGA",
+          "journal": "10th European Breast Cancer Conference",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-009",
@@ -2354,7 +2665,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Parenchymal%20enhancement%20of%20the%20contralateral%20breast%20in%20DCE-MRI%20and%20outcome%20of%20patients%20with%20early%20breast%20cancer%3A%20complimentary%20value%20of%20the%2070-gene%20signature"
             }
-          ]
+          ],
+          "paperTitle": "Parenchymal enhancement of the contralateral breast in DCE-MRI and outcome of patients with early breast cancer: complimentary value of the 70-gene signature",
+          "authors": "Van der Velden, BHM, Loo, CE, Gilhuijs, KGA",
+          "journal": "10th European Breast Cancer Conference",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-bib-010",
@@ -2370,39 +2685,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Deep%20Learning%20for%20Multi-task%20Medical%20Image%20Segmentation%20in%20Multiple%20Modalities"
             }
-          ]
-        },
-        {
-          "id": "cv-bib-018",
-          "title": "Association between computer-derived features of the ipsilateral breast on DCE-MRI and the 70-gene signature in patients with invasive breast cancer",
-          "period": "2016",
-          "details": "van der Velden, BHM, Schmitz, AM Th, Loo, CE, Gilhuijs, KGA",
-          "meta": "San Antonio Breast Cancer Symposium}} · Conference contribution / other output",
-          "group": "Conference contribution / other output",
-          "source": "Previous publications inventory (publicaties_aangevuld.xlsx)",
-          "status": "imported",
-          "links": [
-            {
-              "label": "Find publication",
-              "url": "https://scholar.google.com/scholar?q=Association%20between%20computer-derived%20features%20of%20the%20ipsilateral%20breast%20on%20DCE-MRI%20and%20the%2070-gene%20signature%20in%20patients%20with%20invasive%20breast%20cancer"
-            }
-          ]
-        },
-        {
-          "id": "cv-bib-039",
-          "title": "International conference on medical image computing and computer-assisted intervention",
-          "period": "2016",
-          "details": "Moeskops, P, Wolterink, JM, Van der Velden, BH, Gilhuijs, KG, Leiner, T, Viergever, MA, Išgum, I",
-          "meta": "Venue to verify · Conference contribution / other output",
-          "group": "Conference contribution / other output",
-          "source": "Previous publications inventory (publicaties_aangevuld.xlsx)",
-          "status": "to_verify",
-          "links": [
-            {
-              "label": "Find publication",
-              "url": "https://scholar.google.com/scholar?q=International%20conference%20on%20medical%20image%20computing%20and%20computer-assisted%20intervention"
-            }
-          ]
+          ],
+          "paperTitle": "Deep Learning for Multi-task Medical Image Segmentation in Multiple Modalities",
+          "authors": "Moeskops, Pim, Wolterink, Jelmer M, van der Velden, Bas HM, Gilhuijs, Kenneth GA, Leiner, Tim, Viergever, Max A, Išgum, Ivana",
+          "journal": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+          "publicationType": "Conference contribution"
         },
         {
           "id": "cv-13-19",
@@ -2416,7 +2703,13 @@
               "label": "DOI",
               "url": "https://doi.org/10.1148/radiol.15142192"
             }
-          ]
+          ],
+          "paperTitle": "Association between parenchymal enhancement of the contralateral breast in dynamic contrast-enhanced MR imaging and outcome of patients with unilateral invasive breast cancer",
+          "authors": "Van Der Velden, Bas HM, Dmitriev, Ivan, Loo, Claudette E, Pijnappel, Ruud M, Gilhuijs, Kenneth GA",
+          "journal": "Radiology",
+          "publicationType": "Journal article",
+          "impactFactor": 17.6,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-003",
@@ -2432,7 +2725,13 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Determining%20the%20Bias%20and%20Variance%20of%20a%20Deterministic%20Finger-Tracking%20Algorithm"
             }
-          ]
+          ],
+          "paperTitle": "Determining the Bias and Variance of a Deterministic Finger-Tracking Algorithm",
+          "authors": "Morash, VS, van der Velden, BHM",
+          "journal": "Behavior Research Methods",
+          "publicationType": "Journal article",
+          "impactFactor": 5,
+          "impactFactorYear": 2025
         },
         {
           "id": "cv-bib-004",
@@ -2448,7 +2747,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Evaluation%20of%20image-based%20bias%20field%20correction%20at%207T"
             }
-          ]
+          ],
+          "paperTitle": "Evaluation of image-based bias field correction at 7T",
+          "authors": "van Rijssel, Mike, Pluim, JPW, van der Velden, Bas, van der Velden, Tijl, Krikken, E, Wijnen, Jannie, Gilhuijs, Kenneth, Klomp, DWJ",
+          "journal": "",
+          "publicationType": "Other scholarly output"
         },
         {
           "id": "cv-bib-001",
@@ -2464,7 +2767,11 @@
               "label": "Find publication",
               "url": "https://scholar.google.com/scholar?q=Association%20between%20parenchymal%20enhancement%20of%20the%20contralateral%20breast%20in%20DCE-MRI%20and%20outcome%20of%20patients%20with%20unilateral%20breast%20cancer"
             }
-          ]
+          ],
+          "paperTitle": "Association between parenchymal enhancement of the contralateral breast in DCE-MRI and outcome of patients with unilateral breast cancer",
+          "authors": "van der Velden, BHM, Dmitriev, I, Loo, CE, Gilhuijs, KGA",
+          "journal": "9th European Breast Cancer Conference",
+          "publicationType": "Conference contribution"
         }
       ]
     },
@@ -2635,7 +2942,7 @@
           "id": "cv-agenda-2024-newfood",
           "title": "New Food — Applications of AI Podcast",
           "period": "2024-01-30",
-          "details": "Podcast appearance concerning applications of artificial intelligence. Working title from the calendar; publication link still to be added.",
+          "details": "Podcast on applications of artificial intelligence.",
           "meta": "Podcast · date from agenda",
           "links": []
         },
@@ -2661,7 +2968,7 @@
       "number": 17,
       "title": "Scheduled engagements and forward scientific community activities",
       "category": "Upcoming",
-      "description": "Forward-looking entries are recorded as planned engagements in the source CV.",
+      "description": "Upcoming scientific engagements and activities.",
       "entries": [
         {
           "title": "AI for Food Safety Conference (AIFS), 8–9 April 2027, Ede",
