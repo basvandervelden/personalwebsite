@@ -5,7 +5,7 @@ import './cv.css';
 const external = (url) => /^https:\/\//i.test(url || '');
 const startYear = (period) => /^\d{4}/.exec(period || '')?.[0] || '';
 // Topic synonyms: searching for "XAI" also finds entries spelled out as "explainable AI", etc.
-const normalize = text => String(text || '').toLocaleLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
+const normalize = text => String(text || '').toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 const topicAliases = {
   xai: ['explainab', 'explainable artificial intelligence', 'interpretability', 'interpretab', 'uitlegbare ai', 'verklaarbare ai', 'transparent machine learning', 'black box'],
   llm: ['large language model', 'language model'],
