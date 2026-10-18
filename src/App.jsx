@@ -32,6 +32,11 @@ function Portrait({className=''}) {
     <figcaption>Photo: © Rozanne van der Velden-Land</figcaption>
   </figure>;
 }
+function ChefsImage({className=''}) {
+  return <figure className={'chefs-visual '+className}>
+    <img src={import.meta.env.BASE_URL+'chefs.svg'} alt="CHEFS mascot illustration, a smiling food can wearing a chef's hat" loading="lazy"/>
+  </figure>;
+}
 function PageHeader({kicker,title,lead,compact=false}) {
   return <header className={'page-header '+(compact?'compact':'')}><div className="container"><Eyebrow>{kicker}</Eyebrow><h1>{title}</h1><p className="page-lead">{lead}</p></div></header>;
 }
@@ -71,7 +76,7 @@ function Home(){
     <section className="section"><div className="container"><SectionIntro eyebrow="01 / RESEARCH" title="Three connected research directions." description="Fundamental methodology and practical relevance are complementary parts of the same research agenda." link="/research" linkText="All research"/>
     <div className="mini-grid">{researchAreas.map(item=><ResearchMiniCard item={item} key={item.slug}/>)}</div></div></section>
     <section className="section section-alt"><div className="container"><SectionIntro eyebrow="02 / SELECTED PROJECTS" title="Where ideas become research programmes." description="A selection of open resources, methodological work and ongoing initiatives." link="/projects" linkText="All projects"/>
-    <div className="feature-project"><MediaSlot kind="figure" format="landscape" title="CHEFS / European food monitoring visual" caption="Suggested: a high-resolution data visualisation or database overview"/>
+    <div className="feature-project"><ChefsImage className="chefs-home"/>
       <div className="feature-project-text"><Eyebrow>OPEN DATA · FOOD MONITORING</Eyebrow><h3>CHEFS</h3><p>Bringing together European food monitoring data to make it more useful for analysis, modelling and risk assessment.</p><div className="feature-stat">392 million <span>analytical results in the published database</span></div><LocalLink to="/projects/chefs" className="text-link">Explore the project <span aria-hidden="true">→</span></LocalLink></div>
     </div>
     <div className="link-strip"><LocalLink to="/projects/living-review">Living AI literature review <span>↗</span></LocalLink><LocalLink to="/projects/foundation-models">Foundation models for analytical data <span>↗</span></LocalLink><LocalLink to="/projects/early-warning">Early warning and emerging risks <span>↗</span></LocalLink></div></div></section>
@@ -106,7 +111,7 @@ function ProjectsIndex() {
     <PageHeader kicker="PROJECTS & DATA RESOURCES" title="Research in practice." lead="Open datasets, software, methods and applied collaborations. Selected projects are outlined here; additional project pages can be added over time."/>
     <section className="section first-section"><div className="container project-grid">
       {projectEntries.map((p,i)=><article key={p.slug} className="project-tile">
-        <MediaSlot kind={i%2?'photo':'figure'} format="landscape" title={p.media}/>
+        {p.slug==='chefs'?<ChefsImage className="chefs-project-card"/>:<MediaSlot kind={i%2?'photo':'figure'} format="landscape" title={p.media}/>}
         <div className="project-tile-copy"><Eyebrow>{p.category}</Eyebrow><h2>{p.title}</h2><p>{p.summary}</p><LocalLink to={'/projects/'+p.slug} className="text-link">Read project overview <span>→</span></LocalLink></div>
       </article>)}
     </div></section>
@@ -117,7 +122,7 @@ function ProjectDetail({item}) {
     <div className="article-top container"><Breadcrumbs parent="Projects" parentPath="/projects" title={item.title}/></div>
     <PageHeader compact kicker={item.category.toUpperCase()} title={item.title} lead={item.lead}/>
     <section className="section first-section"><div className="container">
-      <MediaSlot kind="figure" format="panorama" title={item.media} caption="Project hero image / visualisation"/>
+      {item.slug==='chefs'?<ChefsImage className="chefs-detail"/>:<MediaSlot kind="figure" format="panorama" title={item.media} caption="Project hero image / visualisation"/>}
       <div className="article-layout project-article">
         <div className="article-main"><Eyebrow>PROJECT OVERVIEW</Eyebrow><h2>Research context</h2><p className="large-body">{item.context}</p><h2>Our contribution</h2><p>{item.contribution}</p><h2>Outlook</h2><p>{item.next}</p>
         <MediaSlot kind="figure" format="wide" title={item.secondaryMedia} caption="Reserved for a project-specific result, chart or methodology figure"/></div>
