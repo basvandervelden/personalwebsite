@@ -18,11 +18,17 @@ Built with **React + Vite** and deployed automatically to GitHub Pages.
 
 Routing uses URL fragments (`#/research`, etc.) so pages can be bookmarked and refreshed correctly on GitHub Pages and later on the custom domain without server-side routing.
 
-## Add content
+## Editing content safely
 
-**Edit `src/content.js`** to add publication items, rewrite descriptions, expand projects and research areas, or update experience. Page layout and design live in `src/App.jsx` and `src/styles.css`.
+The site separates approved editorial content, media assets and layout. **Make text edits in GitHub or draft them with ChatGPT; the copy will not be rewritten as a side effect of design work.**
 
-Content and editorial text are a structured starting point and should be reviewed and expanded over time. The full publication record is linked at Research@WUR; the internal publication list is intentionally curated.
+- [`src/page-copy.json`](src/page-copy.json) — page titles, headings, text and buttons.
+- [`src/content.js`](src/content.js) — biography, research areas, projects, selected publications and activities.
+- [`src/cv-data.json`](src/cv-data.json) — complete long CV.
+- [`src/media.json`](src/media.json) — image files, alt text and photographer credits.
+- `src/App.jsx`, `src/CV.jsx` and stylesheets — layout and behaviour.
+
+See **[CONTENT_EDITING.md](CONTENT_EDITING.md)** for direct editing examples and **[AGENTS.md](AGENTS.md)** for the approved-copy preservation rules. GitHub Actions prevents combined text + code edits unless the commit explicitly includes `[content]` (content-only edits are allowed normally).
 
 ## Replace image placeholders
 
@@ -35,7 +41,7 @@ Suggested image set:
 - Project hero image/figure and supporting image for each project (4 × 2)
 - Photos from talks, AIFS events, team or laboratory work (3–5)
 
-When actual images become available, place them in `public/images/` and replace each MediaSlot with a semantic `<figure><img ... /></figure>`. For example:
+When actual images become available, place them in `public/images/` (or `public/`) and replace each MediaSlot with a semantic `<figure><img ... /></figure>`. For example:
 
 ```jsx
 <figure className="real-media">

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { site, navigation, researchAreas, projectEntries, publications, activitySections, milestones } from './content.js';
 import './styles.css';
+import pageCopy from './page-copy.json';
+import media from './media.json';
 import CVPage from './CV.jsx';
 
 const homePath = '/';
@@ -28,13 +30,13 @@ function MediaSlot({title='Photograph or illustration',caption,kind='visual',for
 }
 function Portrait({className=''}) {
   return <figure className={'portrait-photo '+className}>
-    <img src={import.meta.env.BASE_URL+'bas.jpeg'} alt="Portrait of Bas van der Velden" loading={className.includes('hero')?'eager':'lazy'} decoding="async"/>
-    <figcaption>Photo: © Rozanne van der Velden-Land</figcaption>
+    <img src={import.meta.env.BASE_URL+media.portrait.file} alt={media.portrait.alt} loading={className.includes('hero')?'eager':'lazy'} decoding="async"/>
+    <figcaption>{media.portrait.credit}</figcaption>
   </figure>;
 }
 function ChefsImage({className=''}) {
   return <figure className={'chefs-visual '+className}>
-    <img src={import.meta.env.BASE_URL+'chefs.svg'} alt="CHEFS mascot illustration, a smiling food can wearing a chef's hat" loading="lazy"/>
+    <img src={import.meta.env.BASE_URL+media.chefs.file} alt={media.chefs.alt} loading="lazy"/>
   </figure>;
 }
 function PageHeader({kicker,title,lead,compact=false}) {
@@ -64,31 +66,31 @@ function Home(){
   return <>
     <section className="home-hero"><div className="container hero-layout">
       <div className="hero-copy">
-        <Eyebrow>RESEARCHER · SCIENTIFIC LEADER · AI FOR FOOD SAFETY</Eyebrow>
-        <h1>Artificial intelligence for <em>better science.</em></h1>
+        <Eyebrow>{pageCopy.home.researcher_scientific_leader_ai_for_food_safety}</Eyebrow>
+        <h1>{pageCopy.home.artificial_intelligence_for} <em>{pageCopy.home.better_science}</em></h1>
         <p className="lead">{site.intro}</p>
         <div className="hero-meta"><strong>{site.name}</strong><span>{site.role}</span><span>{site.organisation}</span></div>
-        <div className="action-row"><ActionRow to="/research">Explore my research</ActionRow><ActionRow to="/about" secondary>About me</ActionRow></div>
+        <div className="action-row"><ActionRow to="/research">{pageCopy.home.explore_my_research}</ActionRow><ActionRow to="/about" secondary>{pageCopy.home.about_me}</ActionRow></div>
       </div>
       <Portrait className="hero-portrait"/>
     </div></section>
-    <section className="band editorial-note"><div className="container note-grid"><strong>Research focus</strong><p>Building trustworthy AI methods, creating strong scientific data foundations and translating results into practical applications for food safety.</p></div></section>
-    <section className="section"><div className="container"><SectionIntro eyebrow="01 / RESEARCH" title="Three connected research directions." description="Fundamental methodology and practical relevance are complementary parts of the same research agenda." link="/research" linkText="All research"/>
+    <section className="band editorial-note"><div className="container note-grid"><strong>{pageCopy.home.research_focus}</strong><p>{pageCopy.home.building_trustworthy_ai_methods_creating_strong_scientific}</p></div></section>
+    <section className="section"><div className="container"><SectionIntro eyebrow={pageCopy.home.text_01_research} title={pageCopy.home.three_connected_research_directions} description={pageCopy.home.fundamental_methodology_and_practical_relevance_are_complementary} link="/research" linkText={pageCopy.home.all_research}/>
     <div className="mini-grid">{researchAreas.map(item=><ResearchMiniCard item={item} key={item.slug}/>)}</div></div></section>
-    <section className="section section-alt"><div className="container"><SectionIntro eyebrow="02 / SELECTED PROJECTS" title="Where ideas become research programmes." description="A selection of open resources, methodological work and ongoing initiatives." link="/projects" linkText="All projects"/>
+    <section className="section section-alt"><div className="container"><SectionIntro eyebrow={pageCopy.home.text_02_selected_projects} title={pageCopy.home.where_ideas_become_research_programmes} description={pageCopy.home.a_selection_of_open_resources_methodological_work} link="/projects" linkText={pageCopy.home.all_projects}/>
     <div className="feature-project"><ChefsImage className="chefs-home"/>
-      <div className="feature-project-text"><Eyebrow>OPEN DATA · FOOD MONITORING</Eyebrow><h3>CHEFS</h3><p>Bringing together European food monitoring data to make it more useful for analysis, modelling and risk assessment.</p><div className="feature-stat">392 million <span>analytical results in the published database</span></div><LocalLink to="/projects/chefs" className="text-link">Explore the project <span aria-hidden="true">→</span></LocalLink></div>
+      <div className="feature-project-text"><Eyebrow>{pageCopy.home.open_data_food_monitoring}</Eyebrow><h3>{pageCopy.home.chefs}</h3><p>{pageCopy.home.bringing_together_european_food_monitoring_data_to}</p><div className="feature-stat">{pageCopy.home.text_392_million} <span>{pageCopy.home.analytical_results_in_the_published_database}</span></div><LocalLink to="/projects/chefs" className="text-link">{pageCopy.home.explore_the_project} <span aria-hidden="true">→</span></LocalLink></div>
     </div>
-    <div className="link-strip"><LocalLink to="/projects/living-review">Living AI literature review <span>↗</span></LocalLink><LocalLink to="/projects/foundation-models">Foundation models for analytical data <span>↗</span></LocalLink><LocalLink to="/projects/early-warning">Early warning and emerging risks <span>↗</span></LocalLink></div></div></section>
-    <section className="section"><div className="container"><SectionIntro eyebrow="03 / PUBLICATIONS" title="Selected publications." description="Recent peer-reviewed work. The complete publication record is available through Wageningen Research." link="/publications" linkText="View publications"/><PublicationRows items={publications}/></div></section>
-    <section className="bottom-cta"><div className="container bottom-cta-layout"><div><Eyebrow>COLLABORATION</Eyebrow><h2>Interested in working together?</h2><p>Scientific collaboration, research projects, invited talks and methodological exchange.</p></div><ActionRow to="/contact">Get in touch</ActionRow></div></section>
+    <div className="link-strip"><LocalLink to="/projects/living-review">{pageCopy.home.living_ai_literature_review} <span>↗</span></LocalLink><LocalLink to="/projects/foundation-models">{pageCopy.home.foundation_models_for_analytical_data} <span>↗</span></LocalLink><LocalLink to="/projects/early-warning">{pageCopy.home.early_warning_and_emerging_risks} <span>↗</span></LocalLink></div></div></section>
+    <section className="section"><div className="container"><SectionIntro eyebrow={pageCopy.home.text_03_publications} title={pageCopy.home.selected_publications} description={pageCopy.home.recent_peer_reviewed_work_the_complete_publication} link="/publications" linkText={pageCopy.home.view_publications}/><PublicationRows items={publications}/></div></section>
+    <section className="bottom-cta"><div className="container bottom-cta-layout"><div><Eyebrow>{pageCopy.home.collaboration}</Eyebrow><h2>{pageCopy.home.interested_in_working_together}</h2><p>{pageCopy.home.scientific_collaboration_research_projects_invited_talks_and}</p></div><ActionRow to="/contact">{pageCopy.home.get_in_touch}</ActionRow></div></section>
   </>;
 }
 function ResearchIndex() {
   return <>
-    <PageHeader kicker="RESEARCH" title="Methods, data and impact." lead="My work spans trustworthy and explainable AI, foundation models for scientific data, and their applications in food safety."/>
-    <section className="section first-section"><div className="container"><div className="editorial-grid"><div><Eyebrow>THE APPROACH</Eyebrow><h2>Connecting methodological depth to domain questions.</h2><p>Many AI research challenges emerge from the scientific context: incomplete labels, changing data distributions, scarce examples and explanations that need expert scrutiny.</p><p>The goal is not only to create better algorithms, but to understand when and why they help researchers make more informed decisions.</p></div><MediaSlot kind="figure" format="wide" title="Research framework: methods × data × food safety" caption="Suggested: overarching research agenda figure"/></div></div></section>
-    <section className="section section-alt"><div className="container"><SectionIntro eyebrow="RESEARCH AREAS" title="Explore the research directions." description="Each area has its own page for concepts, methods, applications and future research output."/>
+    <PageHeader kicker={pageCopy.researchOverview.research} title={pageCopy.researchOverview.methods_data_and_impact} lead={pageCopy.researchOverview.my_work_spans_trustworthy_and_explainable_ai}/>
+    <section className="section first-section"><div className="container"><div className="editorial-grid"><div><Eyebrow>{pageCopy.researchOverview.the_approach}</Eyebrow><h2>{pageCopy.researchOverview.connecting_methodological_depth_to_domain_questions}</h2><p>{pageCopy.researchOverview.many_ai_research_challenges_emerge_from_the}</p><p>{pageCopy.researchOverview.the_goal_is_not_only_to_create}</p></div><MediaSlot kind="figure" format="wide" title={pageCopy.researchOverview.research_framework_methods_data_food_safety} caption={pageCopy.researchOverview.suggested_overarching_research_agenda_figure}/></div></div></section>
+    <section className="section section-alt"><div className="container"><SectionIntro eyebrow={pageCopy.researchOverview.research_areas} title={pageCopy.researchOverview.explore_the_research_directions} description={pageCopy.researchOverview.each_area_has_its_own_page_for}/>
     <div className="research-list">{researchAreas.map(a=><LocalLink to={'/research/'+a.slug} className="research-line" key={a.slug}><div><span className="index-label">{a.number}</span><h3>{a.title}</h3><p>{a.short}</p></div><span className="large-arrow">↗</span></LocalLink>)}</div></div></section>
   </>;
 }
@@ -97,22 +99,22 @@ function ResearchDetail({item}) {
     <div className="article-top container"><Breadcrumbs parent="Research" parentPath="/research" title={item.title}/></div>
     <PageHeader compact kicker={'RESEARCH AREA '+item.number} title={item.title} lead={item.lead}/>
     <section className="section first-section"><div className="container article-layout">
-      <div className="article-main"><Eyebrow>RESEARCH PERSPECTIVE</Eyebrow><h2>Scientific questions and challenges</h2><p className="large-body">{item.perspective}</p>
-      <MediaSlot kind="figure" format="wide" title={item.media} caption="Reserved for a custom scientific illustration"/>
-      <h2>Methodological approach</h2><ul className="line-list">{item.approach.map(x=><li key={x}>{x}</li>)}</ul>
-      <h2>Application areas</h2><ul className="line-list">{item.applications.map(x=><li key={x}>{x}</li>)}</ul></div>
-      <aside className="article-aside"><div className="aside-panel"><strong>RESEARCH AREA {item.number}</strong><p>{item.short}</p><LocalLink to="/research" className="text-link">All research <span>→</span></LocalLink></div><div className="aside-panel"><strong>RELATED PROJECTS</strong>{item.related.map(slug=>{let p=projectEntries.find(v=>v.slug===slug);return p?<LocalLink key={slug} to={'/projects/'+slug} className="aside-link">{p.title} <span>↗</span></LocalLink>:null})}</div></aside>
+      <div className="article-main"><Eyebrow>{pageCopy.researchDetail.research_perspective}</Eyebrow><h2>{pageCopy.researchDetail.scientific_questions_and_challenges}</h2><p className="large-body">{item.perspective}</p>
+      <MediaSlot kind="figure" format="wide" title={item.media} caption={pageCopy.researchDetail.reserved_for_a_custom_scientific_illustration}/>
+      <h2>{pageCopy.researchDetail.methodological_approach}</h2><ul className="line-list">{item.approach.map(x=><li key={x}>{x}</li>)}</ul>
+      <h2>{pageCopy.researchDetail.application_areas}</h2><ul className="line-list">{item.applications.map(x=><li key={x}>{x}</li>)}</ul></div>
+      <aside className="article-aside"><div className="aside-panel"><strong>RESEARCH AREA {item.number}</strong><p>{item.short}</p><LocalLink to="/research" className="text-link">{pageCopy.researchDetail.all_research} <span>→</span></LocalLink></div><div className="aside-panel"><strong>{pageCopy.researchDetail.related_projects}</strong>{item.related.map(slug=>{let p=projectEntries.find(v=>{pageCopy.researchDetail.v_slug_slug_return_p}<LocalLink key={slug} to={'/projects/'+slug} className="aside-link">{p.title} <span>↗</span></LocalLink>:null})}</div></aside>
     </div></section>
-    <div className="container next-page"><span>CONTINUE EXPLORING</span><LocalLink to="/research">Back to all research <span>→</span></LocalLink></div>
+    <div className="container next-page"><span>{pageCopy.researchDetail.continue_exploring}</span><LocalLink to="/research">{pageCopy.researchDetail.back_to_all_research} <span>→</span></LocalLink></div>
   </>;
 }
 function ProjectsIndex() {
   return <>
-    <PageHeader kicker="PROJECTS & DATA RESOURCES" title="Research in practice." lead="Open datasets, software, methods and applied collaborations. Selected projects are outlined here; additional project pages can be added over time."/>
+    <PageHeader kicker={pageCopy.projectsOverview.projects_data_resources} title={pageCopy.projectsOverview.research_in_practice} lead={pageCopy.projectsOverview.open_datasets_software_methods_and_applied_collaborations}/>
     <section className="section first-section"><div className="container project-grid">
       {projectEntries.map((p,i)=><article key={p.slug} className="project-tile">
         {p.slug==='chefs'?<ChefsImage className="chefs-project-card"/>:<MediaSlot kind={i%2?'photo':'figure'} format="landscape" title={p.media}/>}
-        <div className="project-tile-copy"><Eyebrow>{p.category}</Eyebrow><h2>{p.title}</h2><p>{p.summary}</p><LocalLink to={'/projects/'+p.slug} className="text-link">Read project overview <span>→</span></LocalLink></div>
+        <div className="project-tile-copy"><Eyebrow>{p.category}</Eyebrow><h2>{p.title}</h2><p>{p.summary}</p><LocalLink to={'/projects/'+p.slug} className="text-link">{pageCopy.projectsOverview.read_project_overview} <span>→</span></LocalLink></div>
       </article>)}
     </div></section>
   </>;
@@ -122,11 +124,11 @@ function ProjectDetail({item}) {
     <div className="article-top container"><Breadcrumbs parent="Projects" parentPath="/projects" title={item.title}/></div>
     <PageHeader compact kicker={item.category.toUpperCase()} title={item.title} lead={item.lead}/>
     <section className="section first-section"><div className="container">
-      {item.slug==='chefs'?<ChefsImage className="chefs-detail"/>:<MediaSlot kind="figure" format="panorama" title={item.media} caption="Project hero image / visualisation"/>}
+      {item.slug==='chefs'?<ChefsImage className="chefs-detail"/>:<MediaSlot kind="figure" format="panorama" title={item.media} caption={pageCopy.projectDetail.project_hero_image_visualisation}/>}
       <div className="article-layout project-article">
-        <div className="article-main"><Eyebrow>PROJECT OVERVIEW</Eyebrow><h2>Research context</h2><p className="large-body">{item.context}</p><h2>Our contribution</h2><p>{item.contribution}</p><h2>Outlook</h2><p>{item.next}</p>
-        <MediaSlot kind="figure" format="wide" title={item.secondaryMedia} caption="Reserved for a project-specific result, chart or methodology figure"/></div>
-        <aside className="article-aside"><div className="aside-panel"><strong>PROJECT</strong><p>{item.summary}</p><ExtLink href={item.link} className="text-link">{item.linkLabel}</ExtLink></div><div className="aside-panel"><strong>MORE PROJECTS</strong>{projectEntries.filter(x=>x.slug!==item.slug).slice(0,3).map(x=><LocalLink key={x.slug} className="aside-link" to={'/projects/'+x.slug}>{x.title}<span>↗</span></LocalLink>)}</div></aside>
+        <div className="article-main"><Eyebrow>{pageCopy.projectDetail.project_overview}</Eyebrow><h2>{pageCopy.projectDetail.research_context}</h2><p className="large-body">{item.context}</p><h2>{pageCopy.projectDetail.our_contribution}</h2><p>{item.contribution}</p><h2>{pageCopy.projectDetail.outlook}</h2><p>{item.next}</p>
+        <MediaSlot kind="figure" format="wide" title={item.secondaryMedia} caption={pageCopy.projectDetail.reserved_for_a_project_specific_result_chart}/></div>
+        <aside className="article-aside"><div className="aside-panel"><strong>{pageCopy.projectDetail.project}</strong><p>{item.summary}</p><ExtLink href={item.link} className="text-link">{item.linkLabel}</ExtLink></div><div className="aside-panel"><strong>{pageCopy.projectDetail.more_projects}</strong>{projectEntries.filter(x=>x.slug!==item.slug).slice(0,3).map(x=><LocalLink key={x.slug} className="aside-link" to={'/projects/'+x.slug}>{x.title}<span>↗</span></LocalLink>)}</div></aside>
       </div>
     </div></section>
   </>;
@@ -135,36 +137,36 @@ function Publications() {
   const [filter,setFilter] = useState('All');
   const labels=['All','Research article','Review'];
   return <>
-    <PageHeader kicker="SCIENTIFIC OUTPUT" title="Publications." lead="A curated starting selection of peer-reviewed work, with direct links to the publications. The full bibliography will be incorporated as the site develops."/>
-    <section className="section first-section"><div className="container"><div className="pub-tools"><div className="filter-row" role="group" aria-label="Filter publications">{labels.map(label=><button type="button" key={label} aria-pressed={label===filter} onClick={()=>setFilter(label)} className={filter===label?'active':''}>{label}</button>)}</div><ExtLink href={site.links.research} className="text-link">Full record at Research@WUR</ExtLink></div>
+    <PageHeader kicker={pageCopy.publications.scientific_output} title={pageCopy.publications.publications} lead={pageCopy.publications.a_curated_starting_selection_of_peer_reviewed}/>
+    <section className="section first-section"><div className="container"><div className="pub-tools"><div className="filter-row" role="group" aria-label="Filter publications">{labels.map(label=><button type="button" key={label} aria-pressed={label===filter} onClick={()=>setFilter(label)} className={filter===label?'active':''}>{label}</button>)}</div><ExtLink href={site.links.research} className="text-link">{pageCopy.publications.full_record_at_research_wur}</ExtLink></div>
     <PublicationRows items={publications.filter(p=>filter==='All'||p.type===filter)}/>
-    <div className="content-addition"><div><Eyebrow>COMPLETE BIBLIOGRAPHY</Eyebrow><h3>More publications will follow.</h3><p>This section is intentionally curated rather than presenting an incomplete list as exhaustive. Future updates can include searchable topics, publication types and DOI metadata.</p></div><MediaSlot title="Publication visual / selected paper cover" kind="figure" format="landscape"/></div>
+    <div className="content-addition"><div><Eyebrow>{pageCopy.publications.complete_bibliography}</Eyebrow><h3>{pageCopy.publications.more_publications_will_follow}</h3><p>{pageCopy.publications.this_section_is_intentionally_curated_rather_than}</p></div><MediaSlot title={pageCopy.publications.publication_visual_selected_paper_cover} kind="figure" format="landscape"/></div>
     </div></section>
   </>;
 }
 function AcademicActivities(){
   return <>
-    <PageHeader kicker="ACADEMIC ACTIVITIES" title="Research is a collective endeavour." lead="Scientific exchange, community-building and mentorship are important parts of my work alongside research and project delivery."/>
-    <section className="section first-section"><div className="container"><div className="editorial-grid"><div><Eyebrow>COMMUNITY & EXCHANGE</Eyebrow><h2>Connecting researchers and ideas.</h2><p>AI for food safety is an interdisciplinary field. Making progress requires researchers in AI, toxicology, chemistry, microbiology, risk assessment and policy to learn from one another.</p><p>These activities range from invited scientific presentations to organising collaborative initiatives and building cross-disciplinary teams.</p></div><MediaSlot kind="photo" format="wide" title="Conference talk / scientific event photograph" caption="Suggested: invited talk, conference or team event"/></div></div></section>
+    <PageHeader kicker={pageCopy.academicActivities.academic_activities} title={pageCopy.academicActivities.research_is_a_collective_endeavour} lead={pageCopy.academicActivities.scientific_exchange_community_building_and_mentorship_are}/>
+    <section className="section first-section"><div className="container"><div className="editorial-grid"><div><Eyebrow>{pageCopy.academicActivities.community_exchange}</Eyebrow><h2>{pageCopy.academicActivities.connecting_researchers_and_ideas}</h2><p>{pageCopy.academicActivities.ai_for_food_safety_is_an_interdisciplinary}</p><p>{pageCopy.academicActivities.these_activities_range_from_invited_scientific_presentations}</p></div><MediaSlot kind="photo" format="wide" title={pageCopy.academicActivities.conference_talk_scientific_event_photograph} caption={pageCopy.academicActivities.suggested_invited_talk_conference_or_team_event}/></div></div></section>
     <section className="section section-alt"><div className="container activity-grid">{activitySections.map((a,i)=><article className="activity-card" key={a.title}><span className="index-label">0{i+1}</span><h2>{a.title}</h2><p>{a.description}</p><ul>{a.entries.map(e=><li key={e}>{e}</li>)}</ul></article>)}</div></section>
-    <section className="section"><div className="container"><SectionIntro eyebrow="PHOTO GALLERY" title="Speaking, collaboration & research." description="Space for documented activities and scientific highlights."/><div className="gallery-placeholders"><MediaSlot kind="photo" format="landscape" title="Keynote or invited talk"/><MediaSlot kind="photo" format="landscape" title="Conference / community event"/><MediaSlot kind="photo" format="landscape" title="Research team or collaboration"/></div></div></section>
+    <section className="section"><div className="container"><SectionIntro eyebrow={pageCopy.academicActivities.photo_gallery} title={pageCopy.academicActivities.speaking_collaboration_research} description={pageCopy.academicActivities.space_for_documented_activities_and_scientific_highlights}/><div className="gallery-placeholders"><MediaSlot kind="photo" format="landscape" title={pageCopy.academicActivities.keynote_or_invited_talk}/><MediaSlot kind="photo" format="landscape" title={pageCopy.academicActivities.conference_community_event}/><MediaSlot kind="photo" format="landscape" title={pageCopy.academicActivities.research_team_or_collaboration}/></div></div></section>
   </>;
 }
 function About(){
   return <>
-    <PageHeader kicker="ABOUT" title="A researcher, a team leader, and a builder of programmes." lead="My work combines machine learning research, scientific collaboration and developing people and research directions."/>
-    <section className="section first-section"><div className="container about-columns"><Portrait className="about-portrait"/><div><Eyebrow>BACKGROUND</Eyebrow><h2>From medical imaging to AI for food safety.</h2>{site.about.map(p=><p key={p}>{p}</p>)}<ExtLink href={site.links.research} className="text-link">Scientific profile</ExtLink> <LocalLink to="/cv" className="text-link about-cv-link">Full academic CV <span>→</span></LocalLink></div></div></section>
-    <section className="section section-alt"><div className="container"><SectionIntro eyebrow="EXPERIENCE" title="Selected roles and background." description="For a complete overview of appointments, projects, acquisition, supervision, talks and service, explore the searchable CV."/><div className="milestones">{milestones.map(m=><div className="milestone" key={m.title}><span>{m.date}</span><div><h3>{m.title}</h3><p>{m.institution}</p></div></div>)}</div></div></section>
-    <section className="section"><div className="container editorial-grid"><div><Eyebrow>BEYOND INDIVIDUAL RESEARCH</Eyebrow><h2>Building an environment for good research.</h2><p>I care about the conditions that make sustainable science possible: trusted methods, shared data, collaboration across disciplines and time for researchers to develop ambitious ideas.</p><LocalLink to="/academic-activities" className="text-link">Academic activities <span>→</span></LocalLink></div><figure className="about-team-photo"><img src={import.meta.env.BASE_URL+"community-team.avif"} alt="Part of the Data Science and AI team at Wageningen Food Safety Research at a HOLiFOOD event" loading="lazy" decoding="async"/><figcaption>Part of the Data Science &amp; AI team at Wageningen Food Safety Research (2026).</figcaption></figure></div></section>
+    <PageHeader kicker={pageCopy.about.about} title={pageCopy.about.a_researcher_a_team_leader_and_a} lead={pageCopy.about.my_work_combines_machine_learning_research_scientific}/>
+    <section className="section first-section"><div className="container about-columns"><Portrait className="about-portrait"/><div><Eyebrow>{pageCopy.about.background}</Eyebrow><h2>{pageCopy.about.from_medical_imaging_to_ai_for_food}</h2>{site.about.map(p=><p key={p}>{p}</p>)}<ExtLink href={site.links.research} className="text-link">{pageCopy.about.scientific_profile}</ExtLink> <LocalLink to="/cv" className="text-link about-cv-link">{pageCopy.about.full_academic_cv} <span>→</span></LocalLink></div></div></section>
+    <section className="section section-alt"><div className="container"><SectionIntro eyebrow={pageCopy.about.experience} title={pageCopy.about.selected_roles_and_background} description={pageCopy.about.for_a_complete_overview_of_appointments_projects}/><div className="milestones">{milestones.map(m=><div className="milestone" key={m.title}><span>{m.date}</span><div><h3>{m.title}</h3><p>{m.institution}</p></div></div>)}</div></div></section>
+    <section className="section"><div className="container editorial-grid"><div><Eyebrow>{pageCopy.about.beyond_individual_research}</Eyebrow><h2>{pageCopy.about.building_an_environment_for_good_research}</h2><p>{pageCopy.about.i_care_about_the_conditions_that_make}</p><LocalLink to="/academic-activities" className="text-link">{pageCopy.about.academic_activities} <span>→</span></LocalLink></div><figure className="about-team-photo"><img src={import.meta.env.BASE_URL+media.team.file} alt={media.team.alt} loading="lazy" decoding="async"/><figcaption>{media.team.caption}</figcaption></figure></div></section>
   </>;
 }
 function Contact(){
   return <>
-    <PageHeader kicker="CONTACT" title="Let's exchange ideas." lead="For scientific collaboration, invited talks, research initiatives or questions about my work, feel free to get in touch."/>
-    <section className="section first-section"><div className="container contact-columns"><div className="contact-panel"><Eyebrow>GET IN TOUCH</Eyebrow><h2>Email</h2><a href={'mailto:'+site.email} className="email-address">{site.email} <span>↗</span></a><p>{site.organisation}<br/>{site.location}</p></div><div className="contact-panel subtle"><Eyebrow>ONLINE PROFILES</Eyebrow><h2>Find my work</h2><ExtLink href={site.links.research} className="contact-profile">Research@WUR</ExtLink><ExtLink href={site.links.github} className="contact-profile">GitHub</ExtLink><ExtLink href={site.links.wur} className="contact-profile">Wageningen Food Safety Research</ExtLink></div></div></section>
+    <PageHeader kicker={pageCopy.contact.contact} title={pageCopy.contact.let_s_exchange_ideas} lead={pageCopy.contact.for_scientific_collaboration_invited_talks_research_initiatives}/>
+    <section className="section first-section"><div className="container contact-columns"><div className="contact-panel"><Eyebrow>{pageCopy.contact.get_in_touch}</Eyebrow><h2>{pageCopy.contact.email}</h2><a href={'mailto:'+site.email} className="email-address">{site.email} <span>↗</span></a><p>{site.organisation}<br/>{site.location}</p></div><div className="contact-panel subtle"><Eyebrow>{pageCopy.contact.online_profiles}</Eyebrow><h2>{pageCopy.contact.find_my_work}</h2><ExtLink href={site.links.research} className="contact-profile">{pageCopy.contact.research_wur}</ExtLink><ExtLink href={site.links.github} className="contact-profile">{pageCopy.contact.github}</ExtLink><ExtLink href={site.links.wur} className="contact-profile">{pageCopy.contact.wageningen_food_safety_research}</ExtLink></div></div></section>
   </>;
 }
-function NotFound(){return <div className="container notfound"><Eyebrow>404</Eyebrow><h1>Page not found.</h1><p>The requested page does not exist.</p><ActionRow to="/">Return home</ActionRow></div>}
+function NotFound(){return <div className="container notfound"><Eyebrow>404</Eyebrow><h1>{pageCopy.notFound.page_not_found}</h1><p>{pageCopy.notFound.the_requested_page_does_not_exist}</p><ActionRow to="/">{pageCopy.notFound.return_home}</ActionRow></div>}
 function App(){
   const [path,setPath]=useState(currentPath);
   const [menuOpen,setMenuOpen]=useState(false);
@@ -185,29 +187,22 @@ function App(){
   },[path]);
   useEffect(()=>{document.documentElement.dataset.theme=theme;try{localStorage.setItem('bas-theme',theme)}catch{}},[theme]);
   let page;
-  if(path==='/') page=<Home/>;
-  else if(path==='/research') page=<ResearchIndex/>;
+  if(path==='/') page=<Home/>{pageCopy.shell.else_if_path_research_page}<ResearchIndex/>;
   else if(path.startsWith('/research/')) {let a=researchAreas.find(x=>'/research/'+x.slug===path);page=a?<ResearchDetail item={a}/>:<NotFound/>}
   else if(path==='/projects') page=<ProjectsIndex/>;
   else if(path.startsWith('/projects/')) {let p=projectEntries.find(x=>'/projects/'+x.slug===path);page=p?<ProjectDetail item={p}/>:<NotFound/>}
-  else if(path==='/publications') page=<Publications/>;
-  else if(path==='/academic-activities') page=<AcademicActivities/>;
-  else if(path==='/about') page=<About/>;
-  else if(path==='/cv'||/^\/cv\/\d+$/.test(path)) page=<CVPage sectionNumber={path.split('/')[2]}/>;
-  else if(path==='/contact') page=<Contact/>;
-  else page=<NotFound/>;
-  return <>
-    <a href="#main" className="skip-link">Skip to content</a>
+  else if(path==='/publications') page=<Publications/>{pageCopy.shell.else_if_path_academic_activities_page}<AcademicActivities/>{pageCopy.shell.else_if_path_about_page}<About/>{pageCopy.shell.else_if_path_cv_cv_d_test}<CVPage sectionNumber={path.split('/')[2]}/>{pageCopy.shell.else_if_path_contact_page}<Contact/>{pageCopy.shell.else_page}<NotFound/>{pageCopy.shell.return} <>
+    <a href="#main" className="skip-link">{pageCopy.shell.skip_to_content}</a>
     <header className="site-header"><div className="container header-content">
-      <LocalLink to="/" className="wordmark"><span className="wordmark-name">Bas van der Velden<span className="wordmark-dot">.</span></span><span className="wordmark-description">AI FOR FOOD SAFETY</span></LocalLink>
+      <LocalLink to="/" className="wordmark"><span className="wordmark-name">{site.name}<span className="wordmark-dot">.</span></span><span className="wordmark-description">{pageCopy.shell.ai_for_food_safety}</span></LocalLink>
       <nav aria-label="Primary navigation" id="primary-nav" className={'site-nav '+(menuOpen?'is-open':'')}>
         {navigation.map(n=><LocalLink key={n.path} to={n.path} className={n.path==='/'?path==='/'?'is-active':'':path===n.path||path.startsWith(n.path+'/')?'is-active':''} aria-current={path===n.path?'page':undefined}>{n.label}</LocalLink>)}
-        <LocalLink to="/contact" className={'contact-nav '+(path==='/contact'?'is-active':'')}>Contact <span>↗</span></LocalLink>
+        <LocalLink to="/contact" className={'contact-nav '+(path==='/contact'?'is-active':'')}>{pageCopy.shell.contact} <span>↗</span></LocalLink>
       </nav>
       <div className="header-tools"><button className="theme-toggle" aria-label={'Switch to '+(theme==='light'?'dark':'light')+' mode'} onClick={()=>setTheme(t=>t==='light'?'dark':'light')} title="Toggle color theme">{theme==='light'?'☾':'☀'}</button><button className="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded={menuOpen} aria-label="Toggle menu" onClick={()=>setMenuOpen(m=>!m)}><span></span><span></span><span></span></button></div>
     </div></header>
     <main id="main">{page}</main>
-    <footer className="site-footer"><div className="container footer-layout"><div><strong>{site.name}</strong><p>{site.role}<br/>{site.organisation}</p></div><nav aria-label="Footer navigation"><LocalLink to="/research">Research</LocalLink><LocalLink to="/projects">Projects</LocalLink><LocalLink to="/publications">Publications</LocalLink><LocalLink to="/cv">Full CV</LocalLink><LocalLink to="/contact">Contact</LocalLink></nav><div><p>© {new Date().getFullYear()} Bas van der Velden</p><p>Wageningen, the Netherlands</p></div></div></footer>
+    <footer className="site-footer"><div className="container footer-layout"><div><strong>{site.name}</strong><p>{site.role}<br/>{site.organisation}</p></div><nav aria-label="Footer navigation"><LocalLink to="/research">{pageCopy.shell.research}</LocalLink><LocalLink to="/projects">{pageCopy.shell.projects}</LocalLink><LocalLink to="/publications">{pageCopy.shell.publications}</LocalLink><LocalLink to="/cv">{pageCopy.shell.full_cv}</LocalLink><LocalLink to="/contact">{pageCopy.shell.contact}</LocalLink></nav><div><p>© {new Date().getFullYear()} {site.name}</p><p>{site.location}</p></div></div></footer>
   </>;
 }
 export default App;

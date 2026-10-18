@@ -1,5 +1,4 @@
-// Editorial content. Edit this file to expand the site without changing layouts.
-// Media placeholders are intentionally maintained in Site.jsx until actual assets arrive.
+// Structured editorial content. Treat published copy as approved; see AGENTS.md and CONTENT_EDITING.md.
 export const site = {
   name: 'Bas van der Velden',
   tagline: 'AI for Food Safety',
