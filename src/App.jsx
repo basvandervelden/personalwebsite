@@ -26,6 +26,12 @@ function MediaSlot({title='Photograph or illustration',caption,kind='visual',for
     {caption&&<div className="media-caption">{caption}</div>}
   </div>;
 }
+function Portrait({className=''}) {
+  return <figure className={'portrait-photo '+className}>
+    <img src={import.meta.env.BASE_URL+'bas.jpeg'} alt="Portrait of Bas van der Velden" loading={className.includes('hero')?'eager':'lazy'} decoding="async"/>
+    <figcaption>Photo: © Rozanne van der Velden-Land</figcaption>
+  </figure>;
+}
 function PageHeader({kicker,title,lead,compact=false}) {
   return <header className={'page-header '+(compact?'compact':'')}><div className="container"><Eyebrow>{kicker}</Eyebrow><h1>{title}</h1><p className="page-lead">{lead}</p></div></header>;
 }
@@ -59,7 +65,7 @@ function Home(){
         <div className="hero-meta"><strong>{site.name}</strong><span>{site.role}</span><span>{site.organisation}</span></div>
         <div className="action-row"><ActionRow to="/research">Explore my research</ActionRow><ActionRow to="/about" secondary>About me</ActionRow></div>
       </div>
-      <MediaSlot kind="photo" format="portrait" className="hero-portrait" title="Professional portrait" caption="Suggested: professional portrait, preferably in a research setting"/>
+      <Portrait className="hero-portrait"/>
     </div></section>
     <section className="band editorial-note"><div className="container note-grid"><strong>Research focus</strong><p>Building trustworthy AI methods, creating strong scientific data foundations and translating results into practical applications for food safety.</p></div></section>
     <section className="section"><div className="container"><SectionIntro eyebrow="01 / RESEARCH" title="Three connected research directions." description="Fundamental methodology and practical relevance are complementary parts of the same research agenda." link="/research" linkText="All research"/>
@@ -142,7 +148,7 @@ function AcademicActivities(){
 function About(){
   return <>
     <PageHeader kicker="ABOUT" title="A researcher, a team leader, and a builder of programmes." lead="My work combines machine learning research, scientific collaboration and developing people and research directions."/>
-    <section className="section first-section"><div className="container about-columns"><MediaSlot kind="photo" format="portrait" title="Professional or personal portrait" caption="Suggested: natural portrait in a research or university setting"/><div><Eyebrow>BACKGROUND</Eyebrow><h2>From medical imaging to AI for food safety.</h2>{site.about.map(p=><p key={p}>{p}</p>)}<ExtLink href={site.links.research} className="text-link">Scientific profile</ExtLink> <LocalLink to="/cv" className="text-link about-cv-link">Full academic CV <span>→</span></LocalLink></div></div></section>
+    <section className="section first-section"><div className="container about-columns"><Portrait className="about-portrait"/><div><Eyebrow>BACKGROUND</Eyebrow><h2>From medical imaging to AI for food safety.</h2>{site.about.map(p=><p key={p}>{p}</p>)}<ExtLink href={site.links.research} className="text-link">Scientific profile</ExtLink> <LocalLink to="/cv" className="text-link about-cv-link">Full academic CV <span>→</span></LocalLink></div></div></section>
     <section className="section section-alt"><div className="container"><SectionIntro eyebrow="EXPERIENCE" title="Selected roles and background." description="For a complete overview of appointments, projects, acquisition, supervision, talks and service, explore the searchable CV."/><div className="milestones">{milestones.map(m=><div className="milestone" key={m.title}><span>{m.date}</span><div><h3>{m.title}</h3><p>{m.institution}</p></div></div>)}</div></div></section>
     <section className="section"><div className="container editorial-grid"><div><Eyebrow>BEYOND INDIVIDUAL RESEARCH</Eyebrow><h2>Building an environment for good research.</h2><p>I care about the conditions that make sustainable science possible: trusted methods, shared data, collaboration across disciplines and time for researchers to develop ambitious ideas.</p><LocalLink to="/academic-activities" className="text-link">Academic activities <span>→</span></LocalLink></div><MediaSlot kind="photo" format="wide" title="Team / laboratory environment" caption="Suggested: an authentic photo of the research team"/></div></section>
   </>;
