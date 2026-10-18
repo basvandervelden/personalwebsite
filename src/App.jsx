@@ -103,7 +103,7 @@ function ResearchDetail({item}) {
       <MediaSlot kind="figure" format="wide" title={item.media} caption={pageCopy.researchDetail.reserved_for_a_custom_scientific_illustration}/>
       <h2>{pageCopy.researchDetail.methodological_approach}</h2><ul className="line-list">{item.approach.map(x=><li key={x}>{x}</li>)}</ul>
       <h2>{pageCopy.researchDetail.application_areas}</h2><ul className="line-list">{item.applications.map(x=><li key={x}>{x}</li>)}</ul></div>
-      <aside className="article-aside"><div className="aside-panel"><strong>RESEARCH AREA {item.number}</strong><p>{item.short}</p><LocalLink to="/research" className="text-link">{pageCopy.researchDetail.all_research} <span>→</span></LocalLink></div><div className="aside-panel"><strong>{pageCopy.researchDetail.related_projects}</strong>{item.related.map(slug=>{let p=projectEntries.find(v=>{pageCopy.researchDetail.v_slug_slug_return_p}<LocalLink key={slug} to={'/projects/'+slug} className="aside-link">{p.title} <span>↗</span></LocalLink>:null})}</div></aside>
+      <aside className="article-aside"><div className="aside-panel"><strong>RESEARCH AREA {item.number}</strong><p>{item.short}</p><LocalLink to="/research" className="text-link">{pageCopy.researchDetail.all_research} <span>→</span></LocalLink></div><div className="aside-panel"><strong>{pageCopy.researchDetail.related_projects}</strong>{item.related.map(slug=>{let p=projectEntries.find(v=>v.slug===slug);return p?<LocalLink key={slug} to={'/projects/'+slug} className="aside-link">{p.title} <span>↗</span></LocalLink>:null})}</div></aside>
     </div></section>
     <div className="container next-page"><span>{pageCopy.researchDetail.continue_exploring}</span><LocalLink to="/research">{pageCopy.researchDetail.back_to_all_research} <span>→</span></LocalLink></div>
   </>;
@@ -187,11 +187,18 @@ function App(){
   },[path]);
   useEffect(()=>{document.documentElement.dataset.theme=theme;try{localStorage.setItem('bas-theme',theme)}catch{}},[theme]);
   let page;
-  if(path==='/') page=<Home/>{pageCopy.shell.else_if_path_research_page}<ResearchIndex/>;
+  if(path==='/') page=<Home/>;
+  else if(path==='/research') page=<ResearchIndex/>;
   else if(path.startsWith('/research/')) {let a=researchAreas.find(x=>'/research/'+x.slug===path);page=a?<ResearchDetail item={a}/>:<NotFound/>}
   else if(path==='/projects') page=<ProjectsIndex/>;
   else if(path.startsWith('/projects/')) {let p=projectEntries.find(x=>'/projects/'+x.slug===path);page=p?<ProjectDetail item={p}/>:<NotFound/>}
-  else if(path==='/publications') page=<Publications/>{pageCopy.shell.else_if_path_academic_activities_page}<AcademicActivities/>{pageCopy.shell.else_if_path_about_page}<About/>{pageCopy.shell.else_if_path_cv_cv_d_test}<CVPage sectionNumber={path.split('/')[2]}/>{pageCopy.shell.else_if_path_contact_page}<Contact/>{pageCopy.shell.else_page}<NotFound/>{pageCopy.shell.return} <>
+  else if(path==='/publications') page=<Publications/>;
+  else if(path==='/academic-activities') page=<AcademicActivities/>;
+  else if(path==='/about') page=<About/>;
+  else if(path==='/cv'||/^\/cv\/\d+$/.test(path)) page=<CVPage sectionNumber={path.split('/')[2]}/>;
+  else if(path==='/contact') page=<Contact/>;
+  else page=<NotFound/>;
+  return <>
     <a href="#main" className="skip-link">{pageCopy.shell.skip_to_content}</a>
     <header className="site-header"><div className="container header-content">
       <LocalLink to="/" className="wordmark"><span className="wordmark-name">{site.name}<span className="wordmark-dot">.</span></span><span className="wordmark-description">{pageCopy.shell.ai_for_food_safety}</span></LocalLink>

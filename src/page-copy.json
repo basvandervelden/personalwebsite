@@ -55,7 +55,6 @@
     "application_areas": "Application areas",
     "all_research": "All research",
     "related_projects": "RELATED PROJECTS",
-    "v_slug_slug_return_p": "v.slug===slug);return p?",
     "continue_exploring": "CONTINUE EXPLORING",
     "back_to_all_research": "Back to all research"
   },
@@ -136,13 +135,6 @@
     "return_home": "Return home"
   },
   "shell": {
-    "else_if_path_research_page": ";\n  else if(path==='/research') page=",
-    "else_if_path_academic_activities_page": ";\n  else if(path==='/academic-activities') page=",
-    "else_if_path_about_page": ";\n  else if(path==='/about') page=",
-    "else_if_path_cv_cv_d_test": ";\n  else if(path==='/cv'||/^\\/cv\\/\\d+$/.test(path)) page=",
-    "else_if_path_contact_page": ";\n  else if(path==='/contact') page=",
-    "else_page": ";\n  else page=",
-    "return": ";\n  return",
     "skip_to_content": "Skip to content",
     "ai_for_food_safety": "AI FOR FOOD SAFETY",
     "contact": "Contact",
