@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { site, navigation, researchAreas, projectEntries, publications, activitySections, milestones } from './content.js';
+import { site, navigation, researchAreas, projectEntries, activitySections, milestones } from './content.js';
 import './styles.css';
 import pageCopy from './page-copy.json';
 import media from './media.json';
 import CVPage from './CV.jsx';
+import cvData from './cv-data.json';
 
 const homePath = '/';
 const internal = (path) => '#'+path;
@@ -55,12 +56,34 @@ function ResearchMiniCard({item}) {
     <h3>{item.title}</h3><p>{item.short}</p><span className="card-arrow" aria-hidden="true">↗</span>
   </LocalLink>;
 }
+// The long-CV publication inventory is the single source for both publication views.
+const cvPublications = (cvData.sections.find(section => section.number === 13)?.entries ?? []).map(entry => {
+  const links = entry.links || [];
+  const link = links.find(item => /^https:\/\//i.test(item.url || '') && /doi/i.test(item.label || ''))
+    || links.find(item => /^https:\/\//i.test(item.url || ''));
+  return {
+    id: entry.id || entry.title,
+    title: entry.paperTitle || entry.title,
+    year: entry.period || '',
+    type: entry.publicationType || 'Other scholarly output',
+    authors: entry.authors || '',
+    journal: entry.journal || '',
+    url: link?.url || ''
+  };
+});
+const featuredPublicationIds = ["cv-13-01","cv-13-03","cv-13-04","cv-13-11","cv-13-13","cv-13-14"];
+const featuredPublications = featuredPublicationIds.map(id => cvPublications.find(p => p.id === id)).filter(Boolean);
 function PublicationRows({items}) {
-  return <div className="publication-list">{items.map(p=><a key={p.title} className="publication-row" href={p.url} target="_blank" rel="noopener noreferrer">
-    <div className="pub-meta"><span>{p.year}</span><span>{p.type}</span></div>
-    <div className="pub-body"><h3>{p.title}</h3><p>{p.authors}</p><p className="pub-journal">{p.journal}</p></div>
-    <span className="pub-open" aria-hidden="true">↗</span>
-  </a>)}</div>;
+  return <div className="publication-list">{items.map(p => {
+    const body = <>
+      <div className="pub-meta"><span>{p.year}</span><span>{p.type}</span></div>
+      <div className="pub-body"><h3>{p.title}</h3>{p.authors&&<p>{p.authors}</p>}{p.journal&&<p className="pub-journal">{p.journal}</p>}</div>
+      {p.url&&<span className="pub-open" aria-hidden="true">↗</span>}
+    </>;
+    return p.url
+      ? <a key={p.id} className="publication-row" href={p.url} target="_blank" rel="noopener noreferrer">{body}</a>
+      : <div key={p.id} className="publication-row">{body}</div>;
+  })}</div>;
 }
 function Home(){
   return <>
@@ -80,8 +103,8 @@ function Home(){
     <div className="feature-project"><ChefsImage className="chefs-home"/>
       <div className="feature-project-text"><Eyebrow>{pageCopy.home.open_data_food_monitoring}</Eyebrow><h3>{pageCopy.home.chefs}</h3><p>{pageCopy.home.bringing_together_european_food_monitoring_data_to}</p><div className="feature-stat">{pageCopy.home.text_392_million} <span>{pageCopy.home.analytical_results_in_the_published_database}</span></div><LocalLink to="/projects/chefs" className="text-link">{pageCopy.home.explore_the_project} <span aria-hidden="true">→</span></LocalLink></div>
     </div>
-    <div className="link-strip"><LocalLink to="/projects/living-review">{pageCopy.home.living_ai_literature_review} <span>↗</span></LocalLink><LocalLink to="/projects/foundation-models">{pageCopy.home.foundation_models_for_analytical_data} <span>↗</span></LocalLink><LocalLink to="/projects/early-warning">{pageCopy.home.early_warning_and_emerging_risks} <span>↗</span></LocalLink></div></div></section>
-    <section className="section"><div className="container"><SectionIntro eyebrow={pageCopy.home.text_03_publications} title={pageCopy.home.selected_publications} description={pageCopy.home.recent_peer_reviewed_work_the_complete_publication} link="/publications" linkText={pageCopy.home.view_publications}/><PublicationRows items={publications}/></div></section>
+    <div className="link-strip"><LocalLink to="/projects/living-review">{pageCopy.home.living_ai_literature_review} <span>↗</span></LocalLink><LocalLink to="/projects/foundation-models">{pageCopy.home.foundation_models_for_analytical_data} <span>↗</span></LocalLink><LocalLink to="/projects/holifood">HOLiFOOD <span>↗</span></LocalLink><LocalLink to="/projects/early-warning">{pageCopy.home.early_warning_and_emerging_risks} <span>↗</span></LocalLink></div></div></section>
+    <section className="section"><div className="container"><SectionIntro eyebrow={pageCopy.home.text_03_publications} title={pageCopy.home.selected_publications} description={pageCopy.home.recent_peer_reviewed_work_the_complete_publication} link="/publications" linkText={pageCopy.home.view_publications}/><PublicationRows items={featuredPublications}/></div></section>
     <section className="bottom-cta"><div className="container bottom-cta-layout"><div><Eyebrow>{pageCopy.home.collaboration}</Eyebrow><h2>{pageCopy.home.interested_in_working_together}</h2><p>{pageCopy.home.scientific_collaboration_research_projects_invited_talks_and}</p></div><ActionRow to="/contact">{pageCopy.home.get_in_touch}</ActionRow></div></section>
   </>;
 }
@@ -134,12 +157,30 @@ function ProjectDetail({item}) {
 }
 function Publications() {
   const [filter,setFilter] = useState('All');
-  const labels=['All','Research article','Review'];
+  const [search,setSearch] = useState('');
+  const labels = ['All', 'Journal article', 'Conference contribution', 'Preprint', 'Other'];
+  const query = search.trim().toLowerCase();
+  const filtered = cvPublications.filter(p =>
+    (filter === 'All' || (filter === 'Other'
+      ? !['Journal article','Conference contribution','Preprint'].includes(p.type)
+      : p.type === filter))
+    && (!query || [p.title,p.authors,p.journal,p.year,p.type].join(' ').toLowerCase().includes(query))
+  );
   return <>
     <PageHeader kicker={pageCopy.publications.scientific_output} title={pageCopy.publications.publications} lead={pageCopy.publications.a_curated_starting_selection_of_peer_reviewed}/>
-    <section className="section first-section"><div className="container"><div className="pub-tools"><div className="filter-row" role="group" aria-label="Filter publications">{labels.map(label=><button type="button" key={label} aria-pressed={label===filter} onClick={()=>setFilter(label)} className={filter===label?'active':''}>{label}</button>)}</div><ExtLink href={site.links.research} className="text-link">{pageCopy.publications.full_record_at_research_wur}</ExtLink></div>
-    <PublicationRows items={publications.filter(p=>filter==='All'||p.type===filter)}/>
-    <div className="content-addition"><div><Eyebrow>{pageCopy.publications.complete_bibliography}</Eyebrow><h3>{pageCopy.publications.more_publications_will_follow}</h3><p>{pageCopy.publications.this_section_is_intentionally_curated_rather_than}</p></div><MediaSlot title={pageCopy.publications.publication_visual_selected_paper_cover} kind="figure" format="landscape"/></div>
+    <section className="section first-section"><div className="container">
+      <div className="pub-tools">
+        <div className="filter-row" role="group" aria-label="Filter publications">
+          {labels.map(label=><button type="button" key={label} aria-pressed={label===filter} onClick={()=>setFilter(label)} className={label===filter?'active':''}>{label}</button>)}
+        </div>
+        <ExtLink href={site.links.scholar} className="text-link">{pageCopy.publications.full_record_at_research_wur}</ExtLink>
+      </div>
+      <div className="publication-search-row">
+        <input className="publication-search" type="search" aria-label={pageCopy.publications.search_publications} placeholder={pageCopy.publications.search_publications} value={search} onChange={e=>setSearch(e.target.value)}/>
+        <span className="publication-result-count">{filtered.length} {pageCopy.publications.of} {cvPublications.length} {pageCopy.publications.entries}</span>
+      </div>
+      <PublicationRows items={filtered}/>
+      {filtered.length===0&&<p>{pageCopy.publications.no_matching_publications}</p>}
     </div></section>
   </>;
 }
@@ -162,7 +203,7 @@ function About(){
 function Contact(){
   return <>
     <PageHeader kicker={pageCopy.contact.contact} title={pageCopy.contact.let_s_exchange_ideas} lead={pageCopy.contact.for_scientific_collaboration_invited_talks_research_initiatives}/>
-    <section className="section first-section"><div className="container contact-columns"><div className="contact-panel"><Eyebrow>{pageCopy.contact.get_in_touch}</Eyebrow><h2>{pageCopy.contact.email}</h2><a href={'mailto:'+site.email} className="email-address">{site.email} <span>↗</span></a><p>{site.organisation}<br/>{site.location}</p></div><div className="contact-panel subtle"><Eyebrow>{pageCopy.contact.online_profiles}</Eyebrow><h2>{pageCopy.contact.find_my_work}</h2><ExtLink href={site.links.research} className="contact-profile">{pageCopy.contact.research_wur}</ExtLink><ExtLink href={site.links.github} className="contact-profile">{pageCopy.contact.github}</ExtLink><ExtLink href={site.links.wur} className="contact-profile">{pageCopy.contact.wageningen_food_safety_research}</ExtLink></div></div></section>
+    <section className="section first-section"><div className="container contact-columns"><div className="contact-panel"><Eyebrow>{pageCopy.contact.get_in_touch}</Eyebrow><h2>{pageCopy.contact.email}</h2><a href={'mailto:'+site.email} className="email-address">{site.email} <span>↗</span></a><p>{site.organisation}<br/>{site.location}</p></div><div className="contact-panel subtle"><Eyebrow>{pageCopy.contact.online_profiles}</Eyebrow><h2>{pageCopy.contact.find_my_work}</h2><ExtLink href={site.links.scholar} className="contact-profile">{pageCopy.contact.research_wur}</ExtLink><ExtLink href={site.links.github} className="contact-profile">{pageCopy.contact.github}</ExtLink><ExtLink href={site.links.wur} className="contact-profile">{pageCopy.contact.wageningen_food_safety_research}</ExtLink></div></div></section>
   </>;
 }
 function NotFound(){return <div className="container notfound"><Eyebrow>404</Eyebrow><h1>{pageCopy.notFound.page_not_found}</h1><p>{pageCopy.notFound.the_requested_page_does_not_exist}</p><ActionRow to="/">{pageCopy.notFound.return_home}</ActionRow></div>}

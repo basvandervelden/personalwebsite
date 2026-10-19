@@ -15,6 +15,7 @@ export const site = {
   links: {
     wur: 'https://www.wur.nl/en/research/food-safety',
     research: 'https://research.wur.nl/en/persons/bas-van-der-velden/',
+    scholar: 'https://scholar.google.com/citations?hl=nl&user=JWT2FmgAAAAJ&view_op=list_works&sortby=pubdate',
     github: 'https://github.com/basvandervelden',
     review: 'https://github.com/basvandervelden/ai_food_safety_review'
   }
@@ -124,6 +125,20 @@ export const projectEntries = [
     secondaryMedia:'Transfer-learning workflow'
   },
   {
+    slug:'holifood',
+    title:'HOLiFOOD',
+    category:'Horizon Europe · Emerging risks',
+    summary:'Developing AI methods and data-driven approaches to anticipate emerging food safety risks.',
+    lead:'HOLiFOOD explored more holistic approaches to emerging food safety risks in a changing food system.',
+    context:'Early warning relies on information from different sources, including monitoring data, news, scientific evidence and drivers of change.',
+    contribution:'Our work at Wageningen Food Safety Research combined predictive modelling, weak-signal mining and expertise from the food safety domain to investigate ways of detecting and evaluating emerging risks.',
+    next:'A key lesson is that better models alone are not enough. Early-warning systems also need sound data, expert validation and clear links to risk assessment and decision-making. The project concluded with a joint HOLiFOOD–FoodSafeR symposium in Wageningen in June 2026.',
+    link:'https://holifoodproject.eu/',
+    linkLabel:'HOLiFOOD project website',
+    media:'HOLiFOOD research and emerging risks',
+    secondaryMedia:'Holistic AI and emerging-risk methods'
+  },
+  {
     slug:'early-warning',
     title:'Early warning & emerging risks',
     category:'Applied AI · Risk intelligence',
@@ -139,20 +154,7 @@ export const projectEntries = [
   }
 ];
 
-export const publications = [
-  {
-    year:'2026', type:'Review', title:'Artificial intelligence in food safety',
-    authors:'van Meer, F., Takeuchi, M., Ochieng, P. E., Tavelli, R., Gerssen, A. & van der Velden, B. H. M.',
-    journal:'npj Science of Food', detail:'Systematic synthesis of 161 studies across food safety domains, implementation contexts, data types and AI methods.',
-    url:'https://doi.org/10.1038/s41538-026-00925-1'
-  },
-  {
-    year:'2026', type:'Research article', title:'Food safety trends across Europe: insights from the 392-million-entry CompreHensive European Food Safety (CHEFS) database',
-    authors:'Kızılilsoley, N., van Meer, F., Mutlu, O., et al.',
-    journal:'Food Control', detail:'A harmonised resource of European food safety monitoring data.',
-    url:'https://doi.org/10.1016/j.foodcont.2025.111816'
-  }
-];
+// The canonical publication inventory is CV section 13 in cv-data.json.
 
 export const activitySections = [
   {
