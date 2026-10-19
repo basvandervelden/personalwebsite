@@ -76,7 +76,7 @@
   "publications": {
     "scientific_output": "SCIENTIFIC OUTPUT",
     "publications": "Publications.",
-    "a_curated_starting_selection_of_peer_reviewed": "Publications and scholarly outputs from my academic CV, including journal articles, conference contributions, preprints, reports and datasets.",
+    "a_curated_starting_selection_of_peer_reviewed": "Journal articles and full conference papers are listed separately from conference abstracts, posters and other scholarly outputs.",
     "publication_visual_selected_paper_cover": "Publication visual / selected paper cover",
     "full_record_at_research_wur": "Google Scholar",
     "complete_bibliography": "COMPLETE BIBLIOGRAPHY",
@@ -85,7 +85,13 @@
     "search_publications": "Search by title, author, journal or year",
     "no_matching_publications": "No matching publications. Try another search or filter.",
     "entries": "entries",
-    "of": "of"
+    "of": "of",
+    "all_outputs": "All outputs",
+    "journal_articles": "Journal articles",
+    "full_conference_papers": "Full conference papers",
+    "conference_abstracts_posters": "Conference abstracts & posters",
+    "other_outputs": "Other scholarly outputs",
+    "jif_note": "Journal Impact Factors (JIF) shown are the 2025 journal-level values recorded in my academic CV; they are not the impact factors from each article’s publication year. Items without a recorded JIF are shown without one."
   },
   "academicActivities": {
     "academic_activities": "ACADEMIC ACTIVITIES",

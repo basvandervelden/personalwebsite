@@ -5,6 +5,7 @@ import pageCopy from './page-copy.json';
 import media from './media.json';
 import CVPage from './CV.jsx';
 import cvData from './cv-data.json';
+import publicationCategories from './publication-categories.json';
 
 const homePath = '/';
 const internal = (path) => '#'+path;
@@ -57,17 +58,38 @@ function ResearchMiniCard({item}) {
   </LocalLink>;
 }
 // The long-CV publication inventory is the single source for both publication views.
+// Editorial classification overlays the existing CV without changing its records.
+const fullConferencePapers = new Set(publicationCategories.fullConferencePapers);
+const conferenceAbstractsPosters = new Set(publicationCategories.conferenceAbstractsPosters);
+const journalMeetingAbstracts = new Set(publicationCategories.journalMeetingAbstracts);
+const journalNonResearchOutputs = new Set(publicationCategories.journalNonResearchOutputs);
+function publicationSection(entry) {
+  if (journalMeetingAbstracts.has(entry.id) || conferenceAbstractsPosters.has(entry.id)) return 'conferenceAbstract';
+  if (fullConferencePapers.has(entry.id)) return 'conferencePaper';
+  if (entry.publicationType === 'Journal article' && !journalNonResearchOutputs.has(entry.id)) return 'journal';
+  return 'other';
+}
 const cvPublications = (cvData.sections.find(section => section.number === 13)?.entries ?? []).map(entry => {
   const links = entry.links || [];
   const link = links.find(item => /^https:\/\//i.test(item.url || '') && /doi/i.test(item.label || ''))
     || links.find(item => /^https:\/\//i.test(item.url || ''));
+  const section = publicationSection(entry);
+  const type = journalNonResearchOutputs.has(entry.id) ? 'Event report'
+    : journalMeetingAbstracts.has(entry.id) ? 'Conference abstract'
+    : section === 'conferencePaper' ? 'Full conference paper'
+    : section === 'conferenceAbstract' ? 'Conference abstract / poster'
+    : entry.publicationType === 'Conference contribution' ? 'Conference contribution (format to verify)'
+    : entry.publicationType || 'Other scholarly output';
   return {
     id: entry.id || entry.title,
     title: entry.paperTitle || entry.title,
     year: entry.period || '',
-    type: entry.publicationType || 'Other scholarly output',
+    type,
+    section,
     authors: entry.authors || '',
     journal: entry.journal || '',
+    impactFactor: section === 'journal' && Number.isFinite(entry.impactFactor) ? entry.impactFactor : null,
+    impactFactorYear: entry.impactFactorYear ?? null,
     url: link?.url || ''
   };
 });
@@ -77,7 +99,7 @@ function PublicationRows({items}) {
   return <div className="publication-list">{items.map(p => {
     const body = <>
       <div className="pub-meta"><span>{p.year}</span><span>{p.type}</span></div>
-      <div className="pub-body"><h3>{p.title}</h3>{p.authors&&<p>{p.authors}</p>}{p.journal&&<p className="pub-journal">{p.journal}</p>}</div>
+      <div className="pub-body"><h3>{p.title}</h3>{p.authors&&<p>{p.authors}</p>}{p.journal&&<p className="pub-journal">{p.journal}{p.impactFactor!==null&&p.impactFactorYear&&<span className="publication-if"> · JIF {p.impactFactorYear}: {p.impactFactor.toFixed(1)}</span>}</p>}</div>
       {p.url&&<span className="pub-open" aria-hidden="true">↗</span>}
     </>;
     return p.url
@@ -158,12 +180,15 @@ function ProjectDetail({item}) {
 function Publications() {
   const [filter,setFilter] = useState('All');
   const [search,setSearch] = useState('');
-  const labels = ['All', 'Journal article', 'Conference contribution', 'Preprint', 'Other'];
+  const groups = [
+    {key:'journal',label:pageCopy.publications.journal_articles},
+    {key:'conferencePaper',label:pageCopy.publications.full_conference_papers},
+    {key:'conferenceAbstract',label:pageCopy.publications.conference_abstracts_posters},
+    {key:'other',label:pageCopy.publications.other_outputs}
+  ];
   const query = search.trim().toLowerCase();
   const filtered = cvPublications.filter(p =>
-    (filter === 'All' || (filter === 'Other'
-      ? !['Journal article','Conference contribution','Preprint'].includes(p.type)
-      : p.type === filter))
+    (filter === 'All' || p.section === filter)
     && (!query || [p.title,p.authors,p.journal,p.year,p.type].join(' ').toLowerCase().includes(query))
   );
   return <>
@@ -171,7 +196,7 @@ function Publications() {
     <section className="section first-section"><div className="container">
       <div className="pub-tools">
         <div className="filter-row" role="group" aria-label="Filter publications">
-          {labels.map(label=><button type="button" key={label} aria-pressed={label===filter} onClick={()=>setFilter(label)} className={label===filter?'active':''}>{label}</button>)}
+          {[{key:'All',label:pageCopy.publications.all_outputs},...groups].map(item=><button type="button" key={item.key} aria-pressed={item.key===filter} onClick={()=>setFilter(item.key)} className={item.key===filter?'active':''}>{item.label}</button>)}
         </div>
         <ExtLink href={site.links.scholar} className="text-link">{pageCopy.publications.full_record_at_research_wur}</ExtLink>
       </div>
@@ -179,8 +204,15 @@ function Publications() {
         <input className="publication-search" type="search" aria-label={pageCopy.publications.search_publications} placeholder={pageCopy.publications.search_publications} value={search} onChange={e=>setSearch(e.target.value)}/>
         <span className="publication-result-count">{filtered.length} {pageCopy.publications.of} {cvPublications.length} {pageCopy.publications.entries}</span>
       </div>
-      <PublicationRows items={filtered}/>
+      {groups.filter(g=>filter==='All'||filter===g.key).map(g=>{
+        const records=filtered.filter(p=>p.section===g.key);
+        return records.length>0&&<section key={g.key} className="publication-category" aria-label={g.label}>
+          <div className="publication-category-heading"><h2>{g.label}</h2><span>{records.length}</span></div>
+          <PublicationRows items={records}/>
+        </section>;
+      })}
       {filtered.length===0&&<p>{pageCopy.publications.no_matching_publications}</p>}
+      <p className="publication-jif-note">{pageCopy.publications.jif_note}</p>
     </div></section>
   </>;
 }

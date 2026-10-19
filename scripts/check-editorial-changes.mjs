@@ -26,7 +26,7 @@ catch { console.error('Cannot verify base commit; refusing an unchecked deployme
 const head = run('rev-parse', 'HEAD');
 const changed = run('diff', '--name-only', '--diff-filter=ACMR', base, head)
   .split('\n').filter(Boolean);
-const editorial = changed.filter(path => ['src/content.js','src/page-copy.json','src/cv-data.json'].includes(path));
+const editorial = changed.filter(path => ['src/content.js','src/page-copy.json','src/cv-data.json','src/publication-categories.json'].includes(path));
 const code = changed.filter(path => /^src\/.*\.(?:jsx|tsx|css)$/.test(path)
   || /^scripts\/.*\.(?:js|mjs|cjs)$/.test(path)
   || /^package(?:-lock)?\.json$/.test(path)

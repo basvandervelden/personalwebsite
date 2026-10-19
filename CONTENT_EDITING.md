@@ -9,6 +9,7 @@
 | Page titles, headlines, introductions, section copy, button labels | [`src/page-copy.json`](src/page-copy.json) |
 | Biography, research areas, projects, selected publications, activity items and milestones | [`src/content.js`](src/content.js) |
 | Complete long CV | [`src/cv-data.json`](src/cv-data.json) |
+| Publication page: conference paper versus abstract categorisation | [`src/publication-categories.json`](src/publication-categories.json) |
 | Image filename, alt text and photo credits | [`src/media.json`](src/media.json) |
 | Layout and functionality (not ordinary text) | `src/App.jsx`, `src/CV.jsx`, CSS files |
 
