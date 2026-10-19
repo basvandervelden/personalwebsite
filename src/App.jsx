@@ -67,15 +67,14 @@ function Home(){
     <section className="home-hero"><div className="container hero-layout">
       <div className="hero-copy">
         <Eyebrow>{pageCopy.home.researcher_scientific_leader_ai_for_food_safety}</Eyebrow>
-        <h1>{pageCopy.home.artificial_intelligence_for} <em>{pageCopy.home.better_science}</em></h1>
-        <p className="lead">{site.intro}</p>
+        <h1>{pageCopy.home.artificial_intelligence_for}<br/><em>{pageCopy.home.better_science}</em></h1>
         <div className="hero-meta"><strong>{site.name}</strong><span>{site.role}</span><span>{site.organisation}</span></div>
         <div className="action-row"><ActionRow to="/research">{pageCopy.home.explore_my_research}</ActionRow><ActionRow to="/about" secondary>{pageCopy.home.about_me}</ActionRow></div>
       </div>
       <Portrait className="hero-portrait"/>
     </div></section>
     <section className="band editorial-note"><div className="container note-grid"><strong>{pageCopy.home.research_focus}</strong><p>{pageCopy.home.building_trustworthy_ai_methods_creating_strong_scientific}</p></div></section>
-    <section className="section"><div className="container"><SectionIntro eyebrow={pageCopy.home.text_01_research} title={pageCopy.home.three_connected_research_directions} description={pageCopy.home.fundamental_methodology_and_practical_relevance_are_complementary} link="/research" linkText={pageCopy.home.all_research}/>
+    <section className="section"><div className="container"><SectionIntro eyebrow={pageCopy.home.text_01_research} title={pageCopy.home.three_connected_research_directions} link="/research" linkText={pageCopy.home.all_research}/>
     <div className="mini-grid">{researchAreas.map(item=><ResearchMiniCard item={item} key={item.slug}/>)}</div></div></section>
     <section className="section section-alt"><div className="container"><SectionIntro eyebrow={pageCopy.home.text_02_selected_projects} title={pageCopy.home.where_ideas_become_research_programmes} description={pageCopy.home.a_selection_of_open_resources_methodological_work} link="/projects" linkText={pageCopy.home.all_projects}/>
     <div className="feature-project"><ChefsImage className="chefs-home"/>
