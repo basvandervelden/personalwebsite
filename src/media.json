@@ -5,12 +5,12 @@
     "credit": "Photo: © Rozanne van der Velden-Land"
   },
   "chefs": {
-    "file": "chefs.svg",
+    "file": "chefs.png",
     "alt": "CHEFS mascot illustration, a smiling food can wearing a chef's hat"
   },
   "team": {
-    "file": "community-team.avif",
-    "alt": "Part of the Data Science and AI team at Wageningen Food Safety Research at a HOLiFOOD event",
-    "caption": "Part of the Data Science & AI team at Wageningen Food Safety Research (2026)."
+    "file": "team.jpg",
+    "alt": "Part of the Data Science & AI team at the HOLiFOOD final symposium",
+    "caption": "Part of our team at the HOLiFOOD final symposium."
   }
 }
