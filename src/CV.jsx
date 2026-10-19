@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import cv from './cv-data.json';
+import { formatPublicationAuthors, formatPublicationTitle, formatPublicationVenue } from './publication-format.js';
 import './cv.css';
 
 const external = (url) => /^https:\/\//i.test(url || '');
@@ -38,16 +39,16 @@ function Attachment({item}) {
 
 function Entry({entry,compact}) {
   const isPublication=Boolean(entry.paperTitle);
-  const displayTitle=isPublication?entry.paperTitle:entry.title;
+  const displayTitle=isPublication?formatPublicationTitle(entry.paperTitle, entry.id):entry.title;
   const cleanLinkLabel=label => /Research@WUR|source|find publication/i.test(label)?'View publication':label;
   return <article className={'cv-entry '+(compact?'cv-entry-compact':'')+(isPublication?' cv-publication-entry':'')} id={entry.id}>
     <div className="cv-entry-date">{entry.period || '—'}</div>
     <div className="cv-entry-body">
       {isPublication ? <>
         <h3>{displayTitle}</h3>
-        {entry.authors && <p className="cv-pub-authors">{entry.authors}</p>}
+        {entry.authors && <p className="cv-pub-authors">{formatPublicationAuthors(entry.authors, entry.id)}</p>}
         <div className="cv-pub-details">
-          {entry.journal && <span className="cv-pub-journal">{entry.journal}</span>}
+          {entry.journal && <span className="cv-pub-journal">{formatPublicationVenue(entry.journal)}</span>}
           {entry.publicationType && entry.publicationType!=='Journal article' && <span className="cv-pub-kind">{entry.publicationType}</span>}
           {entry.publicationType==='Journal article' && entry.impactFactor>0 && <span className="cv-impact-factor">IF {entry.impactFactor.toFixed(1)} <small>({entry.impactFactorYear||2025})</small></span>}
         </div>

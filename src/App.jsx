@@ -6,6 +6,7 @@ import media from './media.json';
 import CVPage from './CV.jsx';
 import cvData from './cv-data.json';
 import publicationCategories from './publication-categories.json';
+import { formatPublicationAuthors, formatPublicationTitle, formatPublicationVenue } from './publication-format.js';
 
 const homePath = '/';
 const internal = (path) => '#'+path;
@@ -82,12 +83,12 @@ const cvPublications = (cvData.sections.find(section => section.number === 13)?.
     : entry.publicationType || 'Other scholarly output';
   return {
     id: entry.id || entry.title,
-    title: entry.paperTitle || entry.title,
+    title: formatPublicationTitle(entry.paperTitle || entry.title, entry.id),
     year: entry.period || '',
     type,
     section,
-    authors: entry.authors || '',
-    journal: entry.journal || '',
+    authors: formatPublicationAuthors(entry.authors, entry.id),
+    journal: formatPublicationVenue(entry.journal),
     impactFactor: section === 'journal' && Number.isFinite(entry.impactFactor) ? entry.impactFactor : null,
     impactFactorYear: entry.impactFactorYear ?? null,
     url: link?.url || ''

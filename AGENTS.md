@@ -10,6 +10,7 @@ These instructions apply to all files in this repository, including to AI assist
   - `src/content.js`: site identity, biography, research areas, projects, curated publications, activity sections and milestones.
   - `src/cv-data.json`: the full CV and publication inventory. Do not mutate as a side effect of design work.
   - `src/publication-categories.json`: a reviewed categorisation overlay for full conference papers, abstracts/posters and unverified records; never silently change an item’s category.
+  - `src/publication-format.js`: shared display-only rules for publication author initials, sentence-case titles and journal names. Always preserve the original bibliographic records in cv-data.json.
   - `src/media.json`: image filenames, accessible descriptions and photo credits. This is **media metadata**, not a license to modify editorial copy.
 - `src/App.jsx`, `src/CV.jsx`, stylesheets and scripts are for functionality and presentation, not for routine editorial changes.
 - Read the latest files and GitHub HEAD before any edit. Preserve unrelated changes and use the smallest possible diff; never restore an outdated local copy over newer user edits.
