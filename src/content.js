@@ -50,7 +50,7 @@ export const researchAreas = [
     slug:'foundation-models',
     number:'02',
     title:'Foundation models for scientific data',
-    short:'Building general-purpose representations of chemical, biological and image data that can be reused across tasks.',
+    short:'Using, adapting and building general-purpose representations of chemical, biological and image data that can be reused across tasks.',
     lead:'Scientific datasets are often small, heterogeneous and expensive to annotate. Representation learning offers a way to reuse information across experiments, instruments and applications.',
     perspective:'Rather than training a new model from scratch for every task, we explore self-supervised and transfer-learning approaches that can support multiple downstream problems. Model efficiency and scientific validation matter as much as scale.',
     approach:[
