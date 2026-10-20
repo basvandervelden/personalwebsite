@@ -5,7 +5,7 @@ import pageCopy from './page-copy.json';
 import media from './media.json';
 import CVPage from './CV.jsx';
 import cvData from './cv-data.json';
-import publicationCategories from './publication-categories.json';
+import { publicationSection, publicationDisplayType, isSupersededPreprint } from './publication-groups.js';
 import PublicationAuthors from './PublicationAuthors.jsx';
 import { formatPublicationAuthors, formatPublicationTitle, formatPublicationVenue } from './publication-format.js';
 
@@ -60,28 +60,12 @@ function ResearchMiniCard({item}) {
   </LocalLink>;
 }
 // The long-CV publication inventory is the single source for both publication views.
-// Editorial classification overlays the existing CV without changing its records.
-const fullConferencePapers = new Set(publicationCategories.fullConferencePapers);
-const conferenceAbstractsPosters = new Set(publicationCategories.conferenceAbstractsPosters);
-const journalMeetingAbstracts = new Set(publicationCategories.journalMeetingAbstracts);
-const journalNonResearchOutputs = new Set(publicationCategories.journalNonResearchOutputs);
-function publicationSection(entry) {
-  if (journalMeetingAbstracts.has(entry.id) || conferenceAbstractsPosters.has(entry.id)) return 'conferenceAbstract';
-  if (fullConferencePapers.has(entry.id)) return 'conferencePaper';
-  if (entry.publicationType === 'Journal article' && !journalNonResearchOutputs.has(entry.id)) return 'journal';
-  return 'other';
-}
-const cvPublications = (cvData.sections.find(section => section.number === 13)?.entries ?? []).map(entry => {
+const cvPublications = (cvData.sections.find(section => section.number === 13)?.entries ?? []).filter(entry => !isSupersededPreprint(entry)).map(entry => {
   const links = entry.links || [];
   const link = links.find(item => /^https:\/\//i.test(item.url || '') && /doi/i.test(item.label || ''))
     || links.find(item => /^https:\/\//i.test(item.url || ''));
   const section = publicationSection(entry);
-  const type = journalNonResearchOutputs.has(entry.id) ? 'Event report'
-    : journalMeetingAbstracts.has(entry.id) ? 'Conference abstract'
-    : section === 'conferencePaper' ? 'Full conference paper'
-    : section === 'conferenceAbstract' ? 'Conference abstract / poster'
-    : entry.publicationType === 'Conference contribution' ? 'Conference contribution (format to verify)'
-    : entry.publicationType || 'Other scholarly output';
+  const type = publicationDisplayType(entry);
   return {
     id: entry.id || entry.title,
     title: formatPublicationTitle(entry.paperTitle || entry.title, entry.id),

@@ -122,3 +122,11 @@
 .cv-publication-entry .cv-entry-links{margin-top:10px}
 .cv-publication-entry .cv-entry-links a{font-size:11px}
 @media print{.cv-impact-factor{border:1px solid #bbb;background:#fff;color:#000}}
+
+/* In the long CV, publications are grouped by scholarly output type. */
+.cv-publication-groups{display:flex;flex-direction:column;gap:36px}
+.cv-publication-group-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:8px 0 13px}
+.cv-publication-group-heading h3{font-size:clamp(18px,2.3vw,24px);margin:0;color:var(--ink)}
+.cv-publication-group-heading span{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.cv-publication-group .cv-entries{border-top:0}
+@media(max-width:720px){.cv-publication-groups{gap:26px}}

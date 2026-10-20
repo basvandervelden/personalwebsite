@@ -40,6 +40,9 @@ const authorOverrides = {
   'cv-13-04': 'N Kızılilsoley, F van Meer, O Mutlu, W Hoenderdaal, R Hobé, W Mu, A Gerssen, HJ van der Fels-Klerx, Á Jóźwiak, I Manikas, A Hürriyetoğlu, BHM van der Velden',
   'cv-wur-extra-1': 'BHM van der Velden',
   'cv-wur-extra-2': 'BHM van der Velden',
+  // VALDO: keep the first ten authors and the verified lead-in to the last author.
+  // Last author is Marleen de Bruijne (not de Bruyne).
+  'cv-bib-047': 'CH Sudre, K van Wijnen, F Dubost, H Adams, D Atkinson, F Barkhof, MA Birhanu, EE Bron, R Camarasa, N Chaturvedi, …, BHM van der Velden, …, Marleen de Bruijne',
   'cv-13-08': 'F van Meer, BHM van der Velden, M Takeuchi',
   // Full paper-specific author lists are checked separately below.
 };
@@ -84,7 +87,7 @@ function formatOneAuthor(raw) {
 }
 // In these long author lists, the researcher's name is verified but outside
 // the displayed first-author segment. Do not imply a specific missing position.
-const truncatedCoauthorRecords = new Set(['cv-bib-047','cv-bib-041']);
+const truncatedCoauthorRecords = new Set(['cv-bib-041']);
 
 // Verified long author lists in which BHM van der Velden is followed by
 // at most three co-authors. Use the first three, an ellipsis, and the full

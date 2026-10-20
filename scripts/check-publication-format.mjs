@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
 import { formatPublicationAuthors, formatPublicationTitle, formatPublicationVenue } from '../src/publication-format.js';
+import { isSupersededPreprint, publicationSection, publicationGroups, supersededPreprints } from '../src/publication-groups.js';
 const cv = JSON.parse(readFileSync(new URL('../src/cv-data.json',import.meta.url),'utf8'));
 const entries=cv.sections.find(section=>section.number===13)?.entries ?? [];
 assert.ok(entries.length>=80);
@@ -34,7 +35,10 @@ for(const id of ['cv-bib-067','cv-bib-062']) {
   assert.equal(formatPublicationAuthors(get(id).authors,id),sppin,
     'SPPIN journal and preprint: verified lead and final author positions');
 }
-for(const id of ['cv-bib-047','cv-bib-041']) {
+assert.equal(formatPublicationAuthors(get('cv-bib-047').authors,'cv-bib-047'),
+  'CH Sudre, K van Wijnen, F Dubost, H Adams, D Atkinson, F Barkhof, MA Birhanu, EE Bron, R Camarasa, N Chaturvedi, …, BHM van der Velden, …, Marleen de Bruijne',
+  'VALDO: preserve opening ten authors and verified last author with Bas explicitly highlighted');
+for(const id of ['cv-bib-041']) {
   const authors=formatPublicationAuthors(get(id).authors,id);
   assert.ok(authors.includes('et al. (incl. BHM van der Velden)'),
     'Do not fabricate author order for a truncated record: '+id);
@@ -44,4 +48,15 @@ assert.equal(formatPublicationAuthors(get('cv-13-05').authors,'cv-13-05'),
   'Apply near-last author rule to other complete author lists too');
 assert.equal(formatPublicationAuthors(get('cv-wur-extra-1').authors,'cv-wur-extra-1'),name);
 assert.equal(formatPublicationAuthors(get('cv-wur-extra-2').authors,'cv-wur-extra-2'),name);
+assert.deepEqual(supersededPreprints,{'cv-bib-062':'cv-bib-067'});
+for (const [preprintId, journalId] of Object.entries(supersededPreprints)) {
+  assert.equal(get(preprintId).publicationType,'Preprint','Only hide preprints');
+  assert.equal(get(journalId).publicationType,'Journal article','Replacement must be journal-published');
+}
+const visibleEntries=entries.filter(entry=>!isSupersededPreprint(entry));
+assert.equal(visibleEntries.length,entries.length-1,'Published SPPIN preprint hidden without deleting its record');
+assert.ok(visibleEntries.some(entry=>entry.id==='cv-13-11'),'Unpublished Mutlu XAI preprint stays visible');
+assert.ok(!visibleEntries.some(entry=>entry.id==='cv-bib-062'),'Superseded SPPIN preprint is hidden');
+assert.ok(visibleEntries.some(entry=>entry.id==='cv-bib-067'),'SPPIN journal article stays visible');
+assert.deepEqual(publicationGroups.map(group=>visibleEntries.filter(entry=>publicationSection(entry)===group.key).length),[38,11,18,16]);
 console.log('Publication display formatting checked for '+entries.length+' records');

@@ -3,6 +3,7 @@ import cv from './cv-data.json';
 import { formatPublicationAuthors, formatPublicationTitle, formatPublicationVenue } from './publication-format.js';
 import './cv.css';
 import PublicationAuthors from './PublicationAuthors.jsx';
+import { publicationSection, publicationDisplayType, publicationGroups, isSupersededPreprint } from './publication-groups.js';
 
 const external = (url) => /^https:\/\//i.test(url || '');
 const startYear = (period) => /^\d{4}/.exec(period || '')?.[0] || '';
@@ -50,8 +51,8 @@ function Entry({entry,compact}) {
         {entry.authors && <p className="cv-pub-authors"><PublicationAuthors text={formatPublicationAuthors(entry.authors, entry.id)}/></p>}
         <div className="cv-pub-details">
           {entry.journal && <span className="cv-pub-journal">{formatPublicationVenue(entry.journal)}</span>}
-          {entry.publicationType && entry.publicationType!=='Journal article' && <span className="cv-pub-kind">{entry.publicationType}</span>}
-          {entry.publicationType==='Journal article' && entry.impactFactor>0 && <span className="cv-impact-factor">IF {entry.impactFactor.toFixed(1)} <small>({entry.impactFactorYear||2025})</small></span>}
+          {publicationDisplayType(entry)!=='Journal article' && <span className="cv-pub-kind">{publicationDisplayType(entry)}</span>}
+          {publicationSection(entry)==='journal' && entry.impactFactor>0 && <span className="cv-impact-factor">IF {entry.impactFactor.toFixed(1)} <small>({entry.impactFactorYear||2025})</small></span>}
         </div>
       </> : <>
         <h3>{displayTitle}</h3>
@@ -72,7 +73,16 @@ function CvSection({section,entries,compact,collapsed,onToggle}){
     </button>
     {!collapsed && <>
       {section.description && <p className="cv-section-description">{section.description}</p>}
-      <div className="cv-entries">{entries.map(e=><Entry key={e.id} entry={e} compact={compact}/>)}</div>
+      {section.number===13
+        ? <div className="cv-publication-groups">{publicationGroups.map(group=>{
+          const records=entries.filter(e=>publicationSection(e)===group.key);
+          return records.length>0&&<div className="cv-publication-group" key={group.key}>
+            <div className="cv-publication-group-heading"><h3>{group.label}</h3><span>{records.length}</span></div>
+            <div className="cv-entries">{records.map(e=><Entry key={e.id} entry={e} compact={compact}/>)}</div>
+          </div>;
+        })}</div>
+        : <div className="cv-entries">{entries.map(e=><Entry key={e.id} entry={e} compact={compact}/>)}</div>
+      }
     </>}
   </section>;
 }
@@ -83,7 +93,9 @@ export default function CVPage({sectionNumber}) {
   const [category,setCategory]=useState('All topics');
   const [compact,setCompact]=useState(false);
   const [collapsed,setCollapsed]=useState([]);
-  const publicSections=cv.sections.filter(s=>s.number!==18);
+  const publicSections=cv.sections.filter(s=>s.number!==18).map(s=>s.number===13
+    ? {...s,entries:s.entries.filter(entry=>!isSupersededPreprint(entry))}
+    : s);
   const years=useMemo(()=>[...new Set(cv.sections.filter(s=>s.number!==18).flatMap(s=>s.entries.map(e=>startYear(e.period)).filter(Boolean)))].sort((a,b)=>Number(b)-Number(a)),[]);
   const categories=useMemo(()=>[...new Set(cv.sections.filter(s=>s.number!==18).map(s=>s.category))],[]);
   const selected=sectionNumber?publicSections.find(s=>s.number===Number(sectionNumber)):null;

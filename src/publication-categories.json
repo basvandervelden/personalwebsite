@@ -40,5 +40,8 @@
   ],
   "journalNonResearchOutputs": [
     "cv-13-12"
-  ]
+  ],
+  "supersededPreprints": {
+    "cv-bib-062": "cv-bib-067"
+  }
 }
