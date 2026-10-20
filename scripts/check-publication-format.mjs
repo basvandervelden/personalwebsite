@@ -27,11 +27,21 @@ const absent=entries.filter(entry=>!formatPublicationAuthors(entry.authors,entry
 assert.deepEqual(absent.map(entry=>entry.id),['cv-13-12'],
   'Only the EFSA institutional-author event report may omit the site owner as a named author');
 const chefs=formatPublicationAuthors(get('cv-13-04').authors,'cv-13-04');
-assert.ok(chefs.endsWith('A Hürriyetoğlu, BHM van der Velden'), 'CHEFS full published author list');
-for(const id of ['cv-bib-067','cv-bib-047','cv-bib-041','cv-bib-062']) {
-  const authors=formatPublicationAuthors(get(id).authors,id);
-  assert.ok(authors.includes('et al. (incl. BHM van der Velden)'), 'Preserve user credit in truncated list: '+id);
+assert.equal(chefs,'N Kızılilsoley, F van Meer, O Mutlu, …, BHM van der Velden',
+  'CHEFS: first three authors and last author');
+const sppin='MAD Buser, DC Simons, M Fitski, …, BHM van der Velden, H Kuijf, A de Luca, AFW van der Steeg';
+for(const id of ['cv-bib-067','cv-bib-062']) {
+  assert.equal(formatPublicationAuthors(get(id).authors,id),sppin,
+    'SPPIN journal and preprint: verified lead and final author positions');
 }
+for(const id of ['cv-bib-047','cv-bib-041']) {
+  const authors=formatPublicationAuthors(get(id).authors,id);
+  assert.ok(authors.includes('et al. (incl. BHM van der Velden)'),
+    'Do not fabricate author order for a truncated record: '+id);
+}
+assert.equal(formatPublicationAuthors(get('cv-13-05').authors,'cv-13-05'),
+  'N Özen, F Papadopoulou, O Mutlu, …, BHM van der Velden, A Hürriyetoğlu',
+  'Apply near-last author rule to other complete author lists too');
 assert.equal(formatPublicationAuthors(get('cv-wur-extra-1').authors,'cv-wur-extra-1'),name);
 assert.equal(formatPublicationAuthors(get('cv-wur-extra-2').authors,'cv-wur-extra-2'),name);
 console.log('Publication display formatting checked for '+entries.length+' records');
