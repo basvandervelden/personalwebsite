@@ -6,6 +6,7 @@ import media from './media.json';
 import CVPage from './CV.jsx';
 import cvData from './cv-data.json';
 import publicationCategories from './publication-categories.json';
+import PublicationAuthors from './PublicationAuthors.jsx';
 import { formatPublicationAuthors, formatPublicationTitle, formatPublicationVenue } from './publication-format.js';
 
 const homePath = '/';
@@ -100,7 +101,7 @@ function PublicationRows({items}) {
   return <div className="publication-list">{items.map(p => {
     const body = <>
       <div className="pub-meta"><span>{p.year}</span><span>{p.type}</span></div>
-      <div className="pub-body"><h3>{p.title}</h3>{p.authors&&<p>{p.authors}</p>}{p.journal&&<p className="pub-journal">{p.journal}{p.impactFactor!==null&&p.impactFactorYear&&<span className="publication-if"> · JIF {p.impactFactorYear}: {p.impactFactor.toFixed(1)}</span>}</p>}</div>
+      <div className="pub-body"><h3>{p.title}</h3>{p.authors&&<p><PublicationAuthors text={p.authors}/></p>}{p.journal&&<p className="pub-journal">{p.journal}{p.impactFactor!==null&&p.impactFactorYear&&<span className="publication-if"> · JIF {p.impactFactorYear}: {p.impactFactor.toFixed(1)}</span>}</p>}</div>
       {p.url&&<span className="pub-open" aria-hidden="true">↗</span>}
     </>;
     return p.url

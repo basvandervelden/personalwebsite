@@ -51,3 +51,6 @@
 .publication-if{color:var(--muted);font-size:.93em;white-space:normal}
 .publication-jif-note{color:var(--muted);font-size:12px;line-height:1.65;max-width:820px;margin:30px 0 0}
 @media(max-width:730px){.publication-category{margin:26px 0 36px}.publication-category-heading{gap:12px}}
+
+/* Personal academic portfolio: highlight the site owner's name in author lists. */
+.publication-self-author{color:var(--accent);font-weight:800}

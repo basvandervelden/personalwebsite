@@ -22,4 +22,16 @@ assert.equal(formatPublicationVenue(get('cv-bib-057').journal),'npj Breast Cance
 assert.ok(formatPublicationTitle(get('cv-bib-058').paperTitle,'cv-bib-058').includes('extremely dense breasts'));
 assert.ok(formatPublicationTitle(get('cv-bib-058').paperTitle,'cv-bib-058').includes('DENSE trial'));
 assert.ok(formatPublicationTitle(get('cv-wur-extra-1').paperTitle,'cv-wur-extra-1').endsWith('(8 June)'));
+const name='BHM van der Velden';
+const absent=entries.filter(entry=>!formatPublicationAuthors(entry.authors,entry.id).includes(name));
+assert.deepEqual(absent.map(entry=>entry.id),['cv-13-12'],
+  'Only the EFSA institutional-author event report may omit the site owner as a named author');
+const chefs=formatPublicationAuthors(get('cv-13-04').authors,'cv-13-04');
+assert.ok(chefs.endsWith('A Hürriyetoğlu, BHM van der Velden'), 'CHEFS full published author list');
+for(const id of ['cv-bib-067','cv-bib-047','cv-bib-041','cv-bib-062']) {
+  const authors=formatPublicationAuthors(get(id).authors,id);
+  assert.ok(authors.includes('et al. (incl. BHM van der Velden)'), 'Preserve user credit in truncated list: '+id);
+}
+assert.equal(formatPublicationAuthors(get('cv-wur-extra-1').authors,'cv-wur-extra-1'),name);
+assert.equal(formatPublicationAuthors(get('cv-wur-extra-2').authors,'cv-wur-extra-2'),name);
 console.log('Publication display formatting checked for '+entries.length+' records');

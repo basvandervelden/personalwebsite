@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import cv from './cv-data.json';
 import { formatPublicationAuthors, formatPublicationTitle, formatPublicationVenue } from './publication-format.js';
 import './cv.css';
+import PublicationAuthors from './PublicationAuthors.jsx';
 
 const external = (url) => /^https:\/\//i.test(url || '');
 const startYear = (period) => /^\d{4}/.exec(period || '')?.[0] || '';
@@ -46,7 +47,7 @@ function Entry({entry,compact}) {
     <div className="cv-entry-body">
       {isPublication ? <>
         <h3>{displayTitle}</h3>
-        {entry.authors && <p className="cv-pub-authors">{formatPublicationAuthors(entry.authors, entry.id)}</p>}
+        {entry.authors && <p className="cv-pub-authors"><PublicationAuthors text={formatPublicationAuthors(entry.authors, entry.id)}/></p>}
         <div className="cv-pub-details">
           {entry.journal && <span className="cv-pub-journal">{formatPublicationVenue(entry.journal)}</span>}
           {entry.publicationType && entry.publicationType!=='Journal article' && <span className="cv-pub-kind">{entry.publicationType}</span>}

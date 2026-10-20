@@ -36,9 +36,13 @@ const venueOverrides = {
   'Quantitative MRI of brain fluids': 'Quantitative MRI of Brain Fluids'
 };
 const authorOverrides = {
+  // Full CHEFS authorship verified against the published paper.
+  'cv-13-04': 'N Kızılilsoley, F van Meer, O Mutlu, W Hoenderdaal, R Hobé, W Mu, A Gerssen, HJ van der Fels-Klerx, Á Jóźwiak, I Manikas, A Hürriyetoğlu, BHM van der Velden',
+  'cv-wur-extra-1': 'BHM van der Velden',
+  'cv-wur-extra-2': 'BHM van der Velden',
   'cv-13-08': 'F van Meer, BHM van der Velden, M Takeuchi',
   // Legacy import uses commas both between authors and between family/given names.
-  'cv-bib-062': 'MAD Buser, DC Simons, M Fitski, MHWA Wijnen, AS Littooij, AH ter Brugge, IN Vos, MHA Janse, M de Boer, R ter Maat'
+  'cv-bib-062': 'MAD Buser, DC Simons, M Fitski, MHWA Wijnen, AS Littooij, AH ter Brugge, IN Vos, MHA Janse, M de Boer, R ter Maat, et al. (incl. BHM van der Velden)'
 };
 function cleanLegacyEscapes(value) {
   return String(value || '')
@@ -79,13 +83,22 @@ function formatOneAuthor(raw) {
   }
   return name;
 }
+// In these long author lists, the researcher's name is verified but outside
+// the displayed first-author segment. Do not imply a specific missing position.
+const truncatedCoauthorRecords = new Set(['cv-bib-067','cv-bib-047','cv-bib-041']);
+export const featuredAuthorName = 'BHM van der Velden';
 export function formatPublicationAuthors(value,id) {
   if (Object.hasOwn(authorOverrides,id)) return authorOverrides[id];
   const cleaned=cleanLegacyEscapes(value).trim();
   if (!cleaned) return '';
   if (/^European Food Safety Authority/.test(cleaned)) return cleaned;
   const parts=cleaned.split(/\s*;\s*|\s+&\s+/);
-  return parts.map(formatOneAuthor).filter(Boolean).join(', ');
+  const formatted = parts.map(formatOneAuthor).filter(Boolean).join(', ');
+  if (truncatedCoauthorRecords.has(id) && !formatted.includes(featuredAuthorName)) {
+    const abbreviated = /et al\.?$/i.test(formatted) ? formatted : formatted + ', et al.';
+    return abbreviated + ' (incl. ' + featuredAuthorName + ')';
+  }
+  return formatted;
 }
 export function formatPublicationTitle(value,id) {
   if (Object.hasOwn(titleOverrides,id)) return titleOverrides[id];
