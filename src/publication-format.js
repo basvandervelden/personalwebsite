@@ -107,7 +107,7 @@ const verifiedNearLastAuthors = {
 };
 function shortenIfNearLast(formatted) {
   const authors = formatted.split(', ');
-  if (authors.length < 8 || authors.includes('et al.')) return formatted;
+  if (authors.length < 8 || authors.includes('et al.') || formatted.includes('…')) return formatted;
   const position = authors.indexOf(featuredAuthorName);
   if (position <= 3 || position < 0 || authors.length - 1 - position > 3) return formatted;
   return [...authors.slice(0,3),'…',...authors.slice(position)].join(', ');
