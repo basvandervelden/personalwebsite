@@ -1,4 +1,4 @@
-import categories from './publication-categories.json';
+import categories from './publication-categories.json' with { type: 'json' };
 
 // Independent, reviewable publication types; CV bibliographic records remain immutable.
 const conferencePapers = new Set(categories.fullConferencePapers);
