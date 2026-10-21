@@ -54,3 +54,7 @@
 
 /* Personal academic portfolio: highlight the site owner's name in author lists. */
 .publication-self-author{color:var(--accent);font-weight:800}
+
+/* Links to the complete academic CV and Google Scholar. */
+.publication-external-links{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px 24px}
+@media(max-width:730px){.publication-external-links{justify-content:flex-start}}

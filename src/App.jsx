@@ -168,12 +168,11 @@ function Publications() {
   const [search,setSearch] = useState('');
   const groups = [
     {key:'journal',label:pageCopy.publications.journal_articles},
-    {key:'conferencePaper',label:pageCopy.publications.full_conference_papers},
-    {key:'conferenceAbstract',label:pageCopy.publications.conference_abstracts_posters},
-    {key:'other',label:pageCopy.publications.other_outputs}
+    {key:'conferencePaper',label:pageCopy.publications.full_conference_papers}
   ];
+  const papers = cvPublications.filter(p => p.section === 'journal' || p.section === 'conferencePaper');
   const query = search.trim().toLowerCase();
-  const filtered = cvPublications.filter(p =>
+  const filtered = papers.filter(p =>
     (filter === 'All' || p.section === filter)
     && (!query || [p.title,p.authors,p.journal,p.year,p.type].join(' ').toLowerCase().includes(query))
   );
@@ -184,11 +183,11 @@ function Publications() {
         <div className="filter-row" role="group" aria-label="Filter publications">
           {[{key:'All',label:pageCopy.publications.all_outputs},...groups].map(item=><button type="button" key={item.key} aria-pressed={item.key===filter} onClick={()=>setFilter(item.key)} className={item.key===filter?'active':''}>{item.label}</button>)}
         </div>
-        <ExtLink href={site.links.scholar} className="text-link">{pageCopy.publications.full_record_at_research_wur}</ExtLink>
+        <div className="publication-external-links"><LocalLink to="/cv/13" className="text-link">{pageCopy.publications.full_academic_cv}</LocalLink><ExtLink href={site.links.scholar} className="text-link">{pageCopy.publications.full_record_at_research_wur}</ExtLink></div>
       </div>
       <div className="publication-search-row">
         <input className="publication-search" type="search" aria-label={pageCopy.publications.search_publications} placeholder={pageCopy.publications.search_publications} value={search} onChange={e=>setSearch(e.target.value)}/>
-        <span className="publication-result-count">{filtered.length} {pageCopy.publications.of} {cvPublications.length} {pageCopy.publications.entries}</span>
+        <span className="publication-result-count">{filtered.length} {pageCopy.publications.of} {papers.length} {pageCopy.publications.entries}</span>
       </div>
       {groups.filter(g=>filter==='All'||filter===g.key).map(g=>{
         const records=filtered.filter(p=>p.section===g.key);

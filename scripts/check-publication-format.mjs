@@ -59,4 +59,10 @@ assert.ok(visibleEntries.some(entry=>entry.id==='cv-13-11'),'Unpublished Mutlu X
 assert.ok(!visibleEntries.some(entry=>entry.id==='cv-bib-062'),'Superseded SPPIN preprint is hidden');
 assert.ok(visibleEntries.some(entry=>entry.id==='cv-bib-067'),'SPPIN journal article stays visible');
 assert.deepEqual(publicationGroups.map(group=>visibleEntries.filter(entry=>publicationSection(entry)===group.key).length),[38,11,18,16]);
+const appCode=readFileSync(new URL('../src/App.jsx',import.meta.url),'utf8');
+const publicPage=appCode.split('function Publications() {')[1]?.split('function AcademicActivities()')[0] || '';
+assert.ok(publicPage.includes("const papers = cvPublications.filter(p => p.section === 'journal' || p.section === 'conferencePaper')"),
+  'Main Publications page must exclude non-paper outputs');
+assert.ok(!publicPage.includes("pageCopy.publications.conference_abstracts_posters"));
+assert.ok(!publicPage.includes("pageCopy.publications.other_outputs"));
 console.log('Publication display formatting checked for '+entries.length+' records');
