@@ -15,7 +15,7 @@ export const site = {
   links: {
     wur: 'https://www.wur.nl/en/research/food-safety',
     research: 'https://research.wur.nl/en/persons/bas-van-der-velden/',
-    scholar: 'https://scholar.google.com/citations?hl=nl&user=JWT2FmgAAAAJ&view_op=list_works&sortby=pubdate',
+    scholar: 'https://scholar.google.com/citations?hl=nl&user=JWT2FmgAAAAJ',
     github: 'https://github.com/basvandervelden',
     review: 'https://github.com/basvandervelden/ai_food_safety_review'
   }
