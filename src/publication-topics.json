@@ -42,7 +42,15 @@
       "cv-bib-024",
       "cv-bib-017",
       "cv-bib-031",
-      "cv-bib-010"
+      "cv-bib-010",
+      "cv-13-07",
+      "cv-13-12",
+      "cv-bib-049",
+      "cv-13-17",
+      "cv-bib-006",
+      "cv-bib-007",
+      "cv-bib-008",
+      "cv-bibtex-moeskops2016international"
     ],
     "XAI": [
       "cv-bib-069",
@@ -53,14 +61,17 @@
       "cv-13-16",
       "cv-bib-024",
       "cv-bib-046",
-      "cv-wur-extra-3"
+      "cv-wur-extra-3",
+      "cv-13-12",
+      "cv-bib-048"
     ],
     "Foundation models": [
       "cv-13-03",
       "cv-13-06",
       "cv-wur-extra-1",
       "cv-wur-extra-2",
-      "cv-bib-071"
+      "cv-bib-071",
+      "cv-13-02"
     ],
     "Reviews": [
       "cv-13-01",
@@ -68,7 +79,9 @@
       "cv-13-09",
       "cv-13-11",
       "cv-13-13",
-      "cv-13-14"
+      "cv-13-14",
+      "cv-13-03",
+      "cv-13-08"
     ],
     "Food safety": [
       "cv-13-01",
