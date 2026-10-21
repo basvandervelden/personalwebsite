@@ -58,3 +58,22 @@
 /* Links to the complete academic CV and Google Scholar. */
 .publication-external-links{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px 24px}
 @media(max-width:730px){.publication-external-links{justify-content:flex-start}}
+
+/* Publications: grouped output types and combinable topic filters. */
+.pub-tools{display:grid;grid-template-columns:minmax(0,1fr) max-content;align-items:start;gap:20px;margin-bottom:18px}
+.pub-tools .filter-row{flex-wrap:nowrap;min-width:0;overflow-x:auto;gap:8px;scrollbar-width:thin}
+.pub-tools .filter-row button{flex:0 0 auto;white-space:nowrap;padding:9px 12px}
+.pub-tools .publication-external-links{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;flex-wrap:nowrap;gap:14px;white-space:nowrap}
+.publication-topic-tools{display:flex;align-items:center;flex-wrap:wrap;gap:10px 15px;margin:0 0 25px}
+.publication-topic-label{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:11px}
+.publication-topic-buttons{display:flex;align-items:center;flex-wrap:wrap;gap:9px}
+.publication-topic-buttons button{background:transparent;border:1px solid var(--accent);border-radius:2px;color:var(--accent);cursor:pointer;font-size:12px;font-weight:700;padding:9px 16px}
+.publication-topic-buttons button:hover:not(.active){background:var(--accent-soft)}
+.publication-topic-buttons button.active{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme=dark] .publication-topic-buttons button.active{color:#171b22}
+.publication-topic-clear{background:none;border:0;color:var(--accent);cursor:pointer;font-size:12px;font-weight:700;padding:7px 4px;text-decoration:underline;text-underline-offset:4px}
+.publication-topic-clear:hover{color:var(--accent-hover)}
+@media(max-width:730px){
+  .pub-tools{grid-template-columns:minmax(0,1fr);gap:16px}
+  .pub-tools .publication-external-links{flex-direction:row;align-items:center;flex-wrap:wrap;gap:12px 22px}
+}
