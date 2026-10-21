@@ -168,11 +168,12 @@ function Publications() {
   const [search,setSearch] = useState('');
   const groups = [
     {key:'journal',label:pageCopy.publications.journal_articles},
-    {key:'conferencePaper',label:pageCopy.publications.full_conference_papers}
+    {key:'conferencePaper',label:pageCopy.publications.full_conference_papers},
+    {key:'conferenceAbstract',label:pageCopy.publications.conference_abstracts_posters},
+    {key:'other',label:pageCopy.publications.other_outputs}
   ];
-  const papers = cvPublications.filter(p => p.section === 'journal' || p.section === 'conferencePaper');
   const query = search.trim().toLowerCase();
-  const filtered = papers.filter(p =>
+  const filtered = cvPublications.filter(p =>
     (filter === 'All' || p.section === filter)
     && (!query || [p.title,p.authors,p.journal,p.year,p.type].join(' ').toLowerCase().includes(query))
   );
@@ -187,7 +188,7 @@ function Publications() {
       </div>
       <div className="publication-search-row">
         <input className="publication-search" type="search" aria-label={pageCopy.publications.search_publications} placeholder={pageCopy.publications.search_publications} value={search} onChange={e=>setSearch(e.target.value)}/>
-        <span className="publication-result-count">{filtered.length} {pageCopy.publications.of} {papers.length} {pageCopy.publications.entries}</span>
+        <span className="publication-result-count">{filtered.length} {pageCopy.publications.of} {cvPublications.length} {pageCopy.publications.entries}</span>
       </div>
       {groups.filter(g=>filter==='All'||filter===g.key).map(g=>{
         const records=filtered.filter(p=>p.section===g.key);

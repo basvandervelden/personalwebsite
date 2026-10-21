@@ -61,8 +61,15 @@ assert.ok(visibleEntries.some(entry=>entry.id==='cv-bib-067'),'SPPIN journal art
 assert.deepEqual(publicationGroups.map(group=>visibleEntries.filter(entry=>publicationSection(entry)===group.key).length),[38,11,18,16]);
 const appCode=readFileSync(new URL('../src/App.jsx',import.meta.url),'utf8');
 const publicPage=appCode.split('function Publications() {')[1]?.split('function AcademicActivities()')[0] || '';
-assert.ok(publicPage.includes("const papers = cvPublications.filter(p => p.section === 'journal' || p.section === 'conferencePaper')"),
-  'Main Publications page must exclude non-paper outputs');
-assert.ok(!publicPage.includes("pageCopy.publications.conference_abstracts_posters"));
-assert.ok(!publicPage.includes("pageCopy.publications.other_outputs"));
+assert.ok(publicPage.includes('const filtered = cvPublications.filter('),
+  'Main Publications page must display the full bibliography, not only papers');
+assert.ok(!publicPage.includes('const papers = cvPublications.filter('),
+  'Do not filter out presentations, posters or reports from Publications');
+assert.ok(publicPage.includes('pageCopy.publications.conference_abstracts_posters'),
+  'Conference presentations and posters must appear on Publications');
+assert.ok(publicPage.includes('pageCopy.publications.other_outputs'),
+  'Reports, datasets and other publications must appear on Publications');
+assert.deepEqual(publicationGroups.map(g=>g.label),[
+  'Journal papers','Full conference papers','Conference presentations and posters','Other publications'
+]);
 console.log('Publication display formatting checked for '+entries.length+' records');

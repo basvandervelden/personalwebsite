@@ -8,10 +8,10 @@ const nonResearchJournalOutputs = new Set(categories.journalNonResearchOutputs);
 export const supersededPreprints = categories.supersededPreprints || {};
 
 export const publicationGroups = [
-  {key:'journal',label:'Journal articles'},
+  {key:'journal',label:'Journal papers'},
   {key:'conferencePaper',label:'Full conference papers'},
-  {key:'conferenceAbstract',label:'Conference abstracts & posters'},
-  {key:'other',label:'Other scholarly outputs'}
+  {key:'conferenceAbstract',label:'Conference presentations and posters'},
+  {key:'other',label:'Other publications'}
 ];
 
 export function isSupersededPreprint(entry) {
