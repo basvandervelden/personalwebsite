@@ -6,6 +6,7 @@ import media from './media.json';
 import CVPage from './CV.jsx';
 import cvData from './cv-data.json';
 import { publicationSection, publicationDisplayType, isSupersededPreprint } from './publication-groups.js';
+import { publicationTopicNames, publicationHasTopic } from './publication-topics.js';
 import PublicationAuthors from './PublicationAuthors.jsx';
 import { formatPublicationAuthors, formatPublicationTitle, formatPublicationVenue } from './publication-format.js';
 
@@ -165,7 +166,11 @@ function ProjectDetail({item}) {
 }
 function Publications() {
   const [filter,setFilter] = useState('All');
+  const [selectedTopics,setSelectedTopics] = useState([]);
   const [search,setSearch] = useState('');
+  const toggleTopic = topic => setSelectedTopics(current =>
+    current.includes(topic) ? current.filter(item => item !== topic) : [...current,topic]
+  );
   const groups = [
     {key:'journal',label:pageCopy.publications.journal_articles},
     {key:'conferencePaper',label:pageCopy.publications.full_conference_papers},
@@ -175,6 +180,7 @@ function Publications() {
   const query = search.trim().toLowerCase();
   const filtered = cvPublications.filter(p =>
     (filter === 'All' || p.section === filter)
+    && selectedTopics.every(topic => publicationHasTopic(p, topic))
     && (!query || [p.title,p.authors,p.journal,p.year,p.type].join(' ').toLowerCase().includes(query))
   );
   return <>
@@ -185,6 +191,13 @@ function Publications() {
           {[{key:'All',label:pageCopy.publications.all_outputs},...groups].map(item=><button type="button" key={item.key} aria-pressed={item.key===filter} onClick={()=>setFilter(item.key)} className={item.key===filter?'active':''}>{item.label}</button>)}
         </div>
         <div className="publication-external-links"><LocalLink to="/cv/13" className="text-link">{pageCopy.publications.full_academic_cv}</LocalLink><ExtLink href={site.links.scholar} className="text-link">{pageCopy.publications.full_record_at_research_wur}</ExtLink></div>
+      </div>
+      <div className="publication-topic-tools">
+        <span className="publication-topic-label">Topics</span>
+        <div className="publication-topic-buttons" role="group" aria-label="Filter by research topics">
+          {publicationTopicNames.map(topic=><button type="button" key={topic} aria-pressed={selectedTopics.includes(topic)} className={selectedTopics.includes(topic)?'active':''} onClick={()=>toggleTopic(topic)}>{topic}</button>)}
+        </div>
+        {selectedTopics.length>0&&<button className="publication-topic-clear" type="button" onClick={()=>setSelectedTopics([])}>Clear topic filters</button>}
       </div>
       <div className="publication-search-row">
         <input className="publication-search" type="search" aria-label={pageCopy.publications.search_publications} placeholder={pageCopy.publications.search_publications} value={search} onChange={e=>setSearch(e.target.value)}/>
