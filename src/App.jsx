@@ -180,7 +180,7 @@ function Publications() {
   const query = search.trim().toLowerCase();
   const filtered = cvPublications.filter(p =>
     (filter === 'All' || p.section === filter)
-    && selectedTopics.every(topic => publicationHasTopic(p, topic))
+    && (selectedTopics.length === 0 || selectedTopics.some(topic => publicationHasTopic(p, topic)))
     && (!query || [p.title,p.authors,p.journal,p.year,p.type].join(' ').toLowerCase().includes(query))
   );
   return <>
