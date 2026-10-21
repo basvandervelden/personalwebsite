@@ -10,6 +10,7 @@
 | Biography, research areas, projects, selected publications, activity items and milestones | [`src/content.js`](src/content.js) |
 | Complete long CV | [`src/cv-data.json`](src/cv-data.json) |
 | Publication page: conference paper versus abstract categorisation | [`src/publication-categories.json`](src/publication-categories.json) |
+| Long CV publication topic filter (AI, XAI, Foundation models, Reviews, Food safety) | [`src/publication-topics.json`](src/publication-topics.json) |
 | Bibliography display style (authors, titles, venues) | [`src/publication-format.js`](src/publication-format.js) |
 | Image filename, alt text and photo credits | [`src/media.json`](src/media.json) |
 | Layout and functionality (not ordinary text) | `src/App.jsx`, `src/CV.jsx`, CSS files |

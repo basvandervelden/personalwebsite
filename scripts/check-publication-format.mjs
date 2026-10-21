@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
 import { formatPublicationAuthors, formatPublicationTitle, formatPublicationVenue } from '../src/publication-format.js';
 import { isSupersededPreprint, publicationSection, publicationGroups, supersededPreprints } from '../src/publication-groups.js';
+import { publicationTopicNames, publicationHasTopic } from '../src/publication-topics.js';
 const cv = JSON.parse(readFileSync(new URL('../src/cv-data.json',import.meta.url),'utf8'));
 const entries=cv.sections.find(section=>section.number===13)?.entries ?? [];
 assert.ok(entries.length>=80);
@@ -72,4 +73,36 @@ assert.ok(publicPage.includes('pageCopy.publications.other_outputs'),
 assert.deepEqual(publicationGroups.map(g=>g.label),[
   'Journal papers','Full conference papers','Conference presentations and posters','Other publications'
 ]);
+const topicsData=JSON.parse(readFileSync(new URL('../src/publication-topics.json',import.meta.url),'utf8'));
+const topicNames=['AI','XAI','Foundation models','Reviews','Food safety'];
+assert.deepEqual(publicationTopicNames,topicNames,'Five scientific topic filters');
+const available=new Set(visibleEntries.map(e=>e.id));
+const allIds=new Set(entries.map(e=>e.id));
+for(const topic of topicNames) {
+  const ids=topicsData.topics[topic];
+  assert.ok(Array.isArray(ids)&&ids.length>0,'Topic cannot be empty: '+topic);
+  assert.equal(new Set(ids).size,ids.length,'No repeated publication tags: '+topic);
+  for(const id of ids) {
+    assert.ok(allIds.has(id),'Tag has an unknown publication: '+id);
+    assert.ok(available.has(id),'Hidden superseded preprint should not have a topic: '+id);
+    assert.ok(publicationHasTopic(get(id),topic),'Matching publication topic: '+id);
+  }
+}
+for(const narrower of ['XAI','Foundation models']) {
+  for(const id of topicsData.topics[narrower])
+    assert.ok(publicationHasTopic(get(id),'AI'),'Specialised AI topic must also appear under AI: '+id);
+}
+const topical=(id,name)=>publicationHasTopic(get(id),name);
+assert.ok(topical('cv-13-01','Reviews')&&topical('cv-13-01','Food safety')&&topical('cv-13-01','AI'));
+assert.ok(topical('cv-13-09','Reviews'),'Federated learning review is categorised');
+assert.ok(topical('cv-bib-069','XAI')&&topical('cv-bib-069','Food safety'));
+assert.ok(topical('cv-13-03','Foundation models')&&topical('cv-13-03','Food safety'));
+assert.ok(!topical('cv-bibtex-wang2026foresight','Food safety'),
+  'Do not conflate food security and food safety');
+assert.ok(!topical('cv-bib-057','Food safety'),'Medical imaging research is not food safety');
+const cvView=readFileSync(new URL('../src/CV.jsx',import.meta.url),'utf8');
+assert.ok(cvView.includes('publicationTopicFilter ? publicationTopicNames : categories'),
+  'Long CV publication view must show the five topical filters');
+assert.ok(cvView.includes('publicationHasTopic(e,activeTopic)'),
+  'CV publication filter must actually use the curated tags');
 console.log('Publication display formatting checked for '+entries.length+' records');

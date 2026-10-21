@@ -4,6 +4,7 @@ import { formatPublicationAuthors, formatPublicationTitle, formatPublicationVenu
 import './cv.css';
 import PublicationAuthors from './PublicationAuthors.jsx';
 import { publicationSection, publicationDisplayType, publicationGroups, isSupersededPreprint } from './publication-groups.js';
+import { publicationTopicNames, publicationHasTopic } from './publication-topics.js';
 
 const external = (url) => /^https:\/\//i.test(url || '');
 const startYear = (period) => /^\d{4}/.exec(period || '')?.[0] || '';
@@ -98,10 +99,15 @@ export default function CVPage({sectionNumber}) {
     : s);
   const years=useMemo(()=>[...new Set(cv.sections.filter(s=>s.number!==18).flatMap(s=>s.entries.map(e=>startYear(e.period)).filter(Boolean)))].sort((a,b)=>Number(b)-Number(a)),[]);
   const categories=useMemo(()=>[...new Set(cv.sections.filter(s=>s.number!==18).map(s=>s.category))],[]);
+  const publicationTopicFilter = Number(sectionNumber)===13;
+  const topicOptions = publicationTopicFilter ? publicationTopicNames : categories;
+  const activeTopic = category==='All topics' || topicOptions.includes(category) ? category : 'All topics';
   const selected=sectionNumber?publicSections.find(s=>s.number===Number(sectionNumber)):null;
   const baseSections=selected?[selected]:publicSections;
   const query=normalize(search.trim());
-  const filtered=baseSections.filter(s=>category==='All topics'||s.category===category).map(s=>({...s,visible:s.entries.filter(e=>matchesQuery(e,query)&&(year==='All years'||startYear(e.period)===year))})).filter(s=>s.visible.length);
+  const filtered=baseSections.filter(s=>publicationTopicFilter || activeTopic==='All topics'||s.category===activeTopic)
+    .map(s=>({...s,visible:s.entries.filter(e=>(!publicationTopicFilter || publicationHasTopic(e,activeTopic))
+      && matchesQuery(e,query)&&(year==='All years'||startYear(e.period)===year))})).filter(s=>s.visible.length);
   const resultCount=filtered.reduce((sum,s)=>sum+s.visible.length,0);
   const totalCount=publicSections.reduce((sum,s)=>sum+s.entries.length,0);
   const pubCount=publicSections.find(s=>s.number===13)?.entries.length||0;
@@ -136,7 +142,7 @@ export default function CVPage({sectionNumber}) {
           <label className="cv-search-label" htmlFor="cv-search">SEARCH THE CV</label>
           <div className="cv-search-field"><span aria-hidden="true">⌕</span><input id="cv-search" type="search" value={search} onChange={e=>{setSearch(e.target.value);setCollapsed([])}} placeholder="Search talks, collaborators, projects, journals…" autoComplete="off"/></div>
           <div className="cv-filter-row">
-            <label>Topic <select value={category} onChange={e=>{setCategory(e.target.value);setCollapsed([])}}><option>All topics</option>{categories.map(c=><option key={c}>{c}</option>)}</select></label>
+            <label>Topic <select value={activeTopic} onChange={e=>{setCategory(e.target.value);setCollapsed([])}}><option>All topics</option>{topicOptions.map(c=><option key={c}>{c}</option>)}</select></label>
             <label>Start year <select value={year} onChange={e=>{setYear(e.target.value);setCollapsed([])}}><option>All years</option>{years.map(y=><option key={y}>{y}</option>)}</select></label>
             <button type="button" className="cv-reset" onClick={clear}>Reset filters</button>
           </div>
