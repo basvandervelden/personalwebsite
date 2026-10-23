@@ -5,14 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "npm run check:publications && vite build",
+    "build": "npm run check:publications && npm run export:cv && vite build",
     "preview": "vite preview",
     "check:editorial": "node scripts/check-editorial-changes.mjs",
-    "check:publications": "node scripts/check-publication-format.mjs"
+    "check:publications": "node scripts/check-publication-format.mjs",
+    "export:cv": "node scripts/export-cv-docx.mjs"
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "docx": "^9.5.1"
   },
   "devDependencies": {
     "vite": "^6.3.0",

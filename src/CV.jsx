@@ -121,6 +121,7 @@ export default function CVPage({sectionNumber}) {
       <div className="cv-actions">
         <a href="mailto:bas.vandervelden@wur.nl" className="cv-primary-action">Contact <span>↗</span></a>
         <button type="button" className="cv-secondary-action" onClick={()=>window.print()}>Print / save as PDF <span>↗</span></button>
+        <a className="cv-secondary-action" href={import.meta.env.BASE_URL+'Bas_van_der_Velden_CV_editable.docx'} download>Download editable Word <span>↓</span></a>
       </div>
       <div className="cv-metrics">
         <div><strong>{publicSections.length}</strong><span>Sections</span></div>
