@@ -1,0 +1,56 @@
+/* Thesis reader — self-contained, inherits the site's light/dark palette. */
+.thesis-page{color:var(--ink)}
+.thesis-intro{background:var(--alt);border-bottom:1px solid var(--line);padding:40px 0 65px}
+.thesis-back{display:inline-block;font-size:12px;color:var(--muted);margin-bottom:46px}
+.thesis-back:hover{color:var(--accent)}
+.thesis-eyebrow{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.15em;margin:0 0 20px}
+.thesis-intro h1{max-width:950px;font-size:clamp(32px,4.7vw,58px);line-height:1.15;font-weight:750;letter-spacing:-.045em}
+.thesis-byline{font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 12px}
+.thesis-intro-copy{font-size:14px;max-width:670px;line-height:1.8}
+.thesis-links{display:flex;align-items:center;flex-wrap:wrap;gap:16px 25px;margin-top:28px;font-size:12px;font-weight:800}
+.thesis-links a{color:var(--accent);text-decoration:none}
+.thesis-download{padding:12px 17px;background:var(--ink);border:1px solid var(--ink);color:var(--bg)!important;display:inline-flex;gap:26px;justify-content:space-between;align-items:center}
+.thesis-links a:hover{text-decoration:underline}
+.thesis-download:hover{background:var(--accent);border-color:var(--accent);text-decoration:none!important}
+.thesis-reader-section{padding:68px 0 100px}
+.thesis-reader-layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px;align-items:start}
+.thesis-chapters{position:sticky;top:100px;border-top:1px solid var(--line)}
+.thesis-aside-head{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--accent);padding:18px 0 16px}
+.thesis-chapters nav{display:flex;flex-direction:column}
+.thesis-chapters nav button{font:inherit;border:0;border-top:1px solid var(--line);background:transparent;padding:12px 5px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;width:100%;text-align:left;font-size:12px;line-height:1.6;color:var(--muted);cursor:pointer}
+.thesis-chapters nav button small{font-size:11px;color:var(--subtle)}
+.thesis-chapters nav button:hover,.thesis-chapters nav button.is-current{color:var(--accent)}
+.thesis-chapters nav button.is-current{font-weight:800}
+.thesis-chapters nav button:disabled{opacity:.4;cursor:default}
+.thesis-reader{min-width:0}
+.thesis-reader-top{display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.thesis-reader-top span{color:var(--accent);font-size:10px;letter-spacing:.14em;font-weight:800}
+.thesis-reader-top button{background:transparent;border:0;color:var(--muted);cursor:pointer;font-size:12px}
+.thesis-help{font-size:12px;line-height:1.7;color:var(--muted);padding:15px 0}
+.thesis-book-stage{display:flex;justify-content:center;align-items:flex-start;min-height:540px;overflow:hidden;padding:26px 0 28px;background:var(--paper)}
+.thesis-book-stage .react-pdf__Document{width:100%;min-width:0;display:flex;justify-content:center}
+.thesis-flipbook{margin-inline:auto}
+.thesis-book-page{background:#fff;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(20,20,25,.05)}
+.thesis-book-paper{position:relative;display:flex;align-items:flex-start;justify-content:center;width:100%;height:100%;background:#fff;overflow:hidden}
+.thesis-book-paper .react-pdf__Page{width:100%;height:100%;display:flex;align-items:flex-start;justify-content:center}
+.thesis-book-paper .react-pdf__Page__canvas{width:100%!important;height:100%!important;object-fit:fill;display:block}
+.thesis-page-loading{color:#999;display:grid;place-items:center;width:100%;height:100%;font-size:12px;text-align:center;padding:20px}
+.thesis-reader-message{min-height:400px;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:12px;text-align:center;color:var(--muted);font-size:13px}
+.thesis-reader-message a{color:var(--accent);text-decoration:underline}
+.thesis-error{color:#a4423f;font-size:12px;margin:8px 0}
+.thesis-book-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:17px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.thesis-book-controls button{font:inherit;display:inline-flex;align-items:center;gap:10px;cursor:pointer;border:0;background:transparent;color:var(--accent);font-size:12px;font-weight:800;padding:8px 0}
+.thesis-book-controls button:disabled{opacity:.35;cursor:default}
+.thesis-book-position{font-size:12px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.thesis-reader-note{font-size:11px;color:var(--subtle);line-height:1.8;margin-top:17px}
+@media(max-width:1040px){.thesis-reader-layout{grid-template-columns:190px minmax(0,1fr);gap:27px}}
+@media(max-width:730px){
+ .thesis-intro{padding:25px 0 46px}.thesis-back{margin-bottom:32px}
+ .thesis-reader-section{padding:34px 0 70px}
+ .thesis-reader-layout{grid-template-columns:1fr;gap:22px}
+ .thesis-chapters{position:static}
+ .thesis-chapters nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px}
+ .thesis-book-stage{min-height:360px;padding:20px 0}
+ .thesis-book-controls button span{display:none}
+}
+@media(max-width:440px){.thesis-chapters nav{grid-template-columns:1fr}.thesis-intro h1{font-size:31px}.thesis-book-stage{padding:16px 0;min-height:320px}}
