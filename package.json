@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "npm run check:publications && npm run export:cv && vite build",
+    "build": "npm run check:publications && npm run export:cv && vite build && node scripts/generate-seo-pages.mjs",
     "preview": "vite preview",
     "check:editorial": "node scripts/check-editorial-changes.mjs",
     "check:publications": "node scripts/check-publication-format.mjs",
