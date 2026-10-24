@@ -118,6 +118,7 @@ export default function PaperReader({ paper }) {
       <div className="thesis-links">
         {fileAvailable && <a className="thesis-download" href={file} target="_blank" rel="noopener noreferrer">Open / download PDF <span aria-hidden="true">↗</span></a>}
         <a href={doiLink} target="_blank" rel="noopener noreferrer">Original publication / DOI ↗</a>
+        <a href={'https://basvandervelden.github.io/personalwebsite/papers/'+paper.slug+'/'} target="_blank" rel="noopener noreferrer">Shareable paper page ↗</a>
       </div>
     </div></section>
     <section className="thesis-reader-section" aria-label="Paper reader"><div className="container paper-reader-content">
