@@ -45,6 +45,8 @@ jobs:
           fi
           test "$(head -c 4 "$OUTPUT")" = "%PDF"
           echo "Thesis PDF ready: $(wc -c < "$OUTPUT") bytes"
+      - name: Retrieve licensed featured paper PDFs
+        run: node scripts/fetch-featured-papers.mjs
       - name: Build website
         run: npm run build
       - name: Configure Pages
