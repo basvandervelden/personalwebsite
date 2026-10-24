@@ -60,7 +60,7 @@ export default function AccessibleThesisText({ file, chapters, chapterIndex }) {
   }, [pdf, chapters, chapterIndex, chapter]);
 
   useEffect(() => {
-    if (status === 'ready') headingRef.current?.focus({ preventScroll: true });
+    if (status === 'ready') headingRef.current?.focus();
   }, [status, chapterIndex]);
 
   return <div className="thesis-text-edition" aria-label="Thesis text version">
