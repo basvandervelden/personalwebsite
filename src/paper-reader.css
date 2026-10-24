@@ -1,0 +1,17 @@
+/* Featured papers use the site's original editorial typography and palette. */
+.paper-featured{margin:0 0 52px;border-bottom:1px solid var(--line);padding:0 0 34px}
+.paper-featured-head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:20px}
+.paper-featured-head h2{font-size:clamp(20px,2.2vw,26px)}
+.paper-featured-head span{color:var(--muted);font-size:12px}
+.paper-featured-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px}
+.paper-featured-row{border-top:1px solid var(--line);padding:14px 0 17px;display:flex;justify-content:space-between;gap:14px;align-items:center;text-decoration:none}
+.paper-featured-row:hover .paper-featured-title{color:var(--accent)}
+.paper-featured-row .paper-featured-year{display:block;font-size:10px;letter-spacing:.08em;font-weight:800;color:var(--accent);margin-bottom:4px}
+.paper-featured-title{font-size:13px;font-weight:750;line-height:1.55;display:block;color:var(--ink)}
+.paper-featured-row .paper-featured-arrow{flex-shrink:0;color:var(--accent);font-size:16px}
+.paper-reader-content{max-width:1040px}
+.paper-reader-page .thesis-intro h1{max-width:1000px;font-size:clamp(29px,4vw,48px)}
+.paper-reader-page .thesis-reader-top{margin-bottom:0}
+.paper-license-note{border-top:1px solid var(--line);margin:36px 0 0;padding:20px 0;font-size:11px;color:var(--muted);line-height:1.85}
+.paper-license-note a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:650px){.paper-featured-list{grid-template-columns:1fr}.paper-featured{margin-bottom:32px}}
