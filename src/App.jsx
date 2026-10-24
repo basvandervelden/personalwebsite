@@ -5,6 +5,8 @@ import pageCopy from './page-copy.json';
 import media from './media.json';
 import CVPage from './CV.jsx';
 import Thesis from './Thesis.jsx';
+import PaperReader from './PaperReader.jsx';
+import featuredPapers from './featured-papers.json';
 import cvData from './cv-data.json';
 import { publicationSection, publicationDisplayType, isSupersededPreprint } from './publication-groups.js';
 import { publicationTopicNames, publicationHasTopic } from './publication-topics.js';
@@ -187,6 +189,15 @@ function Publications() {
   return <>
     <PageHeader kicker={pageCopy.publications.scientific_output} title={pageCopy.publications.publications} lead={pageCopy.publications.a_curated_starting_selection_of_peer_reviewed}/>
     <section className="section first-section"><div className="container">
+      <section className="paper-featured" aria-labelledby="featured-papers-heading">
+        <div className="paper-featured-head"><h2 id="featured-papers-heading">Selected papers to read</h2><span>Browse full articles · open access</span></div>
+        <div className="paper-featured-list">{featuredPapers.map(paper=>
+          <LocalLink key={paper.slug} to={'/papers/'+paper.slug} className="paper-featured-row">
+            <span><span className="paper-featured-year">{paper.year} · {paper.journal}</span><span className="paper-featured-title">{paper.title}</span></span>
+            <span className="paper-featured-arrow" aria-hidden="true">→</span>
+          </LocalLink>
+        )}</div>
+      </section>
       <div className="pub-tools">
         <div className="filter-row" role="group" aria-label="Filter publications">
           {[{key:'All',label:pageCopy.publications.all_outputs},...groups].map(item=><button type="button" key={item.key} aria-pressed={item.key===filter} onClick={()=>setFilter(item.key)} className={item.key===filter?'active':''}>{item.label}</button>)}
@@ -267,7 +278,7 @@ function App(){
     // Skip the initial page load, but focus the new main region after navigation.
     if (firstRoute.current) firstRoute.current=false;
     else mainRef.current?.focus({preventScroll:true});
-    const label=navigation.find(n=>n.path===path)?.label || researchAreas.find(x=>path==='/research/'+x.slug)?.title || projectEntries.find(x=>path==='/projects/'+x.slug)?.title || (path.startsWith('/cv')?'Full academic CV':path==='/thesis'?'PhD thesis':'Page');
+    const label=navigation.find(n=>n.path===path)?.label || researchAreas.find(x=>path==='/research/'+x.slug)?.title || projectEntries.find(x=>path==='/projects/'+x.slug)?.title || (path.startsWith('/cv')?'Full academic CV':path==='/thesis'?'PhD thesis':path.startsWith('/papers/')?'Featured paper':'Page');
     document.title=(path==='/'?'Bas van der Velden':label+' | Bas van der Velden')+' — AI for Food Safety';
   },[path]);
   useEffect(()=>{document.documentElement.dataset.theme=theme;try{localStorage.setItem('bas-theme',theme)}catch{}},[theme]);
@@ -287,6 +298,7 @@ function App(){
   else if(path==='/about') page=<About/>;
   else if(path==='/cv'||/^\/cv\/\d+$/.test(path)) page=<CVPage sectionNumber={path.split('/')[2]}/>;
   else if(path==='/thesis') page=<Thesis/>;
+  else if(path.startsWith('/papers/')) { const paper=featuredPapers.find(p=>'/papers/'+p.slug===path); page=paper?<PaperReader paper={paper}/>:<NotFound/>; }
   else if(path==='/contact') page=<Contact/>;
   else page=<NotFound/>;
   return <>
