@@ -32,6 +32,16 @@ jobs:
         run: npm run check:editorial
       - name: Install dependencies
         run: npm install --no-audit --no-fund
+      - name: Retrieve public Utrecht University thesis PDF
+        run: |
+          mkdir -p public/thesis
+          OUTPUT=public/thesis/bas-van-der-velden-phd-2017.pdf
+          URL_A="https://dspace.library.uu.nl/bitstreams/6afc64d5-da49-4263-9769-165144db353d/download"
+          URL_B="https://dspace.library.uu.nl/server/api/core/bitstreams/6afc64d5-da49-4263-9769-165144db353d/content"
+          curl --fail --location --retry 2 --connect-timeout 15 --max-time 180 --user-agent "Mozilla/5.0" "$URL_A" --output "$OUTPUT" || \
+            curl --fail --location --retry 2 --connect-timeout 15 --max-time 180 --user-agent "Mozilla/5.0" "$URL_B" --output "$OUTPUT"
+          test "$(head -c 4 "$OUTPUT")" = "%PDF"
+          echo "Thesis PDF retrieved: $(wc -c < "$OUTPUT") bytes"
       - name: Build website
         run: npm run build
       - name: Configure Pages
