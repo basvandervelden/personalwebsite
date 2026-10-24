@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-:root{--bg:#fdfdfc;--paper:#fff;--ink:#1d2432;--muted:#5f6673;--subtle:#7c8390;--line:#e1e3e5;--accent:#675987;--accent-hover:#40385d;--accent-soft:#eeedf3;--alt:#f6f7f7;--slot-bg:#f1f0f5;--slot-line:#c9c8d3;--nav:rgba(253,253,252,.97);color-scheme:light;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+:root{--bg:#fdfdfc;--paper:#fff;--ink:#1d2432;--muted:#5f6673;--subtle:#646b77;--line:#e1e3e5;--accent:#675987;--accent-hover:#40385d;--accent-soft:#eeedf3;--alt:#f6f7f7;--slot-bg:#f1f0f5;--slot-line:#c9c8d3;--nav:rgba(253,253,252,.97);color-scheme:light;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
 :root[data-theme=dark]{--bg:#171b22;--paper:#1e2430;--ink:#f5f4f7;--muted:#b4b9c5;--subtle:#a1a6b4;--line:#353c49;--accent:#c0b4dc;--accent-hover:#e8dffa;--accent-soft:#303044;--alt:#1c212b;--slot-bg:#282c3a;--slot-line:#545367;--nav:rgba(23,27,34,.97);color-scheme:dark}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--ink);margin:0;font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}button{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}p,h1,h2,h3{margin:0}h1,h2,h3{font-family:Manrope,'DM Sans',sans-serif;letter-spacing:-.044em;line-height:1.22}h1{font-size:clamp(44px,5.6vw,74px);font-weight:700}h2{font-size:clamp(28px,3.1vw,43px);font-weight:700}h3{font-size:22px;font-weight:700}h1 em{font-family:Georgia,serif;font-weight:400;letter-spacing:-.055em;color:var(--accent);font-style:italic}p{color:var(--muted)}.container{width:min(1140px,calc(100% - 76px));margin-inline:auto}.skip-link{position:fixed;z-index:100;top:-70px;left:10px;background:var(--ink);color:var(--bg);padding:10px 14px}.skip-link:focus{top:10px}.arrow{padding-left:8px;font-size:1.05em}.eyebrow{color:var(--accent);font-size:11px;font-weight:800;line-height:1.5;letter-spacing:.15em;text-transform:uppercase;margin:0 0 24px}
 .site-header{height:86px;background:var(--nav);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;backdrop-filter:blur(12px)}.header-content{height:100%;display:flex;align-items:center;gap:20px}.wordmark{display:flex;flex-direction:column;white-space:nowrap;gap:0}.wordmark-name{font-family:Manrope,'DM Sans',sans-serif;font-size:15px;font-weight:800;letter-spacing:-.045em;line-height:1.35}.wordmark-dot{color:var(--accent)}.wordmark-description{font-size:9px;font-weight:800;letter-spacing:.15em;color:var(--muted)}.site-nav{margin-left:auto;display:flex;align-items:center;gap:clamp(12px,1.55vw,25px)}.site-nav a{font-size:12px;font-weight:700;color:var(--muted);padding:30px 0;white-space:nowrap;position:relative}.site-nav a:hover,.site-nav a.is-active{color:var(--ink)}.site-nav a.is-active:after{content:'';position:absolute;left:0;right:0;bottom:20px;height:2px;background:var(--accent)}.site-nav .contact-nav{border-left:1px solid var(--line);padding-left:20px;color:var(--accent)}.contact-nav span{padding-left:4px}.header-tools{display:flex;gap:9px}.theme-toggle,.menu-toggle{background:transparent;border:1px solid var(--line);color:var(--ink);height:34px;width:34px;border-radius:3px;display:grid;place-items:center;cursor:pointer}.theme-toggle{font-size:18px}.theme-toggle:hover,.menu-toggle:hover{background:var(--alt)}.menu-toggle{display:none;align-content:center;justify-items:center;gap:4px}.menu-toggle span{width:16px;height:1.5px;background:var(--ink);display:block}
@@ -76,4 +76,15 @@
 @media(max-width:730px){
   .pub-tools{grid-template-columns:minmax(0,1fr);gap:16px}
   .pub-tools .publication-external-links{flex-direction:row;align-items:center;flex-wrap:wrap;gap:12px 22px}
+}
+
+/* Accessibility refinements: no visual changes unless navigating by keyboard. */
+:where(input,select,textarea,[tabindex]):focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:3px;
+}
+main:focus{outline:none}
+.skip-link:focus-visible{top:10px}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
