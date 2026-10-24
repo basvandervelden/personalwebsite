@@ -120,7 +120,7 @@ export default function Thesis() {
           <div className="thesis-book-position" aria-live="polite">{numPages ? `Page ${displayedPdfPage} of ${numPages}` : 'Opening document'}</div>
           <button type="button" onClick={next} disabled={!numPages || currentIndex >= bookPages - 1}><span>Next</span> →</button>
         </div>
-        <p className="thesis-reader-note">This is a reading edition of the archived thesis. The source PDF remains available via the university repository.</p>
+        <p className="thesis-reader-note"><a href={THESIS_PDF + '#page=' + displayedPdfPage} target="_blank" rel="noopener noreferrer">Zoom / read this page at full size ↗</a> · This is a reading edition of the archived thesis. The source PDF remains available via the university repository.</p>
       </div>
     </div></section>
   </div>;
