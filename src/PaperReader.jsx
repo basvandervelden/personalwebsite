@@ -8,9 +8,12 @@ import './paper-reader.css';
 
 pdfjs.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
 const BASE = import.meta.env.BASE_URL;
-const PaperFlipPage = forwardRef(function PaperFlipPage({ pageNumber, active }, ref) {
+const PaperFlipPage = forwardRef(function PaperFlipPage({ pageNumber, active, width }, ref) {
   return <div className="thesis-book-page" ref={ref}><div className="thesis-book-paper">
-    {active ? <PDFPage pageNumber={pageNumber} width={470}
+    {active ? <PDFPage pageNumber={pageNumber} width={width}
+      // Render the actual target page size at >=2x screen resolution.
+      // Previously a 470px canvas was stretched to the book's physical page.
+      devicePixelRatio={Math.min(2.2, Math.max(2, window.devicePixelRatio || 1))}
       renderTextLayer={false} renderAnnotationLayer={false}
       loading={<div className="thesis-page-loading">Loading page {pageNumber}…</div>}/>
       : <div className="thesis-page-loading" aria-hidden="true"/>}
@@ -84,6 +87,13 @@ export default function PaperReader({ paper }) {
     });
   };
   const stepPage=direction=>setPage(p=>Math.max(0,Math.min((numPages||1)-1,p+direction)));
+  // Two-up on laptops/desktops, one page on narrow screens. Keep a generous
+  // gutter so the flipbook never silently shrinks itself to fit the container.
+  const portraitBook = viewportWidth < 760;
+  const bookWidth = Math.round(portraitBook
+    ? Math.min(680, Math.max(270, viewportWidth - 76))
+    : Math.min(750, Math.max(310, (viewportWidth - 150) / 2)));
+  const bookHeight = Math.round(bookWidth * 1.415);
   const fullWidth=Math.round(Math.max(240,Math.min(1350,viewportWidth-96))*zoom);
   useEffect(()=>{
     if(fullscreen) fullscreenStageRef.current?.scrollTo({top:0,left:0,behavior:'instant'});
@@ -165,13 +175,15 @@ export default function PaperReader({ paper }) {
                 onLoadError={()=>setFileAvailable(false)}
                 loading={<div className="thesis-reader-message">Loading paper…</div>}>
                 {numPages && <div className="thesis-flipbook-visual" aria-hidden="true">
-                  <HTMLFlipBook ref={flip} key={numPages} width={470} height={665}
-                    size="stretch" minWidth={255} maxWidth={470} minHeight={361} maxHeight={665}
+                  <HTMLFlipBook ref={flip} key={numPages + '-' + bookWidth}
+                    width={bookWidth} height={bookHeight}
+                    size="fixed"
                     showCover={true} usePortrait={true} startPage={page} drawShadow={true}
                     maxShadowOpacity={0.2} flippingTime={reduceMotion?100:620}
                     autoSize={true} showPageCorners={true} mobileScrollSupport={false}
                     className="thesis-flipbook" onFlip={e=>setPage(e.data)}>
-                    {Array.from({length:numPages},(_,i)=><PaperFlipPage key={i} pageNumber={i+1} active={Math.abs(i-page)<=5}/>)}
+                    {Array.from({length:numPages},(_,i)=><PaperFlipPage key={i} pageNumber={i+1}
+                      width={bookWidth} active={Math.abs(i-page)<=3}/>)}
                   </HTMLFlipBook>
                 </div>}
               </Document>
