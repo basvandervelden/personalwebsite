@@ -4,6 +4,7 @@ import './styles.css';
 import pageCopy from './page-copy.json';
 import media from './media.json';
 import CVPage from './CV.jsx';
+import Thesis from './Thesis.jsx';
 import cvData from './cv-data.json';
 import { publicationSection, publicationDisplayType, isSupersededPreprint } from './publication-groups.js';
 import { publicationTopicNames, publicationHasTopic } from './publication-topics.js';
@@ -226,7 +227,7 @@ function AcademicActivities(){
 function About(){
   return <>
     <PageHeader kicker={pageCopy.about.about} title={pageCopy.about.a_researcher_a_team_leader_and_a} lead={pageCopy.about.my_work_combines_machine_learning_research_scientific}/>
-    <section className="section first-section"><div className="container about-columns"><Portrait className="about-portrait"/><div><Eyebrow>{pageCopy.about.background}</Eyebrow><h2>{pageCopy.about.from_medical_imaging_to_ai_for_food}</h2>{site.about.map(p=><p key={p}>{p}</p>)}<ExtLink href={site.links.research} className="text-link">{pageCopy.about.scientific_profile}</ExtLink> <LocalLink to="/cv" className="text-link about-cv-link">{pageCopy.about.full_academic_cv} <span>→</span></LocalLink></div></div></section>
+    <section className="section first-section"><div className="container about-columns"><Portrait className="about-portrait"/><div><Eyebrow>{pageCopy.about.background}</Eyebrow><h2>{pageCopy.about.from_medical_imaging_to_ai_for_food}</h2>{site.about.map(p=><p key={p}>{p}</p>)}<ExtLink href={site.links.research} className="text-link">{pageCopy.about.scientific_profile}</ExtLink> <LocalLink to="/cv" className="text-link about-cv-link">{pageCopy.about.full_academic_cv} <span>→</span></LocalLink> <LocalLink to="/thesis" className="text-link about-cv-link">PhD thesis (2017) <span>→</span></LocalLink></div></div></section>
     <section className="section section-alt"><div className="container"><SectionIntro eyebrow={pageCopy.about.experience} title={pageCopy.about.selected_roles_and_background} description={pageCopy.about.for_a_complete_overview_of_appointments_projects}/><div className="milestones">{milestones.map(m=><div className="milestone" key={m.title}><span>{m.date}</span><div><h3>{m.title}</h3><p>{m.institution}</p></div></div>)}</div></div></section>
     <section className="section"><div className="container editorial-grid"><div><Eyebrow>{pageCopy.about.beyond_individual_research}</Eyebrow><h2>{pageCopy.about.building_an_environment_for_good_research}</h2><p>{pageCopy.about.i_care_about_the_conditions_that_make}</p><LocalLink to="/academic-activities" className="text-link">{pageCopy.about.academic_activities} <span>→</span></LocalLink></div><figure className="about-team-photo"><img src={import.meta.env.BASE_URL+media.team.file} alt={media.team.alt} loading="lazy" decoding="async"/><figcaption>{media.team.caption}</figcaption></figure></div></section>
   </>;
@@ -253,7 +254,7 @@ function App(){
   useEffect(()=>{
     window.scrollTo({top:0,behavior:'instant'});
     setMenuOpen(false);
-    const label=navigation.find(n=>n.path===path)?.label || researchAreas.find(x=>path==='/research/'+x.slug)?.title || projectEntries.find(x=>path==='/projects/'+x.slug)?.title || (path.startsWith('/cv')?'Full academic CV':'Page');
+    const label=navigation.find(n=>n.path===path)?.label || researchAreas.find(x=>path==='/research/'+x.slug)?.title || projectEntries.find(x=>path==='/projects/'+x.slug)?.title || (path.startsWith('/cv')?'Full academic CV':path==='/thesis'?'PhD thesis':'Page');
     document.title=(path==='/'?'Bas van der Velden':label+' | Bas van der Velden')+' — AI for Food Safety';
   },[path]);
   useEffect(()=>{document.documentElement.dataset.theme=theme;try{localStorage.setItem('bas-theme',theme)}catch{}},[theme]);
@@ -267,6 +268,7 @@ function App(){
   else if(path==='/academic-activities') page=<AcademicActivities/>;
   else if(path==='/about') page=<About/>;
   else if(path==='/cv'||/^\/cv\/\d+$/.test(path)) page=<CVPage sectionNumber={path.split('/')[2]}/>;
+  else if(path==='/thesis') page=<Thesis/>;
   else if(path==='/contact') page=<Contact/>;
   else page=<NotFound/>;
   return <>
@@ -280,7 +282,7 @@ function App(){
       <div className="header-tools"><button className="theme-toggle" aria-label={'Switch to '+(theme==='light'?'dark':'light')+' mode'} onClick={()=>setTheme(t=>t==='light'?'dark':'light')} title="Toggle color theme">{theme==='light'?'☾':'☀'}</button><button className="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded={menuOpen} aria-label="Toggle menu" onClick={()=>setMenuOpen(m=>!m)}><span></span><span></span><span></span></button></div>
     </div></header>
     <main id="main">{page}</main>
-    <footer className="site-footer"><div className="container footer-layout"><div><strong>{site.name}</strong><p>{site.role}<br/>{site.organisation}</p></div><nav aria-label="Footer navigation"><LocalLink to="/research">{pageCopy.shell.research}</LocalLink><LocalLink to="/projects">{pageCopy.shell.projects}</LocalLink><LocalLink to="/publications">{pageCopy.shell.publications}</LocalLink><LocalLink to="/cv">{pageCopy.shell.full_cv}</LocalLink><LocalLink to="/contact">{pageCopy.shell.contact}</LocalLink></nav><div><p>© {new Date().getFullYear()} {site.name}</p><p>{site.location}</p></div></div></footer>
+    <footer className="site-footer"><div className="container footer-layout"><div><strong>{site.name}</strong><p>{site.role}<br/>{site.organisation}</p></div><nav aria-label="Footer navigation"><LocalLink to="/research">{pageCopy.shell.research}</LocalLink><LocalLink to="/projects">{pageCopy.shell.projects}</LocalLink><LocalLink to="/publications">{pageCopy.shell.publications}</LocalLink><LocalLink to="/cv">{pageCopy.shell.full_cv}</LocalLink><LocalLink to="/thesis">PhD thesis</LocalLink><LocalLink to="/contact">{pageCopy.shell.contact}</LocalLink></nav><div><p>© {new Date().getFullYear()} {site.name}</p><p>{site.location}</p></div></div></footer>
   </>;
 }
 export default App;
