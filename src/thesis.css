@@ -43,6 +43,7 @@
 .thesis-book-controls button:disabled{opacity:.35;cursor:default}
 .thesis-book-position{font-size:12px;font-variant-numeric:tabular-nums;color:var(--muted)}
 .thesis-reader-note{font-size:11px;color:var(--subtle);line-height:1.8;margin-top:17px}
+.thesis-reader-note a{color:var(--accent);font-weight:800;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:1040px){.thesis-reader-layout{grid-template-columns:190px minmax(0,1fr);gap:27px}}
 @media(max-width:730px){
  .thesis-intro{padding:25px 0 46px}.thesis-back{margin-bottom:32px}
