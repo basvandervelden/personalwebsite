@@ -31,6 +31,8 @@
 }
 .paper-reader-surface:fullscreen .thesis-reader-top{flex:0 0 auto;margin-bottom:0;padding-bottom:14px}
 .paper-reader-surface:fullscreen .thesis-reader-top>span{white-space:nowrap}
+/* Fullscreen always presents the enlarged single-page edition. */
+.paper-reader-surface:fullscreen .thesis-reader-options button[aria-pressed]{display:none}
 .paper-reader-surface:fullscreen .thesis-help{flex:0 0 auto;padding:8px 0}
 .paper-reader-surface:fullscreen .paper-license-note{display:none}
 .paper-fullscreen-stage{
