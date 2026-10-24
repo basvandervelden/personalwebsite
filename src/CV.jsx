@@ -92,7 +92,6 @@ export default function CVPage({sectionNumber}) {
   const [search,setSearch]=useState('');
   const [year,setYear]=useState('All years');
   const [category,setCategory]=useState('All topics');
-  const [compact,setCompact]=useState(false);
   const [collapsed,setCollapsed]=useState([]);
   const publicSections=cv.sections.filter(s=>s.number!==18).map(s=>s.number===13
     ? {...s,entries:s.entries.filter(entry=>!isSupersededPreprint(entry))}
@@ -108,7 +107,6 @@ export default function CVPage({sectionNumber}) {
   const filtered=baseSections.filter(s=>publicationTopicFilter || activeTopic==='All topics'||s.category===activeTopic)
     .map(s=>({...s,visible:s.entries.filter(e=>(!publicationTopicFilter || publicationHasTopic(e,activeTopic))
       && matchesQuery(e,query)&&(year==='All years'||startYear(e.period)===year))})).filter(s=>s.visible.length);
-  const resultCount=filtered.reduce((sum,s)=>sum+s.visible.length,0);
   const totalCount=publicSections.reduce((sum,s)=>sum+s.entries.length,0);
   const pubCount=publicSections.find(s=>s.number===13)?.entries.length||0;
   const clear=()=>{setSearch('');setYear('All years');setCategory('All topics');setCollapsed([])};
@@ -148,11 +146,7 @@ export default function CVPage({sectionNumber}) {
             <button type="button" className="cv-reset" onClick={clear}>Reset filters</button>
           </div>
         </section>
-        <section className="cv-results-head" aria-live="polite">
-          <div><strong>{resultCount}</strong> {resultCount===1?'result':'results'}{selected?' in '+selected.title:''}</div>
-          <div className="cv-view-actions"><button type="button" onClick={()=>setCompact(!compact)}>{compact?'Detailed view':'Compact view'}</button><button type="button" onClick={()=>setCollapsed(collapsed.length?[]:filtered.map(s=>s.id))}>{collapsed.length?'Expand all':'Collapse all'}</button></div>
-        </section>
-        {filtered.length? <div className="cv-records">{filtered.map(s=><CvSection key={s.id} section={s} entries={s.visible} compact={compact} collapsed={collapsed.includes(s.id)} onToggle={()=>setCollapsed(prev=>prev.includes(s.id)?prev.filter(id=>id!==s.id):[...prev,s.id])}/>)}</div>
+        {filtered.length? <div className="cv-records">{filtered.map(s=><CvSection key={s.id} section={s} entries={s.visible} compact={false} collapsed={collapsed.includes(s.id)} onToggle={()=>setCollapsed(prev=>prev.includes(s.id)?prev.filter(id=>id!==s.id):[...prev,s.id])}/>)}</div>
         :<div className="cv-no-results"><h2>No matching entries</h2><p>Try a broader search term or remove one of the filters.</p><button type="button" onClick={clear}>Show all entries →</button></div>}
 
       </div>
