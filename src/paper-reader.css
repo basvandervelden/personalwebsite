@@ -9,7 +9,20 @@
 .paper-featured-row .paper-featured-year{display:block;font-size:10px;letter-spacing:.08em;font-weight:800;color:var(--accent);margin-bottom:4px}
 .paper-featured-title{font-size:13px;font-weight:750;line-height:1.55;display:block;color:var(--ink)}
 .paper-featured-row .paper-featured-arrow{flex-shrink:0;color:var(--accent);font-size:16px}
-.paper-reader-content{max-width:1040px}
+/* Give a two-page scientific paper the width needed for its small columns. */
+.paper-reader-page .paper-reader-content{width:min(1550px,calc(100% - 48px));max-width:none}
+.paper-reader-page .thesis-book-stage{padding:28px 8px 34px;min-height:620px}
+.paper-reader-page .thesis-book-stage .react-pdf__Document{overflow:visible}
+.paper-reader-page .thesis-book-paper .react-pdf__Page{width:100%;height:100%}
+.paper-reader-page .thesis-book-paper .react-pdf__Page__canvas{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain;
+}
+@media(max-width:759px){
+  .paper-reader-page .paper-reader-content{width:calc(100% - 28px)}
+  .paper-reader-page .thesis-book-stage{padding:16px 4px 24px;min-height:360px}
+}
 .paper-reader-page .thesis-intro h1{max-width:1000px;font-size:clamp(29px,4vw,48px)}
 .paper-reader-page .thesis-reader-top{margin-bottom:0}
 .paper-license-note{border-top:1px solid var(--line);margin:36px 0 0;padding:20px 0;font-size:11px;color:var(--muted);line-height:1.85}
