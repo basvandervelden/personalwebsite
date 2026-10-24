@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "ai-in-food-safety",
+    "title": "Artificial intelligence in food safety",
+    "year": 2026,
+    "journal": "npj Science of Food",
+    "authors": "Floor van Meer, Masami Takeuchi, Phillis E. Ochieng, Raffaella Tavelli, Arjen Gerssen and Bas H. M. van der Velden",
+    "doi": "10.1038/s41538-026-00925-1",
+    "license": "CC BY-NC-ND 4.0",
+    "category": "AI for food safety",
+    "sourcePdf": "https://www.nature.com/articles/s41538-026-00925-1.pdf"
+  },
+  {
+    "slug": "chefs",
+    "title": "Food safety trends across Europe: insights from the 392-million-entry CompreHensive European Food Safety (CHEFS) database",
+    "year": 2026,
+    "journal": "Food Control",
+    "authors": "Nehir Kızılilsoley, Floor van Meer, Osman Mutlu et al., and Bas van der Velden",
+    "doi": "10.1016/j.foodcont.2025.111816",
+    "license": "CC BY 4.0",
+    "category": "AI for food safety",
+    "sourcePdf": "https://edepot.wur.nl/704882"
+  },
+  {
+    "slug": "foundation-models-hrms",
+    "title": "Foundation Models for Liquid Chromatography–High-Resolution Mass Spectrometry: A New Era beyond Labeled Datasets",
+    "year": 2026,
+    "journal": "Analytical Chemistry",
+    "authors": "Andrea Junior Carnoli, Federico Padilla-Gonzalez, Leonieke M. van den Bulk, Daan Korporaal, Martin Alewijn, Marco H. Blokland and Bas H. M. van der Velden",
+    "doi": "10.1021/acs.analchem.6c01825",
+    "license": "CC BY-NC-ND 4.0",
+    "category": "AI for food safety",
+    "sourcePdf": "https://edepot.wur.nl/721681"
+  },
+  {
+    "slug": "weak-signals",
+    "title": "Enhancing regulatory foresight through weak signal mining: An AI-based micro-topic emergence scoring approach",
+    "year": 2026,
+    "journal": "Array",
+    "authors": "Axel Menning, Zsuzsa Farkas, Krisztián Vribék and Bas H. M. van der Velden",
+    "doi": "10.1016/j.array.2026.101126",
+    "license": "CC BY 4.0",
+    "category": "AI for food safety",
+    "sourcePdf": "https://edepot.wur.nl/723865"
+  },
+  {
+    "slug": "federated-learning-food",
+    "title": "Federated learning in food research",
+    "year": 2025,
+    "journal": "Journal of Agriculture and Food Research",
+    "authors": "Zuzanna Fendor, Bas H. M. van der Velden, Xinxin Wang, Andrea J. Carnoli, Osman Mutlu and Ali Hürriyetoglu",
+    "doi": "10.1016/j.jafr.2025.102238",
+    "license": "CC BY 4.0",
+    "category": "AI for food safety",
+    "sourcePdf": "https://edepot.wur.nl/699495"
+  },
+  {
+    "slug": "xai-medical-image-analysis",
+    "title": "Explainable artificial intelligence (XAI) in deep learning-based medical image analysis",
+    "year": 2022,
+    "journal": "Medical Image Analysis",
+    "authors": "Bas H. M. van der Velden, Hugo J. Kuijf, Kenneth G. A. Gilhuijs and Max A. Viergever",
+    "doi": "10.1016/j.media.2022.102470",
+    "license": "CC BY 4.0",
+    "category": "Medical imaging & explainable AI",
+    "sourcePdf": "https://dspace.library.uu.nl/bitstream/handle/1874/446430/1_s2.0_S1361841522001177_main.pdf?sequence=1"
+  },
+  {
+    "slug": "mri-density-xai",
+    "title": "Volumetric breast density estimation on MRI using explainable deep learning regression",
+    "year": 2020,
+    "journal": "Scientific Reports",
+    "authors": "Bas H. M. van der Velden, Markus H. A. Janse, Max A. A. Ragusi, Claudette E. Loo and Kenneth G. A. Gilhuijs",
+    "doi": "10.1038/s41598-020-75167-6",
+    "license": "CC BY 4.0",
+    "category": "Medical imaging & explainable AI",
+    "sourcePdf": "https://www.nature.com/articles/s41598-020-75167-6.pdf"
+  },
+  {
+    "slug": "cpe-validation",
+    "title": "Contralateral parenchymal enhancement on dynamic contrast-enhanced MRI reproduces as a biomarker of survival in ER-positive/HER2-negative breast cancer patients",
+    "year": 2018,
+    "journal": "European Radiology",
+    "authors": "Bas H. M. van der Velden, Elizabeth J. Sutton, Luca A. Carbonaro, Ruud M. Pijnappel, Elizabeth A. Morris and Kenneth G. A. Gilhuijs",
+    "doi": "10.1007/s00330-018-5470-7",
+    "license": "CC BY 4.0",
+    "category": "Medical imaging & explainable AI",
+    "sourcePdf": "https://link.springer.com/content/pdf/10.1007/s00330-018-5470-7.pdf"
+  }
+]
