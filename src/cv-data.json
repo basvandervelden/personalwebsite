@@ -256,75 +256,75 @@
       "category": "Supervision",
       "entries": [
         {
-          "title": "Hui Wang",
-          "period": "2019–2023",
-          "details": "Radiomics phenotyping and automated evaluation of breast cancer.",
-          "meta": "Co-promotor; completed",
-          "group": "Primary doctoral supervision",
-          "id": "cv-05-01"
-        },
-        {
           "title": "Osman Mutlu",
           "period": "2023–present",
           "details": "EFRA; explainable AI and trustworthy deep learning for food-safety applications.",
-          "meta": "Co-promotor",
-          "group": "Primary doctoral supervision",
+          "meta": "",
+          "group": "Co-promotor",
           "id": "cv-05-02"
         },
         {
           "title": "Thijs Schoppema",
           "period": "2024–present",
           "details": "Explainable AI for climate change, food safety and security; environmental factors associated with tetrodotoxin contamination.",
-          "meta": "Doctoral supervisor / co-promotor",
-          "group": "Primary doctoral supervision",
+          "meta": "",
+          "group": "Co-promotor",
           "id": "cv-05-03"
         },
         {
           "title": "M. Mahdi",
           "period": "2024–present",
           "details": "Prediction and cost-effective management of mycotoxin contamination; external validation of food-safety prediction models.",
-          "meta": "Co-promotor",
-          "group": "Primary doctoral supervision",
+          "meta": "",
+          "group": "Co-promotor",
           "id": "cv-05-04"
         },
         {
           "id": "cv-05-05",
-          "title": "M. Janse (2019–)",
-          "period": "",
-          "details": "deep learning-based analysis of liquid biopsies and imaging in locally advanced breast cancer.",
+          "title": "M. Janse",
+          "period": "2019–",
+          "details": "Deep learning-based analysis of liquid biopsies and imaging in locally advanced breast cancer.",
           "meta": "",
-          "group": "Additional supervision"
+          "group": "Supervision (non-co-promotor)"
         },
         {
           "id": "cv-05-06",
-          "title": "M. Ragusi (2019–)",
-          "period": "",
+          "title": "M. Ragusi",
+          "period": "2019–",
           "details": "SELECT: stromal enhancement for selection of endocrine therapy.",
           "meta": "",
-          "group": "Additional supervision"
+          "group": "Supervision (non-co-promotor)"
+        },
+        {
+          "title": "Hui Wang",
+          "period": "2019–2023",
+          "details": "Radiomics phenotyping and automated evaluation of breast cancer.",
+          "meta": "Completed",
+          "group": "Supervision (non-co-promotor)",
+          "id": "cv-05-01"
         },
         {
           "id": "cv-05-07",
-          "title": "H. Chan (2017–2022)",
-          "period": "",
-          "details": "machine learning for prognosis of breast cancer.",
+          "title": "H. Chan",
+          "period": "2017–2022",
+          "details": "Machine learning for prognosis of breast cancer.",
           "meta": "",
-          "group": "Additional supervision"
+          "group": "Supervision (non-co-promotor)"
         },
         {
-          "title": "External assessment of PhD thesis — Candidate: Valentina Corbetta",
+          "title": "Valentina Corbetta",
           "period": "2026",
           "details": "External academic assessment of doctoral work.",
-          "meta": "",
-          "group": "Doctoral assessment",
+          "meta": "External PhD thesis assessment",
+          "group": "Opponent",
           "id": "cv-05-08"
         },
         {
-          "title": "Opponent, PhD defence — Radboud UMC, Nijmegen",
+          "title": "Suzan Vreemann",
           "period": "2018",
-          "details": "Suzan Vreemann — Breast MRI for screening: evaluation of clinical practice and future perspectives.",
-          "meta": "",
-          "group": "Doctoral assessment",
+          "details": "Opponent at the PhD defence. Thesis: Breast MRI for screening: evaluation of clinical practice and future perspectives.",
+          "meta": "PhD defence — Radboud UMC, Nijmegen",
+          "group": "Opponent",
           "id": "cv-05-09"
         }
       ]
