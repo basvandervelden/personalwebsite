@@ -122,7 +122,7 @@ export default function PaperReader({ paper }) {
           </div>}
         </div>
         <p id="paper-reading-help" className="thesis-help" hidden={!help}>Use Previous and Next or swipe to turn pages. Focus the book with Tab for Left/Right arrow controls. Choose Read as text for a selectable, screen-reader-friendly extraction of the original PDF. In fullscreen, one page is shown at a time, with zoom controls and arrow-key navigation. Press Escape to exit fullscreen. Figures and tables are best consulted in the original layout.</p>
-        {fullscreenError && <p role="alert" className="thesis-error">{fullscreenError} <a href={file} target="_blank" rel="noopener noreferrer">Open PDF ↗</a></p>
+        {fullscreenError && <p role="alert" className="thesis-error">{fullscreenError} <a href={file} target="_blank" rel="noopener noreferrer">Open PDF ↗</a></p>}
         {fileAvailable === null && <div className="thesis-reader-message" role="status">Checking available open-access PDF…</div>}
         {fileAvailable === false && <div className="thesis-reader-message">
           <p>The locally hosted copy is temporarily unavailable.</p>
