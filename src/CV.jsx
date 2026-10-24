@@ -116,6 +116,7 @@ export default function CVPage({sectionNumber}) {
     <div className="cv-hero"><div className="container">
       <div className="cv-breadcrumb"><a href="#/about">About</a><span>/</span><a href="#/cv">Full academic CV</a>{selected&&<><span>/</span><span>{selected.title}</span></>}</div>
       <p className="cv-kicker">ACADEMIC CURRICULUM VITAE</p>
+      <p className="cv-print-name">{cv.profile.name}</p>
       <h1>Academic <em>curriculum vitae.</em></h1>
       <p className="cv-hero-lead">Research, publications, academic positions, scientific presentations, teaching, supervision and leadership.</p>
       <div className="cv-actions">
