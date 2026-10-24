@@ -117,7 +117,7 @@ export default function Thesis() {
             <button type="button" onClick={() => setShowHelp(v => !v)} aria-expanded={showHelp} aria-controls="thesis-reading-help">How to read {showHelp ? '−' : '+'}</button>
           </div>
         </div>
-        {showHelp && <p id="thesis-reading-help" className="thesis-help">For the flipbook, use the Previous/Next buttons, click a page edge or swipe on a touchscreen. Focus the book with Tab to turn pages using Left/Right. For screen readers or selectable text, choose Read as text and select a chapter. The PDF begins with a university repository sheet.</p>}
+        <p id="thesis-reading-help" className="thesis-help" hidden={!showHelp}>For the flipbook, use the Previous/Next buttons, click a page edge or swipe on a touchscreen. Focus the book with Tab to turn pages using Left/Right. For screen readers or selectable text, choose Read as text and select a chapter. The PDF begins with a university repository sheet.</p>
         {textMode ? <AccessibleThesisText file={THESIS_PDF} chapters={chapters} chapterIndex={textChapterIndex} />
         : <>
         <div className="thesis-book-stage" tabIndex={0} role="group" aria-label="Interactive thesis pages. Use Left and Right arrow keys, or the controls below." onKeyDown={handleBookKeyDown}>
