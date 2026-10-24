@@ -119,6 +119,16 @@
 .cv-publication-entry .cv-entry-links a{font-size:11px}
 @media print{.cv-impact-factor{border:1px solid #bbb;background:#fff;color:#000}}
 
+/* Doctoral supervision: named groups with consistent CV entry alignment. */
+.cv-supervision-groups{display:flex;flex-direction:column;gap:26px}
+.cv-supervision-group{min-width:0}
+.cv-supervision-heading{font-size:clamp(17px,1.9vw,21px);font-weight:800;letter-spacing:-.025em;color:var(--accent);margin:0;padding:22px 0 14px;line-height:1.35}
+.cv-supervision-group .cv-entries{border-top:1px solid var(--line)}
+@media print{
+  .cv-supervision-groups{gap:10px}
+  .cv-supervision-heading{font-size:13px;color:#000;padding:11px 0 6px;break-after:avoid;page-break-after:avoid}
+}
+
 /* In the long CV, publications are grouped by scholarly output type. */
 .cv-publication-groups{display:flex;flex-direction:column;gap:36px}
 .cv-publication-group-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:8px 0 13px}
