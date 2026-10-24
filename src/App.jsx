@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { site, navigation, researchAreas, projectEntries, activitySections, milestones } from './content.js';
 import './styles.css';
 import pageCopy from './page-copy.json';
@@ -242,6 +242,13 @@ function NotFound(){return <div className="container notfound"><Eyebrow>404</Eye
 function App(){
   const [path,setPath]=useState(currentPath);
   const [menuOpen,setMenuOpen]=useState(false);
+  const mainRef=useRef(null);
+  const firstRoute=useRef(true);
+  const skipToMain=(event)=>{
+    event.preventDefault();
+    mainRef.current?.focus({preventScroll:true});
+    mainRef.current?.scrollIntoView({block:'start',behavior:'instant'});
+  };
   const [theme,setTheme]=useState(()=>{
     try{const saved=localStorage.getItem('bas-theme');if(saved==='dark'||saved==='light')return saved}catch{}
     return window.matchMedia?.('(prefers-color-scheme: dark)').matches?'dark':'light';
@@ -254,6 +261,10 @@ function App(){
   useEffect(()=>{
     window.scrollTo({top:0,behavior:'instant'});
     setMenuOpen(false);
+    // In this hash-routed SPA, changing the URL does not move screen-reader focus.
+    // Skip the initial page load, but focus the new main region after navigation.
+    if (firstRoute.current) firstRoute.current=false;
+    else mainRef.current?.focus({preventScroll:true});
     const label=navigation.find(n=>n.path===path)?.label || researchAreas.find(x=>path==='/research/'+x.slug)?.title || projectEntries.find(x=>path==='/projects/'+x.slug)?.title || (path.startsWith('/cv')?'Full academic CV':path==='/thesis'?'PhD thesis':'Page');
     document.title=(path==='/'?'Bas van der Velden':label+' | Bas van der Velden')+' — AI for Food Safety';
   },[path]);
@@ -272,16 +283,16 @@ function App(){
   else if(path==='/contact') page=<Contact/>;
   else page=<NotFound/>;
   return <>
-    <a href="#main" className="skip-link">{pageCopy.shell.skip_to_content}</a>
+    <a href="#main" className="skip-link" onClick={skipToMain}>{pageCopy.shell.skip_to_content}</a>
     <header className="site-header"><div className="container header-content">
       <LocalLink to="/" className="wordmark"><span className="wordmark-name">{site.name}<span className="wordmark-dot">.</span></span><span className="wordmark-description">{pageCopy.shell.ai_for_food_safety}</span></LocalLink>
       <nav aria-label="Primary navigation" id="primary-nav" className={'site-nav '+(menuOpen?'is-open':'')}>
         {navigation.map(n=><LocalLink key={n.path} to={n.path} className={n.path==='/'?path==='/'?'is-active':'':path===n.path||path.startsWith(n.path+'/')?'is-active':''} aria-current={path===n.path?'page':undefined}>{n.label}</LocalLink>)}
         <LocalLink to="/contact" className={'contact-nav '+(path==='/contact'?'is-active':'')}>{pageCopy.shell.contact} <span>↗</span></LocalLink>
       </nav>
-      <div className="header-tools"><button className="theme-toggle" aria-label={'Switch to '+(theme==='light'?'dark':'light')+' mode'} onClick={()=>setTheme(t=>t==='light'?'dark':'light')} title="Toggle color theme">{theme==='light'?'☾':'☀'}</button><button className="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded={menuOpen} aria-label="Toggle menu" onClick={()=>setMenuOpen(m=>!m)}><span></span><span></span><span></span></button></div>
+      <div className="header-tools"><button className="theme-toggle" aria-label={'Switch to '+(theme==='light'?'dark':'light')+' mode'} onClick={()=>setTheme(t=>t==='light'?'dark':'light')} title="Toggle color theme">{theme==='light'?'☾':'☀'}</button><button className="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded={menuOpen} aria-label={menuOpen?'Close navigation menu':'Open navigation menu'} onClick={()=>setMenuOpen(m=>!m)}><span></span><span></span><span></span></button></div>
     </div></header>
-    <main id="main">{page}</main>
+    <main id="main" ref={mainRef} tabIndex={-1}>{page}</main>
     <footer className="site-footer"><div className="container footer-layout"><div><strong>{site.name}</strong><p>{site.role}<br/>{site.organisation}</p></div><nav aria-label="Footer navigation"><LocalLink to="/research">{pageCopy.shell.research}</LocalLink><LocalLink to="/projects">{pageCopy.shell.projects}</LocalLink><LocalLink to="/publications">{pageCopy.shell.publications}</LocalLink><LocalLink to="/cv">{pageCopy.shell.full_cv}</LocalLink><LocalLink to="/thesis">PhD thesis</LocalLink><LocalLink to="/contact">{pageCopy.shell.contact}</LocalLink></nav><div><p>© {new Date().getFullYear()} {site.name}</p><p>{site.location}</p></div></div></footer>
   </>;
 }
