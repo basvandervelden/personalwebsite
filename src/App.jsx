@@ -243,6 +243,8 @@ function App(){
   const [path,setPath]=useState(currentPath);
   const [menuOpen,setMenuOpen]=useState(false);
   const mainRef=useRef(null);
+  const navRef=useRef(null);
+  const menuButtonRef=useRef(null);
   const firstRoute=useRef(true);
   const skipToMain=(event)=>{
     event.preventDefault();
@@ -269,6 +271,11 @@ function App(){
     document.title=(path==='/'?'Bas van der Velden':label+' | Bas van der Velden')+' — AI for Food Safety';
   },[path]);
   useEffect(()=>{document.documentElement.dataset.theme=theme;try{localStorage.setItem('bas-theme',theme)}catch{}},[theme]);
+  // Mobile navigation appears before its toggle in the DOM. Send keyboard focus
+  // to the first link on opening, and support Escape to close the menu.
+  useEffect(()=>{
+    if(menuOpen) navRef.current?.querySelector('a')?.focus();
+  },[menuOpen]);
   let page;
   if(path==='/') page=<Home/>;
   else if(path==='/research') page=<ResearchIndex/>;
@@ -286,11 +293,11 @@ function App(){
     <a href="#main" className="skip-link" onClick={skipToMain}>{pageCopy.shell.skip_to_content}</a>
     <header className="site-header"><div className="container header-content">
       <LocalLink to="/" className="wordmark"><span className="wordmark-name">{site.name}<span className="wordmark-dot">.</span></span><span className="wordmark-description">{pageCopy.shell.ai_for_food_safety}</span></LocalLink>
-      <nav aria-label="Primary navigation" id="primary-nav" className={'site-nav '+(menuOpen?'is-open':'')}>
+      <nav ref={navRef} aria-label="Primary navigation" id="primary-nav" className={'site-nav '+(menuOpen?'is-open':'')} onKeyDown={event=>{if(event.key==='Escape'&&menuOpen){setMenuOpen(false);menuButtonRef.current?.focus();}}}>
         {navigation.map(n=><LocalLink key={n.path} to={n.path} className={n.path==='/'?path==='/'?'is-active':'':path===n.path||path.startsWith(n.path+'/')?'is-active':''} aria-current={path===n.path?'page':undefined}>{n.label}</LocalLink>)}
         <LocalLink to="/contact" className={'contact-nav '+(path==='/contact'?'is-active':'')}>{pageCopy.shell.contact} <span>↗</span></LocalLink>
       </nav>
-      <div className="header-tools"><button className="theme-toggle" aria-label={'Switch to '+(theme==='light'?'dark':'light')+' mode'} onClick={()=>setTheme(t=>t==='light'?'dark':'light')} title="Toggle color theme">{theme==='light'?'☾':'☀'}</button><button className="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded={menuOpen} aria-label={menuOpen?'Close navigation menu':'Open navigation menu'} onClick={()=>setMenuOpen(m=>!m)}><span></span><span></span><span></span></button></div>
+      <div className="header-tools"><button className="theme-toggle" aria-label={'Switch to '+(theme==='light'?'dark':'light')+' mode'} onClick={()=>setTheme(t=>t==='light'?'dark':'light')} title="Toggle color theme">{theme==='light'?'☾':'☀'}</button><button ref={menuButtonRef} className="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded={menuOpen} aria-label={menuOpen?'Close navigation menu':'Open navigation menu'} onClick={()=>setMenuOpen(m=>!m)}><span></span><span></span><span></span></button></div>
     </div></header>
     <main id="main" ref={mainRef} tabIndex={-1}>{page}</main>
     <footer className="site-footer"><div className="container footer-layout"><div><strong>{site.name}</strong><p>{site.role}<br/>{site.organisation}</p></div><nav aria-label="Footer navigation"><LocalLink to="/research">{pageCopy.shell.research}</LocalLink><LocalLink to="/projects">{pageCopy.shell.projects}</LocalLink><LocalLink to="/publications">{pageCopy.shell.publications}</LocalLink><LocalLink to="/cv">{pageCopy.shell.full_cv}</LocalLink><LocalLink to="/thesis">PhD thesis</LocalLink><LocalLink to="/contact">{pageCopy.shell.contact}</LocalLink></nav><div><p>© {new Date().getFullYear()} {site.name}</p><p>{site.location}</p></div></div></footer>
