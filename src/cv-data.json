@@ -256,6 +256,14 @@
       "category": "Supervision",
       "entries": [
         {
+          "title": "Hui Wang",
+          "period": "2019–2023",
+          "details": "Radiomics phenotyping and automated evaluation of breast cancer.",
+          "meta": "Completed",
+          "group": "Co-promotor",
+          "id": "cv-05-01"
+        },
+        {
           "title": "Osman Mutlu",
           "period": "2023–present",
           "details": "EFRA; explainable AI and trustworthy deep learning for food-safety applications.",
@@ -272,7 +280,7 @@
           "id": "cv-05-03"
         },
         {
-          "title": "M. Mahdi",
+          "title": "Mohamed Mahdi",
           "period": "2024–present",
           "details": "Prediction and cost-effective management of mycotoxin contamination; external validation of food-safety prediction models.",
           "meta": "",
@@ -296,16 +304,8 @@
           "group": "Supervision (non-co-promotor)"
         },
         {
-          "title": "Hui Wang",
-          "period": "2019–2023",
-          "details": "Radiomics phenotyping and automated evaluation of breast cancer.",
-          "meta": "Completed",
-          "group": "Supervision (non-co-promotor)",
-          "id": "cv-05-01"
-        },
-        {
           "id": "cv-05-07",
-          "title": "H. Chan",
+          "title": "Hui Shan Chan",
           "period": "2017–2022",
           "details": "Machine learning for prognosis of breast cancer.",
           "meta": "",
