@@ -30,6 +30,7 @@ export default function PaperReader({ paper }) {
   const [reduceMotion,setReduceMotion] = useState(()=>window.matchMedia?.('(prefers-reduced-motion: reduce)').matches||false);
   const flip = useRef(null);
   const readerRef = useRef(null);
+  const fullscreenStageRef = useRef(null);
   const file = BASE + 'papers/' + paper.slug + '.pdf';
   const doiLink = 'https://doi.org/' + paper.doi;
   const isAuthorPreprint = paper.versionType === 'author-preprint';
@@ -84,6 +85,9 @@ export default function PaperReader({ paper }) {
   };
   const stepPage=direction=>setPage(p=>Math.max(0,Math.min((numPages||1)-1,p+direction)));
   const fullWidth=Math.round(Math.max(240,Math.min(1350,viewportWidth-96))*zoom);
+  useEffect(()=>{
+    if(fullscreen) fullscreenStageRef.current?.scrollTo({top:0,left:0,behavior:'instant'});
+  },[page,fullscreen]);
   const fullscreenKeys=e=>{
     if(e.target!==e.currentTarget)return;
     if(e.key==='ArrowLeft'){e.preventDefault();stepPage(-1);}
@@ -127,7 +131,7 @@ export default function PaperReader({ paper }) {
         </div>}
         {fileAvailable === true && (fullscreen
           ? <>
-            <div className="paper-fullscreen-stage" role="group" tabIndex={0}
+            <div className="paper-fullscreen-stage" ref={fullscreenStageRef} role="group" tabIndex={0}
               aria-label="Fullscreen single-page PDF. Press Left or Right for page navigation." onKeyDown={fullscreenKeys}>
               <Document file={file}
                 onLoadSuccess={({numPages:n})=>setNumPages(n)}
