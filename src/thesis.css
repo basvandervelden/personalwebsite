@@ -29,6 +29,7 @@
 .thesis-help{font-size:12px;line-height:1.7;color:var(--muted);padding:15px 0}
 .thesis-book-stage{display:flex;justify-content:center;align-items:flex-start;min-height:540px;overflow:hidden;padding:26px 0 28px;background:var(--paper)}
 .thesis-book-stage .react-pdf__Document{width:100%;min-width:0;display:flex;justify-content:center}
+.thesis-flipbook-visual{width:100%;display:flex;justify-content:center}
 .thesis-flipbook{margin-inline:auto}
 .thesis-book-page{background:#fff;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(20,20,25,.05)}
 .thesis-book-paper{position:relative;display:flex;align-items:flex-start;justify-content:center;width:100%;height:100%;background:#fff;overflow:hidden}
@@ -55,3 +56,18 @@
  .thesis-book-controls button span{display:none}
 }
 @media(max-width:440px){.thesis-chapters nav{grid-template-columns:1fr}.thesis-intro h1{font-size:31px}.thesis-book-stage{padding:16px 0;min-height:320px}}
+
+/* Optional text edition, while retaining the existing flipbook styling. */
+.thesis-reader-options{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:6px 15px}
+.thesis-reader-options button{padding:6px 2px}
+.thesis-reader-options button.is-selected{color:var(--accent);font-weight:800;text-decoration:underline;text-underline-offset:5px}
+.thesis-reader-options button:disabled{opacity:.5;cursor:not-allowed}
+.thesis-text-edition{padding:24px 0;max-width:100%;overflow-wrap:anywhere}
+.thesis-text-intro h2{font-size:clamp(19px,2.2vw,24px);margin-bottom:12px;line-height:1.35}
+.thesis-text-intro h2:focus{outline:none}
+.thesis-text-intro p{max-width:740px;font-size:12px;line-height:1.8;margin-bottom:22px}
+.thesis-text-status{font-size:13px;padding:24px 0}
+.thesis-text-page{border-top:1px solid var(--line);padding:24px 0 30px;max-width:820px}
+.thesis-text-page h3{font-size:13px;font-weight:800;color:var(--accent);margin-bottom:15px;letter-spacing:0}
+.thesis-text-page p{font-size:15px;line-height:1.9;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:730px){.thesis-reader-top{align-items:flex-start}.thesis-reader-options{justify-content:flex-end}.thesis-text-page p{font-size:14px}}
