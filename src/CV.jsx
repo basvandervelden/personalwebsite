@@ -69,10 +69,16 @@ function Entry({entry,compact}) {
 
 function CvSection({section,entries,compact,collapsed,onToggle}){
   return <section className="cv-record-section" aria-labelledby={'heading-'+section.id} id={section.id}>
-    <button type="button" className="cv-section-header" onClick={onToggle} aria-expanded={!collapsed}>
-      <div><span className="cv-section-number">{String(section.number).padStart(2,'0')}</span><h2 id={'heading-'+section.id}>{section.title}</h2><span className="cv-section-count">{entries.length} {entries.length===1?'entry':'entries'}</span></div>
-      <span className="cv-chevron" aria-hidden="true">{collapsed?'＋':'−'}</span>
-    </button>
+    <div className="cv-section-header">
+      <h2 id={'heading-'+section.id}>
+        <button type="button" className="cv-section-toggle" onClick={onToggle} aria-expanded={!collapsed}>
+          <span className="cv-section-number">{String(section.number).padStart(2,'0')}</span>
+          <span className="cv-section-title">{section.title}</span>
+          <span className="cv-section-count">{entries.length} {entries.length===1?'entry':'entries'}</span>
+          <span className="cv-chevron" aria-hidden="true">{collapsed?'＋':'−'}</span>
+        </button>
+      </h2>
+    </div>
     {!collapsed && <>
       {section.description && <p className="cv-section-description">{section.description}</p>}
       {section.number===5
