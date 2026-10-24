@@ -7,6 +7,7 @@
 .cv-kicker{font-size:11px;color:var(--accent);font-weight:800;letter-spacing:.13em;margin-bottom:20px}
 .cv-hero h1{max-width:790px;margin-bottom:22px;font-size:clamp(42px,5.3vw,68px)}
 .cv-hero h1 em{color:var(--accent);font-style:italic}
+.cv-print-name{display:none}
 .cv-hero-lead{font-size:17px;line-height:1.9;max-width:760px;margin-bottom:28px}
 .cv-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:55px}
 .cv-primary-action,.cv-secondary-action{display:inline-flex;align-items:center;justify-content:space-between;min-height:44px;gap:35px;padding:10px 16px;border:1px solid var(--ink);border-radius:2px;font-size:12px;font-weight:800;cursor:pointer}
@@ -130,3 +131,9 @@
 .cv-publication-group-heading span{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
 .cv-publication-group .cv-entries{border-top:0}
 @media(max-width:720px){.cv-publication-groups{gap:26px}}
+
+/* Print a named CV cover heading without changing the interactive page design. */
+@media print{
+  .cv-print-name{display:block;font-family:Manrope,'DM Sans',sans-serif;font-size:30px;font-weight:800;letter-spacing:-.035em;line-height:1.2;color:#000;margin:0 0 12px}
+  .cv-hero h1{display:none}
+}
