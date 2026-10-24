@@ -14,7 +14,10 @@
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "docx": "^9.5.1"
+    "docx": "^9.5.1",
+    "pdfjs-dist": "5.4.296",
+    "react-pageflip": "2.0.3",
+    "react-pdf": "10.5.0"
   },
   "devDependencies": {
     "vite": "^6.3.0",
