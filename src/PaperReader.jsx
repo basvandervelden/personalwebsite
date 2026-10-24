@@ -27,9 +27,10 @@ export default function PaperReader({ paper }) {
   const flip = useRef(null);
   const file = BASE + 'papers/' + paper.slug + '.pdf';
   const doiLink = 'https://doi.org/' + paper.doi;
-  const licenseLink = paper.license.includes('NC-ND')
+  const isAuthorPreprint = paper.versionType === 'author-preprint';
+  const licenseLink = !isAuthorPreprint && (paper.license.includes('NC-ND')
     ? 'https://creativecommons.org/licenses/by-nc-nd/4.0/'
-    : 'https://creativecommons.org/licenses/by/4.0/';
+    : 'https://creativecommons.org/licenses/by/4.0/');
   useEffect(()=>{
     let alive=true;
     setFileAvailable(null);setPage(0);setNumPages(null);setTextMode(false);
@@ -76,7 +77,7 @@ export default function PaperReader({ paper }) {
         {fileAvailable === null && <div className="thesis-reader-message" role="status">Checking available open-access PDF…</div>}
         {fileAvailable === false && <div className="thesis-reader-message">
           <p>The locally hosted copy is temporarily unavailable.</p>
-          <a href={paper.sourcePdf} target="_blank" rel="noopener noreferrer">View the openly licensed PDF at its source ↗</a>
+          <a href={paper.sourcePdf} target="_blank" rel="noopener noreferrer">{isAuthorPreprint ? 'View author preprint on arXiv ↗' : 'View the openly licensed PDF at its source ↗'}</a>
           <a href={doiLink} target="_blank" rel="noopener noreferrer">Open the publication page ↗</a>
         </div>}
         {fileAvailable === true && (textMode
@@ -107,10 +108,15 @@ export default function PaperReader({ paper }) {
             </div>
             <p className="thesis-reader-note"><a href={file+'#page='+(page+1)} target="_blank" rel="noopener noreferrer">Read at full size ↗</a></p>
           </>)}
-        <p className="paper-license-note">Published by {paper.journal} ({paper.year}).
-          Original article: <a href={doiLink} target="_blank" rel="noopener noreferrer">{paper.doi}</a>.
-          Reproduced without changes under <a href={licenseLink} target="_blank" rel="noopener noreferrer">{paper.license}</a>.
-          Copyright and attribution remain with the original authors and publisher as indicated in the PDF.</p>
+        {isAuthorPreprint
+          ? <p className="paper-license-note">Author preprint (arXiv v1, 2017), not the final Springer-published version of this MICCAI 2016 paper.
+            <a href={paper.archiveUrl} target="_blank" rel="noopener noreferrer"> View the preprint on arXiv ↗</a>.
+            The final authenticated publication is available at <a href={doiLink} target="_blank" rel="noopener noreferrer">{paper.doi}</a>.
+            Shared under the publisher's author self-archiving policy; no Creative Commons licence is claimed.</p>
+          : <p className="paper-license-note">Published by {paper.journal} ({paper.year}).
+            Original article: <a href={doiLink} target="_blank" rel="noopener noreferrer">{paper.doi}</a>.
+            Reproduced without changes under <a href={licenseLink} target="_blank" rel="noopener noreferrer">{paper.license}</a>.
+            Copyright and attribution remain with the original authors and publisher as indicated in the PDF.</p>}
       </div>
     </div></section>
   </div>;
