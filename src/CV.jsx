@@ -8,6 +8,7 @@ import { publicationTopicNames, publicationHasTopic } from './publication-topics
 
 const external = (url) => /^https:\/\//i.test(url || '');
 const startYear = (period) => /^\d{4}/.exec(period || '')?.[0] || '';
+const doctoralGroups = ['Co-promotor', 'Supervision (non-co-promotor)', 'Opponent'];
 // Topic synonyms: searching for "XAI" also finds entries spelled out as "explainable AI", etc.
 const normalize = text => String(text || '').toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 const topicAliases = {
@@ -45,7 +46,7 @@ function Entry({entry,compact}) {
   const displayTitle=isPublication?formatPublicationTitle(entry.paperTitle, entry.id):entry.title;
   const cleanLinkLabel=label => /Research@WUR|source|find publication/i.test(label)?'View publication':label;
   return <article className={'cv-entry '+(compact?'cv-entry-compact':'')+(isPublication?' cv-publication-entry':'')} id={entry.id}>
-    <div className="cv-entry-date">{entry.period || '—'}</div>
+    <div className="cv-entry-date">{entry.period || ""}</div>
     <div className="cv-entry-body">
       {isPublication ? <>
         <h3>{displayTitle}</h3>
@@ -74,7 +75,15 @@ function CvSection({section,entries,compact,collapsed,onToggle}){
     </button>
     {!collapsed && <>
       {section.description && <p className="cv-section-description">{section.description}</p>}
-      {section.number===13
+      {section.number===5
+        ? <div className="cv-supervision-groups">{doctoralGroups.map(group=>{
+          const records=entries.filter(e=>e.group===group);
+          return records.length>0&&<div className="cv-supervision-group" key={group}>
+            <h3 className="cv-supervision-heading">{group}</h3>
+            <div className="cv-entries">{records.map(e=><Entry key={e.id} entry={e} compact={compact}/>)}</div>
+          </div>;
+        })}</div>
+        : section.number===13
         ? <div className="cv-publication-groups">{publicationGroups.map(group=>{
           const records=entries.filter(e=>publicationSection(e)===group.key);
           return records.length>0&&<div className="cv-publication-group" key={group.key}>
