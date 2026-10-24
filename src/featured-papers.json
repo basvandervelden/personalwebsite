@@ -66,6 +66,19 @@
     "sourcePdf": "https://surgicalurology.gr/pdfs/AI5.pdf"
   },
   {
+    "slug": "multi-task-medical-image-segmentation",
+    "title": "Deep Learning for Multi-Task Medical Image Segmentation in Multiple Modalities",
+    "year": 2016,
+    "journal": "MICCAI 2016 · Lecture Notes in Computer Science",
+    "authors": "Pim Moeskops, Jelmer M. Wolterink, Bas H. M. van der Velden, Kenneth G. A. Gilhuijs, Tim Leiner, Max A. Viergever and Ivana Išgum",
+    "doi": "10.1007/978-3-319-46723-8_55",
+    "license": "Author preprint (arXiv v1)",
+    "versionType": "author-preprint",
+    "archiveUrl": "https://arxiv.org/abs/1704.03379",
+    "category": "Medical imaging & explainable AI",
+    "sourcePdf": "https://arxiv.org/pdf/1704.03379v1"
+  },
+  {
     "slug": "mri-density-xai",
     "title": "Volumetric breast density estimation on MRI using explainable deep learning regression",
     "year": 2020,
