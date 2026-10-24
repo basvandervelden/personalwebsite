@@ -104,7 +104,14 @@ for(const section of cv.sections.filter(s=>s.number!==18)){
   const entries=(section.entries || []).filter(entry=>!isSupersededPreprint(entry));
   children.push(sectionHeading(section.title,section.number));
   if(section.description)children.push(line(section.description,{color:muted,italics:true,size:18}));
-  if(section.number===13) {
+  if(section.number===5) {
+    for(const group of ['Co-promotor', 'Supervision (non-co-promotor)', 'Opponent']){
+      const groupEntries=entries.filter(entry=>entry.group===group);
+      if(!groupEntries.length)continue;
+      children.push(subsectionHeading(group));
+      for(const entry of groupEntries)children.push(...entryLines(entry,false));
+    }
+  } else if(section.number===13) {
     for(const group of publicationGroups){
       const groupEntries=entries.filter(entry=>publicationSection(entry)===group.key);
       if(!groupEntries.length)continue;
