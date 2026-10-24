@@ -71,20 +71,20 @@
           "id": "cv-01-05",
           "title": "Principal Scientist — Wageningen Food Safety Research (WFSR)",
           "period": "2026–present",
-          "details": "Appointed 1 September 2026 as one of four Principal Scientists at WFSR, alongside my role as Head of Data Science & AI. The institute-wide role focuses on scientific leadership and research development; its precise remit is being further defined.",
+          "details": "Appointed as one of four Principal Scientists at WFSR, alongside the role of Head of Data Science & AI. The role focuses on developing an institute-wide scientific vision and advancing research.",
           "meta": "Wageningen University & Research"
         },
         {
           "title": "Head of Data Science & Artificial Intelligence — Wageningen Food Safety Research (WFSR)",
           "period": "2022–present",
-          "details": "Leads an international, interdisciplinary team of approximately 25 researchers. Responsible for scientific direction, team development, acquisition, project leadership and coordination, and the development of AI capability for food-safety research and statutory tasks. Leads and contributes to European research consortia and collaborations with EFSA, FAO and NVWA.",
+          "details": "Leads an international, interdisciplinary team of 25 researchers. Responsible for scientific direction, team development, acquisition, project leadership and coordination, and the development of AI for food-safety research and statutory tasks. Leads and contributes to European research consortia and collaborations with EFSA, FAO and the Netherlands Food and Consumer Product Safety Authority (NVWA).",
           "meta": "",
           "id": "cv-01-01"
         },
         {
           "title": "Member, Advisory Group on Data (AGoD) — European Food Safety Authority (EFSA)",
           "period": "2025–present",
-          "details": "Member of the Innovation subgroup, advising EFSA on emerging data-science and AI directions and their responsible use in food-safety risk assessment and surveillance.",
+          "details": "Member of the Innovation subgroup, advising EFSA on emerging data-science and AI directions and their responsible use in food safety risk assessment and surveillance.",
           "meta": "",
           "id": "cv-01-02"
         }
@@ -98,21 +98,21 @@
       "category": "Past positions",
       "entries": [
         {
-          "title": "Senior Supervising Researcher — Prinses Máxima Center for Pediatric Oncology",
-          "period": "2021–2022",
-          "details": "Supervision of PhD research on deep-learning based assessment of Wilms tumour and sarcoma in children.",
-          "meta": "",
-          "id": "cv-02-02"
-        },
-        {
-          "title": "Senior Postdoctoral Researcher — UMC Utrecht, Image Sciences Institute",
+          "title": "Principal Investigator, Explainable AI for Oncology — UMC Utrecht",
           "period": "2020–2022",
-          "details": "Principal research line in explainable AI for medical imaging; projects in lymphoma, breast, kidney and prostate cancer.",
+          "details": "Principal investigator at assistant professor level, leading research on explainable artificial intelligence (XAI) in oncology. Projects covered lymphoma, breast, kidney and prostate cancer, in collaboration with medical oncologists, haematologists, radiation oncologists, radiologists, epidemiologists, and experts in medical image acquisition and AI-based image analysis.",
           "meta": "",
           "id": "cv-02-03"
         },
         {
-          "title": "Junior Postdoctoral Researcher — UMC Utrecht, Image Sciences Institute",
+          "title": "Supervising Researcher — Prinses Máxima Center for Pediatric Oncology",
+          "period": "2021–2022",
+          "details": "Supervised PhD research on deep learning-based assessment of Wilms tumour and sarcoma in children.",
+          "meta": "",
+          "id": "cv-02-02"
+        },
+        {
+          "title": "Postdoctoral Researcher — UMC Utrecht",
           "period": "2018–2019",
           "details": "Deep learning for breast MRI response monitoring and multi-centre harmonisation of quantitative imaging biomarkers.",
           "meta": "",
@@ -121,23 +121,37 @@
         {
           "title": "PhD Researcher, Medical Imaging — Utrecht University / UMC Utrecht",
           "period": "2013–2017",
-          "details": "Thesis: Analysis of healthy breast tissue on MRI for prognosis of breast cancer. Advisors: M.A. Viergever and K.G.A. Gilhuijs.",
+          "details": "Pioneered automated analysis of four-dimensional breast MRI, identifying a perfusion biomarker in the healthy contralateral breast that can predict response to chemotherapy and hormonal therapy. Supervisors: Prof. Max Viergever and Dr. Kenneth Gilhuijs.",
           "meta": "",
           "id": "cv-02-05"
         },
         {
           "title": "Research Fellow — Memorial Sloan Kettering Cancer Center, New York, USA",
           "period": "2016",
-          "details": "Breast imaging research; collaboration with Prof. Elizabeth Morris; work yielded peer-reviewed publications and conference contributions.",
+          "details": "Validated the automated breast MRI biomarker in an independent patient cohort at Memorial Sloan Kettering Cancer Center. Collaboration with Prof. Elizabeth Morris and Dr. Elizabeth Sutton resulted in multiple peer-reviewed publications and conference contributions.",
           "meta": "",
           "id": "cv-02-06"
         },
         {
-          "title": "Research Fellow — UC Berkeley, California, USA — Bankslab",
+          "id": "cv-02-radboud-2012",
+          "title": "Graduation Internship — Radboud UMC",
+          "period": "2012",
+          "details": "Machine learning for segmentation of multiple sclerosis lesions on brain MRI. Supervised by Dr. Bram Platel and Prof. Nico Karssemeijer.",
+          "meta": ""
+        },
+        {
+          "title": "Research Fellow — UC Berkeley, California, USA",
           "period": "2011",
-          "details": "Biomedical image-analysis research; work yielded a peer-reviewed publication and conference poster.",
+          "details": "Biomedical image-analysis research in Prof. Martin Banks's laboratory, resulting in a peer-reviewed publication and conference poster.",
           "meta": "",
           "id": "cv-02-07"
+        },
+        {
+          "id": "cv-02-unipartners",
+          "title": "Board Member & Consultant — UniPartners Eindhoven",
+          "period": "2005–2011",
+          "details": "Board member during the 2008–2009 academic year, with responsibilities including secretary-general and human resources.",
+          "meta": ""
         }
       ],
       "description": "Previous research and academic appointments, excluding current positions listed above."
@@ -149,30 +163,37 @@
       "category": "Education",
       "entries": [
         {
+          "id": "cv-03-leading-others-2025",
+          "title": "Leading Others — ORMIT/WUR",
+          "period": "2025",
+          "details": "Advanced leadership programme focused on situational leadership, group dynamics and team development, including coaching professionals, managing team performance and fostering collaboration in complex, project-driven environments.",
+          "meta": ""
+        },
+        {
           "title": "Basic Teaching Qualification (BKO) — UMC Utrecht",
           "period": "2022",
-          "details": "Qualification based on course development, teaching and supervision, including co-creation of two university courses and supervision of more than ten BSc/MSc theses.",
+          "details": "Qualification based on course development, teaching and supervision, including co-creation of two university courses (the MSc/PhD course Deep Learning in Medical Image Analysis and the BSc course Bio-informatics) and supervision of more than ten BSc/MSc theses.",
           "meta": "",
           "id": "cv-03-01"
         },
         {
-          "title": "PhD, Medical Imaging / Medical Image Analysis — Utrecht University / UMC Utrecht",
+          "title": "PhD — Utrecht University / UMC Utrecht",
           "period": "2017",
           "details": "Thesis: Analysis of healthy breast tissue on MRI for prognosis of breast cancer. PhD Council member, 2014–2017.",
           "meta": "",
           "id": "cv-03-02"
         },
         {
-          "title": "MSc Medical Engineering — Eindhoven University of Technology",
+          "title": "MSc Medical Engineering (Biomedical Image Analysis) — Eindhoven University of Technology",
           "period": "2013",
-          "details": "Biomedical image analysis. Extracurricular: UniPartners Eindhoven. Graduation research included computer-aided diagnosis of multiple-sclerosis lesions at Radboud University.",
+          "details": "",
           "meta": "",
           "id": "cv-03-03"
         },
         {
-          "title": "Graduate coursework in International Business — Maastricht University",
+          "title": "Coursework in International Business (Entrepreneurship and SME Management) — Maastricht University",
           "period": "2011",
-          "details": "Entrepreneurship and SME Management.",
+          "details": "",
           "meta": "",
           "id": "cv-03-04"
         }
