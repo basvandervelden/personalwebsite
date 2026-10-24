@@ -15,3 +15,88 @@
 .paper-license-note{border-top:1px solid var(--line);margin:36px 0 0;padding:20px 0;font-size:11px;color:var(--muted);line-height:1.85}
 .paper-license-note a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 @media(max-width:650px){.paper-featured-list{grid-template-columns:1fr}.paper-featured{margin-bottom:32px}}
+
+/* Native fullscreen displays one enlarged PDF page instead of the small spread. */
+.paper-fullscreen-button{white-space:nowrap;font-weight:800!important;color:var(--accent)!important}
+.paper-reader-surface:fullscreen{
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  height:100%;
+  padding:18px 28px 16px;
+  overflow:hidden;
+  background:var(--bg);
+  color:var(--ink);
+}
+.paper-reader-surface:fullscreen .thesis-reader-top{flex:0 0 auto;margin-bottom:0;padding-bottom:14px}
+.paper-reader-surface:fullscreen .thesis-reader-top>span{white-space:nowrap}
+.paper-reader-surface:fullscreen .thesis-help{flex:0 0 auto;padding:8px 0}
+.paper-reader-surface:fullscreen .paper-license-note{display:none}
+.paper-fullscreen-stage{
+  flex:1 1 auto;
+  min-height:0;
+  overflow:auto;
+  padding:22px;
+  background:var(--alt);
+  scrollbar-gutter:stable;
+  text-align:center;
+}
+.paper-fullscreen-stage .react-pdf__Document{
+  display:flex;
+  width:max-content;
+  min-width:100%;
+  justify-content:center;
+  align-items:flex-start;
+}
+.paper-fullscreen-stage .react-pdf__Page{flex-shrink:0}
+.paper-fullscreen-stage .react-pdf__Page__canvas{
+  display:block;
+  max-width:none;
+  margin:auto;
+  background:#fff;
+  box-shadow:0 2px 18px rgba(0,0,0,.11);
+}
+.paper-fullscreen-controls{
+  flex:0 0 auto;
+  min-height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(12px,2vw,30px);
+  flex-wrap:wrap;
+  padding:10px 0 0;
+  border-top:1px solid var(--line);
+}
+.paper-fullscreen-controls button{
+  font:inherit;
+  color:var(--accent);
+  background:transparent;
+  border:0;
+  padding:8px 6px;
+  font-weight:700;
+  font-size:12px;
+  cursor:pointer;
+}
+.paper-fullscreen-controls button:disabled{opacity:.35;cursor:default}
+.paper-fullscreen-controls .thesis-book-position{font-weight:700;white-space:nowrap}
+.paper-zoom-controls{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  border-left:1px solid var(--line);
+  padding-left:clamp(10px,2vw,22px);
+}
+.paper-zoom-controls span{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:42px;text-align:center}
+.paper-zoom-controls button{font-size:14px}
+.paper-zoom-controls button:last-child{font-size:12px;white-space:nowrap}
+.paper-reader-surface:fullscreen .thesis-reader-options button:focus-visible,
+.paper-reader-surface:fullscreen button:focus-visible,
+.paper-fullscreen-stage:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:720px){
+  .paper-reader-surface:fullscreen{padding:12px 10px 8px}
+  .paper-reader-surface:fullscreen .thesis-reader-top{gap:10px;flex-wrap:wrap}
+  .paper-fullscreen-stage{padding:10px}
+  .paper-fullscreen-controls{gap:4px 14px;padding-top:6px}
+  .paper-zoom-controls{padding-left:10px;gap:4px}
+}
