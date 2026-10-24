@@ -88,3 +88,24 @@ main:focus{outline:none}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+
+/* Research journey and tangible research outputs. Kept separate from approved page copy. */
+.research-journey-section{border-top:1px solid var(--line)}
+.research-journey-list{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin:0;padding:0}
+.research-journey-phase{position:relative;border-top:2px solid var(--line);padding:23px 0 16px;display:grid;grid-template-columns:36px minmax(0,1fr);gap:10px}
+.research-journey-phase:last-child{border-top-color:var(--accent)}
+.research-journey-index{font-size:11px;color:var(--accent);font-weight:800;padding-top:2px}
+.research-journey-period{display:block;font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.06em;margin-bottom:11px}
+.research-journey-body{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.research-journey-body h3{font-size:clamp(18px,1.7vw,23px);line-height:1.35;letter-spacing:-.025em;margin:0 0 13px}
+.research-journey-body p{font-size:13px;line-height:1.8;margin:0 0 21px}
+.research-journey-link{margin-top:auto;font-size:12px}
+.research-output-section{background:var(--alt);border-top:1px solid var(--line)}
+.research-output-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.research-output-link{border-top:1px solid var(--line);padding:20px 0 22px;display:grid;gap:11px;grid-template-columns:1fr auto;align-content:start;min-height:120px}
+.research-output-meta{grid-column:1/-1;color:var(--accent);font-weight:800;letter-spacing:.09em;font-size:10px}
+.research-output-link strong{font-family:Manrope,'DM Sans',sans-serif;font-size:18px;line-height:1.4;letter-spacing:-.02em;font-weight:750}
+.research-output-arrow{font-size:19px;color:var(--accent)}
+.research-output-link:hover strong{color:var(--accent)}
+@media(max-width:800px){.research-journey-list,.research-output-links{grid-template-columns:1fr;gap:14px}.research-journey-phase{padding:20px 0}.research-output-link{min-height:80px}}
