@@ -7,6 +7,7 @@ import CVPage from './CV.jsx';
 import Thesis from './Thesis.jsx';
 import PaperReader from './PaperReader.jsx';
 import featuredPapers from './featured-papers.json';
+import { researchJourney } from './research-journey.js';
 import cvData from './cv-data.json';
 import { publicationSection, publicationDisplayType, isSupersededPreprint } from './publication-groups.js';
 import { publicationTopicNames, publicationHasTopic } from './publication-topics.js';
@@ -142,6 +143,25 @@ function ResearchDetail({item}) {
     <div className="container next-page"><span>{pageCopy.researchDetail.continue_exploring}</span><LocalLink to="/research">{pageCopy.researchDetail.back_to_all_research} <span>→</span></LocalLink></div>
   </>;
 }
+function ResearchOutputs(){
+  return <section className="section research-output-section" aria-labelledby="research-output-title"><div className="container">
+    <SectionIntro eyebrow="OPEN RESEARCH" title="Explore research outputs." description="Research resources that you can read, use or explore directly."/>
+    <div className="research-output-links">
+      <a href="https://chefs.wur.nl/" className="research-output-link" target="_blank" rel="noopener noreferrer">
+        <span className="research-output-meta">01 · INTERACTIVE DATA</span><strong>CHEFS dashboard</strong>
+        <span className="research-output-arrow" aria-hidden="true">↗</span>
+      </a>
+      <LocalLink to="/papers/ai-in-food-safety" className="research-output-link">
+        <span className="research-output-meta">02 · OPEN ACCESS PAPER</span><strong>AI in Food Safety review</strong>
+        <span className="research-output-arrow" aria-hidden="true">→</span>
+      </LocalLink>
+      <a href={site.links.review} className="research-output-link" target="_blank" rel="noopener noreferrer">
+        <span className="research-output-meta">03 · OPEN SOURCE</span><strong>Living literature review</strong>
+        <span className="research-output-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div></section>;
+}
 function ProjectsIndex() {
   return <>
     <PageHeader kicker={pageCopy.projectsOverview.projects_data_resources} title={pageCopy.projectsOverview.research_in_practice} lead={pageCopy.projectsOverview.open_datasets_software_methods_and_applied_collaborations}/>
@@ -151,6 +171,7 @@ function ProjectsIndex() {
         <div className="project-tile-copy"><Eyebrow>{p.category}</Eyebrow><h2>{p.title}</h2><p>{p.summary}</p><LocalLink to={'/projects/'+p.slug} className="text-link">{pageCopy.projectsOverview.read_project_overview} <span>→</span></LocalLink></div>
       </article>)}
     </div></section>
+    <ResearchOutputs/>
   </>;
 }
 function ProjectDetail({item}) {
@@ -162,7 +183,7 @@ function ProjectDetail({item}) {
       <div className="article-layout project-article">
         <div className="article-main"><Eyebrow>{pageCopy.projectDetail.project_overview}</Eyebrow><h2>{pageCopy.projectDetail.research_context}</h2><p className="large-body">{item.context}</p><h2>{pageCopy.projectDetail.our_contribution}</h2><p>{item.contribution}</p><h2>{pageCopy.projectDetail.outlook}</h2><p>{item.next}</p>
         <MediaSlot kind="figure" format="wide" title={item.secondaryMedia} caption={pageCopy.projectDetail.reserved_for_a_project_specific_result_chart}/></div>
-        <aside className="article-aside"><div className="aside-panel"><strong>{pageCopy.projectDetail.project}</strong><p>{item.summary}</p><ExtLink href={item.link} className="text-link">{item.linkLabel}</ExtLink></div><div className="aside-panel"><strong>{pageCopy.projectDetail.more_projects}</strong>{projectEntries.filter(x=>x.slug!==item.slug).slice(0,3).map(x=><LocalLink key={x.slug} className="aside-link" to={'/projects/'+x.slug}>{x.title}<span>↗</span></LocalLink>)}</div></aside>
+        <aside className="article-aside"><div className="aside-panel"><strong>{pageCopy.projectDetail.project}</strong><p>{item.summary}</p><ExtLink href={item.link} className="text-link">{item.linkLabel}</ExtLink>{item.slug==='chefs'&&<ExtLink href="https://chefs.wur.nl/" className="text-link">Explore CHEFS dashboard</ExtLink>}</div><div className="aside-panel"><strong>{pageCopy.projectDetail.more_projects}</strong>{projectEntries.filter(x=>x.slug!==item.slug).slice(0,3).map(x=><LocalLink key={x.slug} className="aside-link" to={'/projects/'+x.slug}>{x.title}<span>↗</span></LocalLink>)}</div></aside>
       </div>
     </div></section>
   </>;
@@ -235,10 +256,29 @@ function AcademicActivities(){
     <section className="section"><div className="container"><SectionIntro eyebrow={pageCopy.academicActivities.photo_gallery} title={pageCopy.academicActivities.speaking_collaboration_research} description={pageCopy.academicActivities.space_for_documented_activities_and_scientific_highlights}/><div className="gallery-placeholders"><MediaSlot kind="photo" format="landscape" title={pageCopy.academicActivities.keynote_or_invited_talk}/><MediaSlot kind="photo" format="landscape" title={pageCopy.academicActivities.conference_community_event}/><MediaSlot kind="photo" format="landscape" title={pageCopy.academicActivities.research_team_or_collaboration}/></div></div></section>
   </>;
 }
+function ResearchJourney(){
+  return <section className="section research-journey-section" aria-labelledby="research-journey-title">
+    <div className="container">
+      <SectionIntro eyebrow="RESEARCH JOURNEY" title="From oncology biomarkers to AI for food safety." description="Three connected directions in my research, rather than a complete career timeline."/>
+      <ol className="research-journey-list">
+        {researchJourney.map((item,index)=><li className="research-journey-phase" key={item.title}>
+          <span className="research-journey-index" aria-hidden="true">0{index+1}</span>
+          <div className="research-journey-body">
+            <span className="research-journey-period">{item.period}</span>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <LocalLink className="text-link research-journey-link" to={item.paperPath}>{item.paperLabel} <span aria-hidden="true">→</span></LocalLink>
+          </div>
+        </li>)}
+      </ol>
+    </div>
+  </section>;
+}
 function About(){
   return <>
     <PageHeader kicker={pageCopy.about.about} title={pageCopy.about.a_researcher_a_team_leader_and_a} lead={pageCopy.about.my_work_combines_machine_learning_research_scientific}/>
     <section className="section first-section"><div className="container about-columns"><Portrait className="about-portrait"/><div><Eyebrow>{pageCopy.about.background}</Eyebrow><h2>{pageCopy.about.from_medical_imaging_to_ai_for_food}</h2>{site.about.map(p=><p key={p}>{p}</p>)}<ExtLink href={site.links.research} className="text-link">{pageCopy.about.scientific_profile}</ExtLink> <LocalLink to="/cv" className="text-link about-cv-link">{pageCopy.about.full_academic_cv} <span>→</span></LocalLink> <LocalLink to="/thesis" className="text-link about-cv-link">PhD thesis (2017) <span>→</span></LocalLink></div></div></section>
+    <ResearchJourney/>
     <section className="section section-alt"><div className="container"><SectionIntro eyebrow={pageCopy.about.experience} title={pageCopy.about.selected_roles_and_background} description={pageCopy.about.for_a_complete_overview_of_appointments_projects}/><div className="milestones">{milestones.map(m=><div className="milestone" key={m.title}><span>{m.date}</span><div><h3>{m.title}</h3><p>{m.institution}</p></div></div>)}</div></div></section>
     <section className="section"><div className="container editorial-grid"><div><Eyebrow>{pageCopy.about.beyond_individual_research}</Eyebrow><h2>{pageCopy.about.building_an_environment_for_good_research}</h2><p>{pageCopy.about.i_care_about_the_conditions_that_make}</p><LocalLink to="/academic-activities" className="text-link">{pageCopy.about.academic_activities} <span>→</span></LocalLink></div><figure className="about-team-photo"><img src={import.meta.env.BASE_URL+media.team.file} alt={media.team.alt} loading="lazy" decoding="async"/><figcaption>{media.team.caption}</figcaption></figure></div></section>
   </>;
