@@ -59,7 +59,15 @@ assert.equal(visibleEntries.length,entries.length-1,'Published SPPIN preprint hi
 assert.ok(visibleEntries.some(entry=>entry.id==='cv-13-11'),'Unpublished Mutlu XAI preprint stays visible');
 assert.ok(!visibleEntries.some(entry=>entry.id==='cv-bib-062'),'Superseded SPPIN preprint is hidden');
 assert.ok(visibleEntries.some(entry=>entry.id==='cv-bib-067'),'SPPIN journal article stays visible');
-assert.deepEqual(publicationGroups.map(group=>visibleEntries.filter(entry=>publicationSection(entry)===group.key).length),[38,11,18,16]);
+assert.deepEqual(publicationGroups.map(group=>visibleEntries.filter(entry=>publicationSection(entry)===group.key).length),[38,11,21,16]);
+for (const id of ['cv-13-rafa-2026-niek','cv-13-rafa-2026-andrea','cv-13-effost-2026-daan']) {
+  const entry=get(id);
+  assert.ok(entry, 'Conference oral must be recorded: '+id);
+  assert.equal(publicationSection(entry),'conferenceAbstract');
+  assert.equal(publicationDisplayType(entry),'Conference oral presentation');
+  assert.ok(formatPublicationAuthors(entry.authors,id).endsWith('BHM van der Velden'),
+    'Site owner must be the last named author for '+id);
+}
 const appCode=readFileSync(new URL('../src/App.jsx',import.meta.url),'utf8');
 const publicPage=appCode.split('function Publications() {')[1]?.split('function AcademicActivities()')[0] || '';
 assert.ok(publicPage.includes('const filtered = cvPublications.filter('),
