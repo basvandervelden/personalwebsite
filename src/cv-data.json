@@ -1385,6 +1385,60 @@
           "bibtexKey": "koops2026voedselveiligheid"
         },
         {
+          "id": "cv-13-rafa-2026-niek",
+          "title": "A Foundation Model for Data Independent Acquisition High-Resolution Mass Spectrometry",
+          "period": "2026",
+          "paperTitle": "A Foundation Model for Data Independent Acquisition High-Resolution Mass Spectrometry",
+          "authors": "",
+          "journal": "RAFA 2026 — 12th International Symposium on Recent Advances in Food Analysis, Prague",
+          "publicationType": "Conference contribution",
+          "group": "Conference contribution / other output",
+          "details": "Oral presentation by Niek de Jonge, 3 November 2026 (16:50–17:10), workshop Smart Data Handling and AI in Food Analysis.",
+          "meta": "RAFA 2026, Prague · Oral presentation",
+          "links": [
+            {
+              "label": "RAFA 2026 programme",
+              "url": "https://www.rafa2026.eu/scientific_programme.html"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-rafa-2026-andrea",
+          "title": "Transfer Learning for Cross-Experiment Deep Learning in Untargeted Mass Spectrometry",
+          "period": "2026",
+          "paperTitle": "Transfer Learning for Cross-Experiment Deep Learning in Untargeted Mass Spectrometry",
+          "authors": "",
+          "journal": "RAFA 2026 — 12th International Symposium on Recent Advances in Food Analysis, Prague",
+          "publicationType": "Conference contribution",
+          "group": "Conference contribution / other output",
+          "details": "Oral presentation by Andrea Junior Carnoli, 3 November 2026 (17:30–17:50), workshop Smart Data Handling and AI in Food Analysis.",
+          "meta": "RAFA 2026, Prague · Oral presentation",
+          "links": [
+            {
+              "label": "RAFA 2026 programme",
+              "url": "https://www.rafa2026.eu/scientific_programme.html"
+            }
+          ]
+        },
+        {
+          "id": "cv-13-effost-2026-daan",
+          "title": "Korporaal, D., van den Bulk, L., Hoenderdaal, W., Hobe, R., van der Fels-Klerx, I., & van der Velden, B.H.M. (2026). Explainable AI for holistic prediction of mycotoxin contamination in cereals. EFFoST 2026, oral O19.5.",
+          "period": "2026",
+          "paperTitle": "Explainable AI for holistic prediction of mycotoxin contamination in cereals",
+          "authors": "Korporaal, Daan; van den Bulk, Leonieke; Hoenderdaal, Wouter; Hobe, Rosan; van der Fels-Klerx, Ine; van der Velden, Bas",
+          "journal": "EFFoST 2026 International Conference, Poznań — Oral O19.5",
+          "publicationType": "Conference contribution",
+          "group": "Conference contribution / other output",
+          "details": "Oral presentation by Daan Korporaal, 5 November 2026 (12:15–12:30).",
+          "meta": "EFFoST 2026, Poznań · Oral presentation",
+          "links": [
+            {
+              "label": "EFFoST 2026 abstract book (p. 91)",
+              "url": "https://effostconference.com/wp-content/uploads/EFFoST2026_Abstract_Book_Orals_pdf.pdf"
+            }
+          ]
+        },
+        {
           "id": "cv-wur-extra-1",
           "group": "Poster or digital scientific output",
           "source": "Wageningen Research portal",
