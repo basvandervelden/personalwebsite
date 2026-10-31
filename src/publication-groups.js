@@ -28,6 +28,8 @@ export function publicationSection(entry) {
 
 export function publicationDisplayType(entry) {
   const section=publicationSection(entry);
+  if (section === 'conferenceAbstract' && /oral presentation/i.test(entry.meta || ''))
+    return 'Conference oral presentation';
   return nonResearchJournalOutputs.has(entry.id) ? 'Event report'
     : journalAbstracts.has(entry.id) ? 'Conference abstract'
     : section === 'conferencePaper' ? 'Full conference paper'
