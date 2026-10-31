@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
 import { formatPublicationAuthors, formatPublicationTitle, formatPublicationVenue } from '../src/publication-format.js';
-import { isSupersededPreprint, publicationSection, publicationGroups, supersededPreprints } from '../src/publication-groups.js';
+import { isSupersededPreprint, publicationSection, publicationDisplayType, publicationGroups, supersededPreprints } from '../src/publication-groups.js';
 import { publicationTopicNames, publicationHasTopic } from '../src/publication-topics.js';
 const cv = JSON.parse(readFileSync(new URL('../src/cv-data.json',import.meta.url),'utf8'));
 const entries=cv.sections.find(section=>section.number===13)?.entries ?? [];
