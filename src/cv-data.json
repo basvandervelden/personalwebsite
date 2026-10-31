@@ -926,11 +926,15 @@
           ]
         },
         {
-          "title": "FoodProcess Seminar",
+          "title": "FoodProcess Seminar, Ghent",
           "period": "2026",
-          "details": "AI & foundation models voor voedselveiligheid.",
-          "meta": "",
-          "id": "cv-11-04"
+          "details": "Keynote — AI & foundation models voor voedselveiligheid.",
+          "meta": "FoodProcess Seminar, Ghent",
+          "id": "cv-11-04",
+          "tags": [
+            "Keynote",
+            "AI for food safety"
+          ]
         },
         {
           "title": "Symposium NVT-RA",
@@ -938,6 +942,28 @@
           "details": "Scientific presentation / invited contribution.",
           "meta": "",
           "id": "cv-11-05"
+        },
+        {
+          "title": "NVVT Symposium",
+          "period": "2026",
+          "details": "Keynote presentation.",
+          "meta": "NVVT Symposium",
+          "id": "cv-11-30",
+          "tags": [
+            "Keynote",
+            "Toxicology"
+          ]
+        },
+        {
+          "title": "EFSA Advisory Group on Data Symposium, Dublin",
+          "period": "2026",
+          "details": "Keynote — Explainable AI.",
+          "meta": "EFSA, Dublin",
+          "id": "cv-11-31",
+          "tags": [
+            "Keynote",
+            "Explainable AI"
+          ]
         },
         {
           "title": "AI4RSE Workshop, Wageningen",
@@ -3210,25 +3236,11 @@
           ]
         },
         {
-          "title": "EFSA Advisory Group on Data Symposium on People Readiness for AI, 30 November–1 December 2026, Dublin",
-          "period": "",
-          "details": "AGoD participation.",
-          "meta": "",
-          "id": "cv-17-02"
-        },
-        {
           "title": "WUR Model & Data Day 2026",
           "period": "",
           "details": "scheduled scientific contribution / session.",
           "meta": "",
           "id": "cv-17-03"
-        },
-        {
-          "title": "NVVT symposium, November 2026",
-          "period": "",
-          "details": "scheduled scientific contribution.",
-          "meta": "",
-          "id": "cv-17-04"
         }
       ]
     },
@@ -3270,16 +3282,6 @@
           "source": "agenda_cv_shortlist.xlsx"
         },
         {
-          "id": "cv-review-24",
-          "title": "NVVT symposium",
-          "period": "2026-11-10",
-          "details": "Calendar candidate. Speaking/leadership role not confirmed; review before presenting this as a formal achievement. Named symposium; role not explicit.",
-          "meta": "Conference / scientific event",
-          "group": "Calendar candidate",
-          "status": "to_verify",
-          "source": "agenda_cv_shortlist.xlsx"
-        },
-        {
           "id": "cv-review-37",
           "title": "EFSA tender proposal assessment",
           "period": "2026-08-18",
@@ -3288,16 +3290,6 @@
           "group": "Calendar candidate",
           "status": "to_verify",
           "source": "agenda_cv_shortlist.xlsx"
-        },
-        {
-          "id": "cv-extra-review-4",
-          "title": "FoodProcess, Ghent — presentation",
-          "period": "2026",
-          "details": "Agenda references the event and presentation planning; distinguish from the other FoodProcess seminar.",
-          "meta": "Possible invited talk",
-          "group": "From earlier longlist",
-          "status": "to_verify",
-          "source": "agenda_cv_shortlist.xlsx or earlier CV discussions"
         },
         {
           "id": "cv-extra-review-5",
