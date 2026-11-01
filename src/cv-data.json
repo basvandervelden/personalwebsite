@@ -698,6 +698,19 @@
       "category": "Projects",
       "entries": [
         {
+          "id": "cv-09-12",
+          "title": "COST Action Agrifood-OneAI (CA25159)",
+          "period": "2026",
+          "details": "International COST Action on AI and One Health in agrifood systems, including risk prediction, data and model sharing, and food safety.",
+          "meta": "Co-applicant",
+          "links": [
+            {
+              "label": "COST Action CA25159",
+              "url": "https://www.cost.eu/actions/CA25159/"
+            }
+          ]
+        },
+        {
           "title": "HOLiFOOD",
           "period": "",
           "details": "Holistic AI and emerging-risk framework linking monitoring data, drivers of change, advanced detection and stakeholder input.",
