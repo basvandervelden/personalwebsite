@@ -499,20 +499,20 @@
       "description": "Funded research programmes, acquisitions and project leadership.",
       "entries": [
         {
-          "title": "PARC",
-          "period": "2026",
-          "details": "Granted",
-          "meta": "EU · €160k",
-          "group": "Funded projects",
-          "id": "cv-08-15"
-        },
-        {
           "title": "FoodData4All",
           "period": "2026",
           "details": "In progress; consortium total approx. €4.0M",
           "meta": "EU proposal · €600k WFSR share",
           "group": "Funded projects",
           "id": "cv-08-16"
+        },
+        {
+          "title": "PARC",
+          "period": "2026",
+          "details": "Granted",
+          "meta": "EU · €160k",
+          "group": "Funded projects",
+          "id": "cv-08-15"
         },
         {
           "title": "SMART FARM",
@@ -539,20 +539,12 @@
           "id": "cv-08-08"
         },
         {
-          "title": "SIP — colony counter / AI imaging",
+          "title": "KB AI for HRMS",
           "period": "2024",
-          "details": "Granted; project lead",
-          "meta": "Internal WR · €22.5k",
+          "details": "Granted; foundation-model research line",
+          "meta": "Internal WR · €400k",
           "group": "Funded projects",
-          "id": "cv-08-09"
-        },
-        {
-          "title": "FAO — AI for Food Safety",
-          "period": "2024",
-          "details": "Granted; scientific lead / co-author",
-          "meta": "International organisation · €25k",
-          "group": "Funded projects",
-          "id": "cv-08-10"
+          "id": "cv-08-12"
         },
         {
           "title": "KB AI & Robotics",
@@ -563,12 +555,20 @@
           "id": "cv-08-11"
         },
         {
-          "title": "KB AI for HRMS",
+          "title": "FAO — AI for Food Safety",
           "period": "2024",
-          "details": "Granted; foundation-model research line",
-          "meta": "Internal WR · €400k",
+          "details": "Granted; scientific lead / co-author",
+          "meta": "International organisation · €25k",
           "group": "Funded projects",
-          "id": "cv-08-12"
+          "id": "cv-08-10"
+        },
+        {
+          "title": "SIP — colony counter / AI imaging",
+          "period": "2024",
+          "details": "Granted; project lead",
+          "meta": "Internal WR · €22.5k",
+          "group": "Funded projects",
+          "id": "cv-08-09"
         },
         {
           "title": "ECO-READY co-financing",
@@ -595,20 +595,20 @@
           "id": "cv-08-05"
         },
         {
-          "title": "SIP — automated bone-fragment detection",
-          "period": "2023",
-          "details": "Granted; project lead",
-          "meta": "Internal WR · €22.5k",
-          "group": "Funded projects",
-          "id": "cv-08-06"
-        },
-        {
           "title": "WCDS / HRMS data infrastructure",
           "period": "2023",
           "details": "Granted",
           "meta": "Internal WUR/WR · €120k",
           "group": "Funded projects",
           "id": "cv-08-07"
+        },
+        {
+          "title": "SIP — automated bone-fragment detection",
+          "period": "2023",
+          "details": "Granted; project lead",
+          "meta": "Internal WR · €22.5k",
+          "group": "Funded projects",
+          "id": "cv-08-06"
         },
         {
           "title": "HANARTH",
