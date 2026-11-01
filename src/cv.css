@@ -147,3 +147,77 @@
 
 /* Expose visible keyboard focus around the CV search field. */
 .cv-search-field:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+
+/* Responsive CV reading layout. Desktop layout and CV data remain unchanged. */
+.cv-main{min-width:0}
+.cv-mobile-toc,.cv-mobile-filter-toggle{display:none}
+@media(max-width:760px){
+  .cv-hero{padding-top:25px}
+  .cv-breadcrumb{flex-wrap:wrap;gap:6px 9px;font-size:11px;margin-bottom:17px;overflow-wrap:anywhere}
+  .cv-kicker{margin-bottom:10px}
+  .cv-hero h1{font-size:clamp(32px,8.3vw,44px);line-height:1.12;margin-bottom:12px}
+  .cv-hero-lead{font-size:14px;line-height:1.6;margin-bottom:17px}
+  .cv-actions{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px;margin-bottom:18px}
+  .cv-primary-action,.cv-secondary-action{min-height:42px;justify-content:center;gap:10px;padding:9px 12px;font-size:11px}
+  .cv-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:none}
+  .cv-metrics div{min-width:0;margin:0;padding:12px 8px 13px 0}
+  .cv-metrics strong{font-size:19px}
+  .cv-metrics span{font-size:10px;line-height:1.3}
+  .cv-page-layout{grid-template-columns:minmax(0,1fr);gap:16px;padding-top:20px;padding-bottom:60px}
+  .cv-sidebar{padding:0;border:0}
+  .cv-sidebar-sticky{display:none}
+  .cv-mobile-toc{display:block;background:var(--paper);border:1px solid var(--line)}
+  .cv-mobile-toc summary{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:56px;padding:10px 15px;list-style:none;cursor:pointer}
+  .cv-mobile-toc summary::-webkit-details-marker{display:none}
+  .cv-mobile-toc summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .cv-mobile-toc-summary{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .cv-mobile-toc-eyebrow{font-size:10px;color:var(--accent);font-weight:800;letter-spacing:.11em}
+  .cv-mobile-toc-summary strong{font-size:13px;line-height:1.4;overflow-wrap:anywhere}
+  .cv-mobile-toc-arrow{color:var(--accent);font-size:22px;line-height:1;transition:transform .15s ease}
+  .cv-mobile-toc[open] .cv-mobile-toc-arrow{transform:rotate(180deg)}
+  .cv-mobile-toc-links{display:grid;max-height:min(52vh,460px);overflow-y:auto;border-top:1px solid var(--line);padding:6px 0;overscroll-behavior:contain}
+  .cv-mobile-toc-links a{display:grid;grid-template-columns:26px minmax(0,1fr);gap:9px;padding:10px 15px;font-size:12px;line-height:1.45;color:var(--muted)}
+  .cv-mobile-toc-links a:first-child{display:block;font-weight:800}
+  .cv-mobile-toc-links a span{font-size:10px;color:var(--subtle);font-weight:800}
+  .cv-mobile-toc-links a:hover,.cv-mobile-toc-links a.cv-sidebar-active{background:var(--accent-soft);color:var(--accent)}
+  .cv-toolbar{padding:15px}
+  .cv-search-label{margin-bottom:7px}
+  .cv-search-field{height:46px}
+  .cv-search-field input{min-width:0;font-size:16px}
+  .cv-mobile-filter-toggle{display:flex;width:100%;min-height:44px;justify-content:space-between;align-items:center;padding:9px 0 0;border:0;background:transparent;color:var(--accent);font-size:12px;font-weight:800;cursor:pointer}
+  .cv-mobile-filter-toggle span:last-child{font-size:19px;line-height:1}
+  .cv-filter-row{display:none;gap:11px;margin-top:10px}
+  .cv-filter-row.cv-filter-row-open{display:flex}
+  .cv-filter-row select{min-height:44px;font-size:16px}
+  .cv-reset{padding:10px 0}
+  .cv-section-header{padding:23px 0 13px}
+  .cv-section-toggle{display:grid;grid-template-columns:25px minmax(0,1fr) auto;column-gap:10px;row-gap:4px;align-items:start}
+  .cv-section-number{grid-column:1;grid-row:1}
+  .cv-section-title{grid-column:2;grid-row:1;min-width:0;overflow-wrap:anywhere}
+  .cv-section-count{grid-column:2;grid-row:2}
+  .cv-chevron{grid-column:3;grid-row:1 / span 2;margin:0}
+  .cv-section-header h2{font-size:clamp(18px,5.3vw,22px)}
+  .cv-section-description{margin-bottom:12px}
+  .cv-entry{display:block;padding:17px 0}
+  .cv-entry-date{font-size:11px;line-height:1.5;margin-bottom:5px}
+  .cv-entry-body h3{font-size:15px;line-height:1.5}
+  .cv-entry-meta{font-size:12px;line-height:1.55}
+  .cv-entry-description{font-size:13px;line-height:1.65}
+  .cv-pub-authors{font-size:12px;line-height:1.6}
+  .cv-publication-entry .cv-entry-body h3{font-size:15px;line-height:1.5}
+  .cv-publication-group-heading{align-items:center;gap:10px}
+  .cv-publication-group-heading h3{font-size:17px}
+  .cv-publication-groups{gap:23px}
+  .cv-supervision-heading{font-size:17px;padding:15px 0 10px}
+  .cv-media-section{padding:46px 0 60px}
+}
+@media(max-width:520px){
+  .cv-filter-row label{flex:1 1 100%;min-width:0}
+  .cv-filter-row select{width:100%;min-width:0}
+  .cv-reset{margin:0}
+  .cv-media-grid{grid-template-columns:1fr}
+}
+@media print{
+  .cv-mobile-toc,.cv-mobile-filter-toggle{display:none!important}
+  .cv-filter-row{display:none!important}
+}

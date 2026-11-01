@@ -108,6 +108,7 @@ export default function CVPage({sectionNumber}) {
   const [year,setYear]=useState('All years');
   const [category,setCategory]=useState('All topics');
   const [collapsed,setCollapsed]=useState([]);
+  const [mobileFiltersOpen,setMobileFiltersOpen]=useState(false);
   const publicSections=cv.sections.filter(s=>s.number!==18).map(s=>s.number===13
     ? {...s,entries:s.entries.filter(entry=>!isSupersededPreprint(entry))}
     : s);
@@ -124,7 +125,8 @@ export default function CVPage({sectionNumber}) {
       && matchesQuery(e,query)&&(year==='All years'||startYear(e.period)===year))})).filter(s=>s.visible.length);
   const totalCount=publicSections.reduce((sum,s)=>sum+s.entries.length,0);
   const pubCount=publicSections.find(s=>s.number===13)?.entries.length||0;
-  const clear=()=>{setSearch('');setYear('All years');setCategory('All topics');setCollapsed([])};
+  const activeFilterCount=Number(activeTopic!=='All topics')+Number(year!=='All years');
+  const clear=()=>{setSearch('');setYear('All years');setCategory('All topics');setCollapsed([]);setMobileFiltersOpen(false)};
   return <div className="cv-page">
     <div className="cv-hero"><div className="container">
       <div className="cv-breadcrumb"><a href="#/about">About</a><span>/</span><a href="#/cv">Full academic CV</a>{selected&&<><span>/</span><span>{selected.title}</span></>}</div>
@@ -150,12 +152,28 @@ export default function CVPage({sectionNumber}) {
           <div className="cv-sidebar-links">{publicSections.map(s=><a href={'#/cv/'+s.number} className={selected?.number===s.number?'cv-sidebar-active':''} key={s.number}><span>{String(s.number).padStart(2,'0')}</span>{s.title}</a>)}</div>
           <div className="cv-sidebar-extra"><a href="#/about">Back to About →</a></div>
         </div>
+        <details className="cv-mobile-toc" key={selected?.number || 'all'}>
+          <summary>
+            <span className="cv-mobile-toc-summary">
+              <span className="cv-mobile-toc-eyebrow">BROWSE CV</span>
+              <strong>{selected ? selected.title : 'Jump to a section'}</strong>
+            </span>
+            <span className="cv-mobile-toc-arrow" aria-hidden="true">⌄</span>
+          </summary>
+          <nav className="cv-mobile-toc-links" aria-label="CV section navigation">
+            <a href="#/cv" className={!selected?'cv-sidebar-active':''}>All sections</a>
+            {publicSections.map(s=><a key={s.number} href={'#/cv/'+s.number} className={selected?.number===s.number?'cv-sidebar-active':''}><span>{String(s.number).padStart(2,'0')}</span>{s.title}</a>)}
+          </nav>
+        </details>
       </aside>
       <div className="cv-main">
         <section className="cv-toolbar" aria-label="Search and filter CV">
           <label className="cv-search-label" htmlFor="cv-search">SEARCH THE CV</label>
           <div className="cv-search-field"><span aria-hidden="true">⌕</span><input id="cv-search" type="search" value={search} onChange={e=>{setSearch(e.target.value);setCollapsed([])}} placeholder="Search talks, collaborators, projects, journals…" autoComplete="off"/></div>
-          <div className="cv-filter-row">
+          <button type="button" className="cv-mobile-filter-toggle" onClick={()=>setMobileFiltersOpen(open=>!open)} aria-expanded={mobileFiltersOpen} aria-controls="cv-filter-options">
+            <span>Filters{activeFilterCount>0?' ('+activeFilterCount+' active)':''}</span><span aria-hidden="true">{mobileFiltersOpen?'−':'＋'}</span>
+          </button>
+          <div className={'cv-filter-row'+(mobileFiltersOpen?' cv-filter-row-open':'')} id="cv-filter-options">
             <label>Topic <select value={activeTopic} onChange={e=>{setCategory(e.target.value);setCollapsed([])}}><option>All topics</option>{topicOptions.map(c=><option key={c}>{c}</option>)}</select></label>
             <label>Start year <select value={year} onChange={e=>{setYear(e.target.value);setCollapsed([])}}><option>All years</option>{years.map(y=><option key={y}>{y}</option>)}</select></label>
             <button type="button" className="cv-reset" onClick={clear}>Reset filters</button>
