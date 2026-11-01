@@ -499,60 +499,36 @@
       "description": "Funded research programmes, acquisitions and project leadership.",
       "entries": [
         {
-          "title": "HANARTH",
-          "period": "2022",
+          "title": "PARC",
+          "period": "2026",
           "details": "Granted",
-          "meta": "Foundation · €500k",
+          "meta": "EU · €160k",
           "group": "Funded projects",
-          "id": "cv-08-01"
+          "id": "cv-08-15"
         },
         {
-          "title": "WR Small Innovative Project (SIP)",
-          "period": "2022",
-          "details": "Granted; project lead",
-          "meta": "Internal WR · €22.5k",
+          "title": "FoodData4All",
+          "period": "2026",
+          "details": "In progress; consortium total approx. €4.0M",
+          "meta": "EU proposal · €600k WFSR share",
           "group": "Funded projects",
-          "id": "cv-08-02"
+          "id": "cv-08-16"
         },
         {
-          "title": "ECO-READY co-financing",
-          "period": "2023",
-          "details": "Granted; interim WP leadership / WFSR leadership",
-          "meta": "EU / WR · €979k",
+          "title": "SMART FARM",
+          "period": "2025",
+          "details": "Granted; consortium total approx. €3.0M",
+          "meta": "PPS · €560k WFSR share",
           "group": "Funded projects",
-          "id": "cv-08-03"
+          "id": "cv-08-13"
         },
         {
-          "title": "EFRA co-financing",
-          "period": "2023",
-          "details": "Granted; WFSR project leadership / interim WP leadership",
-          "meta": "EU / WR · €349k",
+          "title": "ENRESFOOD",
+          "period": "2025",
+          "details": "Granted; consortium total approx. €1.4M",
+          "meta": "EU / FutureFoodS · €400k WFSR share",
           "group": "Funded projects",
-          "id": "cv-08-04"
-        },
-        {
-          "title": "Porticus",
-          "period": "2023",
-          "details": "Granted",
-          "meta": "Foundation · €132k",
-          "group": "Funded projects",
-          "id": "cv-08-05"
-        },
-        {
-          "title": "SIP — automated bone-fragment detection",
-          "period": "2023",
-          "details": "Granted; project lead",
-          "meta": "Internal WR · €22.5k",
-          "group": "Funded projects",
-          "id": "cv-08-06"
-        },
-        {
-          "title": "WCDS / HRMS data infrastructure",
-          "period": "2023",
-          "details": "Granted",
-          "meta": "Internal WUR/WR · €120k",
-          "group": "Funded projects",
-          "id": "cv-08-07"
+          "id": "cv-08-14"
         },
         {
           "title": "Porticus",
@@ -595,36 +571,60 @@
           "id": "cv-08-12"
         },
         {
-          "title": "SMART FARM",
-          "period": "2025",
-          "details": "Granted; consortium total approx. €3.0M",
-          "meta": "PPS · €560k WFSR share",
+          "title": "ECO-READY co-financing",
+          "period": "2023",
+          "details": "Granted; interim WP leadership / WFSR leadership",
+          "meta": "EU / WR · €979k",
           "group": "Funded projects",
-          "id": "cv-08-13"
+          "id": "cv-08-03"
         },
         {
-          "title": "ENRESFOOD",
-          "period": "2025",
-          "details": "Granted; consortium total approx. €1.4M",
-          "meta": "EU / FutureFoodS · €400k WFSR share",
+          "title": "EFRA co-financing",
+          "period": "2023",
+          "details": "Granted; WFSR project leadership / interim WP leadership",
+          "meta": "EU / WR · €349k",
           "group": "Funded projects",
-          "id": "cv-08-14"
+          "id": "cv-08-04"
         },
         {
-          "title": "PARC",
-          "period": "2026",
+          "title": "Porticus",
+          "period": "2023",
           "details": "Granted",
-          "meta": "EU · €160k",
+          "meta": "Foundation · €132k",
           "group": "Funded projects",
-          "id": "cv-08-15"
+          "id": "cv-08-05"
         },
         {
-          "title": "FoodData4All",
-          "period": "2026",
-          "details": "In progress; consortium total approx. €4.0M",
-          "meta": "EU proposal · €600k WFSR share",
+          "title": "SIP — automated bone-fragment detection",
+          "period": "2023",
+          "details": "Granted; project lead",
+          "meta": "Internal WR · €22.5k",
           "group": "Funded projects",
-          "id": "cv-08-16"
+          "id": "cv-08-06"
+        },
+        {
+          "title": "WCDS / HRMS data infrastructure",
+          "period": "2023",
+          "details": "Granted",
+          "meta": "Internal WUR/WR · €120k",
+          "group": "Funded projects",
+          "id": "cv-08-07"
+        },
+        {
+          "title": "HANARTH",
+          "period": "2022",
+          "details": "Granted",
+          "meta": "Foundation · €500k",
+          "group": "Funded projects",
+          "id": "cv-08-01"
+        },
+        {
+          "title": "WR Small Innovative Project (SIP)",
+          "period": "2022",
+          "details": "Granted; project lead",
+          "meta": "Internal WR · €22.5k",
+          "group": "Funded projects",
+          "id": "cv-08-02"
         },
         {
           "title": "UMC Utrecht Talent programme; European Society of Radiology ECR grant (€2k).",
