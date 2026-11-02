@@ -112,8 +112,9 @@ main:focus{outline:none}
 
 /* VMT Food Safety Event images: keep uploaded JPGs intact; crop only in the browser. */
 .activity-photo{margin:0;min-width:0;overflow:hidden;border:1px solid var(--slot-line);background:var(--slot-bg)}
-.activity-photo-frame{position:relative;overflow:hidden}
-.activity-photo img{display:block;width:100%;object-fit:cover}
-.activity-photo-hero img{aspect-ratio:5/4;object-fit:cover;object-position:62% center}
-.activity-photo-keynote img{aspect-ratio:1/1;object-position:center 25%;transform:scale(1.15);transform-origin:70% 35%}
+.activity-photo-frame{position:relative;width:100%;aspect-ratio:5/4;overflow:hidden}
+.activity-photo img{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center}
+.activity-photo-hero img{object-position:62% center}
+.activity-photo-keynote .activity-photo-frame{aspect-ratio:1/1}
+.activity-photo-keynote img{object-position:center 25%}
 
