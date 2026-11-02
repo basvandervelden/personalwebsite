@@ -119,3 +119,9 @@ main:focus{outline:none}
 .activity-photo-keynote img{object-position:center 75%}
 .gallery-placeholders>.activity-photo{align-self:start}
 
+
+/* Academic activities gallery: every tile has the same square outer dimensions. */
+.gallery-placeholders>.activity-photo .activity-photo-frame{aspect-ratio:1/1}
+.gallery-empty-photo{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;background:var(--slot-bg);color:var(--ink);text-align:center}
+.gallery-empty-photo-label{font-size:11px;letter-spacing:.16em;font-weight:700;color:var(--accent)}
+.gallery-empty-photo strong{font-size:16px;line-height:1.5}
