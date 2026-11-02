@@ -12,5 +12,19 @@
     "file": "team.jpg",
     "alt": "Part of the Data Science & AI team at the HOLiFOOD final symposium",
     "caption": "Part of our team at the HOLiFOOD final symposium."
+  },
+  "academicActivitiesHero": {
+    "file": "Food Safety Event 2024- KLEIN- 112.JPG",
+    "width": 1440,
+    "height": 960,
+    "alt": "Bas van der Velden giving a presentation at VMT Food Safety Event 2024, with an audience in the foreground and a laboratory image on the screen.",
+    "credit": "VMT / Food Safety Event 2024 — Photo by Koos Groenewold"
+  },
+  "academicActivitiesKeynote": {
+    "file": "Food Safety Event 2024- KLEIN- 091.JPG",
+    "width": 960,
+    "height": 1440,
+    "alt": "Bas van der Velden speaking on stage at VMT Food Safety Event 2024 in Amersfoort.",
+    "credit": "VMT / Food Safety Event 2024 — Photo by Koos Groenewold"
   }
 }

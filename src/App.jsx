@@ -48,6 +48,12 @@ function ChefsImage({className=''}) {
     <img src={import.meta.env.BASE_URL+media.chefs.file} alt={media.chefs.alt} loading="lazy"/>
   </figure>;
 }
+function ActivityPhoto({image,className=''}) {
+  return <figure className={'activity-photo '+className}>
+    <img src={import.meta.env.BASE_URL+encodeURIComponent(image.file)} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async"/>
+    <figcaption>{image.credit}</figcaption>
+  </figure>;
+}
 function PageHeader({kicker,title,lead,compact=false}) {
   return <header className={'page-header '+(compact?'compact':'')}><div className="container"><Eyebrow>{kicker}</Eyebrow><h1>{title}</h1><p className="page-lead">{lead}</p></div></header>;
 }
@@ -251,9 +257,9 @@ function Publications() {
 function AcademicActivities(){
   return <>
     <PageHeader kicker={pageCopy.academicActivities.academic_activities} title={pageCopy.academicActivities.research_is_a_collective_endeavour} lead={pageCopy.academicActivities.scientific_exchange_community_building_and_mentorship_are}/>
-    <section className="section first-section"><div className="container"><div className="editorial-grid"><div><Eyebrow>{pageCopy.academicActivities.community_exchange}</Eyebrow><h2>{pageCopy.academicActivities.connecting_researchers_and_ideas}</h2><p>{pageCopy.academicActivities.ai_for_food_safety_is_an_interdisciplinary}</p><p>{pageCopy.academicActivities.these_activities_range_from_invited_scientific_presentations}</p></div><MediaSlot kind="photo" format="wide" title={pageCopy.academicActivities.conference_talk_scientific_event_photograph} caption={pageCopy.academicActivities.suggested_invited_talk_conference_or_team_event}/></div></div></section>
+    <section className="section first-section"><div className="container"><div className="editorial-grid"><div><Eyebrow>{pageCopy.academicActivities.community_exchange}</Eyebrow><h2>{pageCopy.academicActivities.connecting_researchers_and_ideas}</h2><p>{pageCopy.academicActivities.ai_for_food_safety_is_an_interdisciplinary}</p><p>{pageCopy.academicActivities.these_activities_range_from_invited_scientific_presentations}</p></div><ActivityPhoto image={media.academicActivitiesHero} className="activity-photo-hero"/></div></div></section>
     <section className="section section-alt"><div className="container activity-grid">{activitySections.map((a,i)=><article className="activity-card" key={a.title}><span className="index-label">0{i+1}</span><h2>{a.title}</h2><p>{a.description}</p><ul>{a.entries.map(e=><li key={e}>{e}</li>)}</ul></article>)}</div></section>
-    <section className="section"><div className="container"><SectionIntro eyebrow={pageCopy.academicActivities.photo_gallery} title={pageCopy.academicActivities.speaking_collaboration_research} description={pageCopy.academicActivities.space_for_documented_activities_and_scientific_highlights}/><div className="gallery-placeholders"><MediaSlot kind="photo" format="landscape" title={pageCopy.academicActivities.keynote_or_invited_talk}/><MediaSlot kind="photo" format="landscape" title={pageCopy.academicActivities.conference_community_event}/><MediaSlot kind="photo" format="landscape" title={pageCopy.academicActivities.research_team_or_collaboration}/></div></div></section>
+    <section className="section"><div className="container"><SectionIntro eyebrow={pageCopy.academicActivities.photo_gallery} title={pageCopy.academicActivities.speaking_collaboration_research} description={pageCopy.academicActivities.space_for_documented_activities_and_scientific_highlights}/><div className="gallery-placeholders"><ActivityPhoto image={media.academicActivitiesKeynote} className="activity-photo-keynote"/><MediaSlot kind="photo" format="landscape" title={pageCopy.academicActivities.conference_community_event}/><MediaSlot kind="photo" format="landscape" title={pageCopy.academicActivities.research_team_or_collaboration}/></div></div></section>
   </>;
 }
 function ResearchJourney(){
