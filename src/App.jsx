@@ -50,7 +50,7 @@ function ChefsImage({className=''}) {
 }
 function ActivityPhoto({image,className=''}) {
   return <figure className={'activity-photo '+className}>
-    <div className="activity-photo-frame"><img src={import.meta.env.BASE_URL+encodeURIComponent(image.file)} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async"/><figcaption className="photo-credit">{image.credit}</figcaption></div>
+    <div className="activity-photo-frame"><img src={import.meta.env.BASE_URL+encodeURIComponent(image.file)} alt={image.alt} loading="lazy" decoding="async"/><figcaption className="photo-credit">{image.credit}</figcaption></div>
   </figure>;
 }
 function PageHeader({kicker,title,lead,compact=false}) {
