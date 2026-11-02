@@ -110,7 +110,7 @@ main:focus{outline:none}
 .research-output-link:hover strong{color:var(--accent)}
 @media(max-width:800px){.research-journey-list,.research-output-links{grid-template-columns:1fr;gap:14px}.research-journey-phase{padding:20px 0}.research-output-link{min-height:80px}}
 
-/* VMT Food Safety Event images: keep uploaded JPGs intact; crop only in the browser. */
+/* VMT Food Safety Event images: keep uploaded JPGs intact; crop only in the browser. Redeploy after photo 112 correction. */
 .activity-photo{display:block;align-self:start;margin:0;min-width:0;min-height:0;overflow:hidden;border:1px solid var(--slot-line);background:var(--slot-bg)}
 .activity-photo-frame{position:relative;display:block;width:100%;height:auto;aspect-ratio:3/2;overflow:hidden}
 .activity-photo-frame>img{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center}
