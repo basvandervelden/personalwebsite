@@ -19,7 +19,7 @@
 /* Professional portrait and visible photographer credit */
 .portrait-photo{position:relative;margin:0;min-width:0;overflow:hidden;background:var(--slot-bg);border:1px solid var(--slot-line);aspect-ratio:4/5;isolation:isolate}
 .portrait-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 25%}
-.portrait-photo figcaption{position:absolute;right:12px;bottom:12px;left:12px;width:max-content;max-width:calc(100% - 24px);padding:7px 10px;border-radius:4px;background:rgba(15,19,28,.66);color:#fff;font-size:11px;line-height:1.4;letter-spacing:.01em}
+.photo-credit{position:absolute;right:12px;bottom:12px;left:12px;width:max-content;max-width:calc(100% - 24px);padding:7px 10px;border-radius:4px;background:rgba(15,19,28,.66);color:#fff;font-size:11px;line-height:1.4;letter-spacing:.01em}
 .portrait-photo.hero-portrait{min-height:515px}
 .portrait-photo.about-portrait{min-height:360px}
 @media(max-width:730px){.portrait-photo.hero-portrait{width:100%;max-width:520px;min-height:320px;aspect-ratio:4/5}}
@@ -112,8 +112,8 @@ main:focus{outline:none}
 
 /* VMT Food Safety Event images: keep uploaded JPGs intact; crop only in the browser. */
 .activity-photo{margin:0;min-width:0;overflow:hidden;border:1px solid var(--slot-line);background:var(--slot-bg)}
-.activity-photo-frame{overflow:hidden}
+.activity-photo-frame{position:relative;overflow:hidden}
 .activity-photo img{display:block;width:100%;object-fit:cover}
-.activity-photo-hero img{aspect-ratio:3/2;object-position:center center}
+.activity-photo-hero img{aspect-ratio:5/4;object-fit:cover;object-position:62% center}
 .activity-photo-keynote img{aspect-ratio:1/1;object-position:center 25%;transform:scale(1.15);transform-origin:70% 35%}
-.activity-photo figcaption{padding:10px 13px;border-top:1px solid var(--line);font-size:11px;line-height:1.5;color:var(--muted)}
+

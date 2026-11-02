@@ -40,7 +40,7 @@ function MediaSlot({title='Photograph or illustration',caption,kind='visual',for
 function Portrait({className=''}) {
   return <figure className={'portrait-photo '+className}>
     <img src={import.meta.env.BASE_URL+media.portrait.file} alt={media.portrait.alt} loading={className.includes('hero')?'eager':'lazy'} decoding="async"/>
-    <figcaption>{media.portrait.credit}</figcaption>
+    <figcaption className="photo-credit">{media.portrait.credit}</figcaption>
   </figure>;
 }
 function ChefsImage({className=''}) {
@@ -50,8 +50,7 @@ function ChefsImage({className=''}) {
 }
 function ActivityPhoto({image,className=''}) {
   return <figure className={'activity-photo '+className}>
-    <div className="activity-photo-frame"><img src={import.meta.env.BASE_URL+encodeURIComponent(image.file)} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async"/></div>
-    <figcaption>{image.credit}</figcaption>
+    <div className="activity-photo-frame"><img src={import.meta.env.BASE_URL+encodeURIComponent(image.file)} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async"/><figcaption className="photo-credit">{image.credit}</figcaption></div>
   </figure>;
 }
 function PageHeader({kicker,title,lead,compact=false}) {
