@@ -960,6 +960,13 @@
           ]
         },
         {
+          "id": "cv-11-adm-2025",
+          "title": "Amsterdam Data Collective (ADM)",
+          "period": "2025",
+          "details": "Speaker — AI for food/feed safety.",
+          "meta": "Amsterdam Data Collective"
+        },
+        {
           "title": "29th Conference on Food Microbiology, Brussels",
           "period": "2025",
           "details": "Keynote / invited presentation — AI for food safety; overview of artificial intelligence in food safety.",
@@ -1021,6 +1028,27 @@
               "url": "https://research.wur.nl/en/activities/explainable-ai/"
             }
           ]
+        },
+        {
+          "id": "cv-11-wur-xai-2024",
+          "title": "WUR XAI Symposium 2024",
+          "period": "2024",
+          "details": "Scientific presentation on explainable AI; co-organiser of the symposium.",
+          "meta": "Wageningen University & Research"
+        },
+        {
+          "id": "cv-11-fenelab-2024",
+          "title": "Fenelab inspiratiedag",
+          "period": "2024-10-01",
+          "details": "Speaker — AI en data voor voedselveiligheid.",
+          "meta": "Fenelab"
+        },
+        {
+          "id": "cv-11-digital-innovation-2024",
+          "title": "2nd International Workshop Digital Innovation Ecosystems in Agri-Food",
+          "period": "2024-10-09",
+          "details": "Speaker — Food safety in the lab with AI.",
+          "meta": "International workshop"
         },
         {
           "title": "RAFA, Prague",
@@ -1192,6 +1220,13 @@
           "details": "Chaired an AI/data-focused session alongside invited scientific presentation.",
           "meta": "",
           "id": "cv-12-02"
+        },
+        {
+          "id": "cv-12-wur-xai-2024",
+          "title": "Co-organiser — WUR XAI Symposium",
+          "period": "2024",
+          "details": "Co-organised the symposium on explainable AI and contributed as a speaker.",
+          "meta": "Wageningen University & Research"
         },
         {
           "title": "Session chair — Deep Learning: Lesions and Pathologies — SPIE Medical Imaging",
@@ -3379,16 +3414,6 @@
           "source": "agenda_cv_shortlist.xlsx or earlier CV discussions"
         },
         {
-          "id": "cv-extra-review-3",
-          "title": "Amsterdam Data Collective (ADM) — presentation",
-          "period": "2025",
-          "details": "Agenda refers to sending a presentation to ADM. Confirm external speaking role, venue and exact date.",
-          "meta": "Possible external presentation",
-          "group": "From earlier longlist",
-          "status": "to_verify",
-          "source": "agenda_cv_shortlist.xlsx or earlier CV discussions"
-        },
-        {
           "id": "cv-extra-review-7",
           "title": "EFFoST — scientific participation / potential contribution",
           "period": "2025",
@@ -3429,26 +3454,6 @@
           "source": "agenda_cv_shortlist.xlsx"
         },
         {
-          "id": "cv-review-18",
-          "title": "Fenelab inspiratiedag",
-          "period": "2024-10-01",
-          "details": "Calendar candidate. Speaking/leadership role not confirmed; review before presenting this as a formal achievement. Named external event; role not explicit.",
-          "meta": "Conference / scientific event",
-          "group": "Calendar candidate",
-          "status": "to_verify",
-          "source": "agenda_cv_shortlist.xlsx"
-        },
-        {
-          "id": "cv-review-19",
-          "title": "2nd International Workshop Digital Innovation Ecosystems in Agri-Food",
-          "period": "2024-10-09",
-          "details": "Calendar candidate. Speaking/leadership role not confirmed; review before presenting this as a formal achievement. Named international workshop in the calendar; role not explicit.",
-          "meta": "Conference / scientific event",
-          "group": "Calendar candidate",
-          "status": "to_verify",
-          "source": "agenda_cv_shortlist.xlsx"
-        },
-        {
           "id": "cv-review-20",
           "title": "RAFA",
           "period": "2024-11-04",
@@ -3477,16 +3482,6 @@
           "group": "Calendar candidate",
           "status": "to_verify",
           "source": "agenda_cv_shortlist.xlsx"
-        },
-        {
-          "id": "cv-extra-review-1",
-          "title": "XAI Symposium — Utrecht / Impulse",
-          "period": "2024",
-          "details": "Agenda contains references to an XAI symposium and preparation. Confirm whether there was a formal speaking or organisation role.",
-          "meta": "Scientific event · agenda-based lead",
-          "group": "From earlier longlist",
-          "status": "to_verify",
-          "source": "agenda_cv_shortlist.xlsx or earlier CV discussions"
         },
         {
           "id": "cv-review-13",
