@@ -1201,6 +1201,13 @@
       "category": "Community",
       "entries": [
         {
+          "id": "cv-12-wmdd-2026",
+          "title": "Organiser — WUR Model & Data Day 2026 (Data Science & AI session)",
+          "period": "2026-10-15",
+          "details": "Organised a Data Science & AI session with scientific contributions from WFSR researchers.",
+          "meta": "Wageningen University & Research"
+        },
+        {
           "title": "Initiator and co-organiser — AI for Food Safety Conference (AIFS) — Wageningen Food Safety Research / international community",
           "period": "2026–2027",
           "details": "Established a dedicated technical conference at the intersection of AI and food safety, with full-paper submissions, peer review and oral/poster tracks. First conference: 8–9 April 2027, Ede, The Netherlands.",
@@ -3324,16 +3331,6 @@
           "source": "agenda_cv_shortlist.xlsx"
         },
         {
-          "id": "cv-review-23",
-          "title": "WUR Model & Data Day 2026",
-          "period": "2026-10-15",
-          "details": "Calendar candidate. Speaking/leadership role not confirmed; review before presenting this as a formal achievement. Named scientific event; session preparation elsewhere suggests a role, but not explicit.",
-          "meta": "Conference / scientific event",
-          "group": "Calendar candidate",
-          "status": "to_verify",
-          "source": "agenda_cv_shortlist.xlsx"
-        },
-        {
           "id": "cv-review-37",
           "title": "EFSA tender proposal assessment",
           "period": "2026-08-18",
@@ -3349,16 +3346,6 @@
           "period": "2026",
           "details": "Agenda references work-package presentation. Confirm exact programme, date and whether externally relevant.",
           "meta": "Project / programme presentation",
-          "group": "From earlier longlist",
-          "status": "to_verify",
-          "source": "agenda_cv_shortlist.xlsx or earlier CV discussions"
-        },
-        {
-          "id": "cv-extra-review-6",
-          "title": "WUR / WFSR Model & Data Day — scientific contribution",
-          "period": "2026-10-15",
-          "details": "Scientific event with multiple Data Science & AI team presentations; confirm individual speaking or organisational contribution.",
-          "meta": "Academic event",
           "group": "From earlier longlist",
           "status": "to_verify",
           "source": "agenda_cv_shortlist.xlsx or earlier CV discussions"
