@@ -933,9 +933,12 @@
         {
           "title": "Symposium NVT-RA",
           "period": "2026",
-          "details": "Scientific presentation (speaker).",
+          "details": "Keynote presentation.",
           "meta": "",
-          "id": "cv-11-05"
+          "id": "cv-11-05",
+          "tags": [
+            "Keynote"
+          ]
         },
         {
           "title": "NVVT Symposium",
