@@ -1576,6 +1576,24 @@
           "source": "citations.csv"
         },
         {
+          "id": "cv-13-holifood-policy-2026",
+          "title": "van Meer, F., Korenjak Lalovič, E., & van der Velden, B.H.M. (2026). Holistic artificial intelligence for food safety. HOLiFOOD Policy Brief.",
+          "period": "2026",
+          "details": "February 2026.",
+          "meta": "",
+          "group": "AI, data science and food safety",
+          "links": [
+            {
+              "label": "Policy brief (PDF)",
+              "url": "https://holifoodproject.eu/wp-content/uploads/2026/07/Policy-brief1_Holistic-artificial-intelligence-for-food-safety_FvM_deb.pdf"
+            }
+          ],
+          "paperTitle": "Holistic artificial intelligence for food safety",
+          "authors": "F. van Meer; E. Korenjak Lalovič; B. H. M. van der Velden",
+          "journal": "HOLiFOOD",
+          "publicationType": "Report"
+        },
+        {
           "id": "cv-13-08",
           "title": "van Meer, F., van der Velden, B.H.M., & Takeuchi, M. (2025). Artificial intelligence for food safety: A literature synthesis, real-world applications and regulatory frameworks. FAO.",
           "period": "2025",
